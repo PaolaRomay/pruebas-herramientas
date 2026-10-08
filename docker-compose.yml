@@ -1,0 +1,44 @@
+# Base común de pruebas: PostgreSQL 16 con Pagila cargada automáticamente.
+# Uso:  ./scripts/get_pagila.sh   (una vez)  y  docker compose up -d
+services:
+  db:
+    image: postgres:16.4
+    container_name: pagila-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres   # solo local; el puerto no sale de la máquina
+      POSTGRES_DB: pagila
+    ports:
+      - "127.0.0.1:55432:5432"      # 55432 para no chocar con un Postgres ya instalado en el Mac
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./data/pagila/01-schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./data/pagila/02-data.sql:/docker-entrypoint-initdb.d/02-data.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U postgres -d pagila"]   # por TCP: durante la carga inicial solo escucha el socket
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  # Solo para la prueba B1 (PostgreSQL Anonymizer). No se levanta por defecto:
+  #   docker compose --profile anon up -d anon
+  # Fijar la versión después del primer pull (ver README).
+  anon:
+    profiles: ["anon"]
+    image: ${ANON_IMAGE:-registry.gitlab.com/dalibo/postgresql_anonymizer:stable}
+    platform: linux/amd64   # la imagen solo se publica para amd64: en el M1 corre emulada (más lenta)
+    container_name: pagila-anon
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pagila
+    ports:
+      - "127.0.0.1:55433:5432"
+    volumes:
+      - pgdata_anon:/var/lib/postgresql   # la imagen está basada en PostgreSQL 18, que usa esta ruta
+      - ./data/pagila/01-schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./data/pagila/02-data.sql:/docker-entrypoint-initdb.d/02-data.sql:ro
+
+volumes:
+  pgdata:
+  pgdata_anon:

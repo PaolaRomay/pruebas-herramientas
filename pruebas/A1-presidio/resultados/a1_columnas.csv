@@ -1,0 +1,436 @@
+variante,umbral,tabla,columna,fraccion,entidad,marcada,n_valores,verdad,categoria,evaluable,entidad_esperada,etiqueta_ok
+manual,0.0,customer,first_name,0.86,PERSON,True,200,si,nombre,True,PERSON,True
+manual,0.4,customer,first_name,0.86,PERSON,True,200,si,nombre,True,PERSON,True
+manual,0.6,customer,first_name,0.86,PERSON,True,200,si,nombre,True,PERSON,True
+manual,0.0,customer,last_name,0.6,PERSON,True,200,si,apellido,True,PERSON,True
+manual,0.4,customer,last_name,0.6,PERSON,True,200,si,apellido,True,PERSON,True
+manual,0.6,customer,last_name,0.6,PERSON,True,200,si,apellido,True,PERSON,True
+manual,0.0,customer,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual,0.4,customer,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual,0.6,customer,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual,0.0,customer,uuid,0.225,DATE_TIME,False,200,si,identificador unico,True,,False
+manual,0.4,customer,uuid,0.115,DATE_TIME,False,200,si,identificador unico,True,,False
+manual,0.6,customer,uuid,0.115,DATE_TIME,False,200,si,identificador unico,True,,False
+manual,0.0,customer,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual,0.4,customer,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual,0.6,customer,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual,0.0,customer,create_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.4,customer,create_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.6,customer,create_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.0,address,address,0.51,LOCATION,True,200,si,direccion,True,LOCATION,True
+manual,0.4,address,address,0.51,LOCATION,True,200,si,direccion,True,LOCATION,True
+manual,0.6,address,address,0.51,LOCATION,True,200,si,direccion,True,LOCATION,True
+manual,0.0,address,district,0.735,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual,0.4,address,district,0.735,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual,0.6,address,district,0.735,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual,0.0,address,postal_code,0.455,DATE_TIME,False,200,dudoso,ubicacion,True,,False
+manual,0.4,address,postal_code,0.455,DATE_TIME,False,200,dudoso,ubicacion,True,,False
+manual,0.6,address,postal_code,0.455,DATE_TIME,False,200,dudoso,ubicacion,True,,False
+manual,0.0,address,phone,1.0,DATE_TIME,True,200,si,telefono,True,PHONE_NUMBER,False
+manual,0.4,address,phone,0.445,DATE_TIME,False,200,si,telefono,True,PHONE_NUMBER,False
+manual,0.6,address,phone,0.425,DATE_TIME,False,200,si,telefono,True,PHONE_NUMBER,False
+manual,0.0,address,city_id,0.0,,False,200,no,clave foranea,True,,False
+manual,0.4,address,city_id,0.0,,False,200,no,clave foranea,True,,False
+manual,0.6,address,city_id,0.0,,False,200,no,clave foranea,True,,False
+manual,0.0,city,city,0.63,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual,0.4,city,city,0.63,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual,0.6,city,city,0.63,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual,0.0,country,country,0.972,LOCATION,True,109,no,dato de referencia,True,,False
+manual,0.4,country,country,0.972,LOCATION,True,109,no,dato de referencia,True,,False
+manual,0.6,country,country,0.972,LOCATION,True,109,no,dato de referencia,True,,False
+manual,0.0,staff,first_name,0.755,PERSON,True,200,si,nombre,True,PERSON,True
+manual,0.4,staff,first_name,0.755,PERSON,True,200,si,nombre,True,PERSON,True
+manual,0.6,staff,first_name,0.755,PERSON,True,200,si,nombre,True,PERSON,True
+manual,0.0,staff,last_name,0.595,PERSON,True,200,si,apellido,True,PERSON,True
+manual,0.4,staff,last_name,0.595,PERSON,True,200,si,apellido,True,PERSON,True
+manual,0.6,staff,last_name,0.595,PERSON,True,200,si,apellido,True,PERSON,True
+manual,0.0,staff,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual,0.4,staff,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual,0.6,staff,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual,0.0,staff,username,0.675,URL,True,200,si,identificador de cuenta,True,,False
+manual,0.4,staff,username,0.675,URL,True,200,si,identificador de cuenta,True,,False
+manual,0.6,staff,username,0.09,PERSON,False,200,si,identificador de cuenta,True,,False
+manual,0.0,staff,password,0.0,,False,200,si,credencial,True,,False
+manual,0.4,staff,password,0.0,,False,200,si,credencial,True,,False
+manual,0.6,staff,password,0.0,,False,200,si,credencial,True,,False
+manual,0.0,staff,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual,0.4,staff,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual,0.6,staff,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual,0.0,actor,first_name,0.775,PERSON,True,200,dudoso,nombre,True,PERSON,False
+manual,0.4,actor,first_name,0.775,PERSON,True,200,dudoso,nombre,True,PERSON,False
+manual,0.6,actor,first_name,0.775,PERSON,True,200,dudoso,nombre,True,PERSON,False
+manual,0.0,actor,last_name,0.475,PERSON,False,200,dudoso,apellido,True,PERSON,False
+manual,0.4,actor,last_name,0.475,PERSON,False,200,dudoso,apellido,True,PERSON,False
+manual,0.6,actor,last_name,0.475,PERSON,False,200,dudoso,apellido,True,PERSON,False
+manual,0.0,payment,amount,0.0,,False,200,dudoso,dato transaccional,True,,False
+manual,0.4,payment,amount,0.0,,False,200,dudoso,dato transaccional,True,,False
+manual,0.6,payment,amount,0.0,,False,200,dudoso,dato transaccional,True,,False
+manual,0.0,payment,payment_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.4,payment,payment_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.6,payment,payment_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.0,rental,rental_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.4,rental,rental_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.6,rental,rental_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.0,rental,return_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.4,rental,return_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.6,rental,return_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual,0.0,film,title,0.22,PERSON,False,200,no,contenido del catalogo,True,,False
+manual,0.4,film,title,0.22,PERSON,False,200,no,contenido del catalogo,True,,False
+manual,0.6,film,title,0.22,PERSON,False,200,no,contenido del catalogo,True,,False
+manual,0.0,film,description,0.575,LOCATION,True,200,no,contenido del catalogo,True,,False
+manual,0.4,film,description,0.575,LOCATION,True,200,no,contenido del catalogo,True,,False
+manual,0.6,film,description,0.575,LOCATION,True,200,no,contenido del catalogo,True,,False
+manual,0.0,category,name,0.0,,False,16,no,dato de referencia,True,,False
+manual,0.4,category,name,0.0,,False,16,no,dato de referencia,True,,False
+manual,0.6,category,name,0.0,,False,16,no,dato de referencia,True,,False
+manual,0.0,language,name,0.667,NRP,True,6,no,dato de referencia,True,,False
+manual,0.4,language,name,0.667,NRP,True,6,no,dato de referencia,True,,False
+manual,0.6,language,name,0.667,NRP,True,6,no,dato de referencia,True,,False
+manual_contexto,0.0,customer,first_name,0.855,PERSON,True,200,si,nombre,True,PERSON,True
+manual_contexto,0.4,customer,first_name,0.855,PERSON,True,200,si,nombre,True,PERSON,True
+manual_contexto,0.6,customer,first_name,0.855,PERSON,True,200,si,nombre,True,PERSON,True
+manual_contexto,0.0,customer,last_name,0.705,PERSON,True,200,si,apellido,True,PERSON,True
+manual_contexto,0.4,customer,last_name,0.705,PERSON,True,200,si,apellido,True,PERSON,True
+manual_contexto,0.6,customer,last_name,0.705,PERSON,True,200,si,apellido,True,PERSON,True
+manual_contexto,0.0,customer,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual_contexto,0.4,customer,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual_contexto,0.6,customer,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual_contexto,0.0,customer,uuid,0.145,US_DRIVER_LICENSE,False,200,si,identificador unico,True,,False
+manual_contexto,0.4,customer,uuid,0.01,MEDICAL_LICENSE,False,200,si,identificador unico,True,,False
+manual_contexto,0.6,customer,uuid,0.01,MEDICAL_LICENSE,False,200,si,identificador unico,True,,False
+manual_contexto,0.0,customer,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual_contexto,0.4,customer,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual_contexto,0.6,customer,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual_contexto,0.0,customer,create_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.4,customer,create_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.6,customer,create_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.0,address,address,0.44,LOCATION,False,200,si,direccion,True,LOCATION,False
+manual_contexto,0.4,address,address,0.44,LOCATION,False,200,si,direccion,True,LOCATION,False
+manual_contexto,0.6,address,address,0.435,LOCATION,False,200,si,direccion,True,LOCATION,False
+manual_contexto,0.0,address,district,0.81,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual_contexto,0.4,address,district,0.81,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual_contexto,0.6,address,district,0.81,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual_contexto,0.0,address,postal_code,0.02,DATE_TIME,False,200,dudoso,ubicacion,True,,False
+manual_contexto,0.4,address,postal_code,0.02,DATE_TIME,False,200,dudoso,ubicacion,True,,False
+manual_contexto,0.6,address,postal_code,0.015,DATE_TIME,False,200,dudoso,ubicacion,True,,False
+manual_contexto,0.0,address,phone,1.0,US_BANK_NUMBER,True,200,si,telefono,True,PHONE_NUMBER,False
+manual_contexto,0.4,address,phone,0.055,PHONE_NUMBER,False,200,si,telefono,True,PHONE_NUMBER,False
+manual_contexto,0.6,address,phone,0.055,PHONE_NUMBER,False,200,si,telefono,True,PHONE_NUMBER,False
+manual_contexto,0.0,address,city_id,0.0,,False,200,no,clave foranea,True,,False
+manual_contexto,0.4,address,city_id,0.0,,False,200,no,clave foranea,True,,False
+manual_contexto,0.6,address,city_id,0.0,,False,200,no,clave foranea,True,,False
+manual_contexto,0.0,city,city,0.79,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual_contexto,0.4,city,city,0.79,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual_contexto,0.6,city,city,0.79,LOCATION,True,200,dudoso,ubicacion,True,,False
+manual_contexto,0.0,country,country,0.982,LOCATION,True,109,no,dato de referencia,True,,False
+manual_contexto,0.4,country,country,0.982,LOCATION,True,109,no,dato de referencia,True,,False
+manual_contexto,0.6,country,country,0.982,LOCATION,True,109,no,dato de referencia,True,,False
+manual_contexto,0.0,staff,first_name,0.85,PERSON,True,200,si,nombre,True,PERSON,True
+manual_contexto,0.4,staff,first_name,0.85,PERSON,True,200,si,nombre,True,PERSON,True
+manual_contexto,0.6,staff,first_name,0.85,PERSON,True,200,si,nombre,True,PERSON,True
+manual_contexto,0.0,staff,last_name,0.73,PERSON,True,200,si,apellido,True,PERSON,True
+manual_contexto,0.4,staff,last_name,0.73,PERSON,True,200,si,apellido,True,PERSON,True
+manual_contexto,0.6,staff,last_name,0.73,PERSON,True,200,si,apellido,True,PERSON,True
+manual_contexto,0.0,staff,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual_contexto,0.4,staff,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual_contexto,0.6,staff,email,1.0,EMAIL_ADDRESS,True,200,si,correo electronico,True,EMAIL_ADDRESS,True
+manual_contexto,0.0,staff,username,0.7,URL,True,200,si,identificador de cuenta,True,,False
+manual_contexto,0.4,staff,username,0.7,URL,True,200,si,identificador de cuenta,True,,False
+manual_contexto,0.6,staff,username,0.165,PERSON,False,200,si,identificador de cuenta,True,,False
+manual_contexto,0.0,staff,password,0.0,,False,200,si,credencial,True,,False
+manual_contexto,0.4,staff,password,0.0,,False,200,si,credencial,True,,False
+manual_contexto,0.6,staff,password,0.0,,False,200,si,credencial,True,,False
+manual_contexto,0.0,staff,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual_contexto,0.4,staff,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual_contexto,0.6,staff,address_id,0.0,,False,200,no,clave foranea,True,,False
+manual_contexto,0.0,actor,first_name,0.795,PERSON,True,200,dudoso,nombre,True,PERSON,False
+manual_contexto,0.4,actor,first_name,0.795,PERSON,True,200,dudoso,nombre,True,PERSON,False
+manual_contexto,0.6,actor,first_name,0.795,PERSON,True,200,dudoso,nombre,True,PERSON,False
+manual_contexto,0.0,actor,last_name,0.585,PERSON,True,200,dudoso,apellido,True,PERSON,False
+manual_contexto,0.4,actor,last_name,0.585,PERSON,True,200,dudoso,apellido,True,PERSON,False
+manual_contexto,0.6,actor,last_name,0.585,PERSON,True,200,dudoso,apellido,True,PERSON,False
+manual_contexto,0.0,payment,amount,0.0,,False,200,dudoso,dato transaccional,True,,False
+manual_contexto,0.4,payment,amount,0.0,,False,200,dudoso,dato transaccional,True,,False
+manual_contexto,0.6,payment,amount,0.0,,False,200,dudoso,dato transaccional,True,,False
+manual_contexto,0.0,payment,payment_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.4,payment,payment_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.6,payment,payment_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.0,rental,rental_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.4,rental,rental_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.6,rental,rental_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.0,rental,return_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.4,rental,return_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.6,rental,return_date,1.0,DATE_TIME,True,200,dudoso,fecha,True,,False
+manual_contexto,0.0,film,title,0.23,PERSON,False,200,no,contenido del catalogo,True,,False
+manual_contexto,0.4,film,title,0.23,PERSON,False,200,no,contenido del catalogo,True,,False
+manual_contexto,0.6,film,title,0.23,PERSON,False,200,no,contenido del catalogo,True,,False
+manual_contexto,0.0,film,description,0.58,LOCATION,True,200,no,contenido del catalogo,True,,False
+manual_contexto,0.4,film,description,0.58,LOCATION,True,200,no,contenido del catalogo,True,,False
+manual_contexto,0.6,film,description,0.58,LOCATION,True,200,no,contenido del catalogo,True,,False
+manual_contexto,0.0,category,name,0.0,,False,16,no,dato de referencia,True,,False
+manual_contexto,0.4,category,name,0.0,,False,16,no,dato de referencia,True,,False
+manual_contexto,0.6,category,name,0.0,,False,16,no,dato de referencia,True,,False
+manual_contexto,0.0,language,name,0.667,NRP,True,6,no,dato de referencia,True,,False
+manual_contexto,0.4,language,name,0.667,NRP,True,6,no,dato de referencia,True,,False
+manual_contexto,0.6,language,name,0.667,NRP,True,6,no,dato de referencia,True,,False
+structured:most_common,0.0,customer,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:most_common,0.0,customer,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:most_common,0.0,customer,email,,URL,True,100,si,correo electronico,True,EMAIL_ADDRESS,False
+structured:most_common,0.0,customer,uuid,,US_DRIVER_LICENSE,True,100,si,identificador unico,True,,False
+structured:most_common,0.0,customer,address_id,,,False,100,no,clave foranea,True,,False
+structured:most_common,0.0,customer,create_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.0,address,address,,LOCATION,True,100,si,direccion,True,LOCATION,True
+structured:most_common,0.0,address,district,,LOCATION,True,100,dudoso,ubicacion,True,,False
+structured:most_common,0.0,address,postal_code,,DATE_TIME,True,100,dudoso,ubicacion,True,,False
+structured:most_common,0.0,address,phone,,US_BANK_NUMBER,True,100,si,telefono,True,PHONE_NUMBER,False
+structured:most_common,0.0,address,city_id,,,False,100,no,clave foranea,True,,False
+structured:most_common,0.0,city,city,,PERSON,True,100,dudoso,ubicacion,True,,False
+structured:most_common,0.0,country,country,,LOCATION,True,100,no,dato de referencia,True,,False
+structured:most_common,0.0,staff,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:most_common,0.0,staff,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:most_common,0.0,staff,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:most_common,0.0,staff,username,,URL,True,100,si,identificador de cuenta,True,,False
+structured:most_common,0.0,staff,password,,,False,100,si,credencial,True,,False
+structured:most_common,0.0,staff,address_id,,,False,100,no,clave foranea,True,,False
+structured:most_common,0.0,actor,first_name,,PERSON,True,100,dudoso,nombre,True,PERSON,False
+structured:most_common,0.0,actor,last_name,,PERSON,True,100,dudoso,apellido,True,PERSON,False
+structured:most_common,0.0,payment,amount,,,False,100,dudoso,dato transaccional,True,,False
+structured:most_common,0.0,payment,payment_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.0,rental,rental_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.0,rental,return_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.0,film,title,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:most_common,0.0,film,description,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:most_common,0.0,category,name,,,False,16,no,dato de referencia,True,,False
+structured:most_common,0.0,language,name,,NRP,True,6,no,dato de referencia,True,,False
+structured:highest_confidence,0.0,customer,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:highest_confidence,0.0,customer,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:highest_confidence,0.0,customer,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:highest_confidence,0.0,customer,uuid,,MEDICAL_LICENSE,True,100,si,identificador unico,True,,False
+structured:highest_confidence,0.0,customer,address_id,,,False,100,no,clave foranea,True,,False
+structured:highest_confidence,0.0,customer,create_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.0,address,address,,LOCATION,True,100,si,direccion,True,LOCATION,True
+structured:highest_confidence,0.0,address,district,,LOCATION,True,100,dudoso,ubicacion,True,,False
+structured:highest_confidence,0.0,address,postal_code,,DATE_TIME,True,100,dudoso,ubicacion,True,,False
+structured:highest_confidence,0.0,address,phone,,DATE_TIME,True,100,si,telefono,True,PHONE_NUMBER,False
+structured:highest_confidence,0.0,address,city_id,,,False,100,no,clave foranea,True,,False
+structured:highest_confidence,0.0,city,city,,PERSON,True,100,dudoso,ubicacion,True,,False
+structured:highest_confidence,0.0,country,country,,LOCATION,True,100,no,dato de referencia,True,,False
+structured:highest_confidence,0.0,staff,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:highest_confidence,0.0,staff,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:highest_confidence,0.0,staff,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:highest_confidence,0.0,staff,username,,PERSON,True,100,si,identificador de cuenta,True,,False
+structured:highest_confidence,0.0,staff,password,,,False,100,si,credencial,True,,False
+structured:highest_confidence,0.0,staff,address_id,,,False,100,no,clave foranea,True,,False
+structured:highest_confidence,0.0,actor,first_name,,PERSON,True,100,dudoso,nombre,True,PERSON,False
+structured:highest_confidence,0.0,actor,last_name,,PERSON,True,100,dudoso,apellido,True,PERSON,False
+structured:highest_confidence,0.0,payment,amount,,,False,100,dudoso,dato transaccional,True,,False
+structured:highest_confidence,0.0,payment,payment_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.0,rental,rental_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.0,rental,return_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.0,film,title,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:highest_confidence,0.0,film,description,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:highest_confidence,0.0,category,name,,,False,16,no,dato de referencia,True,,False
+structured:highest_confidence,0.0,language,name,,NRP,True,6,no,dato de referencia,True,,False
+structured:mixed,0.0,customer,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:mixed,0.0,customer,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:mixed,0.0,customer,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:mixed,0.0,customer,uuid,,MEDICAL_LICENSE,True,100,si,identificador unico,True,,False
+structured:mixed,0.0,customer,address_id,,,False,100,no,clave foranea,True,,False
+structured:mixed,0.0,customer,create_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.0,address,address,,LOCATION,True,100,si,direccion,True,LOCATION,True
+structured:mixed,0.0,address,district,,LOCATION,True,100,dudoso,ubicacion,True,,False
+structured:mixed,0.0,address,postal_code,,DATE_TIME,True,100,dudoso,ubicacion,True,,False
+structured:mixed,0.0,address,phone,,DATE_TIME,True,100,si,telefono,True,PHONE_NUMBER,False
+structured:mixed,0.0,address,city_id,,,False,100,no,clave foranea,True,,False
+structured:mixed,0.0,city,city,,PERSON,True,100,dudoso,ubicacion,True,,False
+structured:mixed,0.0,country,country,,LOCATION,True,100,no,dato de referencia,True,,False
+structured:mixed,0.0,staff,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:mixed,0.0,staff,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:mixed,0.0,staff,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:mixed,0.0,staff,username,,PERSON,True,100,si,identificador de cuenta,True,,False
+structured:mixed,0.0,staff,password,,,False,100,si,credencial,True,,False
+structured:mixed,0.0,staff,address_id,,,False,100,no,clave foranea,True,,False
+structured:mixed,0.0,actor,first_name,,PERSON,True,100,dudoso,nombre,True,PERSON,False
+structured:mixed,0.0,actor,last_name,,PERSON,True,100,dudoso,apellido,True,PERSON,False
+structured:mixed,0.0,payment,amount,,,False,100,dudoso,dato transaccional,True,,False
+structured:mixed,0.0,payment,payment_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.0,rental,rental_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.0,rental,return_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.0,film,title,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:mixed,0.0,film,description,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:mixed,0.0,category,name,,,False,16,no,dato de referencia,True,,False
+structured:mixed,0.0,language,name,,NRP,True,6,no,dato de referencia,True,,False
+structured:most_common,0.4,customer,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:most_common,0.4,customer,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:most_common,0.4,customer,email,,URL,True,100,si,correo electronico,True,EMAIL_ADDRESS,False
+structured:most_common,0.4,customer,uuid,,DATE_TIME,True,100,si,identificador unico,True,,False
+structured:most_common,0.4,customer,address_id,,,False,100,no,clave foranea,True,,False
+structured:most_common,0.4,customer,create_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.4,address,address,,LOCATION,True,100,si,direccion,True,LOCATION,True
+structured:most_common,0.4,address,district,,LOCATION,True,100,dudoso,ubicacion,True,,False
+structured:most_common,0.4,address,postal_code,,DATE_TIME,True,100,dudoso,ubicacion,True,,False
+structured:most_common,0.4,address,phone,,DATE_TIME,True,100,si,telefono,True,PHONE_NUMBER,False
+structured:most_common,0.4,address,city_id,,,False,100,no,clave foranea,True,,False
+structured:most_common,0.4,city,city,,PERSON,True,100,dudoso,ubicacion,True,,False
+structured:most_common,0.4,country,country,,LOCATION,True,100,no,dato de referencia,True,,False
+structured:most_common,0.4,staff,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:most_common,0.4,staff,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:most_common,0.4,staff,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:most_common,0.4,staff,username,,URL,True,100,si,identificador de cuenta,True,,False
+structured:most_common,0.4,staff,password,,,False,100,si,credencial,True,,False
+structured:most_common,0.4,staff,address_id,,,False,100,no,clave foranea,True,,False
+structured:most_common,0.4,actor,first_name,,PERSON,True,100,dudoso,nombre,True,PERSON,False
+structured:most_common,0.4,actor,last_name,,PERSON,True,100,dudoso,apellido,True,PERSON,False
+structured:most_common,0.4,payment,amount,,,False,100,dudoso,dato transaccional,True,,False
+structured:most_common,0.4,payment,payment_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.4,rental,rental_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.4,rental,return_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.4,film,title,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:most_common,0.4,film,description,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:most_common,0.4,category,name,,,False,16,no,dato de referencia,True,,False
+structured:most_common,0.4,language,name,,NRP,True,6,no,dato de referencia,True,,False
+structured:highest_confidence,0.4,customer,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:highest_confidence,0.4,customer,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:highest_confidence,0.4,customer,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:highest_confidence,0.4,customer,uuid,,MEDICAL_LICENSE,True,100,si,identificador unico,True,,False
+structured:highest_confidence,0.4,customer,address_id,,,False,100,no,clave foranea,True,,False
+structured:highest_confidence,0.4,customer,create_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.4,address,address,,LOCATION,True,100,si,direccion,True,LOCATION,True
+structured:highest_confidence,0.4,address,district,,LOCATION,True,100,dudoso,ubicacion,True,,False
+structured:highest_confidence,0.4,address,postal_code,,DATE_TIME,True,100,dudoso,ubicacion,True,,False
+structured:highest_confidence,0.4,address,phone,,DATE_TIME,True,100,si,telefono,True,PHONE_NUMBER,False
+structured:highest_confidence,0.4,address,city_id,,,False,100,no,clave foranea,True,,False
+structured:highest_confidence,0.4,city,city,,PERSON,True,100,dudoso,ubicacion,True,,False
+structured:highest_confidence,0.4,country,country,,LOCATION,True,100,no,dato de referencia,True,,False
+structured:highest_confidence,0.4,staff,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:highest_confidence,0.4,staff,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:highest_confidence,0.4,staff,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:highest_confidence,0.4,staff,username,,PERSON,True,100,si,identificador de cuenta,True,,False
+structured:highest_confidence,0.4,staff,password,,,False,100,si,credencial,True,,False
+structured:highest_confidence,0.4,staff,address_id,,,False,100,no,clave foranea,True,,False
+structured:highest_confidence,0.4,actor,first_name,,PERSON,True,100,dudoso,nombre,True,PERSON,False
+structured:highest_confidence,0.4,actor,last_name,,PERSON,True,100,dudoso,apellido,True,PERSON,False
+structured:highest_confidence,0.4,payment,amount,,,False,100,dudoso,dato transaccional,True,,False
+structured:highest_confidence,0.4,payment,payment_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.4,rental,rental_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.4,rental,return_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.4,film,title,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:highest_confidence,0.4,film,description,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:highest_confidence,0.4,category,name,,,False,16,no,dato de referencia,True,,False
+structured:highest_confidence,0.4,language,name,,NRP,True,6,no,dato de referencia,True,,False
+structured:mixed,0.4,customer,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:mixed,0.4,customer,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:mixed,0.4,customer,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:mixed,0.4,customer,uuid,,MEDICAL_LICENSE,True,100,si,identificador unico,True,,False
+structured:mixed,0.4,customer,address_id,,,False,100,no,clave foranea,True,,False
+structured:mixed,0.4,customer,create_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.4,address,address,,LOCATION,True,100,si,direccion,True,LOCATION,True
+structured:mixed,0.4,address,district,,LOCATION,True,100,dudoso,ubicacion,True,,False
+structured:mixed,0.4,address,postal_code,,DATE_TIME,True,100,dudoso,ubicacion,True,,False
+structured:mixed,0.4,address,phone,,DATE_TIME,True,100,si,telefono,True,PHONE_NUMBER,False
+structured:mixed,0.4,address,city_id,,,False,100,no,clave foranea,True,,False
+structured:mixed,0.4,city,city,,PERSON,True,100,dudoso,ubicacion,True,,False
+structured:mixed,0.4,country,country,,LOCATION,True,100,no,dato de referencia,True,,False
+structured:mixed,0.4,staff,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:mixed,0.4,staff,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:mixed,0.4,staff,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:mixed,0.4,staff,username,,PERSON,True,100,si,identificador de cuenta,True,,False
+structured:mixed,0.4,staff,password,,,False,100,si,credencial,True,,False
+structured:mixed,0.4,staff,address_id,,,False,100,no,clave foranea,True,,False
+structured:mixed,0.4,actor,first_name,,PERSON,True,100,dudoso,nombre,True,PERSON,False
+structured:mixed,0.4,actor,last_name,,PERSON,True,100,dudoso,apellido,True,PERSON,False
+structured:mixed,0.4,payment,amount,,,False,100,dudoso,dato transaccional,True,,False
+structured:mixed,0.4,payment,payment_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.4,rental,rental_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.4,rental,return_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.4,film,title,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:mixed,0.4,film,description,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:mixed,0.4,category,name,,,False,16,no,dato de referencia,True,,False
+structured:mixed,0.4,language,name,,NRP,True,6,no,dato de referencia,True,,False
+structured:most_common,0.6,customer,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:most_common,0.6,customer,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:most_common,0.6,customer,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:most_common,0.6,customer,uuid,,DATE_TIME,True,100,si,identificador unico,True,,False
+structured:most_common,0.6,customer,address_id,,,False,100,no,clave foranea,True,,False
+structured:most_common,0.6,customer,create_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.6,address,address,,LOCATION,True,100,si,direccion,True,LOCATION,True
+structured:most_common,0.6,address,district,,LOCATION,True,100,dudoso,ubicacion,True,,False
+structured:most_common,0.6,address,postal_code,,DATE_TIME,True,100,dudoso,ubicacion,True,,False
+structured:most_common,0.6,address,phone,,DATE_TIME,True,100,si,telefono,True,PHONE_NUMBER,False
+structured:most_common,0.6,address,city_id,,,False,100,no,clave foranea,True,,False
+structured:most_common,0.6,city,city,,PERSON,True,100,dudoso,ubicacion,True,,False
+structured:most_common,0.6,country,country,,LOCATION,True,100,no,dato de referencia,True,,False
+structured:most_common,0.6,staff,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:most_common,0.6,staff,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:most_common,0.6,staff,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:most_common,0.6,staff,username,,PERSON,True,100,si,identificador de cuenta,True,,False
+structured:most_common,0.6,staff,password,,,False,100,si,credencial,True,,False
+structured:most_common,0.6,staff,address_id,,,False,100,no,clave foranea,True,,False
+structured:most_common,0.6,actor,first_name,,PERSON,True,100,dudoso,nombre,True,PERSON,False
+structured:most_common,0.6,actor,last_name,,PERSON,True,100,dudoso,apellido,True,PERSON,False
+structured:most_common,0.6,payment,amount,,,False,100,dudoso,dato transaccional,True,,False
+structured:most_common,0.6,payment,payment_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.6,rental,rental_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.6,rental,return_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:most_common,0.6,film,title,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:most_common,0.6,film,description,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:most_common,0.6,category,name,,,False,16,no,dato de referencia,True,,False
+structured:most_common,0.6,language,name,,NRP,True,6,no,dato de referencia,True,,False
+structured:highest_confidence,0.6,customer,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:highest_confidence,0.6,customer,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:highest_confidence,0.6,customer,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:highest_confidence,0.6,customer,uuid,,MEDICAL_LICENSE,True,100,si,identificador unico,True,,False
+structured:highest_confidence,0.6,customer,address_id,,,False,100,no,clave foranea,True,,False
+structured:highest_confidence,0.6,customer,create_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.6,address,address,,LOCATION,True,100,si,direccion,True,LOCATION,True
+structured:highest_confidence,0.6,address,district,,LOCATION,True,100,dudoso,ubicacion,True,,False
+structured:highest_confidence,0.6,address,postal_code,,DATE_TIME,True,100,dudoso,ubicacion,True,,False
+structured:highest_confidence,0.6,address,phone,,DATE_TIME,True,100,si,telefono,True,PHONE_NUMBER,False
+structured:highest_confidence,0.6,address,city_id,,,False,100,no,clave foranea,True,,False
+structured:highest_confidence,0.6,city,city,,PERSON,True,100,dudoso,ubicacion,True,,False
+structured:highest_confidence,0.6,country,country,,LOCATION,True,100,no,dato de referencia,True,,False
+structured:highest_confidence,0.6,staff,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:highest_confidence,0.6,staff,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:highest_confidence,0.6,staff,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:highest_confidence,0.6,staff,username,,PERSON,True,100,si,identificador de cuenta,True,,False
+structured:highest_confidence,0.6,staff,password,,,False,100,si,credencial,True,,False
+structured:highest_confidence,0.6,staff,address_id,,,False,100,no,clave foranea,True,,False
+structured:highest_confidence,0.6,actor,first_name,,PERSON,True,100,dudoso,nombre,True,PERSON,False
+structured:highest_confidence,0.6,actor,last_name,,PERSON,True,100,dudoso,apellido,True,PERSON,False
+structured:highest_confidence,0.6,payment,amount,,,False,100,dudoso,dato transaccional,True,,False
+structured:highest_confidence,0.6,payment,payment_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.6,rental,rental_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.6,rental,return_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:highest_confidence,0.6,film,title,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:highest_confidence,0.6,film,description,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:highest_confidence,0.6,category,name,,,False,16,no,dato de referencia,True,,False
+structured:highest_confidence,0.6,language,name,,NRP,True,6,no,dato de referencia,True,,False
+structured:mixed,0.6,customer,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:mixed,0.6,customer,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:mixed,0.6,customer,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:mixed,0.6,customer,uuid,,MEDICAL_LICENSE,True,100,si,identificador unico,True,,False
+structured:mixed,0.6,customer,address_id,,,False,100,no,clave foranea,True,,False
+structured:mixed,0.6,customer,create_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.6,address,address,,LOCATION,True,100,si,direccion,True,LOCATION,True
+structured:mixed,0.6,address,district,,LOCATION,True,100,dudoso,ubicacion,True,,False
+structured:mixed,0.6,address,postal_code,,DATE_TIME,True,100,dudoso,ubicacion,True,,False
+structured:mixed,0.6,address,phone,,DATE_TIME,True,100,si,telefono,True,PHONE_NUMBER,False
+structured:mixed,0.6,address,city_id,,,False,100,no,clave foranea,True,,False
+structured:mixed,0.6,city,city,,PERSON,True,100,dudoso,ubicacion,True,,False
+structured:mixed,0.6,country,country,,LOCATION,True,100,no,dato de referencia,True,,False
+structured:mixed,0.6,staff,first_name,,PERSON,True,100,si,nombre,True,PERSON,True
+structured:mixed,0.6,staff,last_name,,PERSON,True,100,si,apellido,True,PERSON,True
+structured:mixed,0.6,staff,email,,EMAIL_ADDRESS,True,100,si,correo electronico,True,EMAIL_ADDRESS,True
+structured:mixed,0.6,staff,username,,PERSON,True,100,si,identificador de cuenta,True,,False
+structured:mixed,0.6,staff,password,,,False,100,si,credencial,True,,False
+structured:mixed,0.6,staff,address_id,,,False,100,no,clave foranea,True,,False
+structured:mixed,0.6,actor,first_name,,PERSON,True,100,dudoso,nombre,True,PERSON,False
+structured:mixed,0.6,actor,last_name,,PERSON,True,100,dudoso,apellido,True,PERSON,False
+structured:mixed,0.6,payment,amount,,,False,100,dudoso,dato transaccional,True,,False
+structured:mixed,0.6,payment,payment_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.6,rental,rental_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.6,rental,return_date,,DATE_TIME,True,100,dudoso,fecha,True,,False
+structured:mixed,0.6,film,title,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:mixed,0.6,film,description,,LOCATION,True,100,no,contenido del catalogo,True,,False
+structured:mixed,0.6,category,name,,,False,16,no,dato de referencia,True,,False
+structured:mixed,0.6,language,name,,NRP,True,6,no,dato de referencia,True,,False

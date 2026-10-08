@@ -1,0 +1,11 @@
+# Python 3.11 vía uv (ver README). Instalar con requirements-todo.txt
+# Rangos, no versiones exactas: después de la primera instalación buena correr
+#   uv pip freeze > requirements.lock.txt
+# y subir ese archivo para que los dos tengamos exactamente las mismas versiones.
+pandas
+sqlalchemy
+psycopg2-binary
+spacy
+presidio-analyzer
+presidio-anonymizer
+presidio-structured

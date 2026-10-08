@@ -1,0 +1,4 @@
+# Prueba E1 (síntesis + reporte de calidad). Misma nota sobre versiones que requirements.txt.
+-r requirements.txt
+sdv
+sdmetrics

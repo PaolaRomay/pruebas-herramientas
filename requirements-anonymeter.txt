@@ -1,0 +1,4 @@
+# Prueba E1 (privacidad). Anonymeter pide numpy<1.27: si choca con SDV al instalar,
+# usar un entorno aparte (.venv-anonymeter) en lugar de forzar versiones.
+-r requirements.txt
+anonymeter

@@ -1,0 +1,4 @@
+# Instalar todo junto en un solo entorno: así el resolvedor busca versiones compatibles entre
+# Presidio, SDV y Anonymeter (probado en seco: resuelve, con numpy 1.26 y pandas 2.3).
+-r requirements-sdv.txt
+-r requirements-anonymeter.txt

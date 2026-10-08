@@ -1,0 +1,32 @@
+tabla,columna,sensible,categoria,comentario
+customer,first_name,si,nombre,
+customer,last_name,si,apellido,
+customer,email,si,correo electronico,
+customer,uuid,si,identificador unico,identificador indirecto; no es PII "clasica"
+customer,address_id,no,clave foranea,tiene que seguir resolviendo despues de anonimizar
+customer,create_date,dudoso,fecha,cuasi-identificador combinado con otras columnas
+address,address,si,direccion,
+address,address2,si,direccion,mayormente vacia
+address,district,dudoso,ubicacion,cuasi-identificador
+address,postal_code,dudoso,ubicacion,cuasi-identificador; debe seguir siendo consistente con ciudad
+address,phone,si,telefono,
+address,city_id,no,clave foranea,
+city,city,dudoso,ubicacion,dato de referencia pero cuasi-identificador
+country,country,no,dato de referencia,
+staff,first_name,si,nombre,
+staff,last_name,si,apellido,
+staff,email,si,correo electronico,
+staff,username,si,identificador de cuenta,
+staff,password,si,credencial,
+staff,picture,si,imagen,bytea; puede ser una foto
+staff,address_id,no,clave foranea,
+actor,first_name,dudoso,nombre,nombre de persona pero personaje publico/ficticio: decidir criterio
+actor,last_name,dudoso,apellido,idem
+payment,amount,dudoso,dato transaccional,no identifica solo; sensible para el negocio
+payment,payment_date,dudoso,fecha,cuasi-identificador
+rental,rental_date,dudoso,fecha,cuasi-identificador
+rental,return_date,dudoso,fecha,cuasi-identificador
+film,title,no,contenido del catalogo,columna "señuelo" para medir falsos positivos
+film,description,no,contenido del catalogo,idem; texto libre pero sin datos personales
+category,name,no,dato de referencia,
+language,name,no,dato de referencia,

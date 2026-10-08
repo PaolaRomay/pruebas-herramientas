@@ -1,0 +1,10 @@
+# Datos descargados (se regeneran con scripts/get_pagila.sh)
+data/pagila/*.sql
+# Entornos y claves
+.venv*/
+__pycache__/
+.env
+# Salidas pesadas de las pruebas: guardar solo capturas/logs/reportes chicos
+pruebas/**/salidas_grandes/
+*.dump
+.DS_Store
