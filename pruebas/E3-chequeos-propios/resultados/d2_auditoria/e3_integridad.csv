@@ -1,0 +1,137 @@
+tipo,tabla,nombre,columnas,ref_tabla,ref_columnas,estado,violaciones,ejemplos,definicion,origen
+FK,address,address_city_id_fkey,city_id,city,city_id,ok,0,,FOREIGN KEY (city_id) REFERENCES city(city_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,city,city_country_id_fkey,country_id,country,country_id,ok,0,,FOREIGN KEY (country_id) REFERENCES country(country_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,customer,customer_address_id_fkey,address_id,address,address_id,ok,0,,FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,customer,customer_store_id_fkey,store_id,store,store_id,ok,0,,FOREIGN KEY (store_id) REFERENCES store(store_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,film,film_language_id_fkey,language_id,language,language_id,ok,0,,FOREIGN KEY (language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,film,film_original_language_id_fkey,original_language_id,language,language_id,ok,0,,FOREIGN KEY (original_language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,film_actor,film_actor_actor_id_fkey,actor_id,actor,actor_id,ok,0,,FOREIGN KEY (actor_id) REFERENCES actor(actor_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,film_actor,film_actor_film_id_fkey,film_id,film,film_id,ok,0,,FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,film_category,film_category_category_id_fkey,category_id,category,category_id,ok,0,,FOREIGN KEY (category_id) REFERENCES category(category_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,film_category,film_category_film_id_fkey,film_id,film,film_id,ok,0,,FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,inventory,inventory_film_id_fkey,film_id,film,film_id,ok,0,,FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,inventory,inventory_store_id_fkey,store_id,store,store_id,ok,0,,FOREIGN KEY (store_id) REFERENCES store(store_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,payment_p2022_01,payment_p2022_01_customer_id_fkey,customer_id,customer,customer_id,ok,0,,FOREIGN KEY (customer_id) REFERENCES customer(customer_id),catálogo
+FK,payment_p2022_01,payment_p2022_01_rental_id_fkey,rental_id,rental,rental_id,ok,0,,FOREIGN KEY (rental_id) REFERENCES rental(rental_id),catálogo
+FK,payment_p2022_01,payment_p2022_01_staff_id_fkey,staff_id,staff,staff_id,ok,0,,FOREIGN KEY (staff_id) REFERENCES staff(staff_id),catálogo
+FK,payment_p2022_02,payment_p2022_02_customer_id_fkey,customer_id,customer,customer_id,ok,0,,FOREIGN KEY (customer_id) REFERENCES customer(customer_id),catálogo
+FK,payment_p2022_02,payment_p2022_02_rental_id_fkey,rental_id,rental,rental_id,ok,0,,FOREIGN KEY (rental_id) REFERENCES rental(rental_id),catálogo
+FK,payment_p2022_02,payment_p2022_02_staff_id_fkey,staff_id,staff,staff_id,ok,0,,FOREIGN KEY (staff_id) REFERENCES staff(staff_id),catálogo
+FK,payment_p2022_03,payment_p2022_03_customer_id_fkey,customer_id,customer,customer_id,ok,0,,FOREIGN KEY (customer_id) REFERENCES customer(customer_id),catálogo
+FK,payment_p2022_03,payment_p2022_03_rental_id_fkey,rental_id,rental,rental_id,ok,0,,FOREIGN KEY (rental_id) REFERENCES rental(rental_id),catálogo
+FK,payment_p2022_03,payment_p2022_03_staff_id_fkey,staff_id,staff,staff_id,ok,0,,FOREIGN KEY (staff_id) REFERENCES staff(staff_id),catálogo
+FK,payment_p2022_04,payment_p2022_04_customer_id_fkey,customer_id,customer,customer_id,ok,0,,FOREIGN KEY (customer_id) REFERENCES customer(customer_id),catálogo
+FK,payment_p2022_04,payment_p2022_04_rental_id_fkey,rental_id,rental,rental_id,ok,0,,FOREIGN KEY (rental_id) REFERENCES rental(rental_id),catálogo
+FK,payment_p2022_04,payment_p2022_04_staff_id_fkey,staff_id,staff,staff_id,ok,0,,FOREIGN KEY (staff_id) REFERENCES staff(staff_id),catálogo
+FK,payment_p2022_05,payment_p2022_05_customer_id_fkey,customer_id,customer,customer_id,ok,0,,FOREIGN KEY (customer_id) REFERENCES customer(customer_id),catálogo
+FK,payment_p2022_05,payment_p2022_05_rental_id_fkey,rental_id,rental,rental_id,ok,0,,FOREIGN KEY (rental_id) REFERENCES rental(rental_id),catálogo
+FK,payment_p2022_05,payment_p2022_05_staff_id_fkey,staff_id,staff,staff_id,ok,0,,FOREIGN KEY (staff_id) REFERENCES staff(staff_id),catálogo
+FK,payment_p2022_06,payment_p2022_06_customer_id_fkey,customer_id,customer,customer_id,ok,0,,FOREIGN KEY (customer_id) REFERENCES customer(customer_id),catálogo
+FK,payment_p2022_06,payment_p2022_06_rental_id_fkey,rental_id,rental,rental_id,ok,0,,FOREIGN KEY (rental_id) REFERENCES rental(rental_id),catálogo
+FK,payment_p2022_06,payment_p2022_06_staff_id_fkey,staff_id,staff,staff_id,ok,0,,FOREIGN KEY (staff_id) REFERENCES staff(staff_id),catálogo
+FK,rental,rental_customer_id_fkey,customer_id,customer,customer_id,ok,0,,FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,rental,rental_inventory_id_fkey,inventory_id,inventory,inventory_id,ok,0,,FOREIGN KEY (inventory_id) REFERENCES inventory(inventory_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,rental,rental_staff_id_fkey,staff_id,staff,staff_id,ok,0,,FOREIGN KEY (staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,staff,staff_address_id_fkey,address_id,address,address_id,ok,0,,FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+FK,staff,staff_store_id_fkey,store_id,store,store_id,ok,0,,FOREIGN KEY (store_id) REFERENCES store(store_id),catálogo
+FK,store,store_address_id_fkey,address_id,address,address_id,ok,0,,FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT,catálogo
+PK,actor,actor_pkey,actor_id,,,ok,0,,PRIMARY KEY (actor_id),catálogo
+PK,address,address_pkey,address_id,,,ok,0,,PRIMARY KEY (address_id),catálogo
+PK,category,category_pkey,category_id,,,ok,0,,PRIMARY KEY (category_id),catálogo
+PK,city,city_pkey,city_id,,,ok,0,,PRIMARY KEY (city_id),catálogo
+PK,country,country_pkey,country_id,,,ok,0,,PRIMARY KEY (country_id),catálogo
+PK,customer,customer_pkey,customer_id,,,ok,0,,PRIMARY KEY (customer_id),catálogo
+PK,film,film_pkey,film_id,,,ok,0,,PRIMARY KEY (film_id),catálogo
+PK,film_actor,film_actor_pkey,"actor_id, film_id",,,violada,70,"(68,352); (4,282); (6,168)","PRIMARY KEY (actor_id, film_id)",catálogo
+PK,film_category,film_category_pkey,"film_id, category_id",,,violada,114,"(109,4); (697,9); (27,5)","PRIMARY KEY (film_id, category_id)",catálogo
+PK,inventory,inventory_pkey,inventory_id,,,ok,0,,PRIMARY KEY (inventory_id),catálogo
+PK,language,language_pkey,language_id,,,ok,0,,PRIMARY KEY (language_id),catálogo
+PK,payment,payment_pkey,"payment_date, payment_id",,,ok,0,,"PRIMARY KEY (payment_date, payment_id)",catálogo
+PK,rental,rental_pkey,rental_id,,,ok,0,,PRIMARY KEY (rental_id),catálogo
+PK,staff,staff_pkey,staff_id,,,ok,0,,PRIMARY KEY (staff_id),catálogo
+PK,store,store_pkey,store_id,,,ok,0,,PRIMARY KEY (store_id),catálogo
+UNIQUE (índice),customer,customer_uuid_key,uuid,,,ok,0,,CREATE UNIQUE INDEX customer_uuid_key ON public.customer USING btree (uuid),catálogo
+UNIQUE (índice),payment,payment_uuid_key,"uuid, payment_date",,,ok,0,,"CREATE UNIQUE INDEX payment_uuid_key ON ONLY public.payment USING btree (uuid, payment_date)",catálogo
+UNIQUE (índice),rental,idx_unq_rental_rental_date_inventory_id_customer_id,"rental_date, inventory_id, customer_id",,,ok,0,,"CREATE UNIQUE INDEX idx_unq_rental_rental_date_inventory_id_customer_id ON public.rental USING btree (rental_date, inventory_id, customer_id)",catálogo
+UNIQUE (índice),rental,rental_uuid_key,uuid,,,ok,0,,CREATE UNIQUE INDEX rental_uuid_key ON public.rental USING btree (uuid),catálogo
+UNIQUE (índice),store,idx_unq_manager_staff_id,manager_staff_id,,,violada,85,(1366); (604); (1173),CREATE UNIQUE INDEX idx_unq_manager_staff_id ON public.store USING btree (manager_staff_id),catálogo
+NOT NULL,actor,actor.actor_id,actor_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,actor,actor.first_name,first_name,,,ok,0,,NOT NULL,catálogo
+NOT NULL,actor,actor.last_name,last_name,,,ok,0,,NOT NULL,catálogo
+NOT NULL,actor,actor.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,address,address.address_id,address_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,address,address.address,address,,,ok,0,,NOT NULL,catálogo
+NOT NULL,address,address.district,district,,,ok,0,,NOT NULL,catálogo
+NOT NULL,address,address.city_id,city_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,address,address.phone,phone,,,ok,0,,NOT NULL,catálogo
+NOT NULL,address,address.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,category,category.category_id,category_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,category,category.name,name,,,ok,0,,NOT NULL,catálogo
+NOT NULL,category,category.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,city,city.city_id,city_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,city,city.city,city,,,ok,0,,NOT NULL,catálogo
+NOT NULL,city,city.country_id,country_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,city,city.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,country,country.country_id,country_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,country,country.country,country,,,ok,0,,NOT NULL,catálogo
+NOT NULL,country,country.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,customer,customer.customer_id,customer_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,customer,customer.store_id,store_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,customer,customer.first_name,first_name,,,ok,0,,NOT NULL,catálogo
+NOT NULL,customer,customer.last_name,last_name,,,ok,0,,NOT NULL,catálogo
+NOT NULL,customer,customer.address_id,address_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,customer,customer.activebool,activebool,,,ok,0,,NOT NULL,catálogo
+NOT NULL,customer,customer.create_date,create_date,,,ok,0,,NOT NULL,catálogo
+NOT NULL,customer,customer.uuid,uuid,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film,film.film_id,film_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film,film.title,title,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film,film.language_id,language_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film,film.rental_duration,rental_duration,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film,film.rental_rate,rental_rate,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film,film.replacement_cost,replacement_cost,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film,film.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film,film.fulltext,fulltext,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film_actor,film_actor.actor_id,actor_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film_actor,film_actor.film_id,film_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film_actor,film_actor.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film_category,film_category.film_id,film_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film_category,film_category.category_id,category_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,film_category,film_category.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,inventory,inventory.inventory_id,inventory_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,inventory,inventory.film_id,film_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,inventory,inventory.store_id,store_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,inventory,inventory.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,language,language.language_id,language_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,language,language.name,name,,,ok,0,,NOT NULL,catálogo
+NOT NULL,language,language.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,payment,payment.payment_id,payment_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,payment,payment.customer_id,customer_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,payment,payment.staff_id,staff_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,payment,payment.rental_id,rental_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,payment,payment.amount,amount,,,ok,0,,NOT NULL,catálogo
+NOT NULL,payment,payment.payment_date,payment_date,,,ok,0,,NOT NULL,catálogo
+NOT NULL,payment,payment.uuid,uuid,,,ok,0,,NOT NULL,catálogo
+NOT NULL,rental,rental.rental_id,rental_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,rental,rental.rental_date,rental_date,,,ok,0,,NOT NULL,catálogo
+NOT NULL,rental,rental.inventory_id,inventory_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,rental,rental.customer_id,customer_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,rental,rental.staff_id,staff_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,rental,rental.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,rental,rental.uuid,uuid,,,ok,0,,NOT NULL,catálogo
+NOT NULL,staff,staff.staff_id,staff_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,staff,staff.first_name,first_name,,,ok,0,,NOT NULL,catálogo
+NOT NULL,staff,staff.last_name,last_name,,,ok,0,,NOT NULL,catálogo
+NOT NULL,staff,staff.address_id,address_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,staff,staff.store_id,store_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,staff,staff.active,active,,,ok,0,,NOT NULL,catálogo
+NOT NULL,staff,staff.username,username,,,ok,0,,NOT NULL,catálogo
+NOT NULL,staff,staff.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+NOT NULL,store,store.store_id,store_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,store,store.manager_staff_id,manager_staff_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,store,store.address_id,address_id,,,ok,0,,NOT NULL,catálogo
+NOT NULL,store,store.last_update,last_update,,,ok,0,,NOT NULL,catálogo
+CHECK (dominio),film,year en film.release_year,release_year,,,ok,0,,CHECK (((VALUE >= 1901) AND (VALUE <= 2155))),catálogo
+FK,payment,payment.customer_id -> customer (en la tabla padre),customer_id,customer,customer_id,ok,0,,FOREIGN KEY (customer_id) REFERENCES customer(customer_id),declarada en 6 de 55 particiones
+FK,payment,payment.rental_id -> rental (en la tabla padre),rental_id,rental,rental_id,ok,0,,FOREIGN KEY (rental_id) REFERENCES rental(rental_id),declarada en 6 de 55 particiones
+FK,payment,payment.staff_id -> staff (en la tabla padre),staff_id,staff,staff_id,ok,0,,FOREIGN KEY (staff_id) REFERENCES staff(staff_id),declarada en 6 de 55 particiones
+FK,store,store.manager_staff_id -> staff,manager_staff_id,staff,staff_id,ok,0,,(lógica) store(manager_staff_id) -> staff(staff_id),no declarada en el catálogo

@@ -1,0 +1,389 @@
+{
+  "config": {
+    "country": {
+      "pk": "country_id",
+      "fks": []
+    },
+    "city": {
+      "pk": "city_id",
+      "fks": [
+        [
+          "country_id",
+          "country",
+          true
+        ]
+      ]
+    },
+    "address": {
+      "pk": "address_id",
+      "fks": [
+        [
+          "city_id",
+          "city",
+          true
+        ]
+      ]
+    },
+    "language": {
+      "pk": "language_id",
+      "fks": []
+    },
+    "category": {
+      "pk": "category_id",
+      "fks": []
+    },
+    "actor": {
+      "pk": "actor_id",
+      "fks": []
+    },
+    "film": {
+      "pk": "film_id",
+      "fks": [
+        [
+          "language_id",
+          "language",
+          false
+        ]
+      ]
+    },
+    "film_actor": {
+      "pk": null,
+      "fks": [
+        [
+          "film_id",
+          "film",
+          true
+        ],
+        [
+          "actor_id",
+          "actor",
+          false
+        ]
+      ]
+    },
+    "film_category": {
+      "pk": null,
+      "fks": [
+        [
+          "film_id",
+          "film",
+          true
+        ],
+        [
+          "category_id",
+          "category",
+          false
+        ]
+      ]
+    },
+    "store": {
+      "pk": "store_id",
+      "fks": [
+        [
+          "address_id",
+          "address",
+          false
+        ],
+        [
+          "manager_staff_id",
+          "staff",
+          false
+        ]
+      ]
+    },
+    "staff": {
+      "pk": "staff_id",
+      "fks": [
+        [
+          "store_id",
+          "store",
+          true
+        ],
+        [
+          "address_id",
+          "address",
+          false
+        ]
+      ]
+    },
+    "customer": {
+      "pk": "customer_id",
+      "fks": [
+        [
+          "address_id",
+          "address",
+          true
+        ],
+        [
+          "store_id",
+          "store",
+          false
+        ]
+      ]
+    },
+    "inventory": {
+      "pk": "inventory_id",
+      "fks": [
+        [
+          "film_id",
+          "film",
+          true
+        ],
+        [
+          "store_id",
+          "store",
+          false
+        ]
+      ]
+    },
+    "rental": {
+      "pk": "rental_id",
+      "fks": [
+        [
+          "customer_id",
+          "customer",
+          true
+        ],
+        [
+          "inventory_id",
+          "inventory",
+          false
+        ],
+        [
+          "staff_id",
+          "staff",
+          false
+        ]
+      ]
+    },
+    "payment": {
+      "pk": "payment_id",
+      "fks": [
+        [
+          "rental_id",
+          "rental",
+          true
+        ],
+        [
+          "staff_id",
+          "staff",
+          false
+        ]
+      ]
+    }
+  },
+  "max_minutos_por_tabla": 10.0,
+  "con_store_manager_fk": true,
+  "accuracy_global": 0.8696678818181819,
+  "metricas_por_tabla": {
+    "country": {
+      "accuracy": 1.0,
+      "accuracy_univariada": 1.0,
+      "accuracy_bivariada": null,
+      "accuracy_trivariada": null,
+      "coherencia": null,
+      "accuracy_max_holdout": 1.0,
+      "dcr_entrenamiento": 0.155,
+      "dcr_holdout": 0.37,
+      "dcr_share": 1.0,
+      "ims_entrenamiento": 0.0,
+      "ims_holdout": 0.0,
+      "discriminador_auc": 1.0
+    },
+    "address": {
+      "accuracy": 0.9175409,
+      "accuracy_univariada": 0.9475017,
+      "accuracy_bivariada": 0.9102862,
+      "accuracy_trivariada": 0.859679,
+      "coherencia": 0.9526967,
+      "accuracy_max_holdout": 0.957996,
+      "dcr_entrenamiento": 0.265,
+      "dcr_holdout": 0.239,
+      "dcr_share": 0.0,
+      "ims_entrenamiento": 0.0,
+      "ims_holdout": 0.0,
+      "discriminador_auc": 1.0
+    },
+    "actor": {
+      "accuracy": 0.89625,
+      "accuracy_univariada": 0.9275,
+      "accuracy_bivariada": 0.865,
+      "accuracy_trivariada": null,
+      "coherencia": null,
+      "accuracy_max_holdout": 0.9357075,
+      "dcr_entrenamiento": 0.734,
+      "dcr_holdout": 0.855,
+      "dcr_share": 1.0,
+      "ims_entrenamiento": 0.0,
+      "ims_holdout": 0.0,
+      "discriminador_auc": 1.0
+    },
+    "film": {
+      "accuracy": 0.8308532,
+      "accuracy_univariada": 0.9313333,
+      "accuracy_bivariada": 0.85525,
+      "accuracy_trivariada": 0.7059762,
+      "coherencia": null,
+      "accuracy_max_holdout": 0.8630471,
+      "dcr_entrenamiento": 0.131,
+      "dcr_holdout": 0.134,
+      "dcr_share": 0.602,
+      "ims_entrenamiento": 0.0,
+      "ims_holdout": 0.0,
+      "discriminador_auc": 1.0
+    },
+    "film_actor": {
+      "accuracy": 0.9092911,
+      "accuracy_univariada": 0.95643,
+      "accuracy_bivariada": 0.8621522,
+      "accuracy_trivariada": null,
+      "coherencia": null,
+      "accuracy_max_holdout": 0.9054578,
+      "dcr_entrenamiento": 0.0,
+      "dcr_holdout": 0.0,
+      "dcr_share": 0.5,
+      "ims_entrenamiento": 1.0,
+      "ims_holdout": 1.0,
+      "discriminador_auc": 0.481
+    },
+    "film_category": {
+      "accuracy": 0.9580556,
+      "accuracy_univariada": 0.977,
+      "accuracy_bivariada": 0.9391111,
+      "accuracy_trivariada": null,
+      "coherencia": null,
+      "accuracy_max_holdout": 0.9546422,
+      "dcr_entrenamiento": 0.0,
+      "dcr_holdout": 0.0,
+      "dcr_share": 0.5,
+      "ims_entrenamiento": 1.0,
+      "ims_holdout": 1.0,
+      "discriminador_auc": 0.516
+    },
+    "staff": {
+      "accuracy": 0.8699079,
+      "accuracy_univariada": 0.92253,
+      "accuracy_bivariada": 0.8553195,
+      "accuracy_trivariada": 0.7913617,
+      "coherencia": 0.9104206,
+      "accuracy_max_holdout": 0.9345481,
+      "dcr_entrenamiento": 0.082,
+      "dcr_holdout": 0.117,
+      "dcr_share": 0.918,
+      "ims_entrenamiento": 0.0,
+      "ims_holdout": 0.0,
+      "discriminador_auc": 0.999
+    },
+    "customer": {
+      "accuracy": 0.8964949,
+      "accuracy_univariada": 0.9340229,
+      "accuracy_bivariada": 0.8949986,
+      "accuracy_trivariada": 0.8057574,
+      "coherencia": 0.9512006,
+      "accuracy_max_holdout": 0.9311821,
+      "dcr_entrenamiento": 0.225,
+      "dcr_holdout": 0.253,
+      "dcr_share": 1.0,
+      "ims_entrenamiento": 0.0,
+      "ims_holdout": 0.0,
+      "discriminador_auc": 1.0
+    },
+    "inventory": {
+      "accuracy": 0.9076656,
+      "accuracy_univariada": 0.93583,
+      "accuracy_bivariada": 0.8795011,
+      "accuracy_trivariada": null,
+      "coherencia": null,
+      "accuracy_max_holdout": 0.9171372,
+      "dcr_entrenamiento": 0.0,
+      "dcr_holdout": 0.0,
+      "dcr_share": 0.5,
+      "ims_entrenamiento": 1.0,
+      "ims_holdout": 1.0,
+      "discriminador_auc": 0.512
+    },
+    "rental": {
+      "accuracy": 0.7205618,
+      "accuracy_univariada": 0.8703733,
+      "accuracy_bivariada": 0.7624724,
+      "accuracy_trivariada": 0.45238,
+      "coherencia": 0.7970217,
+      "accuracy_max_holdout": 0.8091473,
+      "dcr_entrenamiento": 0.052,
+      "dcr_holdout": 0.058,
+      "dcr_share": 0.622,
+      "ims_entrenamiento": 0.0,
+      "ims_holdout": 0.0,
+      "discriminador_auc": 0.748
+    },
+    "payment": {
+      "accuracy": 0.6597257,
+      "accuracy_univariada": 0.7876767,
+      "accuracy_bivariada": 0.6363144,
+      "accuracy_trivariada": 0.42511,
+      "coherencia": 0.7898017,
+      "accuracy_max_holdout": 0.9081156,
+      "dcr_entrenamiento": 0.1,
+      "dcr_holdout": 0.092,
+      "dcr_share": 0.453,
+      "ims_entrenamiento": 0.0,
+      "ims_holdout": 0.0,
+      "discriminador_auc": 0.827
+    }
+  },
+  "filas_entrada": {
+    "country": 109,
+    "city": 600,
+    "address": 912,
+    "language": 6,
+    "category": 16,
+    "actor": 200,
+    "film": 1000,
+    "film_actor": 5462,
+    "film_category": 2367,
+    "store": 500,
+    "staff": 1500,
+    "customer": 799,
+    "inventory": 4581,
+    "rental": 41663,
+    "payment": 41064
+  },
+  "filas_sinteticas": {
+    "country": 109,
+    "rental": 44227,
+    "actor": 200,
+    "address": 795,
+    "language": 6,
+    "customer": 640,
+    "film_actor": 5461,
+    "film": 1000,
+    "category": 16,
+    "payment": 44227,
+    "film_category": 2360,
+    "inventory": 4619,
+    "staff": 1388,
+    "city": 795,
+    "store": 500
+  },
+  "estados": {
+    "generador": "ProgressStatus.done",
+    "dataset": "ProgressStatus.done"
+  },
+  "avisos": [],
+  "entorno": {
+    "equipo": "arm64, macOS 26.6.2",
+    "python": "3.12.0",
+    "ejecutable": "/Users/jerojacques/Desktop/Tesis/.venv/bin/python",
+    "paquetes": {
+      "mostlyai": "6.1.4",
+      "mostlyai-engine": "2.7.0",
+      "mostlyai-qa": "1.10.8",
+      "torch": "2.13.0",
+      "pandas": "3.0.6",
+      "numpy": "2.5.3",
+      "pyarrow": "25.0.1",
+      "sqlalchemy": "2.0.54"
+    }
+  },
+  "dispositivo": "cpu (ver ficha)"
+}

@@ -1,0 +1,4 @@
+fase,linea,sqlstate,tipo,tabla,mensaje,detalle,contexto
+estricta,8405,23505,PK/UNIQUE (duplicado),film_actor,"duplicate key value violates unique constraint ""film_actor_pkey""","Key (actor_id, film_id)=(134, 651) already exists.","COPY film_actor, line 1310"
+estricta,10768,23505,PK/UNIQUE (duplicado),film_category,"duplicate key value violates unique constraint ""film_category_pkey""","Key (film_id, category_id)=(345, 14) already exists.","COPY film_category, line 1001"
+estricta,11271,23505,PK/UNIQUE (duplicado),store,"duplicate key value violates unique constraint ""idx_unq_manager_staff_id""",Key (manager_staff_id)=(680) already exists.,"COPY store, line 37"
