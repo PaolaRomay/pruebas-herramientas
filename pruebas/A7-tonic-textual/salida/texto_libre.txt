@@ -1,0 +1,35 @@
+Reclamo recibido el
+ DATE_TIME2n2D0. Lo hizo
+ NAME_GIVENGXW4j
+ NAME_FAMILYNT3MU, que escribió desde el correo
+ EMAIL_ADDRESSPhR11 porque le cobraron dos veces el alquiler de «
+ NAME_GIVEN7tb3VER
+ NAME_GIVENiUJUA». Vive en
+ LOCATION_ADDRESSzoBP1,
+ LOCATION_CITYcUXz0,
+ LOCATION_STATEl5X08 (
+ LOCATION_COUNTRYILrpC), código postal
+ LOCATION_ZIPHLJb7, y dejó como teléfono
+ PHONE_NUMBERk3T26.
+Nota interna de la tienda: el empleado
+ NAME_GIVENYwL42
+ NAME_FAMILYZDCB1 (
+ EMAIL_ADDRESS124uario
+ EMAIL_ADDRESSM3dcA, correo
+ EMAIL_ADDRESSEYglF) atendió el reclamo y devolvió
+ MONEY5bf5a. Para validar la identidad, presentó la cédula
+ NUMERIC_PIIvAgd5 y dio un celular alternativo:
+ PHONE_NUMBERN7Wg1.
+Customer support log:
+ NAME_GIVENc7tc2
+ NAME_FAMILYQ3DP3 called on
+ DATE_TIMErSKC0 asking to update the account linked to
+ EMAIL_ADDRESSG5a49. The new mailing address is
+ LOCATION_ADDRESSIE9k0,
+ LOCATION_CITYdVZT0,
+ LOCATION_COUNTRYILrpC. Customer ID in the system:
+ NUMERIC_PII0kcB3.
+Comentario libre del cliente: “Quiero que me devuelvan la plata. Me llamo
+ NAME_GIVENc7tc2
+ NAME_FAMILYQ3DP3 y mi número es
+ NUMERIC_PIIJP0j0.”

@@ -1,0 +1,6 @@
+Italian
+French
+Mandarin
+Japanese
+German
+English
