@@ -1,0 +1,9 @@
+fase,linea,sqlstate,tipo,tabla,mensaje,detalle,contexto
+estricta,3947,23514,fuera de las particiones,payment,"no partition of relation ""payment"" found for row",Partition key of the failing row contains (payment_date) = (2005-05-24 03:11:13+00).,
+estricta,4952,23514,fuera de las particiones,payment,"no partition of relation ""payment"" found for row",Partition key of the failing row contains (payment_date) = (2005-06-21 11:38:14+00).,
+estricta,5957,23514,fuera de las particiones,payment,"no partition of relation ""payment"" found for row",Partition key of the failing row contains (payment_date) = (2005-07-20 03:33:59+00).,
+estricta,6172,23514,fuera de las particiones,payment,"no partition of relation ""payment"" found for row",Partition key of the failing row contains (payment_date) = (2005-08-18 01:52:40+00).,
+auditoria,3947,23514,fuera de las particiones,payment,"no partition of relation ""payment"" found for row",Partition key of the failing row contains (payment_date) = (2005-05-24 03:11:13+00).,
+auditoria,4952,23514,fuera de las particiones,payment,"no partition of relation ""payment"" found for row",Partition key of the failing row contains (payment_date) = (2005-06-21 11:38:14+00).,
+auditoria,5957,23514,fuera de las particiones,payment,"no partition of relation ""payment"" found for row",Partition key of the failing row contains (payment_date) = (2005-07-20 03:33:59+00).,
+auditoria,6172,23514,fuera de las particiones,payment,"no partition of relation ""payment"" found for row",Partition key of the failing row contains (payment_date) = (2005-08-18 01:52:40+00).,

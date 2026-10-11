@@ -1,0 +1,7 @@
+# Pagos rechazados por las particiones, cargados aparte en d5_auditoria.aux.payment_rechazados
+# (fecha de la corrida: 2026-10-10 23:37; archivo fabricate.sql sha256 8961211272f5f4d9...)
+ filas | huerf_customer | huerf_rental | huerf_staff | pk_duplicadas | cliente_distinto_al_alquiler |   desde    |   hasta    
+-------+----------------+--------------+-------------+---------------+------------------------------+------------+------------
+  3210 |              0 |            0 |           0 |             0 |                            0 | 2005-05-24 | 2005-08-24
+(1 row)
+
