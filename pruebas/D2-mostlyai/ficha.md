@@ -102,6 +102,17 @@ Columnas excluidas del entrenamiento, que se rellenan al cargar:
 
 Parámetros: valores por defecto de MOSTLY (100 épocas como máximo, *value protection* activada, *flexible generation* activada), salvo un tope de **10 minutos de entrenamiento por tabla** para acotar la corrida. El tamaño generado es el que MOSTLY elige por defecto: el mismo que las tablas sujeto del entrenamiento.
 
+## ¿Y en la nube? La plataforma gratuita ya no está disponible
+
+Se intentó repetir la prueba en la plataforma en la nube de MOSTLY AI (2026-10-11). No se pudo, porque **esa plataforma gratuita ya no existe**:
+
+- El dominio de la plataforma, `app.mostly.ai`, **no tiene registro DNS**. La red funcionaba: `mostly.ai` y `pypi.org` respondían (P).
+- **El SDK 6.x ya no se conecta a la nube.** Desde la versión 6.0 (27/04/2026), el modo cliente se conecta a «un endpoint remoto del SDK», es decir, a un servidor que uno mismo levanta (D, PyPI). En la 6.1.4 el modo cliente no tiene autenticación (no acepta API key) y apunta por defecto a `http://127.0.0.1:8080` (código: `sdk/client/base.py`).
+- **La web ya no ofrece registro ni prueba gratuita** (D). Ofrece el SDK de código abierto y una plataforma *enterprise* que se instala en Kubernetes u OpenShift «en tu propio cómputo», a la que se accede pidiendo una demo.
+- La página de uso de la documentación todavía menciona «2 créditos diarios» en la plataforma. Está desactualizada respecto del producto actual.
+
+**Conclusión para el estado del arte:** antes, MOSTLY AI ofrecía una plataforma en la nube con uso gratuito (créditos diarios), a la que el SDK se conectaba con una API key. A octubre de 2026 eso ya no existe: gratis, solo se puede usar como SDK local. La versión «plataforma» es comercial y se instala en la infraestructura propia. Por eso esta prueba no tiene una versión en la nube.
+
 ## Qué se midió y resultado
 
 Métricas mínimas de «Sintetizar»: tiempo de entrenamiento y de generación, memoria máxima, claves huérfanas o duplicadas, y un reporte de calidad. Corrida del 2026-10-11, una sola vez (no hay semilla para repetirla igual).
