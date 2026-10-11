@@ -1,0 +1,16 @@
+tabla,pagila,candidata
+actor,200,200
+address,1003,912
+category,16,16
+city,600,600
+country,109,109
+customer,999,799
+film,1000,1000
+film_actor,5462,5462
+film_category,2367,2367
+inventory,4581,4581
+language,6,6
+payment,51061,41064
+rental,51805,41663
+staff,1500,1500
+store,500,500
