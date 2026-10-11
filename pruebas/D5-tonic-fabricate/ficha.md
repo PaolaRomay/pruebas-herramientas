@@ -7,18 +7,19 @@
 
 ## En pocas palabras
 
-- Tonic Fabricate (web, versión de prueba) generó una base desde el esquema de Pagila, sin ver datos reales. Se le pidió el 20 % de las filas y el resultado fue desparejo: entre 0,1 % y 100 % según la tabla.
+- Tonic Fabricate (web, versión de prueba) generó una base desde el esquema de Pagila. No se le pasaron datos, pero consultó en internet la base pública (Sakila/Pagila). Se le pidió el 20 % de las filas y el resultado fue desparejo: entre 0,1 % y 100 % según la tabla.
 - Generó el **Sakila clásico** (año 2005, 2 tiendas) en lugar del esquema real. **Todos los pagos quedaron afuera**: sus fechas no caen en ninguna partición de `payment`. No es un problema de formato.
 - La estructura relacional está bien: **0 huérfanas y 0 duplicadas**, incluso en los pagos rechazados. Con las fechas corridas a 2022, los pagos cargan sin errores.
-- **Calidad 0,601** (penalizada por las fechas y por `payment` vacía). **Riesgo de privacidad bajo** por construcción.
+- **Calidad 0,601** (penalizada por las fechas y por `payment` vacía). **Riesgo de privacidad bajo** según lo medido: 0 % de copias exactas.
 
 ## Entorno
 
 - Equipo de verificación: Mac M5 Pro (arm64), 16 GB de RAM, macOS 26. La generación corre en la nube de Tonic; en el equipo solo se cargan y verifican los datos.
 - Herramienta: Tonic Fabricate (web, fabricate.tonic.ai), versión de prueba. No muestra número de versión, así que se registra la fecha de la corrida. Según la página de Tonic, el plan gratuito da USD 5 de crédito por mes (D).
-- Proyecto: _(enlace al proyecto de Fabricate)_
-- Entrada que se le dio: _(el DDL `data/pagila/01-schema.sql` completo o un recorte; qué tablas)_. **Se pidió el 20 % de la cantidad de filas del original**, para ahorrar créditos de la versión de prueba.
-- Prompt usado: _(copiar textual)_
+- Proyecto: <https://fabricate.tonic.ai/projects/4ce56e84-5448-49ca-87af-71d7647894a7?conversationId=5c3e06e5-173d-4a22-b9c9-832d24118a77> (requiere la cuenta de Jero).
+- Entrada que se le dio: el DDL `data/pagila/01-schema.sql` completo. No se le pasó ninguna muestra de datos. **Además, Fabricate buscó en internet los datos de la base**, que es pública (Sakila/Pagila). Eso probablemente explica que haya generado el Sakila clásico.
+- **Se pidió el 20 % de la cantidad de filas del original por el límite de créditos del plan gratuito**, no por una decisión de diseño de la prueba.
+- Prompt usado (textual): «Generame datos sinteticos para este esquema con un 20% de la cantidad de filas que tiene el original»
 - Salida: `salidas_grandes/fabricate.sql` (no se sube). Se descargó como `pagila_sintetico.sql`. Tamaño: 934 367 bytes, 9424 líneas. sha256: `8961211272f5f4d92721eea312dd59d21e0b6d3c5c2b4c14103229098ab4de43`.
 - Contenido del archivo: 22 `INSERT` de varias filas sobre las 15 tablas de Pagila, 15 `TRUNCATE ... CASCADE` al principio, y `SET session_replication_role = 'replica'` al principio y `'origin'` al final. No trae `DROP`, `CREATE` ni transacciones.
 - Verificación: PostgreSQL 16.4 del contenedor `pagila-db`; las restricciones se toman de la base común `pagila` (pagila-v4.0.0). Scripts: `d5_fabricate.py` + `scripts/integridad.py` (integridad) y `pruebas/E3-chequeos-propios/evaluar_bd.py` (calidad y privacidad).
@@ -28,7 +29,7 @@
 Métricas mínimas de «Sintetizar»: tiempo de entrenamiento y de generación, memoria máxima, claves huérfanas o duplicadas, y un reporte de calidad.
 
 - **Tiempo de entrenamiento:** no aplica. Fabricate no entrena con datos propios: genera desde el esquema.
-- **Tiempo de generación:** _(lo que muestra Fabricate o cronometrado; captura)_
+- **Tiempo de generación:** 3 min 49 s.
 - **Memoria máxima:** no aplica, corre en la nube de Tonic. La verificación local tardó 1,3 s (D5) y 5 s (E3).
 
 ### Cantidad de filas: el 20 % no se respetó de forma pareja
@@ -132,13 +133,15 @@ Registro «persona» (customer + address + city + country): 120 filas sintética
   - 0 % de copias exactas.
   - Distancia mediana a la persona real más cercana: 0,981. Como referencia, el control está a 0,546.
   - Índice de memorización: −1,13, es decir, más lejos de los datos reales que el propio control.
-- **Interpretación:** el riesgo es bajo por construcción, porque Fabricate generó desde el esquema y no vio personas reales. El aviso de E3 sobre `--entrenada-con` no aplica en este caso. _(Confirmar que a Fabricate no se le pasó ninguna muestra de datos reales; si se le pasó, hay que volver a interpretar esta sección.)_ Los riesgos que no dan exactamente 0 (singling out univariado, linkability) son compatibles con coincidencias de valores comunes, como nombres frecuentes o países grandes, más que con una filtración.
+- **Interpretación:** confirmado que a Fabricate no se le pasó ninguna muestra de datos, pero **consultó en internet la base pública**, así que el riesgo **no es bajo por construcción**. Lo respaldan las mediciones: 0 % de copias exactas y un índice de memorización de −1,13 (más lejos de los datos reales que el control). Además, Pagila es ficticia y pública. Los riesgos que no dan exactamente 0 (singling out univariado, linkability) son compatibles con coincidencias de valores comunes, como nombres frecuentes o países grandes, más que con una filtración.
 
 ## Esfuerzo
 
 - Problemas encontrados:
-  - El archivo descargado quedó en `~/Downloads`, y macOS no le da a la terminal (iTerm2) permiso para leer esa carpeta (`Operation not permitted`, aun fuera del sandbox de Claude Code). Hubo que copiarlo con el Finder.
-  - Docker Desktop estaba en pausa y la primera corrida quedó colgada sin dar error.
+  - Con la herramienta, ninguno: es fácil de usar.
+  - En la verificación local:
+    - El archivo descargado quedó en `~/Downloads`, y macOS no le da a la terminal (iTerm2) permiso para leer esa carpeta (`Operation not permitted`, aun fuera del sandbox de Claude Code). Hubo que copiarlo con el Finder.
+    - Docker Desktop estaba en pausa y la primera corrida quedó colgada sin dar error.
 
 ## Hallazgos
 
@@ -165,4 +168,4 @@ Registro «persona» (customer + address + city + country): 120 filas sintética
 
 ## Opcional
 
-- ¿Misma semilla, mismo resultado? _(si Fabricate permite fijar semilla o regenerar, comparar el sha256 de dos exportaciones)_
+- ¿Misma semilla, mismo resultado? No aplica: Fabricate no tiene semilla y la documentación no garantiza la misma salida al regenerar. Para repetir una generación propone un script de workflow reutilizable (D, ver [ficha de Tonic](../_herramientas/tonic.md#tonic-fabricate)). Lo que sí se puede medir es la variabilidad: regenerar con el mismo prompt y comparar los conteos (no se hizo).

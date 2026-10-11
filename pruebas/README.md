@@ -5,6 +5,8 @@ Dentro: copia de `_plantilla/ficha.md` completada, los scripts usados y una carp
 
 Una prueba cuenta si: (1) dice con qué datos se hizo, (2) lleva hardware y versión, (3) tiene al menos un resultado concreto, (4) tiene evidencia guardada.
 
+Estado de todas las pruebas: [ESTADO.md](ESTADO.md). Fichas por herramienta (Bloque 1) y notas de infraestructura (Neon): [_herramientas/](_herramientas/).
+
 ## Formato común de las pruebas de detección (A*)
 
 Cada prueba A* deja `resultados/<id>_columnas.csv` (p. ej. `A9-llm-local/resultados/a9_columnas.csv`) con, al menos:

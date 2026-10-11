@@ -1,0 +1,384 @@
+SET
+SET
+SET
+SET
+SET
+ set_config 
+------------
+ 
+(1 row)
+
+SET
+SET
+SET
+SET
+psql:<stdin>:26: ERROR:  role "postgres" does not exist
+CREATE DOMAIN
+psql:<stdin>:35: ERROR:  role "postgres" does not exist
+CREATE TYPE
+psql:<stdin>:50: ERROR:  role "postgres" does not exist
+CREATE DOMAIN
+psql:<stdin>:60: ERROR:  role "postgres" does not exist
+CREATE FUNCTION
+psql:<stdin>:77: ERROR:  role "postgres" does not exist
+CREATE FUNCTION
+psql:<stdin>:94: ERROR:  role "postgres" does not exist
+CREATE FUNCTION
+psql:<stdin>:111: ERROR:  role "postgres" does not exist
+CREATE FUNCTION
+psql:<stdin>:156: ERROR:  role "postgres" does not exist
+CREATE FUNCTION
+psql:<stdin>:178: ERROR:  role "postgres" does not exist
+CREATE FUNCTION
+psql:<stdin>:215: ERROR:  role "postgres" does not exist
+CREATE FUNCTION
+psql:<stdin>:233: ERROR:  role "postgres" does not exist
+CREATE FUNCTION
+psql:<stdin>:248: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:262: ERROR:  role "postgres" does not exist
+SET
+SET
+CREATE TABLE
+psql:<stdin>:287: ERROR:  role "postgres" does not exist
+CREATE FUNCTION
+psql:<stdin>:351: ERROR:  role "postgres" does not exist
+CREATE AGGREGATE
+psql:<stdin>:363: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:377: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:391: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:405: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:418: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:432: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:456: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:469: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:482: ERROR:  role "postgres" does not exist
+CREATE VIEW
+psql:<stdin>:505: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:519: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:537: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:551: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:565: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:579: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:592: ERROR:  role "postgres" does not exist
+CREATE VIEW
+psql:<stdin>:617: ERROR:  role "postgres" does not exist
+CREATE VIEW
+psql:<stdin>:640: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:654: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:668: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:682: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:695: ERROR:  role "postgres" does not exist
+CREATE VIEW
+psql:<stdin>:718: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:732: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:751: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:768: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:785: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:802: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:819: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:836: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:853: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:870: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:887: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:904: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:921: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:938: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:955: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:972: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:989: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1006: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1023: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1040: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1057: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1074: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1091: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1108: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1125: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1142: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1159: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1176: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1193: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1210: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1227: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1244: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1261: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1278: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1295: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1312: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1329: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1346: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1363: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1380: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1397: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1414: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1431: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1448: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1465: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1482: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1499: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1516: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1533: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1550: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1567: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1584: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1601: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1618: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1635: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1652: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1669: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1686: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:1700: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1718: ERROR:  role "postgres" does not exist
+CREATE MATERIALIZED VIEW
+psql:<stdin>:1738: ERROR:  role "postgres" does not exist
+CREATE VIEW
+psql:<stdin>:1757: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:1771: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1792: ERROR:  role "postgres" does not exist
+CREATE SEQUENCE
+psql:<stdin>:1806: ERROR:  role "postgres" does not exist
+CREATE TABLE
+psql:<stdin>:1820: ERROR:  role "postgres" does not exist
+CREATE VIEW
+psql:<stdin>:1842: ERROR:  role "postgres" does not exist
+CREATE VIEW
+psql:<stdin>:1863: ERROR:  role "postgres" does not exist
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+REVOKE
+GRANT

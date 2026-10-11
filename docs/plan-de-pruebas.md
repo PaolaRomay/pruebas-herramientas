@@ -88,14 +88,14 @@ Estados: ✅ hecha · 🔄 en curso · 📝 hecha fuera del repo (hay que rehace
 
 | ID | Herramienta / variante | Responsable | Estado |
 |---|---|---|---|
-| C1 | Condenser o script propio. Ojo: `payment` está particionada y hay un ciclo `store` ↔ `staff` | Jero | ⏳ |
+| C1 | Condenser o script propio. Ancla `customer`, filtro `hashtext('c1' \|\| customer_id::text) % 10 = 0` (98 clientes). Ojo: `payment` está particionada y hay un ciclo `store` ↔ `staff` | Jero | ⏳ |
 | C2 | Tonic Structural (con trial) | sin asignar | ⏳ |
 
 ### D — Sintetizar
 
 | ID | Herramienta / variante | Responsable | Estado |
 |---|---|---|---|
-| D1 | MOSTLY AI SDK multi-tabla, sobre **otro esquema** (10 tablas, ~15 000 filas por tabla) | Jero | 📝 hecha fuera del repo. **Propuesta, a decidir:** usar D2 (misma herramienta, sobre Pagila) para comparar y dejar D1 como antecedente |
+| D1 | MOSTLY AI SDK multi-tabla, sobre **otro esquema** (10 tablas, ~15 000 filas por tabla) | Jero | ❌ **desestimada:** se usa solo D2 (misma herramienta, sobre Pagila, hecha en el repo) |
 | D2 | MOSTLY AI sobre Pagila | Jero | ✅ [ficha](../pruebas/D2-mostlyai/ficha.md) |
 | D3 | SDV con 3, 5 y 10 tablas | sin asignar | ⏳ |
 | D4 | Faker (línea base) | sin asignar | ⏳ |
@@ -108,7 +108,7 @@ Estados: ✅ hecha · 🔄 en curso · 📝 hecha fuera del repo (hay que rehace
 | E1 | SDV + Anonymeter | Paola | 🔄 |
 | E3 | Chequeos propios: carga con restricciones, huérfanas, distancia al registro más cercano | Jero | ✅ [ficha](../pruebas/E3-chequeos-propios/ficha.md). Es el **evaluador común** que se aplica a la salida de las demás pruebas. |
 | E4 | SyntheRela | sin asignar | ⏳ |
-| E5 | Anonymeter sobre la salida de Fabricate | Jero | ✅ **propuesta, a confirmar:** cubierta con E3 sobre la base de D5 ([ficha D5](../pruebas/D5-tonic-fabricate/ficha.md), sección Privacidad) |
+| E5 | Anonymeter sobre la salida de Fabricate | Jero | ✅ **confirmada:** cubierta con E3 sobre la base de D5 ([ficha D5](../pruebas/D5-tonic-fabricate/ficha.md), sección Privacidad) |
 | E6 | Tonic Structural (con trial) | sin asignar | ⏳ |
 
 ### F y G

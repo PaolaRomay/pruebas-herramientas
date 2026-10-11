@@ -55,7 +55,7 @@ PREFIJOS_ESPERADOS = {
 }
 
 VERDADEROS = {"true", "1", "si", "sí", "yes"}
-FALSOS = {"false", "0", "no", ""}
+FALSOS = {"false", "0", "no"}  # vacío = sin completar: error, no FN
 
 
 # ----------------------------------------------------------------------------- entrada

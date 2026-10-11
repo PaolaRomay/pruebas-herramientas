@@ -1,0 +1,148 @@
+SET
+SET
+SET
+SET
+SET
+ set_config 
+------------
+ 
+(1 row)
+
+SET
+SET
+SET
+SET
+COPY 200
+COPY 109
+COPY 600
+COPY 1003
+COPY 16
+COPY 500
+COPY 999
+COPY 6
+COPY 1000
+COPY 5462
+COPY 2367
+COPY 4581
+COPY 1500
+COPY 51805
+COPY 723
+COPY 2401
+COPY 2713
+COPY 2547
+COPY 2677
+COPY 2654
+COPY 2334
+COPY 83
+COPY 718
+COPY 694
+COPY 736
+COPY 790
+COPY 722
+COPY 704
+COPY 720
+COPY 726
+COPY 753
+COPY 714
+COPY 733
+COPY 756
+COPY 732
+COPY 782
+COPY 723
+COPY 804
+COPY 750
+COPY 771
+COPY 770
+COPY 745
+COPY 782
+COPY 775
+COPY 738
+COPY 735
+COPY 613
+COPY 774
+COPY 762
+COPY 710
+COPY 747
+COPY 653
+COPY 751
+COPY 722
+COPY 798
+COPY 752
+COPY 802
+COPY 805
+COPY 693
+COPY 777
+COPY 677
+COPY 739
+COPY 761
+COPY 700
+COPY 803
+COPY 696
+COPY 782
+COPY 727
+COPY 812
+ setval 
+--------
+    200
+(1 row)
+
+ setval 
+--------
+   1005
+(1 row)
+
+ setval 
+--------
+     16
+(1 row)
+
+ setval 
+--------
+    600
+(1 row)
+
+ setval 
+--------
+    109
+(1 row)
+
+ setval 
+--------
+    999
+(1 row)
+
+ setval 
+--------
+   1000
+(1 row)
+
+ setval 
+--------
+   4581
+(1 row)
+
+ setval 
+--------
+      6
+(1 row)
+
+ setval 
+--------
+ 102094
+(1 row)
+
+ setval 
+--------
+  87559
+(1 row)
+
+ setval 
+--------
+   1500
+(1 row)
+
+ setval 
+--------
+    500
+(1 row)
+

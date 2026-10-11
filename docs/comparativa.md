@@ -66,7 +66,7 @@ restricciones, se parece a la real y protege a las personas?
 | **Riesgo de privacidad** (Anonymeter, máximo) | **0,005** | 0,182 * |
 | Copias exactas de personas | 0 % | 0 % |
 
-\* D5 no vio datos reales, así que su riesgo es bajo por construcción. El 0,18 de singling out es compatible
+\* A D5 no se le pasaron datos, pero consultó en internet la base pública. Su riesgo bajo es medido (0 % de copias exactas), no por construcción. El 0,18 de singling out es compatible
 con coincidencias en valores comunes (nombres o países frecuentes), no con una filtración.
 
 ![Distribuciones: Pagila real contra cada base sintética](../resultados_comparados/graficos/sintesis_distribuciones.png)
