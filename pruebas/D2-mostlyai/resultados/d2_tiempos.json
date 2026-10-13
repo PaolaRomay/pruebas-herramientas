@@ -1,0 +1,89 @@
+{
+  "exportar": {
+    "segundos": 2.1,
+    "memoria_max_mb": 174,
+    "medicion_memoria": "getrusage (pico del proceso o de sus hijos)",
+    "base": "e3_entrenamiento",
+    "filas": {
+      "country": 109,
+      "city": 600,
+      "address": 912,
+      "language": 6,
+      "category": 16,
+      "actor": 200,
+      "film": 1000,
+      "film_actor": 5462,
+      "film_category": 2367,
+      "store": 500,
+      "staff": 1500,
+      "customer": 799,
+      "inventory": 4581,
+      "rental": 41663,
+      "payment": 41064
+    },
+    "entorno": {
+      "equipo": "arm64, macOS 26.6.2",
+      "python": "3.11.16",
+      "ejecutable": "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv/bin/python",
+      "paquetes": {
+        "torch": "2.14.1",
+        "pandas": "3.0.6",
+        "numpy": "1.26.4",
+        "pyarrow": "21.0.0",
+        "sqlalchemy": "2.1.3",
+        "psycopg2-binary": "2.9.13"
+      }
+    },
+    "registrado": "2026-10-10 23:56:01"
+  },
+  "entrenar": {
+    "fases": {
+      "arranque": {
+        "segundos": 5.9,
+        "memoria_max_mb": 601,
+        "medicion_memoria": "psutil (proceso + subprocesos, muestreo cada 0,25 s)"
+      },
+      "entrenamiento": {
+        "segundos": 511.8,
+        "memoria_max_mb": 3109,
+        "medicion_memoria": "psutil (proceso + subprocesos, muestreo cada 0,25 s)"
+      },
+      "generacion": {
+        "segundos": 728.2,
+        "memoria_max_mb": 8275,
+        "medicion_memoria": "psutil (proceso + subprocesos, muestreo cada 0,25 s)"
+      }
+    },
+    "max_minutos_por_tabla": 10.0,
+    "entorno": {
+      "equipo": "arm64, macOS 26.6.2",
+      "python": "3.12.0",
+      "ejecutable": "/Users/jerojacques/Desktop/Tesis/.venv/bin/python",
+      "paquetes": {
+        "mostlyai": "6.1.4",
+        "mostlyai-engine": "2.7.0",
+        "mostlyai-qa": "1.10.8",
+        "torch": "2.13.0",
+        "pandas": "3.0.6",
+        "numpy": "2.5.3",
+        "pyarrow": "25.0.1",
+        "sqlalchemy": "2.0.54"
+      }
+    },
+    "registrado": "2026-10-11 00:16:58"
+  },
+  "postproceso": {
+    "segundos": 0.6,
+    "memoria_max_mb": 205,
+    "medicion_memoria": "getrusage (pico del proceso o de sus hijos)",
+    "claves_sin_padre": {},
+    "registrado": "2026-10-11 00:17:40"
+  },
+  "carga": {
+    "segundos": 3.4,
+    "memoria_max_mb": 208,
+    "medicion_memoria": "getrusage (pico del proceso o de sus hijos)",
+    "segundos_carga_estricta": 1.3,
+    "registrado": "2026-10-11 00:17:44"
+  }
+}

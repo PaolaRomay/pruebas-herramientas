@@ -1,0 +1,39 @@
+# Experimento: los 3210 pagos de Fabricate con payment_date + 17 años, cargados en d5_estricta
+# (esquema completo de Pagila, FK activas, session_replication_role = origin), dentro de una transacción con ROLLBACK.
+# Corrida: 2026-10-10 23:44. fabricate.sql sha256 8961211272f5f4d9...
+
+BEGIN;
+BEGIN
+SHOW session_replication_role;
+ session_replication_role 
+--------------------------
+ origin
+(1 row)
+
+COPY public.payment (payment_id, customer_id, staff_id, rental_id, amount, payment_date, uuid) FROM STDIN;
+COPY 3210
+SELECT tableoid::regclass AS particion, count(*) AS filas, min(payment_date)::date AS desde, max(payment_date)::date AS hasta FROM public.payment GROUP BY 1 ORDER BY 1;
+    particion     | filas |   desde    |   hasta    
+------------------+-------+------------+------------
+ payment_p2022_05 |   284 | 2022-05-24 | 2022-05-31
+ payment_p2022_06 |  1081 | 2022-06-01 | 2022-06-30
+ payment_p2022_07 |  1044 | 2022-07-01 | 2022-07-31
+ payment_p2022_08 |   801 | 2022-08-01 | 2022-08-24
+(4 rows)
+
+SET CONSTRAINTS ALL IMMEDIATE;
+SET CONSTRAINTS
+SELECT count(*) AS pagos_cargados FROM public.payment;
+ pagos_cargados 
+----------------
+           3210
+(1 row)
+
+ROLLBACK;
+ROLLBACK
+SELECT count(*) AS pagos_despues_del_rollback FROM public.payment;
+ pagos_despues_del_rollback 
+----------------------------
+                          0
+(1 row)
+

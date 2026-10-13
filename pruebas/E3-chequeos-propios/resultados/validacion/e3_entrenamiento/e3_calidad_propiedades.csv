@@ -1,0 +1,8 @@
+Property,Score,reporte
+Column Shapes,1.0,calidad
+Column Pair Trends,1.0,calidad
+Cardinality,1.0,calidad
+Intertable Trends,1.0,calidad
+Data Validity,1.0,diagnóstico
+Data Structure,1.0,diagnóstico
+Relationship Validity,1.0,diagnóstico

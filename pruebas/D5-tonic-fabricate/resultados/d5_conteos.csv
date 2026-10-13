@@ -1,0 +1,16 @@
+tabla,pagila_real,fabricate_cargadas_sin_restricciones,fabricate_cargadas_estricta
+actor,200,40,40
+address,1003,125,125
+category,16,16,16
+city,600,120,120
+country,109,22,22
+customer,999,120,120
+film,1000,200,200
+film_actor,5462,1092,1092
+film_category,2367,200,200
+inventory,4581,916,916
+language,6,6,6
+payment,51061,0,0
+rental,51805,3209,3209
+staff,1500,2,2
+store,500,2,2

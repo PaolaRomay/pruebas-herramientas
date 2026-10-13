@@ -1,0 +1,198 @@
+Table,Column,Metric,Score,reporte,propiedad,Column 1,Column 2,Real Correlation,Synthetic Correlation,Child Table,Parent Table,Foreign Key,Primary Key
+address,address2,TVComplement,1.0,calidad,Column Shapes,,,,,,,,
+category,name,TVComplement,1.0,calidad,Column Shapes,,,,,,,,
+customer,activebool,TVComplement,1.0,calidad,Column Shapes,,,,,,,,
+customer,create_date,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+customer,active,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+film,release_year,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+film,rental_duration,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+film,rental_rate,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+film,length,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+film,replacement_cost,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+film,rating,TVComplement,1.0,calidad,Column Shapes,,,,,,,,
+language,name,TVComplement,1.0,calidad,Column Shapes,,,,,,,,
+payment,amount,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+payment,payment_date,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+rental,rental_date,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+rental,return_date,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+staff,active,TVComplement,1.0,calidad,Column Shapes,,,,,,,,
+staff,password,TVComplement,1.0,calidad,Column Shapes,,,,,,,,
+store,manager_staff_id,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+customer,,ContingencySimilarity,1.0,calidad,Column Pair Trends,activebool,create_date,,,,,,
+customer,,ContingencySimilarity,1.0,calidad,Column Pair Trends,activebool,active,,,,,,
+customer,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,create_date,active,-0.08990203192990474,-0.08990203192990474,,,,
+film,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,release_year,rental_duration,-0.001453082053762286,-0.001453082053762286,,,,
+film,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,release_year,rental_rate,0.015274055840973034,0.015274055840973034,,,,
+film,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,release_year,length,0.01119576031645258,0.01119576031645258,,,,
+film,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,release_year,replacement_cost,0.024709600424421482,0.024709600424421482,,,,
+film,,ContingencySimilarity,1.0,calidad,Column Pair Trends,release_year,rating,,,,,,
+film,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,rental_duration,rental_rate,0.02577726014513919,0.02577726014513919,,,,
+film,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,rental_duration,length,0.0615860790892068,0.0615860790892068,,,,
+film,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,rental_duration,replacement_cost,-0.0008308779914924045,-0.0008308779914924045,,,,
+film,,ContingencySimilarity,1.0,calidad,Column Pair Trends,rental_duration,rating,,,,,,
+film,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,rental_rate,length,0.029789258645798927,0.029789258645798927,,,,
+film,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,rental_rate,replacement_cost,-0.04461978289655966,-0.04461978289655966,,,,
+film,,ContingencySimilarity,1.0,calidad,Column Pair Trends,rental_rate,rating,,,,,,
+film,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,length,replacement_cost,0.005604784554800195,0.005604784554800195,,,,
+film,,ContingencySimilarity,1.0,calidad,Column Pair Trends,length,rating,,,,,,
+film,,ContingencySimilarity,1.0,calidad,Column Pair Trends,replacement_cost,rating,,,,,,
+payment,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,amount,payment_date,-0.22025300132774445,-0.22025300132774445,,,,
+rental,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,rental_date,return_date,0.9999898649292444,0.9999898649292444,,,,
+staff,,ContingencySimilarity,1.0,calidad,Column Pair Trends,active,password,,,,,,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,film,language,language_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,payment,rental,rental_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,film_actor,actor,actor_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,staff,address,address_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,inventory,film,film_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,staff,store,store_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,rental,customer,customer_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,rental,staff,staff_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,payment,customer,customer_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,rental,inventory,inventory_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,city,country,country_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,film,language,original_language_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,store,address,address_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,customer,store,store_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,customer,address,address_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,film_category,film,film_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,film_actor,film,film_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,address,city,city_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,inventory,store,store_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,film_category,category,category_id,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,payment,staff,staff_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,release_year,,,film,language,language_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,rental_duration,,,film,language,language_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,rental_rate,,,film,language,language_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,length,,,film,language,language_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,replacement_cost,,,film,language,language_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,rating,,,film,language,language_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,rental_date,amount,-0.20810598491447435,-0.20810598491447435,payment,rental,rental_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,rental_date,payment_date,0.9961989868476058,0.9961989868476058,payment,rental,rental_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,return_date,amount,-0.2090693046340609,-0.2090693046340609,payment,rental,rental_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,return_date,payment_date,0.9963153655480609,0.9963153655480609,payment,rental,rental_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,address2,active,,,staff,address,address_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,address2,password,,,staff,address,address_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,manager_staff_id,active,,,staff,store,store_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,manager_staff_id,password,,,staff,store,store_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,activebool,rental_date,,,rental,customer,customer_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,activebool,return_date,,,rental,customer,customer_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,create_date,rental_date,0.3701732482114174,0.3701732482114174,rental,customer,customer_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,create_date,return_date,0.3689132296147686,0.3689132296147686,rental,customer,customer_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,active,rental_date,-0.01738403588124509,-0.01738403588124509,rental,customer,customer_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,active,return_date,-0.01708486103214563,-0.01708486103214563,rental,customer,customer_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,active,rental_date,,,rental,staff,staff_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,active,return_date,,,rental,staff,staff_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,password,rental_date,,,rental,staff,staff_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,password,return_date,,,rental,staff,staff_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,activebool,amount,,,payment,customer,customer_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,activebool,payment_date,,,payment,customer,customer_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,create_date,amount,-0.06167369972797647,-0.06167369972797647,payment,customer,customer_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,create_date,payment_date,0.3667919477769303,0.3667919477769303,payment,customer,customer_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,active,amount,0.0011612480932205792,0.0011612480932205792,payment,customer,customer_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,active,payment_date,-0.018473591846446574,-0.018473591846446574,payment,customer,customer_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,release_year,,,film,language,original_language_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,rental_duration,,,film,language,original_language_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,rental_rate,,,film,language,original_language_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,length,,,film,language,original_language_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,replacement_cost,,,film,language,original_language_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,name,rating,,,film,language,original_language_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,address2,manager_staff_id,,,store,address,address_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,manager_staff_id,activebool,,,customer,store,store_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,manager_staff_id,create_date,0.056201061391103625,0.056201061391103625,customer,store,store_id,
+,,CorrelationSimilarity,1.0,calidad,Intertable Trends,manager_staff_id,active,-0.002783972344238292,-0.002783972344238292,customer,store,store_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,address2,activebool,,,customer,address,address_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,address2,create_date,,,customer,address,address_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,address2,active,,,customer,address,address_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,active,amount,,,payment,staff,staff_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,active,payment_date,,,payment,staff,staff_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,password,amount,,,payment,staff,staff_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,password,payment_date,,,payment,staff,staff_id,
+actor,actor_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+address,address_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+address,address2,CategoryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+category,category_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+category,name,CategoryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+city,city_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+country,country_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+customer,customer_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+customer,activebool,CategoryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+customer,create_date,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+customer,active,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+film,film_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+film,release_year,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+film,rental_duration,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+film,rental_rate,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+film,length,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+film,replacement_cost,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+film,rating,CategoryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+inventory,inventory_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+language,language_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+language,name,CategoryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+payment,payment_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+payment,amount,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+payment,payment_date,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+rental,rental_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+rental,rental_date,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+rental,return_date,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+staff,staff_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+staff,active,CategoryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+staff,password,CategoryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+store,store_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+store,manager_staff_id,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+actor,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+address,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+category,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+city,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+country,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+customer,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+film,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+film_actor,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+film_category,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+inventory,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+language,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+payment,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+rental,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+staff,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+store,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,film,language,language_id,language_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,film,language,language_id,language_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,payment,rental,rental_id,rental_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,payment,rental,rental_id,rental_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,film_actor,actor,actor_id,actor_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,film_actor,actor,actor_id,actor_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,staff,address,address_id,address_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,staff,address,address_id,address_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,inventory,film,film_id,film_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,inventory,film,film_id,film_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,staff,store,store_id,store_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,staff,store,store_id,store_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,rental,customer,customer_id,customer_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,rental,customer,customer_id,customer_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,rental,staff,staff_id,staff_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,rental,staff,staff_id,staff_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,payment,customer,customer_id,customer_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,payment,customer,customer_id,customer_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,rental,inventory,inventory_id,inventory_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,rental,inventory,inventory_id,inventory_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,city,country,country_id,country_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,city,country,country_id,country_id
+,,ReferentialIntegrity,,diagnóstico,Relationship Validity,,,,,film,language,original_language_id,language_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,film,language,original_language_id,language_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,store,address,address_id,address_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,store,address,address_id,address_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,customer,store,store_id,store_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,customer,store,store_id,store_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,customer,address,address_id,address_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,customer,address,address_id,address_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,film_category,film,film_id,film_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,film_category,film,film_id,film_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,film_actor,film,film_id,film_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,film_actor,film,film_id,film_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,address,city,city_id,city_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,address,city,city_id,city_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,inventory,store,store_id,store_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,inventory,store,store_id,store_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,film_category,category,category_id,category_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,film_category,category,category_id,category_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,payment,staff,staff_id,staff_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,payment,staff,staff_id,staff_id
