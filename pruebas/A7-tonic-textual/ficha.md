@@ -31,6 +31,33 @@ Texto libre (`texto_libre.txt`), qué detectó y qué no (revisión manual de `s
 - Párrafo en español vs. párrafo en inglés: sin diferencias visibles; tapó todo lo sensible en los dos idiomas.
 - Coherencia de tokens: el mismo valor recibe el mismo token en todo el documento (OMAR HALL → `c7tc2 Q3DP3` las dos veces, Mexico → `ILrpC`). Mantiene la coherencia, pero deja ver que dos menciones son de la misma persona.
 
+### Cómo se usa: opciones de la interfaz
+
+Del documento de pruebas de Jero (`evidencia/Pruebas en Tonic.docx`, 2026-10-03). Es la contrincante de Presidio: identifica datos sensibles en texto. Además sirve como filtro antes de mandar información de la base a un LLM en la nube, para no divulgarle datos sensibles.
+
+- **Modo por tipo de entidad.** Al hacer clic sobre una detección se ve el valor original y se elige qué hacer con ese tipo:
+  - **Redaction:** reemplaza por la etiqueta y un token (`DATE_TIME2n2D0`). Es el modo usado en la prueba.
+
+    ![Modo Redaction sobre una fecha](evidencia/a7_modo_redaction.png)
+  - **Synthesis:** reemplaza por un valor falso realista (2022-05-27 → 2022-06-01). Admite un reemplazo propio («Custom override»).
+
+    ![Modo Synthesis sobre la misma fecha](evidencia/a7_modo_synthesis.png)
+  - **Ignore:** deja el valor original a la vista.
+
+    ![Modo Ignore sobre la misma fecha](evidencia/a7_modo_ignore.png)
+  - Hay también una opción **LLM Synthesis**, marcada como Beta, que usa un LLM para sintetizar. No se probó.
+- **Reglas propias («Fine-tune Results»):** expresiones regulares para agregar o excluir valores de la detección. Es la vía para, por ejemplo, darle una etiqueta propia a la cédula uruguaya o excluir títulos de películas. No se probó: la prueba se hizo sin reglas.
+
+  ![Panel de reglas con expresiones regulares](evidencia/a7_reglas_regex.png)
+- **Código equivalente:** la interfaz muestra el Python del SDK (`tonic-textual`) que hace lo mismo que la prueba:
+
+  ```python
+  from tonic_textual.redact_api import TextualNer
+
+  ner = TextualNer('https://textual.tonic.ai', '<api_key>')
+  response = ner.redact('Reclamo recibido el 2022-05-27. Lo hizo DANIELLE DANIELS, ...')  # texto de entrada/texto_libre.txt
+  ```
+
 ## Esfuerzo
 
 - Horas hasta la primera corrida: prácticamente nada. Se sube el archivo y el resultado sale casi automático.
@@ -56,7 +83,8 @@ Texto libre (`texto_libre.txt`), qué detectó y qué no (revisión manual de `s
 - `resultados/a7_resumen.md` y `resultados/a7_columnas.csv` (generados por `a7_evaluar.py`).
 - `salida/`: los archivos tal como los devolvió Textual.
   - `salida/texto_libre.txt` es una **copia desde la vista web** de Textual, no el archivo descargado. Los marcadores perdieron los corchetes (`NAME_GIVENGXW4j` en vez de `[NAME_GIVEN_xxxx]`) y hay saltos de línea agregados. Sirve como evidencia de qué se tapó, pero conviene reemplazarlo por el archivo descargado.
-- Capturas en `evidencia/`: configuración del modo de redacción, la vista de `texto_libre.txt` con las entidades marcadas, y el contador de palabras usadas.
+- `evidencia/Pruebas en Tonic.docx`: documento original de Jero con el texto, el resultado y las capturas (de ahí salen los PNG).
+- Capturas en `evidencia/`: `a7_modo_redaction.png`, `a7_modo_synthesis.png`, `a7_modo_ignore.png` y `a7_reglas_regex.png`. Falta, si se quiere, la del contador de palabras usadas.
 
 ## Opcional
 

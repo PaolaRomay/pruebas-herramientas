@@ -20,6 +20,12 @@
 - Entrada que se le dio: el DDL `data/pagila/01-schema.sql` completo. No se le pasó ninguna muestra de datos. **Además, Fabricate buscó en internet los datos de la base**, que es pública (Sakila/Pagila). Eso probablemente explica que haya generado el Sakila clásico.
 - **Se pidió el 20 % de la cantidad de filas del original por el límite de créditos del plan gratuito**, no por una decisión de diseño de la prueba.
 - Prompt usado (textual): «Generame datos sinteticos para este esquema con un 20% de la cantidad de filas que tiene el original»
+- Modelo del Data Agent: Claude Sonnet 5.5, esfuerzo High. Validación: apagada (opción «Validation Off» del chat).
+- Interfaz: al recibir el DDL, Fabricate crea el esquema en el proyecto y se puede navegar tabla por tabla antes de generar datos. El chat funciona como un LLM común (con artifacts, por ejemplo archivos `.sql`), pero además tiene una vista propia de la base, como un cliente de base de datos.
+
+  ![Proyecto de Fabricate: base «Pagila sintético», tabla actor y resumen del agente](evidencia/d5_fabricate_proyecto.png)
+
+  En la captura, el agente dice que calculó «el 20 % sobre los conteos de Pagila **estándar**», que para algunos países usó «listas de ciudades reales que escribí a mano» y que dejó completas las tablas de catálogo (`category`, `language`, `staff`, `store`). Las dos primeras frases son coherentes con que generó el Sakila clásico y no el esquema v4.
 - Salida: `salidas_grandes/fabricate.sql` (no se sube). Se descargó como `pagila_sintetico.sql`. Tamaño: 934 367 bytes, 9424 líneas. sha256: `8961211272f5f4d92721eea312dd59d21e0b6d3c5c2b4c14103229098ab4de43`.
 - Contenido del archivo: 22 `INSERT` de varias filas sobre las 15 tablas de Pagila, 15 `TRUNCATE ... CASCADE` al principio, y `SET session_replication_role = 'replica'` al principio y `'origin'` al final. No trae `DROP`, `CREATE` ni transacciones.
 - Verificación: PostgreSQL 16.4 del contenedor `pagila-db`; las restricciones se toman de la base común `pagila` (pagila-v4.0.0). Scripts: `d5_fabricate.py` + `scripts/integridad.py` (integridad) y `pruebas/E3-chequeos-propios/evaluar_bd.py` (calidad y privacidad).
@@ -164,7 +170,7 @@ Registro «persona» (customer + address + city + country): 120 filas sintética
 - [`evidencia/d5_payment_fechas_corridas.txt`](evidencia/d5_payment_fechas_corridas.txt): experimento con las fechas corridas 17 años en `d5_estricta` (carga completa, deshecha con `ROLLBACK`).
 - [E3 sobre `d5_auditoria`](../E3-chequeos-propios/resultados/d5_auditoria/e3_resumen.md): calidad, privacidad e integridad con la vara común.
 - El `.sql` que exportó Fabricate no se sube (está en `salidas_grandes/`). Su sha256 está en «Entorno», para poder verificar que es el mismo archivo.
-- Lo esencial va como texto en «Entorno» (prompt, entrada y cantidad de filas pedida). Capturas de la pantalla de Fabricate en `evidencia/`: _(opcionales)_
+- Lo esencial va como texto en «Entorno» (prompt, entrada y cantidad de filas pedida). Captura de la pantalla de Fabricate: [`evidencia/d5_fabricate_proyecto.png`](evidencia/d5_fabricate_proyecto.png), sacada del documento de pruebas de Jero (`../A7-tonic-textual/evidencia/Pruebas en Tonic.docx`).
 
 ## Opcional
 

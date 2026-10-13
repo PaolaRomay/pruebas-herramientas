@@ -8,6 +8,8 @@ Cada herramienta se prueba **con las mismas preguntas, las mismas métricas y lo
 ejemplo Pagila), para poder compararlas. Esta página explica qué leer y en qué orden. No hace falta instalar
 nada: todos los resultados están escritos en los archivos `.md` y en los gráficos.
 
+**Informe de avance (primera entrega):** [proyecto-de-grado-entrega-1.pdf](proyecto-de-grado-entrega-1.pdf), el relevamiento del estado del arte en el que venimos avanzando. Este repositorio tiene las pruebas que lo respaldan.
+
 ## Recorrido de lectura
 
 | Paso | Documento | Para qué |
