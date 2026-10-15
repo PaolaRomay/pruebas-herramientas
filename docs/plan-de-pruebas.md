@@ -81,7 +81,7 @@ Estados: ✅ hecha · 🔄 en curso · 📝 hecha fuera del repo (hay que rehace
 |---|---|---|---|
 | B1 | PostgreSQL Anonymizer | Paola | 🔄 |
 | B2 | Presidio con cifrado reversible | Paola | ⏳ |
-| B3 | ARX (k-anonimato) | sin asignar | ⏳ |
+| B3 | ARX (k-anonimato) | Jero | ✅ [ficha](../pruebas/B3-arx/ficha.md) |
 | B4 | Tonic Structural (con trial) | sin asignar | ⏳ |
 
 ### C — Extraer subconjuntos
@@ -100,6 +100,7 @@ Estados: ✅ hecha · 🔄 en curso · 📝 hecha fuera del repo (hay que rehace
 | D3 | SDV con 3, 5 y 10 tablas | sin asignar | ⏳ |
 | D4 | Faker (línea base) | sin asignar | ⏳ |
 | D5 | Tonic Fabricate (sin trial) | Jero | ✅ [ficha](../pruebas/D5-tonic-fabricate/ficha.md) |
+| D6 | REaLTabFormer, **prueba de descarte** (Tabla 2.6 del informe): 2 niveles, 3 niveles nativo y encadenado, varios padres | Jero | ✅ [ficha](../pruebas/D6-realtabformer/ficha.md): confirma el descarte |
 
 ### E — Validar privacidad
 

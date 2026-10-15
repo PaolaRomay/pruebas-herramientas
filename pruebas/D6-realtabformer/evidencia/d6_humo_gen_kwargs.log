@@ -1,0 +1,40 @@
+
+===== entrenar customer (tabular) =====
+Computing the sensitivity threshold...
+Using parallel computation!!!
+Bootstrap round:   0%|          | 0/50 [00:00<?, ?it/s]Bootstrap round:   8%|▊         | 4/50 [00:02<00:25,  1.79it/s]Bootstrap round:  28%|██▊       | 14/50 [00:02<00:04,  7.65it/s]Bootstrap round:  88%|████████▊ | 44/50 [00:02<00:00, 30.54it/s]Bootstrap round: 100%|██████████| 50/50 [00:02<00:00, 20.41it/s]
+Sensitivity threshold summary:
+count    50.000000
+mean      0.085667
+std       0.109925
+min      -0.025000
+25%      -0.025000
+50%       0.108333
+75%       0.108333
+max       0.441667
+dtype: float64
+Sensitivity threshold: 0.24166666666666667 qt_max: 0.05
+Map:   0%|          | 0/20 [00:00<?, ? examples/s]Map: 100%|██████████| 20/20 [00:00<00:00, 9474.37 examples/s]
+  0%|          | 0/2 [00:00<?, ?it/s]`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+ 50%|█████     | 1/2 [00:03<00:03,  3.18s/it]100%|██████████| 2/2 [00:03<00:00,  1.67s/it]                                             100%|██████████| 2/2 [00:04<00:00,  1.67s/it]100%|██████████| 2/2 [00:04<00:00,  2.36s/it]
+{'train_runtime': 4.7254, 'train_samples_per_second': 8.465, 'train_steps_per_second': 0.423, 'train_loss': 4.400888442993164, 'epoch': 2.0}
+Traceback (most recent call last):
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 474, in <module>
+    main()
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 470, in main
+    {"exportar": exportar, "entrenar": entrenar, "cargar": cargar}[a.cmd](a)
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 225, in entrenar
+    m_cus = correr("entrenar customer (tabular)", fit_customer)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 208, in correr
+    out = fn()
+          ^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 222, in fit_customer
+    mod.fit(cus.drop(columns=["customer_id"]), device=a.device, num_bootstrap=a.bootstrap)
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/realtabformer.py", line 466, in fit
+    trainer = self._train_with_sensitivity(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/realtabformer.py", line 726, in _train_with_sensitivity
+    gen_df = self.sample(
+             ^^^^^^^^^^^^
+TypeError: realtabformer.realtabformer.REaLTabFormer.sample() argument after ** must be a mapping, not NoneType

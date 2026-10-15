@@ -10,7 +10,7 @@ sección.
 | Función | Pruebas con resultados | Tabla completa |
 |---|---|---|
 | A — Detectar | A1 (A7 en curso) | [`resultados_comparados/deteccion_resumen.md`](../resultados_comparados/deteccion_resumen.md) |
-| B — Anonimizar | — (B1 en curso) | — |
+| B — Anonimizar | B3 (B1 en curso) | [`pruebas/B3-arx/resultados/b3_resumen.md`](../pruebas/B3-arx/resultados/b3_resumen.md) |
 | C — Extraer subconjuntos | — | — |
 | D — Sintetizar | D2, D5 | [`resultados_comparados/sintesis_resumen.md`](../resultados_comparados/sintesis_resumen.md) |
 | E — Validar privacidad | E3 (evaluador común), E5 (vía E3) | sección Privacidad de la tabla de D |
@@ -100,6 +100,25 @@ esquema real: genera el Sakila clásico y pierde todos los pagos por la fecha.
 
 ---
 
-## B, C, F, G
+## B — Anonimizar
+
+**Pregunta:** ¿se puede anonimizar la base en el lugar, sin romper las claves, conservando lo útil y sin dejar
+reconocer a nadie?
+
+Por ahora solo B3 (ARX, k-anonimato) tiene resultados. Sobre las 799 personas de `e3_entrenamiento`:
+
+| Variante | Qué queda de cada persona | Restricciones violadas | Riesgo (Anonymeter, máx.) | Ciudad y CP intactos |
+|---|---|---|---|---|
+| k = 2 | país, año de alta | 0 | 0,000 | 0 de 799 |
+| k = 5 | 1 dígito del CP, año de alta | 0 | 0,010 | 0 de 799 |
+| k = 5, solo ciudad, país y fecha | mes de alta | 0 | 0,019 | 0 de 799 |
+
+**En una línea:** ARX protege muy bien y no rompe ninguna clave, pero con una base chica y dispersa borra casi
+toda la información útil, no genera valores falsos (deja `*`) y trabaja con una sola tabla. Detalle en la
+[ficha de B3](../pruebas/B3-arx/ficha.md).
+
+---
+
+## C, F, G
 
 Sin resultados todavía. Ver el estado de cada prueba en el [plan](plan-de-pruebas.md#todas-las-pruebas-y-su-estado).
