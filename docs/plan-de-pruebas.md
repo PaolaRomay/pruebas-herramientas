@@ -81,7 +81,7 @@ Estados: ✅ hecha · 🔄 en curso · 📝 hecha fuera del repo (hay que rehace
 |---|---|---|---|
 | B1 | PostgreSQL Anonymizer | Paola | 🔄 |
 | B2 | Presidio con cifrado reversible | Paola | ⏳ |
-| B3 | ARX (k-anonimato) | sin asignar | ⏳ |
+| B3 | ARX (k-anonimato) | Jero | ✅ [ficha](../pruebas/B3-arx/ficha.md) |
 | B4 | Tonic Structural (con trial) | sin asignar | ⏳ |
 
 ### C — Extraer subconjuntos

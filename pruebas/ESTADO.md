@@ -17,7 +17,7 @@ Estados: **Hecha** · **Hecha fuera del repo** (hay que rehacerla o documentarla
 | A8 | Tonic Structural | Detectar | Requiere trial | sin asignar | [A8-tonic-structural](A8-tonic-structural/ficha.md) |
 | B1 | PostgreSQL Anonymizer | Anonimizar | En curso | Paola | — |
 | B2 | Presidio con cifrado reversible | Anonimizar | Pendiente | Paola | — |
-| B3 | ARX (k-anonimato) | Anonimizar | Pendiente | sin asignar | — |
+| B3 | ARX (k-anonimato) | Anonimizar | Hecha (2026-10-14) | Jero | [B3-arx](B3-arx/ficha.md) |
 | B4 | Tonic Structural (incluye el extra fail-closed) | Anonimizar | Requiere trial | sin asignar | [B4-tonic-structural](B4-tonic-structural/ficha.md) |
 | C1 | Condenser o script propio | Extraer subconjuntos | Pendiente. Ancla `customer`, filtro 10 % con semilla (ver C2) | Jero | — |
 | C2 | Tonic Structural | Extraer subconjuntos | Requiere trial (ancla y filtro ya definidos) | sin asignar | [C2-tonic-structural](C2-tonic-structural/ficha.md) |
