@@ -1,0 +1,112 @@
+{
+  "exportar": {
+    "segundos": 0.4,
+    "memoria_max_mb": 294,
+    "mps_max_mb": 0,
+    "base": "e3_entrenamiento",
+    "clientes": 20,
+    "semilla": "d6",
+    "filas": {
+      "customer": 20,
+      "rental": 1109,
+      "payment": 1094
+    },
+    "alquileres_por_cliente_max": 83,
+    "alquileres_por_cliente_prom": 55.5,
+    "entorno": {
+      "equipo": "arm64, macOS 26.6.2",
+      "python": "3.11.16",
+      "ejecutable": "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/bin/python",
+      "paquetes": {
+        "realtabformer": "0.2.4",
+        "torch": "2.14.1",
+        "transformers": "4.57.6",
+        "datasets": "4.0.0",
+        "accelerate": "1.15.0",
+        "pandas": "2.3.3",
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "psycopg2-binary": "2.9.13"
+      }
+    },
+    "registrado": "2026-10-14 20:30:30"
+  },
+  "entrenar": {
+    "fases": {
+      "entrenar customer (tabular)": {
+        "segundos": 7.2,
+        "memoria_max_mb": 836,
+        "mps_max_mb": 876
+      },
+      "entrenar rental (relacional, padre customer)": {
+        "segundos": 21.8,
+        "memoria_max_mb": 1306,
+        "mps_max_mb": 3963
+      },
+      "entrenar payment (relacional, padre rental)": {
+        "segundos": 15.8,
+        "memoria_max_mb": 933,
+        "mps_max_mb": 4044
+      },
+      "generar customer": {
+        "segundos": 0.8,
+        "memoria_max_mb": 711,
+        "mps_max_mb": 4036
+      },
+      "generar rental": {
+        "segundos": 56.2,
+        "memoria_max_mb": 673,
+        "mps_max_mb": 6084
+      },
+      "generar payment": {
+        "segundos": 3.9,
+        "memoria_max_mb": 395,
+        "mps_max_mb": 6084
+      }
+    },
+    "parametros": {
+      "cmd": "entrenar",
+      "epocas_tabular": 2,
+      "epocas_rental": 2,
+      "epocas_payment": 1,
+      "batch_size": 8,
+      "batch_rental": 1,
+      "bootstrap": 50,
+      "gradient_checkpointing": true,
+      "gen_batch": 64,
+      "generar": 0,
+      "device": "cuda",
+      "semilla_modelo": 1029
+    },
+    "entorno": {
+      "equipo": "arm64, macOS 26.6.2",
+      "python": "3.11.16",
+      "ejecutable": "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/bin/python",
+      "paquetes": {
+        "realtabformer": "0.2.4",
+        "torch": "2.14.1",
+        "transformers": "4.57.6",
+        "datasets": "4.0.0",
+        "accelerate": "1.15.0",
+        "pandas": "2.3.3",
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "psycopg2-binary": "2.9.13"
+      }
+    },
+    "rental_max_tokens": 2078,
+    "payment_max_tokens": 23,
+    "filas_entrada": {
+      "customer": 20,
+      "rental": 1109,
+      "payment": 1094
+    },
+    "filas_sinteticas": {
+      "customer": 20,
+      "rental": 362,
+      "payment": 362
+    },
+    "dispositivo": "mps:0",
+    "registrado": "2026-10-14 20:32:19"
+  }
+}

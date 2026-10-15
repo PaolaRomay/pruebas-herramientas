@@ -1,6 +1,6 @@
 # Estado de las pruebas
 
-Índice único de todas las pruebas del plan. Estado al 2026-10-11. Para qué mide cada función, ver [docs/plan-de-pruebas.md](../docs/plan-de-pruebas.md). El plan tiene su propia tabla de estado: **al cambiar un estado, actualizar las dos**.
+Índice único de todas las pruebas del plan. Estado al 2026-10-14. Para qué mide cada función, ver [docs/plan-de-pruebas.md](../docs/plan-de-pruebas.md). El plan tiene su propia tabla de estado: **al cambiar un estado, actualizar las dos**.
 
 Estados: **Hecha** · **Hecha fuera del repo** (hay que rehacerla o documentarla) · **En curso** · **Pendiente** · **Requiere trial** (Tonic Structural, 14 días). Fichas de herramienta (Bloque 1): [_herramientas/](_herramientas/).
 
@@ -26,6 +26,7 @@ Estados: **Hecha** · **Hecha fuera del repo** (hay que rehacerla o documentarla
 | D3 | SDV con 3, 5 y 10 tablas | Sintetizar | Pendiente | sin asignar | — |
 | D4 | Faker (línea base) | Sintetizar | Pendiente | sin asignar | — |
 | D5 | Tonic Fabricate | Sintetizar | Hecha | Jero | [D5-tonic-fabricate](D5-tonic-fabricate/ficha.md) |
+| D6 | REaLTabFormer (prueba de descarte) | Sintetizar | Hecha (2026-10-14): confirma el descarte | Jero | [D6-realtabformer](D6-realtabformer/ficha.md) |
 | E1 | SDV + Anonymeter | Validar privacidad | En curso. Usa el split de E3 (decidido 2026-10-11, avisar a Paola) | Paola | — |
 | E3 | Chequeos propios (evaluador común) | Validar | Hecha | Jero | [E3-chequeos-propios](E3-chequeos-propios/ficha.md) |
 | E4 | SyntheRela | Validar | Pendiente | sin asignar | — |

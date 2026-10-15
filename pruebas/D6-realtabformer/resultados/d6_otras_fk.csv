@@ -1,0 +1,7 @@
+fk,filas,sin_padre,pct
+customer.address_id -> address,50,5,10.0
+customer.store_id -> store,50,0,0.0
+rental.inventory_id -> inventory,1714,2,0.1
+rental.staff_id -> staff,1714,0,0.0
+payment.staff_id -> staff,1684,0,0.0
+payment.customer_id -> customer,1684,1581,93.9
