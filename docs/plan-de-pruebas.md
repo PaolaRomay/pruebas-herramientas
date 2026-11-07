@@ -88,7 +88,7 @@ Estados: ✅ hecha · 🔄 en curso · 📝 hecha fuera del repo (hay que rehace
 
 | ID | Herramienta / variante | Responsable | Estado |
 |---|---|---|---|
-| C1 | Condenser o script propio. Ancla `customer`, filtro `hashtext('c1' \|\| customer_id::text) % 10 = 0` (98 clientes). Ojo: `payment` está particionada y hay un ciclo `store` ↔ `staff` | Jero | ⏳ |
+| C1 | Condenser o script propio. Ancla `customer`, filtro `hashtext('c1' \|\| customer_id::text) % 10 = 0` (98 clientes). Ojo: `payment` está particionada y hay un ciclo `store` ↔ `staff` | Jero | ✅ [Condenser](../pruebas/C1-condenser/ficha.md) · [script propio](../pruebas/C1-script-propio/ficha.md) |
 | C2 | Tonic Structural (con trial) | sin asignar | ⏳ |
 
 ### D — Sintetizar

@@ -4,14 +4,14 @@
 
 Una sección por función del [plan de pruebas](plan-de-pruebas.md). Cada tabla sale de los resultados que ya
 están en el repositorio, medidos con las mismas métricas sobre los mismos datos. Los números de esta página son
-**al 2026-10-11**. Las tablas completas y actualizadas se regeneran con un script y están enlazadas en cada
+**al 2026-10-11** (C, al 2026-11-02). Las tablas completas y actualizadas se regeneran con un script y están enlazadas en cada
 sección.
 
 | Función | Pruebas con resultados | Tabla completa |
 |---|---|---|
 | A — Detectar | A1 (A7 en curso) | [`resultados_comparados/deteccion_resumen.md`](../resultados_comparados/deteccion_resumen.md) |
 | B — Anonimizar | B3 (B1 en curso) | [`pruebas/B3-arx/resultados/b3_resumen.md`](../pruebas/B3-arx/resultados/b3_resumen.md) |
-| C — Extraer subconjuntos | — | — |
+| C — Extraer subconjuntos | C1 (Condenser y script propio) | [ficha del script propio](../pruebas/C1-script-propio/ficha.md#resultados-frente-a-condenser-corrida-2) |
 | D — Sintetizar | D2, D5 | [`resultados_comparados/sintesis_resumen.md`](../resultados_comparados/sintesis_resumen.md) |
 | E — Validar privacidad | E3 (evaluador común), E5 (vía E3) | sección Privacidad de la tabla de D |
 | F — Utilidad para testing | — | — |
@@ -119,6 +119,26 @@ toda la información útil, no genera valores falsos (deja `*`) y trabaja con un
 
 ---
 
-## C, F, G
+## C — Extraer subconjuntos
+
+**Pregunta:** ¿se puede sacar una porción chica de la base (un ancla y un filtro, y todo lo que dependa de ellos)
+que siga siendo una base válida, sin claves rotas, y que se pueda repetir?
+
+C1, sobre Pagila. Ancla `customer` y filtro determinista: 98 clientes. Resultados al 2026-11-02:
+
+| Herramienta | Relaciones a mano | `payment` | Ciclo `store` ↔ `staff` | Violaciones (catálogo / E3) | Secuencias | Registro | Tiempo |
+|---|---|---|---|---|---|---|---|
+| Condenser (MIT, sin mantenimiento desde 2023) | 147 | 5 249 (descarta 1 sin aviso) | No lo resuelve | 0 / **2** | En 1 | No | 3–4 s |
+| Script propio | 1 | 5 250 | Cerrado (9 rondas) | 0 / **0** | Ajustadas | Manifiesto | 1,6 s |
+
+**En una línea:** Condenser solo sigue las FK declaradas y no cierra ciclos. El script propio lleva las FK de las
+particiones a la tabla raíz, cierra el grafo por punto fijo y registra lo que agrega. Es genérico para PostgreSQL:
+lo propio de cada base es la configuración, que en el sistema proponen las capas anteriores y confirma una persona.
+Es candidato a componente de la capa de extracción. Detalle en las fichas de
+[Condenser](../pruebas/C1-condenser/ficha.md) y del [script propio](../pruebas/C1-script-propio/ficha.md).
+
+---
+
+## F, G
 
 Sin resultados todavía. Ver el estado de cada prueba en el [plan](plan-de-pruebas.md#todas-las-pruebas-y-su-estado).

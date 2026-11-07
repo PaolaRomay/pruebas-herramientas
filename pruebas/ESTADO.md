@@ -1,6 +1,6 @@
 # Estado de las pruebas
 
-Índice único de todas las pruebas del plan. Estado al 2026-10-14. Para qué mide cada función, ver [docs/plan-de-pruebas.md](../docs/plan-de-pruebas.md). El plan tiene su propia tabla de estado: **al cambiar un estado, actualizar las dos**.
+Índice único de todas las pruebas del plan. Estado al 2026-11-02. Para qué mide cada función, ver [docs/plan-de-pruebas.md](../docs/plan-de-pruebas.md). El plan tiene su propia tabla de estado: **al cambiar un estado, actualizar las dos**.
 
 Estados: **Hecha** · **Hecha fuera del repo** (hay que rehacerla o documentarla) · **En curso** · **Pendiente** · **Requiere trial** (Tonic Structural, 14 días). Fichas de herramienta (Bloque 1): [_herramientas/](_herramientas/).
 
@@ -19,7 +19,7 @@ Estados: **Hecha** · **Hecha fuera del repo** (hay que rehacerla o documentarla
 | B2 | Presidio con cifrado reversible | Anonimizar | Pendiente | Paola | — |
 | B3 | ARX (k-anonimato) | Anonimizar | Hecha (2026-10-14) | Jero | [B3-arx](B3-arx/ficha.md) |
 | B4 | Tonic Structural (incluye el extra fail-closed) | Anonimizar | Requiere trial | sin asignar | [B4-tonic-structural](B4-tonic-structural/ficha.md) |
-| C1 | Condenser o script propio | Extraer subconjuntos | Pendiente. Ancla `customer`, filtro 10 % con semilla (ver C2) | Jero | — |
+| C1 | Condenser o script propio | Extraer subconjuntos | Hecha (2026-11-02): Condenser y script propio | Jero | [C1-condenser](C1-condenser/ficha.md) · [C1-script-propio](C1-script-propio/ficha.md) |
 | C2 | Tonic Structural | Extraer subconjuntos | Requiere trial (ancla y filtro ya definidos) | sin asignar | [C2-tonic-structural](C2-tonic-structural/ficha.md) |
 | D1 | MOSTLY AI, otro esquema (no Pagila) | Sintetizar | Desestimada (2026-10-11): se usa solo D2, hecha en el repo | Jero | — |
 | D2 | MOSTLY AI (SDK local) | Sintetizar | Hecha | Jero | [D2-mostlyai](D2-mostlyai/ficha.md) |

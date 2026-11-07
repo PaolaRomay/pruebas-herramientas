@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Envoltorio: corre pg_dump 16 dentro de pagila-db (misma versión que el servidor).
+# Condenser se conecta a 127.0.0.1:55432 desde el Mac; adentro del contenedor es 127.0.0.1:5432.
+args=()
+for a in "$@"; do args+=("${a//127.0.0.1:55432/127.0.0.1:5432}"); done
+exec docker exec -i pagila-db pg_dump "${args[@]}"

@@ -1,0 +1,1524 @@
+{
+  "initial_targets": [
+    {
+      "table": "public.customer",
+      "where": "hashtext('c1' || customer_id::text) % 10 = 0"
+    }
+  ],
+  "db_type": "postgres",
+  "source_db_connection_info": {
+    "user_name": "postgres",
+    "password": "postgres",
+    "host": "127.0.0.1",
+    "db_name": "pagila",
+    "port": 55432
+  },
+  "destination_db_connection_info": {
+    "user_name": "postgres",
+    "password": "postgres",
+    "host": "127.0.0.1",
+    "db_name": "pagila_c1",
+    "port": 55432
+  },
+  "keep_disconnected_tables": false,
+  "excluded_tables": [],
+  "passthrough_tables": [
+    "public.film",
+    "public.film_actor",
+    "public.film_category",
+    "public.actor",
+    "public.category",
+    "public.language"
+  ],
+  "dependency_breaks": [
+    {
+      "fk_table": "public.store",
+      "target_table": "public.staff",
+      "perserve_fk_opportunistically": true
+    }
+  ],
+  "fk_augmentation": [
+    {
+      "fk_table": "public.payment_p2022_07",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_07",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_07",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_08",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_08",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_08",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_09",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_09",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_09",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_10",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_10",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_10",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_11",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_11",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_11",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_12",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_12",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2022_12",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_01",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_01",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_01",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_02",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_02",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_02",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_03",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_03",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_03",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_04",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_04",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_04",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_05",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_05",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_05",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_06",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_06",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_06",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_07",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_07",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_07",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_08",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_08",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_08",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_09",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_09",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_09",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_10",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_10",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_10",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_11",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_11",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_11",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_12",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_12",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2023_12",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_01",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_01",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_01",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_02",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_02",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_02",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_03",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_03",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_03",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_04",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_04",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_04",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_05",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_05",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_05",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_06",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_06",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_06",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_07",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_07",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_07",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_08",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_08",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_08",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_09",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_09",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_09",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_10",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_10",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_10",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_11",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_11",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_11",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_12",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_12",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2024_12",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_01",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_01",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_01",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_02",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_02",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_02",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_03",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_03",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_03",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_04",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_04",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_04",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_05",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_05",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_05",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_06",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_06",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_06",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_07",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_07",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_07",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_08",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_08",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_08",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_09",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_09",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_09",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_10",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_10",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_10",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_11",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_11",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_11",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_12",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_12",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2025_12",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_01",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_01",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_01",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_02",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_02",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_02",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_03",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_03",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_03",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_04",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_04",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_04",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_05",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_05",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_05",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_06",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_06",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_06",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_07",
+      "fk_columns": [
+        "customer_id"
+      ],
+      "target_table": "public.customer",
+      "target_columns": [
+        "customer_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_07",
+      "fk_columns": [
+        "rental_id"
+      ],
+      "target_table": "public.rental",
+      "target_columns": [
+        "rental_id"
+      ]
+    },
+    {
+      "fk_table": "public.payment_p2026_07",
+      "fk_columns": [
+        "staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    },
+    {
+      "fk_table": "public.store",
+      "fk_columns": [
+        "manager_staff_id"
+      ],
+      "target_table": "public.staff",
+      "target_columns": [
+        "staff_id"
+      ]
+    }
+  ],
+  "upstream_filters": [],
+  "max_rows_per_table": "ALL"
+}
