@@ -1,0 +1,10 @@
+{
+  "prueba": "C1m",
+  "origen": "mimic_demo",
+  "destino": "mimic_c1_50",
+  "salida": "resultados/mimic_c1_50",
+  "ancla": { "tabla": "mimiciv_hosp.patients", "filtro": "hashtext('c1' || subject_id::text) % 2 = 0 and not (hashtext('control' || subject_id::text) % 5 = 0)" },
+  "control": "hashtext('control' || subject_id::text) % 5 = 0",
+  "copiar_enteras": ["mimiciv_hosp.d_hcpcs", "mimiciv_hosp.d_icd_diagnoses", "mimiciv_hosp.d_icd_procedures", "mimiciv_hosp.d_labitems", "mimiciv_icu.d_items"],
+  "relaciones_csv": "pruebas/_bases/evidencia/mimic-demo/relaciones.csv"
+}

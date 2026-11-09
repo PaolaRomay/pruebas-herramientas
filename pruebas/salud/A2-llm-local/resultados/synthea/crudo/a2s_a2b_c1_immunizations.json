@@ -1,0 +1,34 @@
+{
+  "columnas": [
+    {
+      "columna": "date",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "patient",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "encounter",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "code",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "description",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "base_cost",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    }
+  ]
+}

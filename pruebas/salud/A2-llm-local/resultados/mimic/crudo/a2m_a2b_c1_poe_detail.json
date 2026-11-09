@@ -1,0 +1,29 @@
+{
+  "columnas": [
+    {
+      "columna": "poe_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "poe_seq",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "field_name",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "field_value",
+      "sensible": true,
+      "entidad": "SALUD"
+    }
+  ]
+}

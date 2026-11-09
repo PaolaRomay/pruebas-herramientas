@@ -1,0 +1,29 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "transfertime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "prev_service",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "curr_service",
+      "sensible": true,
+      "entidad": "SALUD"
+    }
+  ]
+}

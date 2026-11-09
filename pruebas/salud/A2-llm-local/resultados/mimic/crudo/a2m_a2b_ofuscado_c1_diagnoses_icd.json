@@ -1,0 +1,29 @@
+{
+  "columnas": [
+    {
+      "columna": "col_01",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_02",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_03",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_04",
+      "sensible": true,
+      "entidad": "OTRO"
+    },
+    {
+      "columna": "col_05",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

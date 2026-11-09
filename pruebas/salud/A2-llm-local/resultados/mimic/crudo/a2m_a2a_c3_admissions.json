@@ -1,0 +1,84 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "admittime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "dischtime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "deathtime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "admission_type",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "admit_provider_id",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "admission_location",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "discharge_location",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "insurance",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "language",
+      "sensible": true,
+      "entidad": "DEMOGRAFICO"
+    },
+    {
+      "columna": "marital_status",
+      "sensible": true,
+      "entidad": "DEMOGRAFICO"
+    },
+    {
+      "columna": "race",
+      "sensible": true,
+      "entidad": "DEMOGRAFICO"
+    },
+    {
+      "columna": "edregtime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "edouttime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "hospital_expire_flag",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

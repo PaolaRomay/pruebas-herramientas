@@ -1,0 +1,109 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "pharmacy_id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "poe_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "poe_seq",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "order_provider_id",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "starttime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "stoptime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "drug_type",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "drug",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "formulary_drug_cd",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "gsn",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "ndc",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "prod_strength",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "form_rx",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "dose_val_rx",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "dose_unit_rx",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "form_val_disp",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "form_unit_disp",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "doses_per_24_hrs",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "route",
+      "sensible": true,
+      "entidad": "SALUD"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "seq_num",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "icd_code",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "icd_version",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

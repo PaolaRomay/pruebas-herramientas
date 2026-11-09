@@ -1,0 +1,9 @@
+{
+  "columnas": [
+    {
+      "columna": "caregiver_id",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    }
+  ]
+}

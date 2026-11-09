@@ -1,0 +1,79 @@
+{
+  "columnas": [
+    {
+      "columna": "id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "start",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "stop",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "patient",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "organization",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "provider",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "payer",
+      "sensible": true,
+      "entidad": "DEMOGRAFICO"
+    },
+    {
+      "columna": "encounterclass",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "code",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "description",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "base_encounter_cost",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "total_claim_cost",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "payer_coverage",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "reasoncode",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "reasondescription",
+      "sensible": true,
+      "entidad": "SALUD"
+    }
+  ]
+}

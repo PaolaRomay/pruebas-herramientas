@@ -1,0 +1,10 @@
+{
+  "prueba": "C1s",
+  "origen": "synthea_p1000",
+  "destino": "synthea_c1_1",
+  "salida": "resultados/synthea_c1_1",
+  "ancla": { "tabla": "synthea.patients", "filtro": "hashtext('c1' || id::text) % 100 = 0 and not (hashtext('control' || id::text) % 5 = 0)" },
+  "control": "hashtext('control' || id::text) % 5 = 0",
+  "copiar_enteras": [],
+  "relaciones_csv": null
+}

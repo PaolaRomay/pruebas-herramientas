@@ -1,0 +1,59 @@
+{
+  "columnas": [
+    {
+      "columna": "id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "name",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "address",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "city",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "state",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "zip",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "lat",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "lon",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "phone",
+      "sensible": true,
+      "entidad": "PHONE_EMAIL"
+    },
+    {
+      "columna": "revenue",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "utilization",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

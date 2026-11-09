@@ -1,0 +1,169 @@
+{
+  "columnas": [
+    {
+      "columna": "id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "claimid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "chargeid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "patientid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "type",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "amount",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "method",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "fromdate",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "todate",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "placeofservice",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "procedurecode",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "modifier1",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "modifier2",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "diagnosisref1",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "diagnosisref2",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "diagnosisref3",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "diagnosisref4",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "units",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "departmentid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "notes",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "unitamount",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "transferoutid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "transfertype",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "payments",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "adjustments",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "transfers",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "outstanding",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "appointmentid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "linenote",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "patientinsuranceid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "feescheduleid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "providerid",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "supervisingproviderid",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    }
+  ]
+}

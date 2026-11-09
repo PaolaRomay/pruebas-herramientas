@@ -1,0 +1,49 @@
+{
+  "columnas": [
+    {
+      "columna": "col_01",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_02",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_03",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_04",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_05",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "col_06",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "col_07",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_08",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_09",
+      "sensible": true,
+      "entidad": "OTRO"
+    }
+  ]
+}

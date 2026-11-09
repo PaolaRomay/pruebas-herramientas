@@ -1,0 +1,144 @@
+{
+  "columnas": [
+    {
+      "columna": "col_01",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_02",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "col_03",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "col_04",
+      "sensible": true,
+      "entidad": "US_SSN"
+    },
+    {
+      "columna": "col_05",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_06",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_07",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "col_08",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "col_09",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "col_10",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "col_11",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "col_12",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "col_13",
+      "sensible": true,
+      "entidad": "DEMOGRAFICO"
+    },
+    {
+      "columna": "col_14",
+      "sensible": true,
+      "entidad": "DEMOGRAFICO"
+    },
+    {
+      "columna": "col_15",
+      "sensible": true,
+      "entidad": "DEMOGRAFICO"
+    },
+    {
+      "columna": "col_16",
+      "sensible": true,
+      "entidad": "DEMOGRAFICO"
+    },
+    {
+      "columna": "col_17",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "col_18",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "col_19",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "col_20",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "col_21",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "col_22",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "col_23",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "col_24",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "col_25",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "col_26",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "col_27",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "col_28",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    }
+  ]
+}

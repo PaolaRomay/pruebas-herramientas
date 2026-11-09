@@ -1,0 +1,49 @@
+{
+  "columnas": [
+    {
+      "columna": "col_01",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_02",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_03",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_04",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_05",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_06",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_07",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_08",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_09",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

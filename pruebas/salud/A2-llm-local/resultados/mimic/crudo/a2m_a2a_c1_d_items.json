@@ -1,0 +1,49 @@
+{
+  "columnas": [
+    {
+      "columna": "itemid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "label",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "abbreviation",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "linksto",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "category",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "unitname",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "param_type",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "lownormalvalue",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "highnormalvalue",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

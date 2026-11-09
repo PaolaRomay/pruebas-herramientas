@@ -1,0 +1,54 @@
+{
+  "columnas": [
+    {
+      "columna": "start",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "stop",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "patient",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "encounter",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "system",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "code",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "description",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "base_cost",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "reasoncode",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "reasondescription",
+      "sensible": true,
+      "entidad": "SALUD"
+    }
+  ]
+}

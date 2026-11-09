@@ -1,0 +1,29 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "chartdate",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "seq_num",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "result_name",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "result_value",
+      "sensible": true,
+      "entidad": "SALUD"
+    }
+  ]
+}

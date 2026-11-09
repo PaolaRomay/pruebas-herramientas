@@ -1,0 +1,44 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "stay_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "first_careunit",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "last_careunit",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "intime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "outtime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "los",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

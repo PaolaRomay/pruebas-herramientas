@@ -1,0 +1,39 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "drg_type",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "drg_code",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "description",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "drg_severity",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "drg_mortality",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}
