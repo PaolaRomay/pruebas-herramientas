@@ -1,0 +1,131 @@
+SET
+DROP INDEX
+psql:scripts/index.sql:15: NOTICE:  index "admissions_idx01" does not exist, skipping
+CREATE INDEX
+DROP INDEX
+psql:scripts/index.sql:21: NOTICE:  index "d_icd_diag_idx02" does not exist, skipping
+psql:scripts/index.sql:27: NOTICE:  index "d_icd_proc_idx02" does not exist, skipping
+CREATE INDEX
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:33: NOTICE:  index "drgcodes_idx01" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+DROP INDEX
+psql:scripts/index.sql:37: NOTICE:  index "drgcodes_idx02" does not exist, skipping
+CREATE INDEX
+DROP INDEX
+psql:scripts/index.sql:43: NOTICE:  index "d_labitems_idx01" does not exist, skipping
+CREATE INDEX
+DROP INDEX
+psql:scripts/index.sql:49: NOTICE:  index "emar_detail_idx01" does not exist, skipping
+CREATE INDEX
+psql:scripts/index.sql:53: NOTICE:  index "emar_detail_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:57: NOTICE:  index "emar_detail_idx03" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+DROP INDEX
+psql:scripts/index.sql:61: NOTICE:  index "emar_det_idx04" does not exist, skipping
+CREATE INDEX
+DROP INDEX
+psql:scripts/index.sql:67: NOTICE:  index "emar_idx01" does not exist, skipping
+CREATE INDEX
+psql:scripts/index.sql:71: NOTICE:  index "emar_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:75: NOTICE:  index "emar_idx03" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:79: NOTICE:  index "emar_idx04" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:85: NOTICE:  index "hcpcsevents_idx04" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:91: NOTICE:  index "labevents_idx01" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:95: NOTICE:  index "labevents_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:101: NOTICE:  index "microbiologyevents_idx01" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:105: NOTICE:  index "microbiologyevents_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:109: NOTICE:  index "microbiologyevents_idx03" does not exist, skipping
+DROP INDEX
+psql:scripts/index.sql:114: NOTICE:  index "patients_idx01" does not exist, skipping
+CREATE INDEX
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:118: NOTICE:  index "patients_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:124: NOTICE:  index "pharmacy_idx01" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:128: NOTICE:  index "pharmacy_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:132: NOTICE:  index "pharmacy_idx03" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:136: NOTICE:  index "pharmacy_idx04" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:142: NOTICE:  index "poe_idx01" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:148: NOTICE:  index "prescriptions_idx01" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+DROP INDEX
+psql:scripts/index.sql:154: NOTICE:  index "transfers_idx01" does not exist, skipping
+CREATE INDEX
+psql:scripts/index.sql:158: NOTICE:  index "transfers_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+DROP INDEX
+psql:scripts/index.sql:162: NOTICE:  index "transfers_idx03" does not exist, skipping
+CREATE INDEX
+SET
+DROP INDEX
+psql:scripts/index.sql:174: NOTICE:  index "chartevents_idx01" does not exist, skipping
+CREATE INDEX
+DROP INDEX
+psql:scripts/index.sql:180: NOTICE:  index "datetimeevents_idx01" does not exist, skipping
+CREATE INDEX
+psql:scripts/index.sql:184: NOTICE:  index "datetimeevents_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:190: NOTICE:  index "d_items_idx01" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:194: NOTICE:  index "d_items_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+DROP INDEX
+psql:scripts/index.sql:200: NOTICE:  index "icustays_idx01" does not exist, skipping
+CREATE INDEX
+psql:scripts/index.sql:204: NOTICE:  index "icustays_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+DROP INDEX
+psql:scripts/index.sql:210: NOTICE:  index "inputevents_idx01" does not exist, skipping
+CREATE INDEX
+psql:scripts/index.sql:214: NOTICE:  index "inputevents_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:220: NOTICE:  index "outputevents_idx01" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:226: NOTICE:  index "procedureevents_idx01" does not exist, skipping
+DROP INDEX
+CREATE INDEX
+psql:scripts/index.sql:230: NOTICE:  index "procedureevents_idx02" does not exist, skipping
+DROP INDEX
+CREATE INDEX

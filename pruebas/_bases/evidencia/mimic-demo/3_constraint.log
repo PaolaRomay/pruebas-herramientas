@@ -1,0 +1,225 @@
+psql:scripts/constraint.sql:13: NOTICE:  constraint "admissions_pk" of relation "admissions" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:20: NOTICE:  constraint "d_hcpcs_pk" of relation "d_hcpcs" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:27: NOTICE:  constraint "diagnoses_icd_pk" of relation "diagnoses_icd" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:34: NOTICE:  constraint "d_icd_diagnoses_pk" of relation "d_icd_diagnoses" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:41: NOTICE:  constraint "d_icd_procedures_pk" of relation "d_icd_procedures" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:48: NOTICE:  constraint "d_labitems_pk" of relation "d_labitems" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:62: NOTICE:  constraint "emar_pk" of relation "emar" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:69: NOTICE:  constraint "hcpcsevents_pk" of relation "hcpcsevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:76: NOTICE:  constraint "labevents_pk" of relation "labevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:83: NOTICE:  constraint "microbiologyevents_pk" of relation "microbiologyevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:90: NOTICE:  constraint "patients_pk" of relation "patients" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:97: NOTICE:  constraint "pharmacy_pk" of relation "pharmacy" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:104: NOTICE:  constraint "poe_detail_pk" of relation "poe_detail" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:111: NOTICE:  constraint "poe_pk" of relation "poe" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:118: NOTICE:  constraint "prescriptions_pk" of relation "prescriptions" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:125: NOTICE:  constraint "procedures_icd_pk" of relation "procedures_icd" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:132: NOTICE:  constraint "services_pk" of relation "services" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:143: NOTICE:  constraint "datetimeevents_pk" of relation "datetimeevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:150: NOTICE:  constraint "d_items_pk" of relation "d_items" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:157: NOTICE:  constraint "icustays_pk" of relation "icustays" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:164: NOTICE:  constraint "inputevents_pk" of relation "inputevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:171: NOTICE:  constraint "outputevents_pk" of relation "outputevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:178: NOTICE:  constraint "procedureevents_pk" of relation "procedureevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:195: NOTICE:  constraint "admissions_patients_fk" of relation "admissions" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:203: NOTICE:  constraint "diagnoses_icd_patients_fk" of relation "diagnoses_icd" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:209: NOTICE:  constraint "diagnoses_icd_admissions_fk" of relation "diagnoses_icd" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:217: NOTICE:  constraint "drgcodes_patients_fk" of relation "drgcodes" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:223: NOTICE:  constraint "drgcodes_admissions_fk" of relation "drgcodes" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:231: NOTICE:  constraint "emar_detail_patients_fk" of relation "emar_detail" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:237: NOTICE:  constraint "emar_detail_emar_fk" of relation "emar_detail" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:245: NOTICE:  constraint "emar_patients_fk" of relation "emar" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:251: NOTICE:  constraint "emar_admissions_fk" of relation "emar" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:259: NOTICE:  constraint "hcpcsevents_patients_fk" of relation "hcpcsevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:265: NOTICE:  constraint "hcpcsevents_admissions_fk" of relation "hcpcsevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:271: NOTICE:  constraint "hcpcsevents_d_hcpcs_fk" of relation "hcpcsevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:279: NOTICE:  constraint "labevents_patients_fk" of relation "labevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:285: NOTICE:  constraint "labevents_d_labitems_fk" of relation "labevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:293: NOTICE:  constraint "microbiologyevents_patients_fk" of relation "microbiologyevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:299: NOTICE:  constraint "microbiologyevents_admissions_fk" of relation "microbiologyevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:307: NOTICE:  constraint "pharmacy_patients_fk" of relation "pharmacy" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:313: NOTICE:  constraint "pharmacy_admissions_fk" of relation "pharmacy" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:321: NOTICE:  constraint "poe_detail_patients_fk" of relation "poe_detail" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:327: NOTICE:  constraint "poe_detail_poe_fk" of relation "poe_detail" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:335: NOTICE:  constraint "poe_patients_fk" of relation "poe" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:341: NOTICE:  constraint "poe_admissions_fk" of relation "poe" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:349: NOTICE:  constraint "prescriptions_patients_fk" of relation "prescriptions" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:355: NOTICE:  constraint "prescriptions_admissions_fk" of relation "prescriptions" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:363: NOTICE:  constraint "procedures_icd_patients_fk" of relation "procedures_icd" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:369: NOTICE:  constraint "procedures_icd_admissions_fk" of relation "procedures_icd" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:377: NOTICE:  constraint "services_patients_fk" of relation "services" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:383: NOTICE:  constraint "services_admissions_fk" of relation "services" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:391: NOTICE:  constraint "transfers_pk" of relation "transfers" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:398: NOTICE:  constraint "transfers_patients_fk" of relation "transfers" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:411: NOTICE:  constraint "chartevents_patients_fk" of relation "chartevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:417: NOTICE:  constraint "chartevents_admissions_fk" of relation "chartevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:423: NOTICE:  constraint "chartevents_icustays_fk" of relation "chartevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:429: NOTICE:  constraint "chartevents_d_items_fk" of relation "chartevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:437: NOTICE:  constraint "datetimeevents_patients_fk" of relation "datetimeevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:443: NOTICE:  constraint "datetimeevents_admissions_fk" of relation "datetimeevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:449: NOTICE:  constraint "datetimeevents_icustays_fk" of relation "datetimeevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:455: NOTICE:  constraint "datetimeevents_d_items_fk" of relation "datetimeevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:463: NOTICE:  constraint "icustays_patients_fk" of relation "icustays" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:469: NOTICE:  constraint "icustays_admissions_fk" of relation "icustays" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:477: NOTICE:  constraint "inputevents_patients_fk" of relation "inputevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:483: NOTICE:  constraint "inputevents_admissions_fk" of relation "inputevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:489: NOTICE:  constraint "inputevents_icustays_fk" of relation "inputevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:495: NOTICE:  constraint "inputevents_d_items_fk" of relation "inputevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:503: NOTICE:  constraint "outputevents_patients_fk" of relation "outputevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:509: NOTICE:  constraint "outputevents_admissions_fk" of relation "outputevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:515: NOTICE:  constraint "outputevents_icustays_fk" of relation "outputevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:521: NOTICE:  constraint "outputevents_d_items_fk" of relation "outputevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:529: NOTICE:  constraint "procedureevents_patients_fk" of relation "procedureevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:535: NOTICE:  constraint "procedureevents_admissions_fk" of relation "procedureevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:541: NOTICE:  constraint "procedureevents_icustays_fk" of relation "procedureevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE
+psql:scripts/constraint.sql:547: NOTICE:  constraint "procedureevents_d_items_fk" of relation "procedureevents" does not exist, skipping
+ALTER TABLE
+ALTER TABLE

@@ -1,0 +1,257 @@
+tabla,columna,sensible,categoria,entidad_esperada,regla,fuente,tipo,nulos_pct,distintos,unica,esquema
+allergies,start,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,194,no,synthea
+allergies,stop,dudoso,NO_EVALUABLE,,v00,DEC-6,double precision,100.0,0,no,synthea
+allergies,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,195,no,synthea
+allergies,encounter,sí,IDENT_OPACO,,s20,HIPAA-R,text,0.0,195,no,synthea
+allergies,code,sí,SENSIBLE,,s31,L18331-4E,bigint,0.0,22,no,synthea
+allergies,system,no,TECNICO,,s27,DEC-1,text,0.0,1,no,synthea
+allergies,description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,22,no,synthea
+allergies,type,no,TECNICO,,s27,DEC-1,text,0.0,2,no,synthea
+allergies,category,sí,SENSIBLE,,s31,L18331-4E,text,0.0,3,no,synthea
+allergies,reaction1,sí,SENSIBLE,,s31,L18331-4E,double precision,55.0,17,no,synthea
+allergies,description1,sí,SENSIBLE,,s31,L18331-4E,text,55.0,17,no,synthea
+allergies,severity1,sí,SENSIBLE,,s31,L18331-4E,text,55.0,3,no,synthea
+allergies,reaction2,sí,SENSIBLE,,s31,L18331-4E,double precision,72.7,14,no,synthea
+allergies,description2,sí,SENSIBLE,,s31,L18331-4E,text,72.7,14,no,synthea
+allergies,severity2,sí,SENSIBLE,,s31,L18331-4E,text,72.7,2,no,synthea
+careplans,id,dudoso,IDENT_REGISTRO,,s26b,DEC-2,text,0.0,3853,sí,synthea
+careplans,start,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,3094,no,synthea
+careplans,stop,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,49.3,1565,no,synthea
+careplans,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,1074,no,synthea
+careplans,encounter,sí,IDENT_OPACO,,s20,HIPAA-R,text,0.0,3754,no,synthea
+careplans,code,sí,SENSIBLE,,s31,L18331-4E,bigint,0.0,37,no,synthea
+careplans,description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,37,no,synthea
+careplans,reasoncode,sí,SENSIBLE,,s31,L18331-4E,double precision,46.9,58,no,synthea
+careplans,reasondescription,sí,SENSIBLE,,s31,L18331-4E,text,46.9,58,no,synthea
+claims,id,dudoso,IDENT_REGISTRO,,s26,DEC-2,text,0.0,123301,sí,synthea
+claims,patientid,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,1151,no,synthea
+claims,providerid,sí,IDENT_PROFESIONAL,,s04,DEC-3,text,0.0,764,no,synthea
+claims,primarypatientinsuranceid,no,TECNICO,,s27,DEC-1,text,8.8,10,no,synthea
+claims,secondarypatientinsuranceid,no,TECNICO,,s27,DEC-1,text,69.4,1,no,synthea
+claims,departmentid,no,TECNICO,,s27,DEC-1,bigint,0.0,11,no,synthea
+claims,patientdepartmentid,no,TECNICO,,s27,DEC-1,bigint,0.0,11,no,synthea
+claims,diagnosis1,sí,SENSIBLE,,s31,L18331-4E,text,0.0,381,no,synthea
+claims,diagnosis2,sí,SENSIBLE,,s31,L18331-4E,text,73.7,240,no,synthea
+claims,diagnosis3,sí,SENSIBLE,,s31,L18331-4E,text,91.2,124,no,synthea
+claims,diagnosis4,sí,SENSIBLE,,s31,L18331-4E,double precision,97.2,64,no,synthea
+claims,diagnosis5,sí,SENSIBLE,,s31,L18331-4E,double precision,99.0,36,no,synthea
+claims,diagnosis6,sí,SENSIBLE,,s31,L18331-4E,double precision,99.7,21,no,synthea
+claims,diagnosis7,sí,SENSIBLE,,s31,L18331-4E,double precision,99.8,14,no,synthea
+claims,diagnosis8,dudoso,NO_EVALUABLE,,v00,DEC-6,double precision,100.0,6,no,synthea
+claims,referringproviderid,dudoso,NO_EVALUABLE,,v00,DEC-6,double precision,100.0,0,no,synthea
+claims,appointmentid,sí,IDENT_OPACO,,s20,HIPAA-R,text,0.0,69350,no,synthea
+claims,currentillnessdate,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,56512,no,synthea
+claims,servicedate,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,68171,no,synthea
+claims,supervisingproviderid,sí,IDENT_PROFESIONAL,,s04,DEC-3,text,0.0,764,no,synthea
+claims,status1,no,TECNICO,,s27,DEC-1,text,0.0,2,no,synthea
+claims,status2,no,TECNICO,,s27,DEC-1,text,30.6,2,no,synthea
+claims,statusp,no,TECNICO,,s27,DEC-1,text,0.0,2,no,synthea
+claims,outstanding1,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,11,no,synthea
+claims,outstanding2,dudoso,ECONOMICO,,s30,DEC-5,double precision,30.6,10,no,synthea
+claims,outstandingp,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,11,no,synthea
+claims,lastbilleddate1,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,69262,no,synthea
+claims,lastbilleddate2,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,30.6,51819,no,synthea
+claims,lastbilleddatep,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,69262,no,synthea
+claims,healthcareclaimtypeid1,no,TECNICO,,s27,DEC-1,bigint,0.0,2,no,synthea
+claims,healthcareclaimtypeid2,no,TECNICO,,s27,DEC-1,bigint,0.0,3,no,synthea
+claims_transactions,id,dudoso,IDENT_REGISTRO,,s26,DEC-2,text,0.0,942067,sí,synthea
+claims_transactions,claimid,dudoso,IDENT_REGISTRO,,s26,DEC-2,text,0.0,123301,no,synthea
+claims_transactions,chargeid,dudoso,IDENT_REGISTRO,,s26,DEC-2,bigint,0.0,942067,sí,synthea
+claims_transactions,patientid,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,1151,no,synthea
+claims_transactions,type,no,TECNICO,,s27,DEC-1,text,0.0,4,no,synthea
+claims_transactions,amount,dudoso,ECONOMICO,,s30,DEC-5,double precision,53.4,39566,no,synthea
+claims_transactions,method,no,TECNICO,,s27,DEC-1,text,62.5,5,no,synthea
+claims_transactions,fromdate,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,155655,no,synthea
+claims_transactions,todate,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,173959,no,synthea
+claims_transactions,placeofservice,no,TECNICO,,s27,DEC-1,text,0.0,764,no,synthea
+claims_transactions,procedurecode,sí,SENSIBLE,,s31,L18331-4E,text,0.0,935,no,synthea
+claims_transactions,modifier1,dudoso,NO_EVALUABLE,,v00,DEC-6,double precision,100.0,0,no,synthea
+claims_transactions,modifier2,dudoso,NO_EVALUABLE,,v00,DEC-6,double precision,100.0,0,no,synthea
+claims_transactions,diagnosisref1,sí,SENSIBLE,,s31,L18331-4E,bigint,0.0,1,no,synthea
+claims_transactions,diagnosisref2,sí,SENSIBLE,,s31,L18331-4E,double precision,72.2,1,no,synthea
+claims_transactions,diagnosisref3,sí,SENSIBLE,,s31,L18331-4E,double precision,90.7,1,no,synthea
+claims_transactions,diagnosisref4,sí,SENSIBLE,,s31,L18331-4E,double precision,97.1,1,no,synthea
+claims_transactions,units,no,TECNICO,,s27,DEC-1,bigint,0.0,1,no,synthea
+claims_transactions,departmentid,no,TECNICO,,s27,DEC-1,bigint,0.0,11,no,synthea
+claims_transactions,notes,sí,SENSIBLE,,s29,DEC-6,text,0.0,1036,no,synthea
+claims_transactions,unitamount,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,30450,no,synthea
+claims_transactions,transferoutid,no,TECNICO,,s27,DEC-1,double precision,84.1,150086,sí,synthea
+claims_transactions,transfertype,no,TECNICO,,s27,DEC-1,text,53.4,3,no,synthea
+claims_transactions,payments,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,39605,no,synthea
+claims_transactions,adjustments,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,1,no,synthea
+claims_transactions,transfers,dudoso,ECONOMICO,,s30,DEC-5,double precision,68.1,17164,no,synthea
+claims_transactions,outstanding,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,17900,no,synthea
+claims_transactions,appointmentid,sí,IDENT_OPACO,,s20,HIPAA-R,text,0.0,69350,no,synthea
+claims_transactions,linenote,dudoso,NO_EVALUABLE,,v00,DEC-6,double precision,100.0,0,no,synthea
+claims_transactions,patientinsuranceid,no,TECNICO,,s27,DEC-1,text,4.6,12739,no,synthea
+claims_transactions,feescheduleid,no,TECNICO,,s27,DEC-1,bigint,0.0,1,no,synthea
+claims_transactions,providerid,sí,IDENT_PROFESIONAL,,s04,DEC-3,text,0.0,764,no,synthea
+claims_transactions,supervisingproviderid,sí,IDENT_PROFESIONAL,,s04,DEC-3,text,0.0,764,no,synthea
+conditions,start,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,10789,no,synthea
+conditions,stop,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,26.9,6265,no,synthea
+conditions,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,1151,no,synthea
+conditions,encounter,sí,IDENT_OPACO,,s20,HIPAA-R,text,0.0,26347,no,synthea
+conditions,system,no,TECNICO,,s27,DEC-1,text,0.0,2,no,synthea
+conditions,code,sí,SENSIBLE,,s31,L18331-4E,text,0.0,440,no,synthea
+conditions,description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,433,no,synthea
+devices,start,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,1514,no,synthea
+devices,stop,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,52.4,617,no,synthea
+devices,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,708,no,synthea
+devices,encounter,sí,IDENT_OPACO,,s20,HIPAA-R,text,0.0,1478,no,synthea
+devices,code,sí,SENSIBLE,,s31,L18331-4E,bigint,0.0,26,no,synthea
+devices,description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,26,no,synthea
+devices,udi,sí,IDENT_DIRECTO,,s24,HIPAA-M,text,0.0,1945,sí,synthea
+encounters,id,sí,IDENT_OPACO,,s19,HIPAA-R,text,0.0,69350,sí,synthea
+encounters,start,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,68171,no,synthea
+encounters,stop,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,69258,no,synthea
+encounters,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,1151,no,synthea
+encounters,organization,no,TECNICO,,s27,DEC-1,text,0.0,764,no,synthea
+encounters,provider,sí,IDENT_PROFESIONAL,,s04,DEC-3,text,0.0,764,no,synthea
+encounters,payer,no,TECNICO,,s27,DEC-1,text,0.0,10,no,synthea
+encounters,encounterclass,sí,SENSIBLE,,s31,L18331-4E,text,0.0,10,no,synthea
+encounters,code,sí,SENSIBLE,,s31,L18331-4E,bigint,0.0,56,no,synthea
+encounters,description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,56,no,synthea
+encounters,base_encounter_cost,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,11,no,synthea
+encounters,total_claim_cost,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,23046,no,synthea
+encounters,payer_coverage,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,19997,no,synthea
+encounters,reasoncode,sí,SENSIBLE,,s31,L18331-4E,double precision,40.6,147,no,synthea
+encounters,reasondescription,sí,SENSIBLE,,s31,L18331-4E,text,40.6,147,no,synthea
+imaging_studies,id,dudoso,IDENT_REGISTRO,,s26b,DEC-2,text,0.0,2629,no,synthea
+imaging_studies,date,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,2560,no,synthea
+imaging_studies,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,323,no,synthea
+imaging_studies,encounter,sí,IDENT_OPACO,,s20,HIPAA-R,text,0.0,1765,no,synthea
+imaging_studies,series_uid,sí,IDENT_OPACO,,s25,HIPAA-R,text,0.0,2629,no,synthea
+imaging_studies,bodysite_code,sí,SENSIBLE,,s31,L18331-4E,bigint,0.0,14,no,synthea
+imaging_studies,bodysite_description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,14,no,synthea
+imaging_studies,modality_code,sí,SENSIBLE,,s31,L18331-4E,text,0.0,6,no,synthea
+imaging_studies,modality_description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,6,no,synthea
+imaging_studies,instance_uid,sí,IDENT_OPACO,,s25,HIPAA-R,text,0.0,109996,sí,synthea
+imaging_studies,sop_code,no,TECNICO,,s27,DEC-1,text,0.0,6,no,synthea
+imaging_studies,sop_description,no,TECNICO,,s27,DEC-1,text,0.0,7,no,synthea
+imaging_studies,procedure_code,sí,SENSIBLE,,s31,L18331-4E,bigint,0.0,18,no,synthea
+immunizations,date,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,11525,no,synthea
+immunizations,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,1147,no,synthea
+immunizations,encounter,sí,IDENT_OPACO,,s20,HIPAA-R,text,0.0,11650,no,synthea
+immunizations,code,sí,SENSIBLE,,s31,L18331-4E,bigint,0.0,22,no,synthea
+immunizations,description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,25,no,synthea
+immunizations,base_cost,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,1,no,synthea
+medications,start,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,31702,no,synthea
+medications,stop,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,5.6,30059,no,synthea
+medications,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,1095,no,synthea
+medications,payer,no,TECNICO,,s27,DEC-1,text,0.0,10,no,synthea
+medications,encounter,sí,IDENT_OPACO,,s20,HIPAA-R,text,0.0,28425,no,synthea
+medications,code,sí,SENSIBLE,,s31,L18331-4E,bigint,0.0,254,no,synthea
+medications,description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,264,no,synthea
+medications,base_cost,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,6627,no,synthea
+medications,payer_coverage,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,4723,no,synthea
+medications,dispenses,dudoso,ECONOMICO,,s30,DEC-5,bigint,0.0,432,no,synthea
+medications,totalcost,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,7931,no,synthea
+medications,reasoncode,sí,SENSIBLE,,s31,L18331-4E,double precision,20.9,52,no,synthea
+medications,reasondescription,sí,SENSIBLE,,s31,L18331-4E,text,20.9,52,no,synthea
+observations,date,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,91958,no,synthea
+observations,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,1151,no,synthea
+observations,encounter,sí,IDENT_OPACO,,s20,HIPAA-R,text,3.7,38158,no,synthea
+observations,category,sí,SENSIBLE,,s31,L18331-4E,text,3.7,8,no,synthea
+observations,code,sí,SENSIBLE,,s31,L18331-4E,text,0.0,272,no,synthea
+observations,description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,274,no,synthea
+observations,value,sí,SENSIBLE,,s31,L18331-4E,text,0.0,7357,no,synthea
+observations,units,no,TECNICO,,s27,DEC-1,text,26.7,51,no,synthea
+observations,type,no,TECNICO,,s27,DEC-1,text,0.0,2,no,synthea
+organizations,id,no,CATALOGO,,s01,DOC-SYNTHEA,text,0.0,836,sí,synthea
+organizations,name,no,CATALOGO,,s01,DOC-SYNTHEA,text,0.0,766,no,synthea
+organizations,address,no,CATALOGO,,s01,DOC-SYNTHEA,text,0.0,788,no,synthea
+organizations,city,no,CATALOGO,,s01,DOC-SYNTHEA,text,0.0,249,no,synthea
+organizations,state,no,CATALOGO,,s01,DOC-SYNTHEA,text,0.0,1,no,synthea
+organizations,zip,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,778,no,synthea
+organizations,lat,no,CATALOGO,,s01,DOC-SYNTHEA,double precision,0.0,749,no,synthea
+organizations,lon,no,CATALOGO,,s01,DOC-SYNTHEA,double precision,0.0,749,no,synthea
+organizations,phone,no,CATALOGO,,s01,DOC-SYNTHEA,text,0.0,784,no,synthea
+organizations,revenue,no,CATALOGO,,s01,DOC-SYNTHEA,double precision,0.0,1,no,synthea
+organizations,utilization,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,325,no,synthea
+patients,id,sí,IDENT_OPACO,,s17,HIPAA-H,text,0.0,1151,sí,synthea
+patients,birthdate,sí,CUASI_HIPAA,DATE_TIME,s13,HIPAA-C,text,0.0,982,no,synthea
+patients,deathdate,sí,CUASI_HIPAA,DATE_TIME,s13,HIPAA-C,text,86.9,151,sí,synthea
+patients,ssn,sí,IDENT_DIRECTO,US_SSN,s06,HIPAA-G,text,0.0,1149,no,synthea
+patients,drivers,sí,IDENT_DIRECTO,US_DRIVER_LICENSE,s07,HIPAA-K,text,16.6,953,no,synthea
+patients,passport,sí,IDENT_DIRECTO,US_PASSPORT,s08,HIPAA-K,text,21.2,907,sí,synthea
+patients,prefix,sí,CUASI,,s15,DEC-4,text,19.2,3,no,synthea
+patients,first,sí,IDENT_DIRECTO,PERSON,s05,HIPAA-A,text,0.0,974,no,synthea
+patients,middle,sí,IDENT_DIRECTO,PERSON,s05,HIPAA-A,text,22.0,783,no,synthea
+patients,last,sí,IDENT_DIRECTO,PERSON,s05,HIPAA-A,text,0.0,503,no,synthea
+patients,suffix,sí,CUASI,,s15,DEC-4,text,98.3,3,no,synthea
+patients,maiden,sí,IDENT_DIRECTO,PERSON,s05,HIPAA-A,text,74.9,223,no,synthea
+patients,marital,sí,CUASI,,s15,DEC-4,text,32.8,4,no,synthea
+patients,race,sí,SENSIBLE,,s14,L18331-4E,text,0.0,6,no,synthea
+patients,ethnicity,sí,SENSIBLE,,s14,L18331-4E,text,0.0,2,no,synthea
+patients,gender,sí,CUASI,,s15,DEC-4,text,0.0,2,no,synthea
+patients,birthplace,sí,CUASI_HIPAA,LOCATION,s10,HIPAA-B,text,0.0,319,no,synthea
+patients,address,sí,IDENT_DIRECTO,LOCATION,s09,HIPAA-B,text,0.0,1151,sí,synthea
+patients,city,sí,CUASI_HIPAA,LOCATION,s10,HIPAA-B,text,0.0,268,no,synthea
+patients,state,dudoso,CUASI,LOCATION,s12,HIPAA-B,text,0.0,1,no,synthea
+patients,county,sí,CUASI_HIPAA,LOCATION,s10,HIPAA-B,text,0.0,14,no,synthea
+patients,fips,sí,CUASI_HIPAA,,s11,HIPAA-B,double precision,26.3,14,no,synthea
+patients,zip,sí,CUASI_HIPAA,,s11,HIPAA-B,bigint,0.0,258,no,synthea
+patients,lat,sí,CUASI_HIPAA,,s11,HIPAA-B,double precision,0.0,1151,sí,synthea
+patients,lon,sí,CUASI_HIPAA,,s11,HIPAA-B,double precision,0.0,1151,sí,synthea
+patients,healthcare_expenses,sí,ECONOMICO,,s16,DEC-5,double precision,0.0,1150,no,synthea
+patients,healthcare_coverage,sí,ECONOMICO,,s16,DEC-5,double precision,0.0,1050,no,synthea
+patients,income,sí,ECONOMICO,,s16,DEC-5,bigint,0.0,1000,no,synthea
+payer_transitions,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,1141,no,synthea
+payer_transitions,memberid,sí,IDENT_DIRECTO,,s21,HIPAA-I,text,26.9,25807,no,synthea
+payer_transitions,start_date,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,38251,no,synthea
+payer_transitions,end_date,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,38372,no,synthea
+payer_transitions,payer,no,TECNICO,,s27,DEC-1,text,0.0,10,no,synthea
+payer_transitions,secondary_payer,no,TECNICO,,s27,DEC-1,text,92.1,1,no,synthea
+payer_transitions,plan_ownership,sí,CUASI,,s23,DEC-4,text,26.9,3,no,synthea
+payer_transitions,owner_name,sí,IDENT_DIRECTO,PERSON,s22,HIPAA-A,text,26.9,2240,no,synthea
+payers,id,no,CATALOGO,,s01,DOC-SYNTHEA,text,0.0,10,sí,synthea
+payers,name,no,CATALOGO,,s01,DOC-SYNTHEA,text,0.0,10,sí,synthea
+payers,ownership,no,CATALOGO,,s01,DOC-SYNTHEA,text,0.0,3,no,synthea
+payers,address,dudoso,NO_EVALUABLE,,v00,DEC-6,double precision,100.0,0,no,synthea
+payers,city,dudoso,NO_EVALUABLE,,v00,DEC-6,double precision,100.0,0,no,synthea
+payers,state_headquartered,dudoso,NO_EVALUABLE,,v00,DEC-6,double precision,100.0,0,no,synthea
+payers,zip,dudoso,NO_EVALUABLE,,v00,DEC-6,double precision,100.0,0,no,synthea
+payers,phone,dudoso,NO_EVALUABLE,,v00,DEC-6,double precision,100.0,0,no,synthea
+payers,amount_covered,no,CATALOGO,,s01,DOC-SYNTHEA,double precision,0.0,10,sí,synthea
+payers,amount_uncovered,no,CATALOGO,,s01,DOC-SYNTHEA,double precision,0.0,10,sí,synthea
+payers,revenue,no,CATALOGO,,s01,DOC-SYNTHEA,double precision,0.0,10,sí,synthea
+payers,covered_encounters,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,10,sí,synthea
+payers,uncovered_encounters,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,2,no,synthea
+payers,covered_medications,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,10,sí,synthea
+payers,uncovered_medications,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,2,no,synthea
+payers,covered_procedures,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,10,sí,synthea
+payers,uncovered_procedures,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,2,no,synthea
+payers,covered_immunizations,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,10,sí,synthea
+payers,uncovered_immunizations,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,2,no,synthea
+payers,unique_customers,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,10,sí,synthea
+payers,qols_avg,no,CATALOGO,,s01,DOC-SYNTHEA,double precision,0.0,10,sí,synthea
+payers,member_months,no,CATALOGO,,s01,DOC-SYNTHEA,bigint,0.0,10,sí,synthea
+procedures,start,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,124483,no,synthea
+procedures,stop,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,133962,no,synthea
+procedures,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,1151,no,synthea
+procedures,encounter,sí,IDENT_OPACO,,s20,HIPAA-R,text,0.0,48788,no,synthea
+procedures,system,no,TECNICO,,s27,DEC-1,text,0.0,2,no,synthea
+procedures,code,sí,SENSIBLE,,s31,L18331-4E,text,0.0,609,no,synthea
+procedures,description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,697,no,synthea
+procedures,base_cost,dudoso,ECONOMICO,,s30,DEC-5,double precision,0.0,26059,no,synthea
+procedures,reasoncode,sí,SENSIBLE,,s31,L18331-4E,double precision,71.8,83,no,synthea
+procedures,reasondescription,sí,SENSIBLE,,s31,L18331-4E,text,71.8,83,no,synthea
+providers,id,sí,IDENT_PROFESIONAL,,s03,DEC-3,text,0.0,836,sí,synthea
+providers,organization,no,TECNICO,,s03a,DEC-1,text,0.0,836,sí,synthea
+providers,name,sí,IDENT_DIRECTO,PERSON,s02,L18331-4D,text,0.0,836,sí,synthea
+providers,gender,sí,IDENT_PROFESIONAL,,s03,DEC-3,text,0.0,2,no,synthea
+providers,speciality,sí,IDENT_PROFESIONAL,,s03,DEC-3,text,0.0,1,no,synthea
+providers,address,sí,IDENT_PROFESIONAL,,s03,DEC-3,text,0.0,788,no,synthea
+providers,city,sí,IDENT_PROFESIONAL,,s03,DEC-3,text,0.0,249,no,synthea
+providers,state,sí,IDENT_PROFESIONAL,,s03,DEC-3,text,0.0,1,no,synthea
+providers,zip,sí,IDENT_PROFESIONAL,,s03,DEC-3,bigint,0.0,778,no,synthea
+providers,lat,sí,IDENT_PROFESIONAL,,s03,DEC-3,double precision,0.0,749,no,synthea
+providers,lon,sí,IDENT_PROFESIONAL,,s03,DEC-3,double precision,0.0,749,no,synthea
+providers,encounters,sí,IDENT_PROFESIONAL,,s03,DEC-3,bigint,0.0,325,no,synthea
+providers,procedures,sí,IDENT_PROFESIONAL,,s03,DEC-3,bigint,0.0,1,no,synthea
+supplies,date,sí,CUASI_HIPAA,DATE_TIME,s28,HIPAA-C,text,0.0,4102,no,synthea
+supplies,patient,sí,IDENT_OPACO,,s18,HIPAA-H,text,0.0,516,no,synthea
+supplies,encounter,sí,IDENT_OPACO,,s20,HIPAA-R,text,0.0,5323,no,synthea
+supplies,code,sí,SENSIBLE,,s31,L18331-4E,bigint,0.0,31,no,synthea
+supplies,description,sí,SENSIBLE,,s31,L18331-4E,text,0.0,31,no,synthea
+supplies,quantity,dudoso,ECONOMICO,,s30,DEC-5,bigint,0.0,12,no,synthea

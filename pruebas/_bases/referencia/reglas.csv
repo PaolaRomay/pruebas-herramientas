@@ -1,0 +1,49 @@
+id,base,tabla,columna,categoria,sensible,entidad,fuente,nota
+m01,mimic,d_.*,.*,CATALOGO,no,,DOC-MIMIC,Tablas de definición (diccionarios de códigos): no describen personas
+m02,mimic,provider|caregiver,.*,IDENT_PROFESIONAL,sí,,DEC-3,Ids opacos del personal de salud: dato personal aunque no sea del paciente (Ley 18.331 art. 4 D)
+m03,mimic,.*,.*provider_id|caregiver_id,IDENT_PROFESIONAL,sí,,DEC-3,Referencias a profesionales
+m04,mimic,.*,subject_id,IDENT_OPACO,sí,,HIPAA-H,Número de historia clínica del paciente
+m05,mimic,.*,hadm_id|stay_id,IDENT_OPACO,sí,,HIPAA-R,Identificador de una internación o estadía de un paciente
+m06,mimic,.*,labevent_id|microevent_id|emar_id|poe_id|pharmacy_id|transfer_id|specimen_id|micro_specimen_id|orderid|linkorderid|discontinue_of_poe_id|discontinued_by_poe_id,IDENT_REGISTRO,dudoso,,DEC-2,Ids de filas u órdenes: identifican un registro y llegan al paciente solo vía subject_id
+m07,mimic,patients,dod,CUASI_HIPAA,sí,DATE_TIME,HIPAA-C,Fecha de muerte (además es dato de salud)
+m08,mimic,patients,anchor_age,CUASI,dudoso,,HIPAA-C,HIPAA solo lista las edades mayores de 89 (ya topeadas); la edad es cuasi-identificador clásico
+m09,mimic,patients,anchor_year|anchor_year_group,CUASI,dudoso,,HIPAA-C,HIPAA permite el año
+m10,mimic,.*,race,SENSIBLE,sí,,L18331-4E,Origen racial y étnico (también RGPD art. 9)
+m11,mimic,.*,gender|marital_status|language|insurance,CUASI,sí,,DEC-4,Demográficos fuera de la lista de HIPAA: identifican en combinación (único identificador posible en una base sin nombres)
+m12,mimic,.*,comments,TEXTO_LIBRE,sí,,DOC-MIMIC,Texto libre redactado con ___ donde había datos personales; puede contener cualquiera de los 18 de HIPAA
+m13,mimic,.*,seq_num|.*_seq|parent_field_ordinal|isolate_num|icd_version|.*uom|.*_unit|warning|isopenbag|continueinnextdept|statusdescription|order_status|transaction_type|barcode_type,TECNICO,no,,DEC-1,Orden de filas; versiones de código; unidades; estados de carga
+m14,mimic,.*,.*time|.*date|chartdate|storedate,CUASI_HIPAA,sí,DATE_TIME,HIPAA-C,Fechas ligadas al paciente (internación; eventos); MIMIC ya las corrió al futuro
+m15,mimic,admissions|icustays|transfers|services|diagnoses_icd|procedures_icd|drgcodes|hcpcsevents|labevents|microbiologyevents|emar|emar_detail|pharmacy|prescriptions|poe|poe_detail|omr|chartevents|datetimeevents|inputevents|outputevents|procedureevents|ingredientevents,.*,SENSIBLE,sí,,L18331-4E,Contenido clínico del paciente: diagnósticos; procedimientos; medicación; resultados; ubicación y desenlace de la internación
+s01,synthea,organizations|payers,.*,CATALOGO,no,,DOC-SYNTHEA,Organizaciones y aseguradoras: no son personas
+s02,synthea,providers,name,IDENT_DIRECTO,sí,PERSON,L18331-4D,Nombre de un profesional: persona física (mismo criterio que staff en Pagila)
+s03a,synthea,providers,organization,TECNICO,no,,DEC-1,Referencia a la organización (catálogo)
+s03,synthea,providers,.*,IDENT_PROFESIONAL,sí,,DEC-3,Resto de los datos del profesional (id; dirección de trabajo; sexo; especialidad; actividad)
+s04,synthea,.*,provider|providerid|supervisingproviderid|referringproviderid,IDENT_PROFESIONAL,sí,,DEC-3,Referencias a profesionales
+s05,synthea,patients,first|middle|last|maiden,IDENT_DIRECTO,sí,PERSON,HIPAA-A,Nombres
+s06,synthea,patients,ssn,IDENT_DIRECTO,sí,US_SSN,HIPAA-G,Número de seguridad social
+s07,synthea,patients,drivers,IDENT_DIRECTO,sí,US_DRIVER_LICENSE,HIPAA-K,Licencia de conducir
+s08,synthea,patients,passport,IDENT_DIRECTO,sí,US_PASSPORT,HIPAA-K,Pasaporte (número de certificado o licencia)
+s09,synthea,patients,address,IDENT_DIRECTO,sí,LOCATION,HIPAA-B,Dirección (calle)
+s10,synthea,patients,city|county|birthplace,CUASI_HIPAA,sí,LOCATION,HIPAA-B,Subdivisión geográfica menor que un estado
+s11,synthea,patients,fips|zip|lat|lon,CUASI_HIPAA,sí,,HIPAA-B,Código de condado; código postal; coordenadas
+s12,synthea,patients,state,CUASI,dudoso,LOCATION,HIPAA-B,HIPAA permite el estado
+s13,synthea,patients,birthdate|deathdate,CUASI_HIPAA,sí,DATE_TIME,HIPAA-C,Fechas de nacimiento y de muerte
+s14,synthea,patients,race|ethnicity,SENSIBLE,sí,,L18331-4E,Origen racial y étnico (también RGPD art. 9)
+s15,synthea,patients,gender|marital|prefix|suffix,CUASI,sí,,DEC-4,Demográficos fuera de la lista de HIPAA: identifican en combinación
+s16,synthea,patients,healthcare_expenses|healthcare_coverage|income,ECONOMICO,sí,,DEC-5,Situación económica de una persona identificable (dato personal)
+s17,synthea,patients,id,IDENT_OPACO,sí,,HIPAA-H,Identificador del paciente
+s18,synthea,.*,patient|patientid,IDENT_OPACO,sí,,HIPAA-H,Referencia al paciente
+s19,synthea,encounters,id,IDENT_OPACO,sí,,HIPAA-R,Identificador de un encuentro de un paciente
+s20,synthea,.*,encounter|appointmentid,IDENT_OPACO,sí,,HIPAA-R,Referencia a un encuentro
+s21,synthea,payer_transitions,memberid,IDENT_DIRECTO,sí,,HIPAA-I,Número de beneficiario del plan de salud
+s22,synthea,payer_transitions,owner_name,IDENT_DIRECTO,sí,PERSON,HIPAA-A,Nombre del titular del plan
+s23,synthea,payer_transitions,plan_ownership,CUASI,sí,,DEC-4,Relación con el titular (propio; cónyuge; tutor)
+s24,synthea,devices,udi,IDENT_DIRECTO,sí,,HIPAA-M,Identificador único de dispositivo
+s25,synthea,imaging_studies,series_uid|instance_uid,IDENT_OPACO,sí,,HIPAA-R,Identificadores únicos de estudios de imagen
+s26,synthea,claims|claims_transactions,id|claimid|chargeid,IDENT_REGISTRO,dudoso,,DEC-2,Números de reclamo o cargo (próximos a número de cuenta; HIPAA-J)
+s26b,synthea,careplans|imaging_studies,id,IDENT_REGISTRO,dudoso,,DEC-2,Id de fila de una tabla clínica: identifica el registro; llega al paciente vía patient
+s27,synthea,.*,payer|primary_payer|secondary_payer|organization|departmentid|patientdepartmentid|feescheduleid|transferoutid|primarypatientinsuranceid|secondarypatientinsuranceid|patientinsuranceid|healthcareclaimtypeid.*|system|status.*|method|type|transfertype|placeofservice|modifier.*|units|sop_code|sop_description,TECNICO,no,,DEC-1,Referencias a catálogos; sistemas de codificación; estados y tipos administrativos; unidades
+s28,synthea,.*,start|stop|date|start_date|end_date|fromdate|todate|currentillnessdate|servicedate|lastbilleddate.*,CUASI_HIPAA,sí,DATE_TIME,HIPAA-C,Fechas ligadas al paciente
+s29,synthea,claims_transactions,notes,SENSIBLE,sí,,DEC-6,No es texto libre: repite la descripción del procedimiento facturado
+s30,synthea,.*,base_encounter_cost|total_claim_cost|payer_coverage|base_cost|totalcost|amount|payments|adjustments|transfers|outstanding.*|unitamount|dispenses|quantity,ECONOMICO,dudoso,,DEC-5,Costos; pagos y cantidades facturadas: precios de servicios; no identifican a la persona
+s31,synthea,allergies|careplans|conditions|devices|encounters|imaging_studies|immunizations|medications|observations|procedures|supplies|claims|claims_transactions,.*,SENSIBLE,sí,,L18331-4E,Contenido clínico: diagnósticos; alergias; medicación; observaciones; procedimientos; motivos de consulta

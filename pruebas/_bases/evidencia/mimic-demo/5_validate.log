@@ -1,0 +1,32 @@
+        tbl         | expected_count | observed_count | row_count_check 
+--------------------+----------------+----------------+-----------------
+ admissions         |            275 |            275 | PASSED
+ chartevents        |         668862 |         668862 | PASSED
+ datetimeevents     |          15280 |          15280 | PASSED
+ d_hcpcs            |          89200 |          89200 | PASSED
+ diagnoses_icd      |           4506 |           4506 | PASSED
+ d_icd_diagnoses    |         109775 |         109775 | PASSED
+ d_icd_procedures   |          85257 |          85257 | PASSED
+ d_items            |           4014 |           4014 | PASSED
+ d_labitems         |           1622 |           1622 | PASSED
+ drgcodes           |            454 |            454 | PASSED
+ emar               |          35835 |          35835 | PASSED
+ emar_detail        |          72018 |          72018 | PASSED
+ hcpcsevents        |             61 |             61 | PASSED
+ icustays           |            140 |            140 | PASSED
+ inputevents        |          20404 |          20404 | PASSED
+ labevents          |         107727 |         107727 | PASSED
+ microbiologyevents |           2899 |           2899 | PASSED
+ omr                |           2964 |           2964 | PASSED
+ outputevents       |           9362 |           9362 | PASSED
+ patients           |            100 |            100 | PASSED
+ pharmacy           |          15306 |          15306 | PASSED
+ poe                |          45154 |          45154 | PASSED
+ poe_detail         |           3795 |           3795 | PASSED
+ prescriptions      |          18087 |          18087 | PASSED
+ procedureevents    |           1468 |           1468 | PASSED
+ procedures_icd     |            722 |            722 | PASSED
+ services           |            319 |            319 | PASSED
+ transfers          |           1190 |           1190 | PASSED
+(28 rows)
+

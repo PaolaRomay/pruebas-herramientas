@@ -1,0 +1,5 @@
+tablas: 18
+filas: 260838
+tamaño: 109 MB
+carga: 25.7 s
+carga + claves: 26.0 s
