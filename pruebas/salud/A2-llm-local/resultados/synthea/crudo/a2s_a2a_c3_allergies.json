@@ -1,0 +1,79 @@
+{
+  "columnas": [
+    {
+      "columna": "start",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "stop",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "patient",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "encounter",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "code",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "system",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "description",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "type",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "category",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "reaction1",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "description1",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "severity1",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "reaction2",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "description2",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "severity2",
+      "sensible": true,
+      "entidad": "SALUD"
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "entrenamiento": "synthea_85",
+  "fecha": "2026-11-12T23:03",
+  "pacientes_entrenamiento": 85,
+  "pacientes_control": 226,
+  "real": {
+    "reglas": {
+      "encuentro: fin >= inicio": 0,
+      "encuentro después del nacimiento": 0,
+      "encuentro antes de la muerte (+1 día)": 8,
+      "muerte >= nacimiento": 0,
+      "condición: fin >= inicio": 0,
+      "observación dentro de su encuentro (±1 día)": 28
+    },
+    "codigos": {
+      "filas": 2445,
+      "codigos_validos": 2445,
+      "pct": 100.0
+    },
+    "riesgo_arx": {
+      "fraccion_unicos": 0.976,
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.988,
+      "k2_suprimidos": 1,
+      "k2_niveles": {
+        "sexo": 0,
+        "edad": 4,
+        "raza": 0,
+        "etnia": 0,
+        "estado_civil": 1,
+        "condado": 1
+      }
+    }
+  },
+  "candidatas": {
+    "B1 anonimizada (PostgreSQL Anonymizer)": {
+      "filas": {
+        "patients": 85,
+        "encounters": 3214,
+        "conditions": 2445,
+        "observations": 33371
+      },
+      "integridad": {
+        "patients: PK repetidas": 0,
+        "encounters: PK repetidas": 0,
+        "encounters.patient sin padre": 0,
+        "conditions.encounter sin padre": 0,
+        "observations.encounter sin padre": 0
+      },
+      "reglas": {
+        "encuentro: fin >= inicio": 0,
+        "encuentro después del nacimiento": 0,
+        "encuentro antes de la muerte (+1 día)": 8,
+        "muerte >= nacimiento": 0,
+        "condición: fin >= inicio": 0,
+        "observación dentro de su encuentro (±1 día)": 28
+      },
+      "codigos": {
+        "filas": 2445,
+        "codigos_validos": 2445,
+        "pct": 100.0
+      },
+      "segundos_bloque1": 0.0,
+      "calidad": {
+        "puntaje": 0.897,
+        "propiedades": {
+          "Column Shapes": 0.742,
+          "Column Pair Trends": 0.902,
+          "Cardinality": 1.0,
+          "Intertable Trends": 0.944
+        }
+      },
+      "segundos_bloque2": 2.0,
+      "privacidad": {
+        "n_ataques": 85,
+        "filas_original": 85,
+        "filas_candidata": 85,
+        "filas_control": 226,
+        "singling_out": {
+          "riesgo": 0.262,
+          "ic95": [
+            0.058,
+            0.466
+          ],
+          "tasa_ataque": 0.539,
+          "tasa_azar": 0.089,
+          "tasa_control": 0.376,
+          "concluyente": true
+        },
+        "linkability": {
+          "riesgo": 0.081,
+          "ic95": [
+            0.01,
+            0.153
+          ],
+          "tasa_ataque": 0.112,
+          "tasa_azar": 0.033,
+          "tasa_control": 0.033,
+          "concluyente": true
+        },
+        "inference": {
+          "riesgo": 0.867,
+          "ic95": [
+            0.786,
+            0.948
+          ],
+          "tasa_ataque": 0.9,
+          "tasa_azar": 0.978,
+          "tasa_control": 0.247,
+          "concluyente": false
+        },
+        "dcr": {
+          "copias_exactas_pct": 0.0,
+          "mediana_candidata": 0.143,
+          "mediana_control": 0.165,
+          "pct_candidata_mas_cerca_que_p5_control": 0.0
+        }
+      },
+      "segundos_bloque3": 1.8,
+      "riesgo_arx": {
+        "fraccion_unicos": 0.859,
+        "riesgo_maximo": 1.0,
+        "riesgo_promedio": 0.929,
+        "k2_suprimidos": 1,
+        "k2_niveles": {
+          "sexo": 0,
+          "edad": 4,
+          "raza": 0,
+          "etnia": 0,
+          "estado_civil": 1,
+          "condado": 0
+        }
+      },
+      "segundos_bloque4": 0.9,
+      "segundos_total": 5.1
+    },
+    "D2 sintética (MOSTLY AI)": {
+      "filas": {
+        "patients": 85,
+        "encounters": 3305,
+        "conditions": 2166,
+        "observations": 21576
+      },
+      "integridad": {
+        "patients: PK repetidas": 0,
+        "encounters: PK repetidas": 0,
+        "encounters.patient sin padre": 0,
+        "conditions.encounter sin padre": 0,
+        "observations.encounter sin padre": 0
+      },
+      "reglas": {
+        "encuentro: fin >= inicio": 1642,
+        "encuentro después del nacimiento": 110,
+        "encuentro antes de la muerte (+1 día)": 0,
+        "muerte >= nacimiento": 0,
+        "condición: fin >= inicio": 530,
+        "observación dentro de su encuentro (±1 día)": 19614
+      },
+      "codigos": {
+        "filas": 2166,
+        "codigos_validos": 1484,
+        "pct": 68.5
+      },
+      "segundos_bloque1": 0.0,
+      "calidad": {
+        "puntaje": 0.773,
+        "propiedades": {
+          "Column Shapes": 0.824,
+          "Column Pair Trends": 0.687,
+          "Cardinality": 0.903,
+          "Intertable Trends": 0.679
+        }
+      },
+      "segundos_bloque2": 0.8,
+      "privacidad": {
+        "n_ataques": 85,
+        "filas_original": 85,
+        "filas_candidata": 85,
+        "filas_control": 226,
+        "singling_out": {
+          "riesgo": 0.0,
+          "ic95": [
+            0.0,
+            0.114
+          ],
+          "tasa_ataque": 0.157,
+          "tasa_azar": 0.044,
+          "tasa_control": 0.169,
+          "concluyente": true
+        },
+        "linkability": {
+          "riesgo": 0.023,
+          "ic95": [
+            0.0,
+            0.078
+          ],
+          "tasa_ataque": 0.055,
+          "tasa_azar": 0.067,
+          "tasa_control": 0.033,
+          "concluyente": false
+        },
+        "inference": {
+          "riesgo": 0.0,
+          "ic95": [
+            0.0,
+            0.048
+          ],
+          "tasa_ataque": 0.078,
+          "tasa_azar": 0.044,
+          "tasa_control": 0.123,
+          "concluyente": true
+        },
+        "dcr": {
+          "copias_exactas_pct": 0.0,
+          "mediana_candidata": 0.286,
+          "mediana_control": 0.165,
+          "pct_candidata_mas_cerca_que_p5_control": 0.0
+        }
+      },
+      "segundos_bloque3": 0.0,
+      "riesgo_arx": {
+        "fraccion_unicos": 1.0,
+        "riesgo_maximo": 1.0,
+        "riesgo_promedio": 1.0,
+        "k2_suprimidos": 1,
+        "k2_niveles": {
+          "sexo": 0,
+          "edad": 4,
+          "raza": 0,
+          "etnia": 0,
+          "estado_civil": 1,
+          "condado": 1
+        }
+      },
+      "segundos_bloque4": 0.7,
+      "segundos_total": 1.7
+    },
+    "D3 sintética (SDV HMA, 4 tablas)": {
+      "filas": {
+        "patients": 85,
+        "encounters": 3214,
+        "conditions": 2445,
+        "observations": 33371
+      },
+      "integridad": {
+        "patients: PK repetidas": 0,
+        "encounters: PK repetidas": 0,
+        "encounters.patient sin padre": 0,
+        "conditions.encounter sin padre": 0,
+        "observations.encounter sin padre": 0
+      },
+      "reglas": {
+        "encuentro: fin >= inicio": 1530,
+        "encuentro después del nacimiento": 184,
+        "encuentro antes de la muerte (+1 día)": 472,
+        "muerte >= nacimiento": 7,
+        "condición: fin >= inicio": 517,
+        "observación dentro de su encuentro (±1 día)": 31283
+      },
+      "codigos": {
+        "filas": 2445,
+        "codigos_validos": 2445,
+        "pct": 100.0
+      },
+      "segundos_bloque1": 0.0,
+      "calidad": {
+        "puntaje": 0.682,
+        "propiedades": {
+          "Column Shapes": 0.759,
+          "Column Pair Trends": 0.604,
+          "Cardinality": 0.817,
+          "Intertable Trends": 0.55
+        }
+      },
+      "segundos_bloque2": 0.6,
+      "privacidad": {
+        "n_ataques": 85,
+        "filas_original": 85,
+        "filas_candidata": 85,
+        "filas_control": 226,
+        "singling_out": {
+          "riesgo": 0.0,
+          "ic95": [
+            0.0,
+            0.0
+          ],
+          "tasa_ataque": 0.202,
+          "tasa_azar": 0.055,
+          "tasa_control": 0.376,
+          "concluyente": true
+        },
+        "linkability": {
+          "riesgo": 0.0,
+          "ic95": [
+            0.0,
+            0.045
+          ],
+          "tasa_ataque": 0.033,
+          "tasa_azar": 0.055,
+          "tasa_control": 0.033,
+          "concluyente": false
+        },
+        "inference": {
+          "riesgo": 0.046,
+          "ic95": [
+            0.0,
+            0.1
+          ],
+          "tasa_ataque": 0.067,
+          "tasa_azar": 0.067,
+          "tasa_control": 0.022,
+          "concluyente": false
+        },
+        "dcr": {
+          "copias_exactas_pct": 0.0,
+          "mediana_candidata": 0.286,
+          "mediana_control": 0.165,
+          "pct_candidata_mas_cerca_que_p5_control": 1.2
+        }
+      },
+      "segundos_bloque3": 0.0,
+      "riesgo_arx": {
+        "fraccion_unicos": 1.0,
+        "riesgo_maximo": 1.0,
+        "riesgo_promedio": 1.0,
+        "k2_suprimidos": 1,
+        "k2_niveles": {
+          "sexo": 0,
+          "edad": 4,
+          "raza": 0,
+          "etnia": 0,
+          "estado_civil": 1,
+          "condado": 1
+        }
+      },
+      "segundos_bloque4": 0.7,
+      "segundos_total": 1.5
+    }
+  },
+  "avisos": []
+}

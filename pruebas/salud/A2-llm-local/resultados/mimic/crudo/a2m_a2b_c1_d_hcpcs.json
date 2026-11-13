@@ -1,0 +1,24 @@
+{
+  "columnas": [
+    {
+      "columna": "code",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "category",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "long_description",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "short_description",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

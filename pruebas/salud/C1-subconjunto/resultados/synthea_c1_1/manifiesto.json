@@ -1,0 +1,216 @@
+{
+  "prueba": "C1s",
+  "fecha": "2026-11-09T00:20:00",
+  "configuracion": {
+    "prueba": "C1s",
+    "origen": "synthea_p1000",
+    "destino": "synthea_c1_1",
+    "salida": "resultados/synthea_c1_1",
+    "ancla": {
+      "tabla": "synthea.patients",
+      "filtro": "hashtext('c1' || id::text) % 100 = 0 and not (hashtext('control' || id::text) % 5 = 0)"
+    },
+    "control": "hashtext('control' || id::text) % 5 = 0",
+    "copiar_enteras": [],
+    "relaciones_csv": null
+  },
+  "configuracion_sha256": "e08c5d3485126ceca707a990dfb7cfe5112e2636714632f7cfe2a8566dab3a43",
+  "esquema_origen_sha256": "c556738d76fd1a954dc3b14728f49796923a99dba4b7df7741d7544c30982dab",
+  "entorno": {
+    "postgresql": "16.4 (Debian 16.4-1.pgdg120+2)",
+    "python": "3.11.16",
+    "psycopg2": "2.9.13",
+    "equipo": "arm64",
+    "commit_repo": "ebf9094"
+  },
+  "tablas_sin_pk": [
+    "synthea.allergies",
+    "synthea.conditions",
+    "synthea.devices",
+    "synthea.imaging_studies",
+    "synthea.immunizations",
+    "synthea.medications",
+    "synthea.observations",
+    "synthea.payer_transitions",
+    "synthea.procedures",
+    "synthea.supplies"
+  ],
+  "relaciones": {
+    "catalogo": 40,
+    "extra": 0
+  },
+  "ancla": {
+    "filas": 1151,
+    "control": 226,
+    "cumplen_filtro": 12,
+    "semilla": 12,
+    "fuera_del_filtro": 0,
+    "control_en_subconjunto": 0
+  },
+  "rondas_cierre": [
+    {
+      "ronda": 1,
+      "filas_nucleo_nuevas": 10902,
+      "filas_referenciadas_nuevas": 81,
+      "segundos": 0.96
+    },
+    {
+      "ronda": 2,
+      "filas_nucleo_nuevas": 0,
+      "filas_referenciadas_nuevas": 0,
+      "segundos": 0.74
+    }
+  ],
+  "conteos": [
+    {
+      "tabla": "synthea.allergies",
+      "origen": 1002,
+      "subconjunto": 3,
+      "nucleo": 3,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "synthea.careplans",
+      "origen": 3853,
+      "subconjunto": 27,
+      "nucleo": 27,
+      "clave": "pk"
+    },
+    {
+      "tabla": "synthea.claims",
+      "origen": 123301,
+      "subconjunto": 485,
+      "nucleo": 485,
+      "clave": "pk"
+    },
+    {
+      "tabla": "synthea.claims_transactions",
+      "origen": 942067,
+      "subconjunto": 4370,
+      "nucleo": 4370,
+      "clave": "pk"
+    },
+    {
+      "tabla": "synthea.conditions",
+      "origen": 40398,
+      "subconjunto": 254,
+      "nucleo": 254,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "synthea.devices",
+      "origen": 1945,
+      "subconjunto": 10,
+      "nucleo": 10,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "synthea.encounters",
+      "origen": 69350,
+      "subconjunto": 371,
+      "nucleo": 371,
+      "clave": "pk"
+    },
+    {
+      "tabla": "synthea.imaging_studies",
+      "origen": 109996,
+      "subconjunto": 15,
+      "nucleo": 15,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "synthea.immunizations",
+      "origen": 16527,
+      "subconjunto": 181,
+      "nucleo": 181,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "synthea.medications",
+      "origen": 53951,
+      "subconjunto": 114,
+      "nucleo": 114,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "synthea.observations",
+      "origen": 871564,
+      "subconjunto": 4009,
+      "nucleo": 4009,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "synthea.organizations",
+      "origen": 836,
+      "subconjunto": 36,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "synthea.patients",
+      "origen": 1151,
+      "subconjunto": 12,
+      "nucleo": 12,
+      "clave": "pk"
+    },
+    {
+      "tabla": "synthea.payer_transitions",
+      "origen": 43371,
+      "subconjunto": 351,
+      "nucleo": 351,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "synthea.payers",
+      "origen": 10,
+      "subconjunto": 9,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "synthea.procedures",
+      "origen": 149180,
+      "subconjunto": 649,
+      "nucleo": 649,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "synthea.providers",
+      "origen": 836,
+      "subconjunto": 36,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "synthea.supplies",
+      "origen": 12122,
+      "subconjunto": 63,
+      "nucleo": 63,
+      "clave": "ctid"
+    }
+  ],
+  "filas": {
+    "origen": 2441460,
+    "subconjunto": 10995,
+    "porcentaje": 0.45
+  },
+  "integridad": {
+    "fk_catalogo_recreadas_en_destino": 40,
+    "relaciones_no_declaradas": []
+  },
+  "secuencias_ajustadas": [],
+  "escala": {
+    "memoria_max_proceso_mb": 47.1,
+    "tablas_trabajo_mb": "3.3",
+    "temp_bytes_postgres_mb": 0.0,
+    "mayor_tabla_copiada_mb": 1.9,
+    "base_destino_mb": 13.1
+  },
+  "segundos": {
+    "seleccion": 1.69,
+    "esquema_pre": 0.21,
+    "copia_datos": 0.11,
+    "esquema_post": 0.09,
+    "total": 2.36
+  }
+}

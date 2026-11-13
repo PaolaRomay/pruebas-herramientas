@@ -1,0 +1,158 @@
+{
+  "prueba": "F2s",
+  "modelo": "gemma4:12b-it-qat",
+  "fecha": "2026-11-12T22:51",
+  "verdad": 40,
+  "corridas": [
+    {
+      "corrida": 1,
+      "segundos": 119.7,
+      "tokens": 1565,
+      "propuestas": 26,
+      "columnas_inexistentes": 0,
+      "ya_declaradas": 0,
+      "aciertos": 24,
+      "recall": 0.6,
+      "precision_contra_verdad": 0.923,
+      "fuera_de_la_verdad_que_se_cumplen": 0,
+      "precision_verificada": 0.923,
+      "no_encontradas": [
+        "synthea.allergies.encounter -> synthea.encounters.id",
+        "synthea.careplans.encounter -> synthea.encounters.id",
+        "synthea.claims.primarypatientinsuranceid -> synthea.payers.id",
+        "synthea.claims.secondarypatientinsuranceid -> synthea.payers.id",
+        "synthea.conditions.encounter -> synthea.encounters.id",
+        "synthea.devices.encounter -> synthea.encounters.id",
+        "synthea.encounters.payer -> synthea.payers.id",
+        "synthea.imaging_studies.encounter -> synthea.encounters.id",
+        "synthea.immunizations.encounter -> synthea.encounters.id",
+        "synthea.medications.encounter -> synthea.encounters.id",
+        "synthea.medications.payer -> synthea.payers.id",
+        "synthea.observations.encounter -> synthea.encounters.id",
+        "synthea.payer_transitions.payer -> synthea.payers.id",
+        "synthea.payer_transitions.secondary_payer -> synthea.payers.id",
+        "synthea.procedures.encounter -> synthea.encounters.id",
+        "synthea.supplies.encounter -> synthea.encounters.id"
+      ],
+      "fuera_de_la_verdad": [
+        {
+          "relacion": "synthea.claims.departmentid -> synthea.organizations.id",
+          "filas_no_nulas": 123301,
+          "huerfanas": 123301,
+          "distintos": 11,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "synthea.claims_transactions.departmentid -> synthea.organizations.id",
+          "filas_no_nulas": 942067,
+          "huerfanas": 942067,
+          "distintos": 11,
+          "se_cumple": false,
+          "parcial": false
+        }
+      ],
+      "inexistentes": []
+    },
+    {
+      "corrida": 2,
+      "segundos": 114.4,
+      "tokens": 1565,
+      "propuestas": 26,
+      "columnas_inexistentes": 0,
+      "ya_declaradas": 0,
+      "aciertos": 24,
+      "recall": 0.6,
+      "precision_contra_verdad": 0.923,
+      "fuera_de_la_verdad_que_se_cumplen": 0,
+      "precision_verificada": 0.923,
+      "no_encontradas": [
+        "synthea.allergies.encounter -> synthea.encounters.id",
+        "synthea.careplans.encounter -> synthea.encounters.id",
+        "synthea.claims.primarypatientinsuranceid -> synthea.payers.id",
+        "synthea.claims.secondarypatientinsuranceid -> synthea.payers.id",
+        "synthea.conditions.encounter -> synthea.encounters.id",
+        "synthea.devices.encounter -> synthea.encounters.id",
+        "synthea.encounters.payer -> synthea.payers.id",
+        "synthea.imaging_studies.encounter -> synthea.encounters.id",
+        "synthea.immunizations.encounter -> synthea.encounters.id",
+        "synthea.medications.encounter -> synthea.encounters.id",
+        "synthea.medications.payer -> synthea.payers.id",
+        "synthea.observations.encounter -> synthea.encounters.id",
+        "synthea.payer_transitions.payer -> synthea.payers.id",
+        "synthea.payer_transitions.secondary_payer -> synthea.payers.id",
+        "synthea.procedures.encounter -> synthea.encounters.id",
+        "synthea.supplies.encounter -> synthea.encounters.id"
+      ],
+      "fuera_de_la_verdad": [
+        {
+          "relacion": "synthea.claims.departmentid -> synthea.organizations.id",
+          "filas_no_nulas": 123301,
+          "huerfanas": 123301,
+          "distintos": 11,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "synthea.claims_transactions.departmentid -> synthea.organizations.id",
+          "filas_no_nulas": 942067,
+          "huerfanas": 942067,
+          "distintos": 11,
+          "se_cumple": false,
+          "parcial": false
+        }
+      ],
+      "inexistentes": []
+    },
+    {
+      "corrida": 3,
+      "segundos": 111.5,
+      "tokens": 1565,
+      "propuestas": 26,
+      "columnas_inexistentes": 0,
+      "ya_declaradas": 0,
+      "aciertos": 24,
+      "recall": 0.6,
+      "precision_contra_verdad": 0.923,
+      "fuera_de_la_verdad_que_se_cumplen": 0,
+      "precision_verificada": 0.923,
+      "no_encontradas": [
+        "synthea.allergies.encounter -> synthea.encounters.id",
+        "synthea.careplans.encounter -> synthea.encounters.id",
+        "synthea.claims.primarypatientinsuranceid -> synthea.payers.id",
+        "synthea.claims.secondarypatientinsuranceid -> synthea.payers.id",
+        "synthea.conditions.encounter -> synthea.encounters.id",
+        "synthea.devices.encounter -> synthea.encounters.id",
+        "synthea.encounters.payer -> synthea.payers.id",
+        "synthea.imaging_studies.encounter -> synthea.encounters.id",
+        "synthea.immunizations.encounter -> synthea.encounters.id",
+        "synthea.medications.encounter -> synthea.encounters.id",
+        "synthea.medications.payer -> synthea.payers.id",
+        "synthea.observations.encounter -> synthea.encounters.id",
+        "synthea.payer_transitions.payer -> synthea.payers.id",
+        "synthea.payer_transitions.secondary_payer -> synthea.payers.id",
+        "synthea.procedures.encounter -> synthea.encounters.id",
+        "synthea.supplies.encounter -> synthea.encounters.id"
+      ],
+      "fuera_de_la_verdad": [
+        {
+          "relacion": "synthea.claims.departmentid -> synthea.organizations.id",
+          "filas_no_nulas": 123301,
+          "huerfanas": 123301,
+          "distintos": 11,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "synthea.claims_transactions.departmentid -> synthea.organizations.id",
+          "filas_no_nulas": 942067,
+          "huerfanas": 942067,
+          "distintos": 11,
+          "se_cumple": false,
+          "parcial": false
+        }
+      ],
+      "inexistentes": []
+    }
+  ]
+}

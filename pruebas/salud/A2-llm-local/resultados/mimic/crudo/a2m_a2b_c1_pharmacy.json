@@ -1,0 +1,139 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "pharmacy_id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "poe_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "starttime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "stoptime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "medication",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "proc_type",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "status",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "entertime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "verifiedtime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "route",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "frequency",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "disp_sched",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "infusion_type",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "sliding_scale",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "lockout_interval",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "basal_rate",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "one_hr_max",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "doses_per_24_hrs",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "duration",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "duration_interval",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "expiration_value",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "expiration_unit",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "expirationdate",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "dispensation",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "fill_quantity",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

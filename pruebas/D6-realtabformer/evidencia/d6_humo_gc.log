@@ -1,0 +1,45 @@
+
+===== entrenar customer (tabular) =====
+Computing the sensitivity threshold...
+Using parallel computation!!!
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+Sensitivity threshold summary:
+count    50.000000
+mean      0.085667
+std       0.115556
+min      -0.025000
+25%      -0.025000
+50%       0.108333
+75%       0.175000
+max       0.375000
+dtype: float64
+Sensitivity threshold: 0.24166666666666667 qt_max: 0.05
+{'train_runtime': 2.1053, 'train_samples_per_second': 18.999, 'train_steps_per_second': 0.95, 'train_loss': 4.400888442993164, 'epoch': 2.0}
+Generated 0 invalid samples out of total 128 samples generated. Sampling efficiency is: 100.0000%
+Critic round: 5,                     sensitivity_threshold: 0.24166666666666667,                         val_sensitivity: 0.04611111111111112,                             val_sensitivities: [np.float64(0.10833333333333334), np.float64(0.10833333333333334), np.float64(-0.025), np.float64(0.10833333333333334), np.float64(-0.025), np.float64(0.10833333333333334), np.float64(0.10833333333333334), np.float64(0.10833333333333334), np.float64(0.10833333333333334), np.float64(0.10833333333333334), np.float64(-0.025), np.float64(-0.025), np.float64(-0.025), np.float64(-0.025), np.float64(-0.025)]
+Copying artefacts from: best-disc-model
+Copying artefacts from: mean-best-disc-model
+Copying artefacts from: not-best-disc-model
+Copying artefacts from: last-epoch-model
+[entrenar customer (tabular)] 7 s, RSS 0.8 GB, MPS 0.9 GB
+
+===== entrenar rental (relacional, padre customer) =====
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+{'train_runtime': 19.4685, 'train_samples_per_second': 1.644, 'train_steps_per_second': 0.411, 'train_loss': 21.102645874023438, 'epoch': 2.0}
+[entrenar rental (relacional, padre customer)] 22 s, RSS 1.3 GB, MPS 3.9 GB
+
+===== entrenar payment (relacional, padre rental) =====
+{'train_runtime': 12.8601, 'train_samples_per_second': 68.973, 'train_steps_per_second': 2.177, 'train_loss': 11.489339556012835, 'epoch': 1.0}
+[entrenar payment (relacional, padre rental)] 16 s, RSS 0.9 GB, MPS 3.9 GB
+
+===== generar customer =====
+Generated 0 invalid samples out of total 128 samples generated. Sampling efficiency is: 100.0000%
+[generar customer] 1 s, RSS 0.7 GB, MPS 3.9 GB
+
+===== generar rental =====
+We strongly recommend passing in an `attention_mask` since your input_ids may be padded. See https://huggingface.co/docs/transformers/troubleshooting#incorrect-output-when-padding-tokens-arent-masked.
+[generar rental] 56 s, RSS 0.7 GB, MPS 5.9 GB
+
+===== generar payment =====
+[generar payment] 4 s, RSS 0.4 GB, MPS 5.9 GB
+{"customer": 20, "rental": 362, "payment": 362}

@@ -1,0 +1,38 @@
+Table,Column,Metric,Score,reporte,propiedad,Column 1,Column 2,Real Correlation,Synthetic Correlation,Child Table,Parent Table,Foreign Key,Primary Key
+address,address2,TVComplement,1.0,calidad,Column Shapes,,,,,,,,
+customer,store_id,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+customer,activebool,TVComplement,1.0,calidad,Column Shapes,,,,,,,,
+customer,create_date,KSComplement,0.25531914893617025,calidad,Column Shapes,,,,,,,,
+customer,active,KSComplement,1.0,calidad,Column Shapes,,,,,,,,
+customer,,ContingencySimilarity,1.0,calidad,Column Pair Trends,store_id,activebool,,,,,,
+customer,,CorrelationSimilarity,0.9796948883085327,calidad,Column Pair Trends,store_id,create_date,0.056201061391103625,0.01559083800816905,,,,
+customer,,CorrelationSimilarity,1.0,calidad,Column Pair Trends,store_id,active,-0.002783972344238292,-0.002783972344238368,,,,
+customer,,ContingencySimilarity,0.7421777221526908,calidad,Column Pair Trends,activebool,create_date,,,,,,
+customer,,ContingencySimilarity,1.0,calidad,Column Pair Trends,activebool,active,,,,,,
+customer,,CorrelationSimilarity,0.997611672033073,calidad,Column Pair Trends,create_date,active,-0.08990203192990474,-0.08512537599605075,,,,
+,,CardinalityShapeSimilarity,1.0,calidad,Cardinality,,,,,customer,address,address_id,
+,,CardinalityShapeSimilarity,0.20468940654464785,calidad,Cardinality,,,,,address,city,city_id,
+,,CardinalityShapeSimilarity,0.9944120100083402,calidad,Cardinality,,,,,city,country,country_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,address2,store_id,,,customer,address,address_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,address2,activebool,,,customer,address,address_id,
+,,ContingencySimilarity,0.7421777221526908,calidad,Intertable Trends,address2,create_date,,,customer,address,address_id,
+,,ContingencySimilarity,1.0,calidad,Intertable Trends,address2,active,,,customer,address,address_id,
+address,address_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+address,address2,CategoryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+city,city_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+country,country_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+customer,customer_id,KeyUniqueness,1.0,diagnóstico,Data Validity,,,,,,,,
+customer,store_id,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+customer,activebool,CategoryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+customer,create_date,BoundaryAdherence,0.2553191489361702,diagnóstico,Data Validity,,,,,,,,
+customer,active,BoundaryAdherence,1.0,diagnóstico,Data Validity,,,,,,,,
+address,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+city,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+country,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+customer,,TableStructure,1.0,diagnóstico,Data Structure,,,,,,,,
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,customer,address,address_id,address_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,customer,address,address_id,address_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,address,city,city_id,city_id
+,,CardinalityBoundaryAdherence,0.9983361064891847,diagnóstico,Relationship Validity,,,,,address,city,city_id,city_id
+,,ReferentialIntegrity,1.0,diagnóstico,Relationship Validity,,,,,city,country,country_id,country_id
+,,CardinalityBoundaryAdherence,1.0,diagnóstico,Relationship Validity,,,,,city,country,country_id,country_id

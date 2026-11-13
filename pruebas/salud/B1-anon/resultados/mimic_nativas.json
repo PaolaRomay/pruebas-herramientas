@@ -1,0 +1,620 @@
+{
+  "prueba": "B1m",
+  "variante": "nativas",
+  "origen": "mimic_c1_50",
+  "destino": "b1m_nativas",
+  "fecha": "2026-11-09T00:28:42",
+  "segundos_copia": 23.5,
+  "fk_declaradas": 51,
+  "reglas": [
+    {
+      "columna": "admissions.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "admissions.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "admissions.admittime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(admittime, '180 days'::interval)"
+    },
+    {
+      "columna": "admissions.dischtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(dischtime, '180 days'::interval)"
+    },
+    {
+      "columna": "admissions.deathtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(deathtime, '180 days'::interval)"
+    },
+    {
+      "columna": "admissions.admit_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.hash(admit_provider_id)"
+    },
+    {
+      "columna": "admissions.edregtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(edregtime, '180 days'::interval)"
+    },
+    {
+      "columna": "admissions.edouttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(edouttime, '180 days'::interval)"
+    },
+    {
+      "columna": "diagnoses_icd.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "diagnoses_icd.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "drgcodes.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "drgcodes.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "emar.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "emar.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "emar.enter_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.hash(enter_provider_id)"
+    },
+    {
+      "columna": "emar.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(charttime, '180 days'::interval)"
+    },
+    {
+      "columna": "emar.scheduletime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(scheduletime, '180 days'::interval)"
+    },
+    {
+      "columna": "emar.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(storetime, '180 days'::interval)"
+    },
+    {
+      "columna": "emar_detail.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "hcpcsevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "hcpcsevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "hcpcsevents.chartdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(chartdate, '180 days'::interval)"
+    },
+    {
+      "columna": "labevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "labevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "labevents.order_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.hash(order_provider_id)"
+    },
+    {
+      "columna": "labevents.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(charttime, '180 days'::interval)"
+    },
+    {
+      "columna": "labevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(storetime, '180 days'::interval)"
+    },
+    {
+      "columna": "microbiologyevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "microbiologyevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "microbiologyevents.order_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.hash(order_provider_id)"
+    },
+    {
+      "columna": "microbiologyevents.chartdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(chartdate, '180 days'::interval)"
+    },
+    {
+      "columna": "microbiologyevents.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(charttime, '180 days'::interval)"
+    },
+    {
+      "columna": "microbiologyevents.storedate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(storedate, '180 days'::interval)"
+    },
+    {
+      "columna": "microbiologyevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(storetime, '180 days'::interval)"
+    },
+    {
+      "columna": "omr.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "omr.chartdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(chartdate, '180 days'::interval)"
+    },
+    {
+      "columna": "patients.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "patients.anchor_age",
+      "categoria": "cuasi",
+      "regla": "FUNCTION anon.noise(anchor_age, 0.2)"
+    },
+    {
+      "columna": "patients.dod",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(dod, '180 days'::interval)"
+    },
+    {
+      "columna": "pharmacy.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "pharmacy.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "pharmacy.starttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(starttime, '180 days'::interval)"
+    },
+    {
+      "columna": "pharmacy.stoptime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(stoptime, '180 days'::interval)"
+    },
+    {
+      "columna": "pharmacy.entertime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(entertime, '180 days'::interval)"
+    },
+    {
+      "columna": "pharmacy.verifiedtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(verifiedtime, '180 days'::interval)"
+    },
+    {
+      "columna": "poe.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "poe.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "poe.ordertime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(ordertime, '180 days'::interval)"
+    },
+    {
+      "columna": "poe.order_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.hash(order_provider_id)"
+    },
+    {
+      "columna": "poe_detail.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "prescriptions.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "prescriptions.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "prescriptions.order_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.hash(order_provider_id)"
+    },
+    {
+      "columna": "prescriptions.starttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(starttime, '180 days'::interval)"
+    },
+    {
+      "columna": "prescriptions.stoptime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(stoptime, '180 days'::interval)"
+    },
+    {
+      "columna": "procedures_icd.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "procedures_icd.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "procedures_icd.chartdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(chartdate, '180 days'::interval)"
+    },
+    {
+      "columna": "provider.provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.hash(provider_id)"
+    },
+    {
+      "columna": "services.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "services.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "services.transfertime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(transfertime, '180 days'::interval)"
+    },
+    {
+      "columna": "transfers.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "transfers.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "transfers.intime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(intime, '180 days'::interval)"
+    },
+    {
+      "columna": "transfers.outtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(outtime, '180 days'::interval)"
+    },
+    {
+      "columna": "caregiver.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.pseudo_shift(caregiver_id)"
+    },
+    {
+      "columna": "chartevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "chartevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "chartevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(stay_id)"
+    },
+    {
+      "columna": "chartevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.pseudo_shift(caregiver_id)"
+    },
+    {
+      "columna": "chartevents.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(charttime, '180 days'::interval)"
+    },
+    {
+      "columna": "chartevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(storetime, '180 days'::interval)"
+    },
+    {
+      "columna": "datetimeevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "datetimeevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "datetimeevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(stay_id)"
+    },
+    {
+      "columna": "datetimeevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.pseudo_shift(caregiver_id)"
+    },
+    {
+      "columna": "datetimeevents.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(charttime, '180 days'::interval)"
+    },
+    {
+      "columna": "datetimeevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(storetime, '180 days'::interval)"
+    },
+    {
+      "columna": "icustays.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "icustays.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "icustays.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(stay_id)"
+    },
+    {
+      "columna": "icustays.intime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(intime, '180 days'::interval)"
+    },
+    {
+      "columna": "icustays.outtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(outtime, '180 days'::interval)"
+    },
+    {
+      "columna": "ingredientevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "ingredientevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "ingredientevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(stay_id)"
+    },
+    {
+      "columna": "ingredientevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.pseudo_shift(caregiver_id)"
+    },
+    {
+      "columna": "ingredientevents.starttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(starttime, '180 days'::interval)"
+    },
+    {
+      "columna": "ingredientevents.endtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(endtime, '180 days'::interval)"
+    },
+    {
+      "columna": "ingredientevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(storetime, '180 days'::interval)"
+    },
+    {
+      "columna": "inputevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "inputevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "inputevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(stay_id)"
+    },
+    {
+      "columna": "inputevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.pseudo_shift(caregiver_id)"
+    },
+    {
+      "columna": "inputevents.starttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(starttime, '180 days'::interval)"
+    },
+    {
+      "columna": "inputevents.endtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(endtime, '180 days'::interval)"
+    },
+    {
+      "columna": "inputevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(storetime, '180 days'::interval)"
+    },
+    {
+      "columna": "outputevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "outputevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "outputevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(stay_id)"
+    },
+    {
+      "columna": "outputevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.pseudo_shift(caregiver_id)"
+    },
+    {
+      "columna": "outputevents.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(charttime, '180 days'::interval)"
+    },
+    {
+      "columna": "outputevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(storetime, '180 days'::interval)"
+    },
+    {
+      "columna": "procedureevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(subject_id)"
+    },
+    {
+      "columna": "procedureevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(hadm_id)"
+    },
+    {
+      "columna": "procedureevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION anon.pseudo_shift(stay_id)"
+    },
+    {
+      "columna": "procedureevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.pseudo_shift(caregiver_id)"
+    },
+    {
+      "columna": "procedureevents.starttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(starttime, '180 days'::interval)"
+    },
+    {
+      "columna": "procedureevents.endtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(endtime, '180 days'::interval)"
+    },
+    {
+      "columna": "procedureevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.dnoise(storetime, '180 days'::interval)"
+    }
+  ],
+  "columnas_enmascaradas": 111,
+  "enmascarado": "ok",
+  "segundos_enmascarar": 217.0,
+  "coherencia": {
+    "alta >= ingreso": {
+      "antes": 0,
+      "despues": 47
+    },
+    "muerte dentro de la internación": {
+      "antes": 0,
+      "despues": 4
+    },
+    "UCI dentro de la internación": {
+      "antes": 0,
+      "despues": 46
+    },
+    "dod = día de la muerte": {
+      "antes": 0,
+      "despues": 7
+    },
+    "traslado: salida >= entrada": {
+      "antes": 0,
+      "despues": 200
+    },
+    "emergencia: salida >= registro": {
+      "antes": 0,
+      "despues": 27
+    },
+    "chartevents dentro de su estadía UCI": {
+      "antes": 56,
+      "despues": 249456
+    }
+  },
+  "fk_validas": 51,
+  "fechas_por_paciente": {
+    "pacientes": 47,
+    "con_un_solo_desplazamiento": 0,
+    "desplazamientos_distintos_promedio": 7.7
+  },
+  "duracion_internacion_igual": {
+    "internaciones": 115,
+    "igual": 0
+  },
+  "fuga_poe_id": {
+    "filas": 19144,
+    "prefijo_con_subject_id_original": 19144
+  },
+  "subject_id_originales_que_quedan": 0,
+  "edad": "2 de 47 iguales",
+  "reversion": {
+    "metodo": "un par conocido -> desplazamiento",
+    "recuperados": 47,
+    "de": 47
+  }
+}

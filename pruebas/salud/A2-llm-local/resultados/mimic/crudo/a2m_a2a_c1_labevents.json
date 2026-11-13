@@ -1,0 +1,84 @@
+{
+  "columnas": [
+    {
+      "columna": "labevent_id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "specimen_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "itemid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "order_provider_id",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "charttime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "storetime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "value",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "valuenum",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "valueuom",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "ref_range_lower",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "ref_range_upper",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "flag",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "priority",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "comments",
+      "sensible": true,
+      "entidad": "SALUD"
+    }
+  ]
+}

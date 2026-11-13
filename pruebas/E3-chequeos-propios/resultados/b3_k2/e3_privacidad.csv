@@ -1,0 +1,8 @@
+ataque,detalle,n_ataques,riesgo,ic95,tasa_ataque,tasa_azar,tasa_control,segundos,nota
+singling out,univariado,200,0.000,0.000–0.003,0.009,0.009,0.032,0,el ataque no supera al azar: no concluyente
+singling out,multivariado (3 columnas),200,0.000,0.000–0.013,0.009,0.019,0.012,0,el ataque no supera al azar: no concluyente
+linkability,first_name+last_name+email | district+postal_code+phone+city+country,200,0.000,0.000–0.020,0.073,0.009,0.112,2,
+inference,secreto district,200,0.000,0.000–0.013,0.009,0.009,0.009,0,el ataque no supera al azar: no concluyente
+inference,secreto city,200,0.000,0.000–0.013,0.009,0.009,0.009,0,el ataque no supera al azar: no concluyente
+inference,secreto country,200,0.000,0.000–0.144,0.392,0.063,0.402,0,
+inference,secreto postal_code,200,0.000,0.000–0.013,0.009,0.009,0.009,0,el ataque no supera al azar: no concluyente

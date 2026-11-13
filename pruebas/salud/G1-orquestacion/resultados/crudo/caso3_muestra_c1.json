@@ -1,0 +1,37 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    },
+    {
+      "herramienta": "subconjunto",
+      "parametros": {
+        "ancla": "mimiciv_hosp.patients",
+        "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE '%Sepsis%' OR icd_code LIKE '%Septicemia%')",
+        "porcentaje": 100
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "edad": "decada",
+        "texto_libre": "enmascarar"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que la condición de 'sepsis' se identifica mediante códigos ICD en la tabla 'mimiciv_hosp.diagnoses_icd'.",
+    "Asumo que el usuario desea mantener la integridad referencial de todas las tablas relacionadas (admissions, labevents, icustays, etc.) mediante la extracción del subconjunto basada en 'subject_id'.",
+    "Asumo que, al ser una base de producción, se requiere anonimizar los datos resultantes antes de entregarlos como base de prueba."
+  ],
+  "preguntas": [
+    "¿Deseas que utilice algún código ICD específico para identificar la sepsis o prefieres que busque términos relacionados en las descripciones de los diagnósticos?",
+    "¿Deseas que aplique algún filtro adicional sobre las internaciones (por ejemplo, solo las de una fecha específica) además de filtrar por el diagnóstico de sepsis?",
+    "¿Prefieres que elimine los identificadores en lugar de seudonimizarlos?"
+  ]
+}

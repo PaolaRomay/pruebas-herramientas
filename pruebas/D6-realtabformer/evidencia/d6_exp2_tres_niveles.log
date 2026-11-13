@@ -1,0 +1,35 @@
+[A] falló: AttributeError: 'DataFrame' object has no attribute 'unique'
+[B] falló: TypeError: list indices must be integers or slices, not str
+We strongly recommend passing in an `attention_mask` since your input_ids may be padded. See https://huggingface.co/docs/transformers/troubleshooting#incorrect-output-when-padding-tokens-arent-masked.
+{'train_runtime': 10.0059, 'train_samples_per_second': 0.5, 'train_steps_per_second': 0.2, 'train_loss': 12.694547653198242, 'epoch': 1.0}
+[C] corrió: 
+{
+  "muestra": {
+    "clientes": 5,
+    "alquileres": 367,
+    "pagos": 364
+  },
+  "intentos": {
+    "A join_on con dos claves": {
+      "resultado": "falló",
+      "error": "AttributeError: 'DataFrame' object has no attribute 'unique'",
+      "donde": "realtabformer.py:923",
+      "segundos": 0.0
+    },
+    "B in_df con dos tablas padre": {
+      "resultado": "falló",
+      "error": "TypeError: list indices must be integers or slices, not str",
+      "donde": "realtabformer.py:923",
+      "segundos": 0.0
+    },
+    "C payment hija directa de customer": {
+      "resultado": "corrió",
+      "pagos_generados": 77,
+      "rental_id_inexistente": 77,
+      "rental_id_de_otro_cliente": 0,
+      "rental_id_de_su_cliente": 0,
+      "nota": "entrena porque son 2 niveles; rental_id es un número más, no una FK",
+      "segundos": 29.0
+    }
+  }
+}

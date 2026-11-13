@@ -1,0 +1,134 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "stay_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "caregiver_id",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "starttime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "endtime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "storetime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "itemid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "amount",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "amountuom",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "rate",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "rateuom",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "orderid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "linkorderid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "ordercategoryname",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "secondaryordercategoryname",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "ordercomponenttypedescription",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "ordercategorydescription",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "patientweight",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "totalamount",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "totalamountuom",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "isopenbag",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "continueinnextdept",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "statusdescription",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "originalamount",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "originalrate",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    }
+  ]
+}

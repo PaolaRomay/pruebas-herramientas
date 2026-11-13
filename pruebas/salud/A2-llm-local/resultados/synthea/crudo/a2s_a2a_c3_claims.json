@@ -1,0 +1,159 @@
+{
+  "columnas": [
+    {
+      "columna": "id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "patientid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "providerid",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "primarypatientinsuranceid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "secondarypatientinsuranceid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "departmentid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "patientdepartmentid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "diagnosis1",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "diagnosis2",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "diagnosis3",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "diagnosis4",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "diagnosis5",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "diagnosis6",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "diagnosis7",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "diagnosis8",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "referringproviderid",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "appointmentid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "currentillnessdate",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "servicedate",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "supervisingproviderid",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "status1",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "status2",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "statusp",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "outstanding1",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "outstanding2",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "outstandingp",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "lastbilleddate1",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "lastbilleddate2",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "lastbilleddatep",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "healthcareclaimtypeid1",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "healthcareclaimtypeid2",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

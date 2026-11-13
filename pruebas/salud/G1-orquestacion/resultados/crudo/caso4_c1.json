@@ -1,0 +1,36 @@
+{
+  "pasos": [
+    {
+      "herramienta": "subconjunto",
+      "parametros": {
+        "ancla": "mimiciv_hosp.patients",
+        "filtro_sql": "SELECT subject_id FROM mimiciv_hosp.patients LIMIT 200",
+        "porcentaje": 100
+      }
+    },
+    {
+      "herramienta": "sintetizar",
+      "parametros": {
+        "tablas": [
+          "mimiciv_hosp.patients",
+          "mimiciv_hosp.admissions",
+          "mimiciv_hosp.diagnoses_icd",
+          "mimiciv_hosp.procedures_icd",
+          "mimiciv_hosp.labevents",
+          "mimiciv_icu.icustays"
+        ],
+        "pacientes": 200
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que el usuario desea mantener la estructura relacional de las tablas principales (pacientes, internaciones, diagnósticos) pero con datos generados artificialmente.",
+    "Asumo que 'internaciones' se refiere a la tabla 'mimiciv_hosp.admissions' y 'diagnósticos' a 'mimiciv_hosp.diagnoses_icd'.",
+    "Dado que la herramienta 'sintetizar' requiere un esquema para entrenar el generador, he incluido las tablas clave que definen la relación paciente-internación-diagnóstico."
+  ],
+  "preguntas": [
+    "¿Deseas incluir tablas adicionales en la síntesis (ej. resultados de laboratorio, medicamentos o eventos de cuidados intensivos)?",
+    "¿La base sintética debe ser una copia exacta de los datos existentes (anonimizados) o prefieres que el modelo generativo cree patrones nuevos basados en las distribuciones de producción?",
+    "¿Existe alguna restricción específica sobre el tipo de diagnósticos o condiciones clínicas que deban prevalecer en los 200 pacientes?"
+  ]
+}

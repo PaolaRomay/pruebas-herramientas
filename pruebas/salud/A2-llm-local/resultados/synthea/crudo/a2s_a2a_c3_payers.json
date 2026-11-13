@@ -1,0 +1,114 @@
+{
+  "columnas": [
+    {
+      "columna": "id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "name",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "ownership",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "address",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "city",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "state_headquartered",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "zip",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "phone",
+      "sensible": true,
+      "entidad": "PHONE_EMAIL"
+    },
+    {
+      "columna": "amount_covered",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "amount_uncovered",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "revenue",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "covered_encounters",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "uncovered_encounters",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "covered_medications",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "uncovered_medications",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "covered_procedures",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "uncovered_procedures",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "covered_immunizations",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "uncovered_immunizations",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "unique_customers",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "qols_avg",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "member_months",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

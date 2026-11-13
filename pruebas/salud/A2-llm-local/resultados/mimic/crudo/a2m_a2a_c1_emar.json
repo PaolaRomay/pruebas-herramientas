@@ -1,0 +1,64 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "emar_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "emar_seq",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "poe_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "pharmacy_id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "enter_provider_id",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "charttime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "medication",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "event_txt",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "scheduletime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "storetime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    }
+  ]
+}

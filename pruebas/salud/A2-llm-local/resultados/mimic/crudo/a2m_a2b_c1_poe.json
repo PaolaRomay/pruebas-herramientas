@@ -1,0 +1,64 @@
+{
+  "columnas": [
+    {
+      "columna": "poe_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "poe_seq",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "ordertime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "order_type",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "order_subtype",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "transaction_type",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "discontinue_of_poe_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "discontinued_by_poe_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "order_provider_id",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "order_status",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

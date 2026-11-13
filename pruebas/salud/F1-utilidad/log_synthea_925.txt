@@ -1,0 +1,20 @@
+[synthea_925] D2 sintética (MOSTLY AI): 11 de 14
+# F1: utilidad — synthea_925
+
+| Consulta | D2 sintética (MOSTLY AI) |
+|---|---|
+| Pacientes por condición (top 10) | ✓ 8/10 |
+| Condiciones más frecuentes (top 10 códigos) | ✓ 7/10 |
+| Duración mediana del encuentro (horas) | ✓ 13% |
+| Encuentros por paciente (media) | ✗ 24% |
+| % de pacientes fallecidos | ✓ 5% |
+| Edad mediana | ✓ 2% |
+| Encuentros por clase | ✓ VT 0.09 |
+| Pacientes por sexo | ✓ VT 0.00 |
+| Pacientes por raza | ✓ VT 0.02 |
+| Costo medio del encuentro | ✓ 1% |
+| Observaciones más frecuentes (top 10) | ✓ 9/10 |
+| Observaciones por encuentro (media) | ✗ 34% |
+| Encuentros por año | ✗ VT 0.24 |
+| % de condiciones resueltas (con fin) | ✓ 1% |
+| **Se conservan** | **11 de 14** |

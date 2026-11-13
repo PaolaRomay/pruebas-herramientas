@@ -1,0 +1,69 @@
+{
+  "columnas": [
+    {
+      "columna": "id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "date",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "patient",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "encounter",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "series_uid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "bodysite_code",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "bodysite_description",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "modality_code",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "modality_description",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "instance_uid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "sop_code",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "sop_description",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "procedure_code",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

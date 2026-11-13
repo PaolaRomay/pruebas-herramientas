@@ -1,0 +1,89 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "stay_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "caregiver_id",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "starttime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "endtime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "storetime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "itemid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "amount",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "amountuom",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "rate",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "rateuom",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "orderid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "linkorderid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "statusdescription",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "originalamount",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "originalrate",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

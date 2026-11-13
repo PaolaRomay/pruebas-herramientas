@@ -1,0 +1,159 @@
+{
+  "columnas": [
+    {
+      "columna": "col_01",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_02",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_03",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_04",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_05",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_06",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_07",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_08",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_09",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_10",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_11",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_12",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_13",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_14",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_15",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_16",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_17",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_18",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "col_19",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "col_20",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_21",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_22",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_23",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_24",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "col_25",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "col_26",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "col_27",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "col_28",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "col_29",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "col_30",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_31",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

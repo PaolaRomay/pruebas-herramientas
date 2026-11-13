@@ -1,0 +1,341 @@
+{
+  "modelo": "gemma4:12b-it-qat",
+  "temperatura": 0.7,
+  "casos": {
+    "1": {
+      "nombre": "detectar",
+      "pedido": "¿Qué columnas de esta base tienen datos personales o datos de salud? Listalas con el tipo de dato de cada una.",
+      "corridas": [
+        {
+          "corrida": 1,
+          "segundos": 44.3,
+          "herramientas": [
+            "detectar"
+          ],
+          "supuestos": 2,
+          "preguntas": 1,
+          "bien": true
+        },
+        {
+          "corrida": 2,
+          "segundos": 13.9,
+          "herramientas": [
+            "detectar"
+          ],
+          "supuestos": 2,
+          "preguntas": 1,
+          "bien": true
+        },
+        {
+          "corrida": 3,
+          "segundos": 14.5,
+          "herramientas": [
+            "detectar"
+          ],
+          "supuestos": 2,
+          "preguntas": 1,
+          "bien": true
+        }
+      ],
+      "bien": 3,
+      "mismo_plan_en_las_3": true
+    },
+    "2": {
+      "nombre": "anonimizar",
+      "pedido": "Anonimizá los identificadores de los pacientes y de los profesionales y las fechas. Las fechas de cada paciente tienen que seguir siendo coherentes entre sí (un alta no puede quedar antes del ingreso) y la base tiene que seguir cargando sin errores.",
+      "corridas": [
+        {
+          "corrida": 1,
+          "segundos": 28.2,
+          "herramientas": [
+            "detectar",
+            "anonimizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 2,
+          "parametros": {
+            "identificadores": "seudonimizar",
+            "fechas": "desplazar_por_paciente",
+            "edad": "sin_cambios",
+            "texto_libre": "sin_cambios"
+          },
+          "bien": true,
+          "ejecucion": "equivale a B1m `consistentes` (0 incoherencias, 51 FK)"
+        },
+        {
+          "corrida": 2,
+          "segundos": 27.4,
+          "herramientas": [
+            "detectar",
+            "anonimizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 2,
+          "parametros": {
+            "identificadores": "seudonimizar",
+            "fechas": "desplazar_por_paciente",
+            "edad": "sin_cambios",
+            "texto_libre": "sin_cambios"
+          },
+          "bien": true,
+          "ejecucion": "equivale a B1m `consistentes` (0 incoherencias, 51 FK)"
+        },
+        {
+          "corrida": 3,
+          "segundos": 32.2,
+          "herramientas": [
+            "detectar",
+            "anonimizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 3,
+          "parametros": {
+            "identificadores": "seudonimizar",
+            "fechas": "desplazar_por_paciente",
+            "texto_libre": "sin_cambios"
+          },
+          "bien": true,
+          "ejecucion": "equivale a B1m `consistentes` (0 incoherencias, 51 FK)"
+        }
+      ],
+      "bien": 3,
+      "mismo_plan_en_las_3": true
+    },
+    "3": {
+      "nombre": "subconjunto",
+      "pedido": "Sacame un subconjunto con los pacientes que tuvieron sepsis y todo lo que dependa de ellos (internaciones, diagnósticos, laboratorios, UCI), sin romper las claves.",
+      "corridas": [
+        {
+          "corrida": 1,
+          "segundos": 37.3,
+          "herramientas": [
+            "subconjunto",
+            "anonimizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 3,
+          "subconjunto": {
+            "ancla": "mimiciv_hosp.patients",
+            "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE 'A41.%' OR icd_code LIKE 'R65.%')",
+            "porcentaje": 100,
+            "filtro_corre": true,
+            "pacientes": 0,
+            "verdad": 17,
+            "aciertos": 0,
+            "de_mas": 0,
+            "extraccion_c1": "ok, carga con todas las FK",
+            "salida_c1": "g1m_caso3_c1: 289868 de 1398500 filas (20.73 %), 1 rondas, semilla 0 de 100 (control 0, en subconjunto 0), fuera del filtro 0, 6.48 s, escala {'memoria_max_proceso_mb': 49.4, 'tablas_trabajo_mb': Deci"
+          },
+          "bien": false
+        },
+        {
+          "corrida": 2,
+          "segundos": 36.1,
+          "herramientas": [
+            "detectar",
+            "subconjunto",
+            "anonimizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 3,
+          "subconjunto": {
+            "ancla": "mimiciv_hosp.patients",
+            "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE '%Sepsis%')",
+            "porcentaje": 100,
+            "filtro_corre": true,
+            "pacientes": 0,
+            "verdad": 17,
+            "aciertos": 0,
+            "de_mas": 0,
+            "extraccion_c1": "ok, carga con todas las FK",
+            "salida_c1": "g1m_caso3_c2: 289868 de 1398500 filas (20.73 %), 1 rondas, semilla 0 de 100 (control 0, en subconjunto 0), fuera del filtro 0, 5.86 s, escala {'memoria_max_proceso_mb': 42.7, 'tablas_trabajo_mb': Deci"
+          },
+          "bien": false
+        },
+        {
+          "corrida": 3,
+          "segundos": 40.5,
+          "herramientas": [
+            "detectar",
+            "subconjunto",
+            "anonimizar"
+          ],
+          "supuestos": 4,
+          "preguntas": 3,
+          "subconjunto": {
+            "ancla": "mimiciv_hosp.patients",
+            "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE '%Sepsis%')",
+            "porcentaje": 100,
+            "filtro_corre": true,
+            "pacientes": 0,
+            "verdad": 17,
+            "aciertos": 0,
+            "de_mas": 0,
+            "extraccion_c1": "ok, carga con todas las FK",
+            "salida_c1": "g1m_caso3_c3: 289868 de 1398500 filas (20.73 %), 1 rondas, semilla 0 de 100 (control 0, en subconjunto 0), fuera del filtro 0, 5.34 s, escala {'memoria_max_proceso_mb': 45.4, 'tablas_trabajo_mb': Deci"
+          },
+          "bien": false
+        }
+      ],
+      "bien": 0,
+      "mismo_plan_en_las_3": false
+    },
+    "4": {
+      "nombre": "sintetizar",
+      "pedido": "Generá una base sintética con el mismo esquema y unos 200 pacientes, con internaciones y diagnósticos coherentes entre sí.",
+      "corridas": [
+        {
+          "corrida": 1,
+          "segundos": 39.9,
+          "herramientas": [
+            "subconjunto",
+            "sintetizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 3,
+          "parametros": {
+            "tablas": [
+              "mimiciv_hosp.patients",
+              "mimiciv_hosp.admissions",
+              "mimiciv_hosp.diagnoses_icd",
+              "mimiciv_hosp.procedures_icd",
+              "mimiciv_hosp.labevents",
+              "mimiciv_icu.icustays"
+            ],
+            "pacientes": 200
+          },
+          "bien": true
+        },
+        {
+          "corrida": 2,
+          "segundos": 36.8,
+          "herramientas": [
+            "subconjunto",
+            "sintetizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 2,
+          "parametros": {
+            "tablas": [
+              "mimiciv_hosp.patients",
+              "mimiciv_hosp.admissions",
+              "mimiciv_hosp.diagnoses_icd",
+              "mimiciv_hosp.procedures_icd",
+              "mimiciv_hosp.labevents",
+              "mimiciv_hosp.emar",
+              "mimiciv_icu.icustays",
+              "mimiciv_icu.inputevents",
+              "mimiciv_icu.outputevents"
+            ],
+            "pacientes": 200
+          },
+          "bien": true
+        },
+        {
+          "corrida": 3,
+          "segundos": 31.1,
+          "herramientas": [
+            "subconjunto",
+            "sintetizar"
+          ],
+          "supuestos": 4,
+          "preguntas": 2,
+          "parametros": {
+            "tablas": [
+              "mimiciv_hosp.patients",
+              "mimiciv_hosp.admissions",
+              "mimiciv_hosp.diagnoses_icd",
+              "mimiciv_hosp.procedures_icd",
+              "mimiciv_hosp.labevents",
+              "mimiciv_hosp.emar"
+            ],
+            "pacientes": 200
+          },
+          "bien": true
+        }
+      ],
+      "bien": 3,
+      "mismo_plan_en_las_3": true
+    },
+    "5": {
+      "nombre": "ambiguo",
+      "pedido": "Prepará una copia de la base para que el equipo de testing la use sin ver datos reales.",
+      "corridas": [
+        {
+          "corrida": 1,
+          "segundos": 33.0,
+          "herramientas": [
+            "detectar",
+            "anonimizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 3,
+          "parametros": [
+            {
+              "tablas": [
+                "todas"
+              ]
+            },
+            {
+              "identificadores": "seudonimizar",
+              "fechas": "desplazar_por_paciente",
+              "edad": "ruido",
+              "texto_libre": "enmascarar"
+            }
+          ],
+          "bien": true
+        },
+        {
+          "corrida": 2,
+          "segundos": 27.4,
+          "herramientas": [
+            "detectar",
+            "anonimizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 3,
+          "parametros": [
+            {
+              "tablas": [
+                "todas"
+              ]
+            },
+            {
+              "identificadores": "seudonimizar",
+              "fechas": "desplazar_por_paciente",
+              "edad": "decada",
+              "texto_libre": "enmascarar"
+            }
+          ],
+          "bien": true
+        },
+        {
+          "corrida": 3,
+          "segundos": 28.9,
+          "herramientas": [
+            "detectar",
+            "anonimizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 3,
+          "parametros": [
+            {
+              "tablas": [
+                "todas"
+              ]
+            },
+            {
+              "identificadores": "seudonimizar",
+              "fechas": "desplazar_por_paciente",
+              "edad": "decada",
+              "texto_libre": "enmascarar"
+            }
+          ],
+          "bien": true
+        }
+      ],
+      "bien": 3,
+      "mismo_plan_en_las_3": true
+    }
+  }
+}

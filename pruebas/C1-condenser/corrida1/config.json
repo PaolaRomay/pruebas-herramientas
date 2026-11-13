@@ -1,0 +1,15 @@
+{
+    "initial_targets": [
+        { "table": "public.customer", "where": "hashtext('c1' || customer_id::text) % 10 = 0" }
+    ],
+    "db_type": "postgres",
+    "source_db_connection_info": { "user_name": "postgres", "password": "postgres", "host": "127.0.0.1", "db_name": "pagila", "port": 55432 },
+    "destination_db_connection_info": { "user_name": "postgres", "password": "postgres", "host": "127.0.0.1", "db_name": "pagila_c1", "port": 55432 },
+    "keep_disconnected_tables": false,
+    "excluded_tables": [],
+    "passthrough_tables": [],
+    "dependency_breaks": [],
+    "fk_augmentation": [],
+    "upstream_filters": [],
+    "max_rows_per_table": "ALL"
+}

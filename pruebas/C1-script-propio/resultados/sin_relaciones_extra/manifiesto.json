@@ -1,0 +1,473 @@
+{
+  "prueba": "C1 script propio",
+  "fecha": "2026-11-02T16:28:45",
+  "configuracion": {
+    "origen": "pagila",
+    "destino": "pagila_c1p_sin_extra",
+    "salida": "resultados/sin_relaciones_extra",
+    "ancla": {
+      "tabla": "customer",
+      "filtro": "hashtext('c1' || customer_id::text) % 10 = 0"
+    },
+    "copiar_enteras": [
+      "film",
+      "film_actor",
+      "film_category",
+      "actor",
+      "category",
+      "language"
+    ],
+    "relaciones_extra": []
+  },
+  "configuracion_sha256": "ce813fc65f919963920707ce711175f86645dc8c27781621892eb29f255506f4",
+  "esquema_origen_sha256": "ca297690d81a15d34b4946302743c250596154c35c326db2df3b662e42a78c0a",
+  "entorno": {
+    "postgresql": "16.4 (Debian 16.4-1.pgdg120+2)",
+    "python": "3.11.16",
+    "psycopg2": "2.9.13",
+    "equipo": "arm64",
+    "commit_repo": "d4495e5"
+  },
+  "relaciones": [
+    {
+      "hijo": "public.address",
+      "columnas": [
+        "city_id"
+      ],
+      "padre": "public.city",
+      "referencia": [
+        "city_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.city",
+      "columnas": [
+        "country_id"
+      ],
+      "padre": "public.country",
+      "referencia": [
+        "country_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.customer",
+      "columnas": [
+        "address_id"
+      ],
+      "padre": "public.address",
+      "referencia": [
+        "address_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.customer",
+      "columnas": [
+        "store_id"
+      ],
+      "padre": "public.store",
+      "referencia": [
+        "store_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.film",
+      "columnas": [
+        "language_id"
+      ],
+      "padre": "public.language",
+      "referencia": [
+        "language_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.film",
+      "columnas": [
+        "original_language_id"
+      ],
+      "padre": "public.language",
+      "referencia": [
+        "language_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.film_actor",
+      "columnas": [
+        "actor_id"
+      ],
+      "padre": "public.actor",
+      "referencia": [
+        "actor_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.film_actor",
+      "columnas": [
+        "film_id"
+      ],
+      "padre": "public.film",
+      "referencia": [
+        "film_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.film_category",
+      "columnas": [
+        "category_id"
+      ],
+      "padre": "public.category",
+      "referencia": [
+        "category_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.film_category",
+      "columnas": [
+        "film_id"
+      ],
+      "padre": "public.film",
+      "referencia": [
+        "film_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.inventory",
+      "columnas": [
+        "film_id"
+      ],
+      "padre": "public.film",
+      "referencia": [
+        "film_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.inventory",
+      "columnas": [
+        "store_id"
+      ],
+      "padre": "public.store",
+      "referencia": [
+        "store_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.payment",
+      "columnas": [
+        "customer_id"
+      ],
+      "padre": "public.customer",
+      "referencia": [
+        "customer_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.payment",
+      "columnas": [
+        "rental_id"
+      ],
+      "padre": "public.rental",
+      "referencia": [
+        "rental_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.payment",
+      "columnas": [
+        "staff_id"
+      ],
+      "padre": "public.staff",
+      "referencia": [
+        "staff_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.rental",
+      "columnas": [
+        "customer_id"
+      ],
+      "padre": "public.customer",
+      "referencia": [
+        "customer_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.rental",
+      "columnas": [
+        "inventory_id"
+      ],
+      "padre": "public.inventory",
+      "referencia": [
+        "inventory_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.rental",
+      "columnas": [
+        "staff_id"
+      ],
+      "padre": "public.staff",
+      "referencia": [
+        "staff_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.staff",
+      "columnas": [
+        "address_id"
+      ],
+      "padre": "public.address",
+      "referencia": [
+        "address_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.staff",
+      "columnas": [
+        "store_id"
+      ],
+      "padre": "public.store",
+      "referencia": [
+        "store_id"
+      ],
+      "origen": "catálogo"
+    },
+    {
+      "hijo": "public.store",
+      "columnas": [
+        "address_id"
+      ],
+      "padre": "public.address",
+      "referencia": [
+        "address_id"
+      ],
+      "origen": "catálogo"
+    }
+  ],
+  "semilla_filas_ancla": 98,
+  "rondas_cierre": [
+    {
+      "ronda": 1,
+      "filas_nucleo_nuevas": 10569,
+      "filas_referenciadas_nuevas": 3250
+    },
+    {
+      "ronda": 2,
+      "filas_nucleo_nuevas": 0,
+      "filas_referenciadas_nuevas": 104
+    },
+    {
+      "ronda": 3,
+      "filas_nucleo_nuevas": 0,
+      "filas_referenciadas_nuevas": 1
+    },
+    {
+      "ronda": 4,
+      "filas_nucleo_nuevas": 0,
+      "filas_referenciadas_nuevas": 0
+    }
+  ],
+  "ancla_fuera_del_filtro": {
+    "cantidad": 1,
+    "claves": [
+      [
+        182
+      ]
+    ],
+    "motivo": "referenciadas por filas del subconjunto; se agregan para no dejar huérfanas"
+  },
+  "conteos": [
+    {
+      "tabla": "public.actor",
+      "origen": 200,
+      "subconjunto": 200,
+      "nucleo": 0
+    },
+    {
+      "tabla": "public.address",
+      "origen": 1003,
+      "subconjunto": 103,
+      "nucleo": 0
+    },
+    {
+      "tabla": "public.category",
+      "origen": 16,
+      "subconjunto": 16,
+      "nucleo": 0
+    },
+    {
+      "tabla": "public.city",
+      "origen": 600,
+      "subconjunto": 69,
+      "nucleo": 0
+    },
+    {
+      "tabla": "public.country",
+      "origen": 109,
+      "subconjunto": 35,
+      "nucleo": 0
+    },
+    {
+      "tabla": "public.customer",
+      "origen": 999,
+      "subconjunto": 99,
+      "nucleo": 98
+    },
+    {
+      "tabla": "public.film",
+      "origen": 1000,
+      "subconjunto": 1000,
+      "nucleo": 0
+    },
+    {
+      "tabla": "public.film_actor",
+      "origen": 5462,
+      "subconjunto": 5462,
+      "nucleo": 0
+    },
+    {
+      "tabla": "public.film_category",
+      "origen": 2367,
+      "subconjunto": 2367,
+      "nucleo": 0
+    },
+    {
+      "tabla": "public.inventory",
+      "origen": 4581,
+      "subconjunto": 3140,
+      "nucleo": 0
+    },
+    {
+      "tabla": "public.language",
+      "origen": 6,
+      "subconjunto": 6,
+      "nucleo": 0
+    },
+    {
+      "tabla": "public.payment",
+      "origen": 51061,
+      "subconjunto": 5250,
+      "nucleo": 5250
+    },
+    {
+      "tabla": "public.rental",
+      "origen": 51805,
+      "subconjunto": 5320,
+      "nucleo": 5319
+    },
+    {
+      "tabla": "public.staff",
+      "origen": 1500,
+      "subconjunto": 2,
+      "nucleo": 0
+    },
+    {
+      "tabla": "public.store",
+      "origen": 500,
+      "subconjunto": 4,
+      "nucleo": 0
+    }
+  ],
+  "secuencias_ajustadas": [
+    {
+      "secuencia": "customer_customer_id_seq",
+      "tabla": "public.customer",
+      "columna": "customer_id",
+      "valor": 992
+    },
+    {
+      "secuencia": "actor_actor_id_seq",
+      "tabla": "public.actor",
+      "columna": "actor_id",
+      "valor": 200
+    },
+    {
+      "secuencia": "category_category_id_seq",
+      "tabla": "public.category",
+      "columna": "category_id",
+      "valor": 16
+    },
+    {
+      "secuencia": "film_film_id_seq",
+      "tabla": "public.film",
+      "columna": "film_id",
+      "valor": 1000
+    },
+    {
+      "secuencia": "address_address_id_seq",
+      "tabla": "public.address",
+      "columna": "address_id",
+      "valor": 998
+    },
+    {
+      "secuencia": "city_city_id_seq",
+      "tabla": "public.city",
+      "columna": "city_id",
+      "valor": 594
+    },
+    {
+      "secuencia": "country_country_id_seq",
+      "tabla": "public.country",
+      "columna": "country_id",
+      "valor": 108
+    },
+    {
+      "secuencia": "inventory_inventory_id_seq",
+      "tabla": "public.inventory",
+      "columna": "inventory_id",
+      "valor": 4581
+    },
+    {
+      "secuencia": "language_language_id_seq",
+      "tabla": "public.language",
+      "columna": "language_id",
+      "valor": 6
+    },
+    {
+      "secuencia": "payment_payment_id_seq",
+      "tabla": "public.payment",
+      "columna": "payment_id",
+      "valor": 102084
+    },
+    {
+      "secuencia": "rental_rental_id_seq",
+      "tabla": "public.rental",
+      "columna": "rental_id",
+      "valor": 87548
+    },
+    {
+      "secuencia": "staff_staff_id_seq",
+      "tabla": "public.staff",
+      "columna": "staff_id",
+      "valor": 2
+    },
+    {
+      "secuencia": "store_store_id_seq",
+      "tabla": "public.store",
+      "columna": "store_id",
+      "valor": 33
+    }
+  ],
+  "segundos": {
+    "cierre": 0.37,
+    "copia_datos": 0.06,
+    "total": 1.16
+  }
+}

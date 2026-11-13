@@ -1,0 +1,39 @@
+{
+  "variante": "k5_sin_supresion",
+  "arx": "3.9.2",
+  "k": 5,
+  "limite_supresion": 0.0,
+  "cuasi_identificadores": "[district, postal_code, city, country, create_date]",
+  "modelo_calidad": "Loss",
+  "filas": 799,
+  "riesgo_antes": {
+    "riesgo_maximo": 1.0,
+    "riesgo_promedio": 1.0,
+    "filas_con_riesgo_maximo": 799.0,
+    "fraccion_con_riesgo_maximo": 1.0
+  },
+  "segundos_anonimizar": 0.022412041,
+  "solucion_encontrada": true,
+  "optimo_global": true,
+  "nivel_por_cuasi_identificador": {
+    "district": 1,
+    "postal_code": 5,
+    "city": 2,
+    "country": 1,
+    "create_date": 2
+  },
+  "perdida_informacion": "0.8357908189508421",
+  "filas_suprimidas": 0,
+  "clases_equivalencia": 5,
+  "clase_min": 28,
+  "clase_promedio": 159.8,
+  "clase_max": 554,
+  "riesgo_despues": {
+    "riesgo_maximo": 0.03571428571428571,
+    "riesgo_promedio": 0.006257822277847309,
+    "filas_con_riesgo_maximo": 28.0,
+    "fraccion_con_riesgo_maximo": 0.03504380475594493
+  },
+  "segundos_contenedor": 0.6,
+  "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS"
+}

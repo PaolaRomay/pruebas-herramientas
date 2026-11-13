@@ -1,0 +1,5 @@
+medida,datos,min,mediana,promedio,max,ceros
+alquileres por cliente,real,0,61.5,52.3,87,1
+alquileres por cliente,sintético,1,23.0,34.28,81,0
+pagos por alquiler,real,0,1.0,0.98,1,158
+pagos por alquiler,sintético,0,1.0,0.99,1,22

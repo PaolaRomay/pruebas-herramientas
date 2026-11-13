@@ -1,0 +1,19 @@
+miércoles, 14 de octubre de 2026, 22:17:00 -03
+Generated 0 invalid samples out of total 128 samples generated. Sampling efficiency is: 100.0000%
+[generar customer] 1 s
+We strongly recommend passing in an `attention_mask` since your input_ids may be padded. See https://huggingface.co/docs/transformers/troubleshooting#incorrect-output-when-padding-tokens-arent-masked.
+  lote 1: 5 clientes, 131 alquileres, 33 s
+  lote 2: 5 clientes, 162 alquileres, 21 s
+  lote 3: 5 clientes, 296 alquileres, 31 s
+  lote 4: 5 clientes, 210 alquileres, 29 s
+  lote 5: 5 clientes, 66 alquileres, 7 s
+  lote 6: 5 clientes, 183 alquileres, 50 s, 1 fallos
+  lote 7: 5 clientes, 172 alquileres, 30 s
+  lote 8: 5 clientes, 83 alquileres, 24 s
+  lote 9: 5 clientes, 192 alquileres, 30 s
+  lote 10: 5 clientes, 219 alquileres, 21 s
+[generar rental] 276 s
+[generar payment] 17 s, 0 fallos, 0 alquileres descartados
+{"customer": 50, "rental": 1714, "payment": 1692}
+exit 0
+miércoles, 14 de octubre de 2026, 22:22:02 -03

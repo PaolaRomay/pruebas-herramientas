@@ -1,0 +1,8 @@
+Property,Score,reporte
+Column Shapes,0.9176470588235294,calidad
+Column Pair Trends,0.9831886487621646,calidad
+Cardinality,0.7330338055176627,calidad
+Intertable Trends,0.977784730913642,calidad
+Data Validity,0.9920734251147267,diagnóstico
+Data Structure,1.0,diagnóstico
+Relationship Validity,0.9997226844148641,diagnóstico

@@ -1,0 +1,21 @@
+actor|200
+address|1003
+category|16
+city|600
+country|109
+customer|999
+film|1000
+film_actor|5462
+film_category|2367
+inventory|4581
+language|6
+payment|51061
+rental|51805
+staff|1500
+store|500
+particiones_payment|55
+restricciones|c|1
+restricciones|f|36
+restricciones|p|70
+vistas|7
+version|PostgreSQL 16.4 (Debian 16.4-1.pgdg120+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit

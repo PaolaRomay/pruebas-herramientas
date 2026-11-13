@@ -1,0 +1,12 @@
+# Prueba D6 (REaLTabFormer). Entorno aparte (.venv-rtf): no incluye requirements.txt porque
+# realtabformer 0.2.4 no anda con las versiones nuevas que trae el lock común (ver la ficha de D6).
+#   uv venv --python 3.11 .venv-rtf && uv pip install --python .venv-rtf/bin/python -r requirements-realtabformer.txt
+# Versiones exactas de la corrida: requirements-realtabformer.lock.txt
+realtabformer==0.2.4
+pandas<3            # con pandas 3 falla la conversión de fechas
+transformers<5      # la 5 quitó TrainingArguments(overwrite_output_dir=...)
+datasets<4.1        # las nuevas piden un huggingface_hub que transformers 4 no acepta
+psycopg2-binary
+sqlalchemy
+pyarrow
+psutil

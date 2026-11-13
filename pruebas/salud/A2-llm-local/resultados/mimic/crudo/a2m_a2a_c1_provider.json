@@ -1,0 +1,9 @@
+{
+  "columnas": [
+    {
+      "columna": "provider_id",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    }
+  ]
+}

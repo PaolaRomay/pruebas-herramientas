@@ -1,0 +1,241 @@
+{
+  "exportar": {
+    "segundos": 0.2,
+    "memoria_max_mb": 308,
+    "mps_max_mb": 0,
+    "base": "e3_entrenamiento",
+    "clientes": 200,
+    "semilla": "d6",
+    "filas": {
+      "customer": 200,
+      "rental": 10461,
+      "payment": 10303
+    },
+    "alquileres_por_cliente_max": 87,
+    "alquileres_por_cliente_prom": 52.6,
+    "entorno": {
+      "equipo": "arm64, macOS 26.6.2",
+      "python": "3.11.16",
+      "ejecutable": "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/bin/python",
+      "paquetes": {
+        "realtabformer": "0.2.4",
+        "torch": "2.14.1",
+        "transformers": "4.57.6",
+        "datasets": "4.0.0",
+        "accelerate": "1.15.0",
+        "pandas": "2.3.3",
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "psycopg2-binary": "2.9.13"
+      }
+    },
+    "registrado": "2026-10-14 20:32:32"
+  },
+  "entrenar": {
+    "fases": {
+      "entrenar customer (tabular)": {
+        "segundos": 50.3,
+        "memoria_max_mb": 1188,
+        "mps_max_mb": 901
+      },
+      "entrenar rental (relacional, padre customer)": {
+        "segundos": 2113.2,
+        "memoria_max_mb": 1583,
+        "mps_max_mb": 7001
+      },
+      "entrenar payment (relacional, padre rental)": {
+        "segundos": 1696.3,
+        "memoria_max_mb": 2004,
+        "mps_max_mb": 6992
+      },
+      "generar customer": {
+        "segundos": 1.6,
+        "memoria_max_mb": 486,
+        "mps_max_mb": 2504
+      }
+    },
+    "parametros": {
+      "cmd": "entrenar",
+      "epocas_tabular": 100,
+      "epocas_rental": 20,
+      "epocas_payment": 20,
+      "batch_size": 8,
+      "batch_rental": 1,
+      "bootstrap": 500,
+      "gradient_checkpointing": true,
+      "gen_batch": 64,
+      "generar": 0,
+      "device": "cuda",
+      "semilla_modelo": 1029
+    },
+    "entorno": {
+      "equipo": "arm64, macOS 26.6.2",
+      "python": "3.11.16",
+      "ejecutable": "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/bin/python",
+      "paquetes": {
+        "realtabformer": "0.2.4",
+        "torch": "2.14.1",
+        "transformers": "4.57.6",
+        "datasets": "4.0.0",
+        "accelerate": "1.15.0",
+        "pandas": "2.3.3",
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "psycopg2-binary": "2.9.13"
+      }
+    },
+    "rental_max_tokens": 2178,
+    "payment_max_tokens": 23,
+    "registrado": "2026-10-14 21:38:46"
+  },
+  "generar": {
+    "fases": {
+      "cargar modelos": {
+        "segundos": 3.6,
+        "memoria_max_mb": 1890,
+        "mps_max_mb": 0
+      },
+      "generar customer": {
+        "segundos": 0.9,
+        "memoria_max_mb": 1890,
+        "mps_max_mb": 443
+      },
+      "generar rental": {
+        "segundos": 276.5,
+        "memoria_max_mb": 2732,
+        "mps_max_mb": 2044,
+        "lotes": [
+          {
+            "clientes": 5,
+            "alquileres": 131,
+            "segundos": 32.6,
+            "fallos": [],
+            "descartado": false
+          },
+          {
+            "clientes": 5,
+            "alquileres": 162,
+            "segundos": 21.5,
+            "fallos": [],
+            "descartado": false
+          },
+          {
+            "clientes": 5,
+            "alquileres": 296,
+            "segundos": 31.3,
+            "fallos": [],
+            "descartado": false
+          },
+          {
+            "clientes": 5,
+            "alquileres": 210,
+            "segundos": 29.3,
+            "fallos": [],
+            "descartado": false
+          },
+          {
+            "clientes": 5,
+            "alquileres": 66,
+            "segundos": 7.2,
+            "fallos": [],
+            "descartado": false
+          },
+          {
+            "clientes": 5,
+            "alquileres": 183,
+            "segundos": 50.4,
+            "fallos": [
+              "invalid literal for int() with base 10: ''"
+            ],
+            "descartado": false
+          },
+          {
+            "clientes": 5,
+            "alquileres": 172,
+            "segundos": 29.6,
+            "fallos": [],
+            "descartado": false
+          },
+          {
+            "clientes": 5,
+            "alquileres": 83,
+            "segundos": 24.0,
+            "fallos": [],
+            "descartado": false
+          },
+          {
+            "clientes": 5,
+            "alquileres": 192,
+            "segundos": 29.8,
+            "fallos": [],
+            "descartado": false
+          },
+          {
+            "clientes": 5,
+            "alquileres": 219,
+            "segundos": 20.7,
+            "fallos": [],
+            "descartado": false
+          }
+        ]
+      },
+      "generar payment": {
+        "segundos": 17.0,
+        "memoria_max_mb": 1096,
+        "mps_max_mb": 2068,
+        "fallos_sample": 0,
+        "alquileres_sin_generar_pagos": 0,
+        "detalle_fallos": []
+      }
+    },
+    "parametros": {
+      "cmd": "generar",
+      "clientes": 50,
+      "lote": 5,
+      "gen_batch": 64,
+      "device": "cuda",
+      "reusar_alquileres": false,
+      "semilla_modelo": 1029
+    },
+    "entorno": {
+      "equipo": "arm64, macOS 26.6.2",
+      "python": "3.11.16",
+      "ejecutable": "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/bin/python",
+      "paquetes": {
+        "realtabformer": "0.2.4",
+        "torch": "2.14.1",
+        "transformers": "4.57.6",
+        "datasets": "4.0.0",
+        "accelerate": "1.15.0",
+        "pandas": "2.3.3",
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "psycopg2-binary": "2.9.13"
+      }
+    },
+    "filas_sinteticas": {
+      "customer": 50,
+      "rental": 1714,
+      "payment": 1692
+    },
+    "registrado": "2026-10-14 22:22:01"
+  },
+  "cargar": {
+    "segundos": 1.0,
+    "memoria_max_mb": 290,
+    "mps_max_mb": 0,
+    "pagos_fuera_de_particion": 8,
+    "rango_particiones": [
+      "2022-01-01 00:00:00+00:00",
+      "2026-08-01 00:00:00+00:00"
+    ],
+    "pagos_con_alquiler": 1684,
+    "pago_otro_cliente": 1682,
+    "pagos_sin_alquiler": 0,
+    "alquileres_sin_cliente": 0,
+    "rental_unique_duplicados": 0,
+    "devolucion_antes_del_alquiler": 613,
+    "pago_antes_del_alquiler": 265,
+    "registrado": "2026-10-14 22:22:25"
+  }
+}

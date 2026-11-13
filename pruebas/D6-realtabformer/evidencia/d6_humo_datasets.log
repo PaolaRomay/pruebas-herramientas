@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 474, in <module>
+    main()
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 470, in main
+    {"exportar": exportar, "entrenar": entrenar, "cargar": cargar}[a.cmd](a)
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 191, in entrenar
+    from realtabformer import REaLTabFormer
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/__init__.py", line 3, in <module>
+    from . import (
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/data_utils.py", line 12, in <module>
+    from datasets import Dataset
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/datasets/__init__.py", line 17, in <module>
+    from .arrow_dataset import Column, Dataset
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 74, in <module>
+    from huggingface_hub.errors import BucketNotFoundError
+ImportError: cannot import name 'BucketNotFoundError' from 'huggingface_hub.errors' (/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/huggingface_hub/errors.py)

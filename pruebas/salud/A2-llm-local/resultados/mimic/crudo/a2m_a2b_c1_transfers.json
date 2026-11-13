@@ -1,0 +1,39 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "transfer_id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "eventtype",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "careunit",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "intime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "outtime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    }
+  ]
+}

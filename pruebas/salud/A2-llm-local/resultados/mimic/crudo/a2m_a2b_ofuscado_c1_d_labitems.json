@@ -1,0 +1,24 @@
+{
+  "columnas": [
+    {
+      "columna": "col_01",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_02",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_03",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_04",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

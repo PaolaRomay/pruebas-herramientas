@@ -1,0 +1,16 @@
+{"pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    }
+  ],
+  "supuestos": [
+    "El usuario solicita identificar información sensible (PII o datos de salud) para fines de cumplimiento o auditoría antes de proceder con la anonimización.",
+    "Se asume que el usuario desea un reporte completo de todas las tablas del esquema proporcionado."
+  ],
+  "preguntas": [
+    "¿Deseas que el sistema solo te muestre las columnas que el modelo de detección clasifique como 'sensibles' o prefieres un listado de todas las columnas de la base de datos con su respectivo tipo de dato?"
+  ]
+}

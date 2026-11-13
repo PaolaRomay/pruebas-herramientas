@@ -1,0 +1,10 @@
+{
+  "origen": "pagila",
+  "destino": "pagila_c1p",
+  "salida": "resultados",
+  "ancla": { "tabla": "customer", "filtro": "hashtext('c1' || customer_id::text) % 10 = 0" },
+  "copiar_enteras": ["film", "film_actor", "film_category", "actor", "category", "language"],
+  "relaciones_extra": [
+    { "hijo": "store", "columnas": ["manager_staff_id"], "padre": "staff", "referencia": ["staff_id"] }
+  ]
+}

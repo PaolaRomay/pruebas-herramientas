@@ -1,0 +1,65 @@
+{
+  "sintetico": {
+    "pagos_fuera_de_particion": 8,
+    "rango_particiones": [
+      "2022-01-01 00:00:00+00:00",
+      "2026-08-01 00:00:00+00:00"
+    ],
+    "pagos_con_alquiler": 1684,
+    "pago_otro_cliente": 1682,
+    "pagos_sin_alquiler": 0,
+    "alquileres_sin_cliente": 0,
+    "otras_fk": [
+      {
+        "fk": "customer.address_id -> address",
+        "filas": 50,
+        "sin_padre": 5,
+        "pct": 10.0
+      },
+      {
+        "fk": "customer.store_id -> store",
+        "filas": 50,
+        "sin_padre": 0,
+        "pct": 0.0
+      },
+      {
+        "fk": "rental.inventory_id -> inventory",
+        "filas": 1714,
+        "sin_padre": 2,
+        "pct": 0.1
+      },
+      {
+        "fk": "rental.staff_id -> staff",
+        "filas": 1714,
+        "sin_padre": 0,
+        "pct": 0.0
+      },
+      {
+        "fk": "payment.staff_id -> staff",
+        "filas": 1684,
+        "sin_padre": 0,
+        "pct": 0.0
+      },
+      {
+        "fk": "payment.customer_id -> customer",
+        "filas": 1684,
+        "sin_padre": 1581,
+        "pct": 93.9
+      }
+    ],
+    "rental_unique_duplicados": 0,
+    "devolucion_antes_del_alquiler": 613,
+    "pago_antes_del_alquiler": 265,
+    "pct_valores_copiados": {
+      "first_name": 100.0,
+      "last_name": 100.0,
+      "email": 100.0,
+      "persona_completa (nombre+apellido+email)": 26.0
+    }
+  },
+  "real_muestra": {
+    "pago_otro_cliente": 0,
+    "pagos_con_alquiler": 10303,
+    "devolucion_antes_del_alquiler": 0
+  }
+}

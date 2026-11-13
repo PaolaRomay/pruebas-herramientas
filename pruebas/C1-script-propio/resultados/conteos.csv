@@ -1,0 +1,16 @@
+tabla,origen,subconjunto,nucleo,porcentaje
+actor,200,200,0,100.0
+address,1003,113,0,11.3
+category,16,16,0,100.0
+city,600,78,0,13.0
+country,109,39,0,35.8
+customer,999,99,98,9.9
+film,1000,1000,0,100.0
+film_actor,5462,5462,0,100.0
+film_category,2367,2367,0,100.0
+inventory,4581,3140,0,68.5
+language,6,6,0,100.0
+payment,51061,5250,5250,10.3
+rental,51805,5320,5319,10.3
+staff,1500,12,0,0.8
+store,500,12,0,2.4

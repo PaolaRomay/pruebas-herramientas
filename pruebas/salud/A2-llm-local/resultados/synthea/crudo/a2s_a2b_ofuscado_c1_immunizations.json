@@ -1,0 +1,34 @@
+{
+  "columnas": [
+    {
+      "columna": "col_01",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "col_02",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_03",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "col_04",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "col_05",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "col_06",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

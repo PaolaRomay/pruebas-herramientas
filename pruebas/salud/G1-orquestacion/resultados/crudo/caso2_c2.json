@@ -1,0 +1,28 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "edad": "sin_cambios",
+        "texto_libre": "sin_cambios"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que por 'identificadores de pacientes' te referís a la columna 'subject_id' en todas las tablas donde aparece, y por 'profesionales' a 'provider_id' en la tabla 'provider' y 'admit_provider_id' en 'admissions'.",
+    "Asumo que la coherencia temporal se garantiza usando 'desplazar_por_paciente' en la herramienta anonimizar, ya que esta técnica mantiene la diferencia de tiempo entre eventos para un mismo individuo.",
+    "Asumo que el objetivo es mantener la integridad referencial de la base de datos original (que la base 'siga cargando sin errores')."
+  ],
+  "preguntas": [
+    "¿Deseas que elimine o seudonimice únicamente las columnas identificadas por la herramienta 'detectar', o hay alguna columna específica que consideres identificadora y que deba ser tratada manualmente?",
+    "¿Es necesario aplicar algún tipo de ruido o generalización a las edades o a los textos libres, o prefieres mantenerlos intactos como indicé en el plan?"
+  ]
+}

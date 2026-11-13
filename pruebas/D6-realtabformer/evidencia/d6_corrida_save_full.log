@@ -1,0 +1,48 @@
+miércoles, 14 de octubre de 2026, 19:53:14 -03
+Exportado: {'customer': 200, 'rental': 10461, 'payment': 10303} en 0.1 s -> /Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/salidas_grandes/entrada
+
+===== entrenar customer (tabular) =====
+Computing the sensitivity threshold...
+Using parallel computation!!!
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+There were missing keys in the checkpoint model loaded: ['lm_head.weight'].
+Sensitivity threshold summary:
+count    500.000000
+mean       0.007679
+std        0.020192
+min       -0.025000
+25%       -0.006818
+50%        0.005303
+75%        0.017424
+max        0.126515
+dtype: float64
+Sensitivity threshold: 0.0446969696969697 qt_max: 0.05
+{'train_runtime': 8.4299, 'train_samples_per_second': 118.626, 'train_steps_per_second': 4.152, 'train_loss': 2.5571969168526785, 'epoch': 5.0}
+Generated 0 invalid samples out of total 128 samples generated. Sampling efficiency is: 100.0000%
+Critic round: 5,                     sensitivity_threshold: 0.0446969696969697,                         val_sensitivity: -0.015303030303030306,                             val_sensitivities: [np.float64(0.02045454545454545), np.float64(-0.00984848484848485), np.float64(-0.0068181818181818205), np.float64(-0.01893939393939394), np.float64(-0.012878787878787878), np.float64(-0.025), np.float64(-0.01893939393939394), np.float64(-0.01590909090909091), np.float64(-0.00984848484848485), np.float64(-0.025), np.float64(-0.01893939393939394), np.float64(-0.01893939393939394), np.float64(-0.025), np.float64(-0.01893939393939394), np.float64(-0.025)]
+{'train_runtime': 7.99, 'train_samples_per_second': 250.312, 'train_steps_per_second': 8.761, 'train_loss': 0.7419284820556641, 'epoch': 10.0}
+Generated 0 invalid samples out of total 128 samples generated. Sampling efficiency is: 100.0000%
+Traceback (most recent call last):
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 505, in <module>
+    main()
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 501, in main
+    {"exportar": exportar, "entrenar": entrenar, "cargar": cargar}[a.cmd](a)
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 250, in entrenar
+    m_cus = correr("entrenar customer (tabular)", fit_customer)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 231, in correr
+    out = fn()
+          ^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 246, in fit_customer
+    mod.fit(cus.drop(columns=["customer_id"]), device=a.device, num_bootstrap=a.bootstrap,
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/realtabformer.py", line 466, in fit
+    trainer = self._train_with_sensitivity(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/realtabformer.py", line 819, in _train_with_sensitivity
+    self.save(path=full_save_dir)
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/realtabformer.py", line 1423, in save
+    assert self.experiment_id is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+exit 1
+miércoles, 14 de octubre de 2026, 19:53:49 -03

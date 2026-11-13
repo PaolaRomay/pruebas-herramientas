@@ -1,0 +1,144 @@
+{
+  "columnas": [
+    {
+      "columna": "id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "birthdate",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "deathdate",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "ssn",
+      "sensible": true,
+      "entidad": "US_SSN"
+    },
+    {
+      "columna": "drivers",
+      "sensible": true,
+      "entidad": "US_DRIVER_LICENSE"
+    },
+    {
+      "columna": "passport",
+      "sensible": true,
+      "entidad": "US_PASSPORT"
+    },
+    {
+      "columna": "prefix",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "first",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "middle",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "last",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "suffix",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "maiden",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "marital",
+      "sensible": true,
+      "entidad": "DEMOGRAFICO"
+    },
+    {
+      "columna": "race",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "ethnicity",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "gender",
+      "sensible": true,
+      "entidad": "DEMOGRAFICO"
+    },
+    {
+      "columna": "birthplace",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "address",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "city",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "state",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "county",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "fips",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "zip",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "lat",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "lon",
+      "sensible": true,
+      "entidad": "LOCATION"
+    },
+    {
+      "columna": "healthcare_expenses",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "healthcare_coverage",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    },
+    {
+      "columna": "income",
+      "sensible": true,
+      "entidad": "ECONOMICO"
+    }
+  ]
+}

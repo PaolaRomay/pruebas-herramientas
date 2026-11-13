@@ -1,0 +1,53 @@
+miércoles, 14 de octubre de 2026, 19:55:52 -03
+Exportado: {'customer': 200, 'rental': 10461, 'payment': 10303} en 0.2 s -> /Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/salidas_grandes/entrada
+
+===== entrenar customer (tabular) =====
+Computing the sensitivity threshold...
+Using parallel computation!!!
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+There were missing keys in the checkpoint model loaded: ['lm_head.weight'].
+There were missing keys in the checkpoint model loaded: ['lm_head.weight'].
+There were missing keys in the checkpoint model loaded: ['lm_head.weight'].
+Sensitivity threshold summary:
+count    500.000000
+mean       0.008818
+std        0.020508
+min       -0.025000
+25%       -0.006818
+50%        0.005303
+75%        0.020455
+max        0.102273
+dtype: float64
+Sensitivity threshold: 0.05075757575757575 qt_max: 0.05
+{'train_runtime': 8.1091, 'train_samples_per_second': 123.318, 'train_steps_per_second': 4.316, 'train_loss': 2.5571969168526785, 'epoch': 5.0}
+Generated 0 invalid samples out of total 128 samples generated. Sampling efficiency is: 100.0000%
+Critic round: 5,                     sensitivity_threshold: 0.05075757575757575,                         val_sensitivity: -0.015303030303030306,                             val_sensitivities: [np.float64(0.02045454545454545), np.float64(-0.00984848484848485), np.float64(-0.0068181818181818205), np.float64(-0.01893939393939394), np.float64(-0.012878787878787878), np.float64(-0.025), np.float64(-0.01893939393939394), np.float64(-0.01590909090909091), np.float64(-0.00984848484848485), np.float64(-0.025), np.float64(-0.01893939393939394), np.float64(-0.01893939393939394), np.float64(-0.025), np.float64(-0.01893939393939394), np.float64(-0.025)]
+{'train_runtime': 7.9232, 'train_samples_per_second': 252.423, 'train_steps_per_second': 8.835, 'train_loss': 0.7419284820556641, 'epoch': 10.0}
+Generated 0 invalid samples out of total 128 samples generated. Sampling efficiency is: 100.0000%
+Critic round: 10,                     sensitivity_threshold: 0.05075757575757575,                         val_sensitivity: 0.0044949494949494935,                             val_sensitivities: [np.float64(0.0053030303030303025), np.float64(0.01136363636363636), np.float64(-0.00681818181818182), np.float64(0.005303030303030301), np.float64(0.005303030303030301), np.float64(-0.000757575757575759), np.float64(0.005303030303030301), np.float64(-0.012878787878787878), np.float64(-0.000757575757575759), np.float64(0.014393939393939393), np.float64(0.017424242424242422), np.float64(0.026515151515151512), np.float64(-0.00681818181818182), np.float64(-0.00681818181818182), np.float64(0.011363636363636362)]
+{'loss': 1.0366, 'grad_norm': 4.0144267082214355, 'learning_rate': 4.175e-05, 'epoch': 14.32}
+{'train_runtime': 9.1533, 'train_samples_per_second': 327.751, 'train_steps_per_second': 11.471, 'train_loss': 0.3368919917515346, 'epoch': 15.0}
+Generated 0 invalid samples out of total 128 samples generated. Sampling efficiency is: 100.0000%
+Saving not-best model...
+Critic round: 15,                     sensitivity_threshold: 0.05075757575757575,                         val_sensitivity: 0.09055555555555553,                             val_sensitivities: [np.float64(0.13257575757575757), np.float64(0.12954545454545455), np.float64(0.05378787878787878), np.float64(0.14469696969696969), np.float64(0.07196969696969696), np.float64(0.08712121212121211), np.float64(0.06590909090909092), np.float64(0.041666666666666664), np.float64(0.026515151515151512), np.float64(0.06590909090909092), np.float64(0.10227272727272727), np.float64(0.1265151515151515), np.float64(0.11439393939393938), np.float64(0.08106060606060606), np.float64(0.11439393939393938)]
+{'train_runtime': 7.7608, 'train_samples_per_second': 515.41, 'train_steps_per_second': 18.039, 'train_loss': 0.1694394929068429, 'epoch': 20.0}
+Generated 0 invalid samples out of total 128 samples generated. Sampling efficiency is: 100.0000%
+Critic round: 20,                     sensitivity_threshold: 0.05075757575757575,                         val_sensitivity: 0.16429292929292927,                             val_sensitivities: [np.float64(0.22045454545454546), np.float64(0.20833333333333331), np.float64(0.21136363636363636), np.float64(0.2356060606060606), np.float64(0.14469696969696969), np.float64(0.10833333333333334), np.float64(0.12651515151515152), np.float64(0.1477272727272727), np.float64(0.12651515151515152), np.float64(0.16287878787878787), np.float64(0.1356060606060606), np.float64(0.21439393939393941), np.float64(0.18712121212121213), np.float64(0.10227272727272727), np.float64(0.13257575757575757)]
+Stopping training, no improvement in critic...
+Copying artefacts from: best-disc-model
+Copying artefacts from: mean-best-disc-model
+Copying artefacts from: not-best-disc-model
+Copying artefacts from: last-epoch-model
+[entrenar customer (tabular)] 52 s, RSS 1.1 GB, MPS 0.9 GB
+
+===== entrenar rental (relacional, padre customer) =====
+/Users/jerojacques/.local/share/uv/python/cpython-3.11.16-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/joblib/externals/loky/backend/resource_tracker.py:444: UserWarning: resource_tracker: There appear to be 6 leaked semlock objects to clean up at shutdown: {'/loky-17955-3p2ebk2z': 1, '/loky-17955-hg8z170d': 1, '/loky-17955-muur8_y2': 1, '/loky-17955-caabr9h4': 1, '/loky-17955-tf6d8ypu': 1, '/loky-17955-nbg8yw3_': 1}
+  warnings.warn(
+/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/joblib/externals/loky/backend/resource_tracker.py:444: UserWarning: resource_tracker: There appear to be 2 leaked folder objects to clean up at shutdown: {'/var/folders/fp/nftlk9kj3v79pz87dbm112v80000gn/T/joblib_memmapping_folder_17955_40b3728a31c74beb9c4c4be204204601_1b63271cb75a4e4a8e96de60a4ab4a7d': 1, '/var/folders/fp/nftlk9kj3v79pz87dbm112v80000gn/T/joblib_memmapping_folder_17955_40b3728a31c74beb9c4c4be204204601_e0e092482f0b4d159ffbf8736f1fd8e9': 1}
+  warnings.warn(
+/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/joblib/externals/loky/backend/resource_tracker.py:468: UserWarning: resource_tracker: /var/folders/fp/nftlk9kj3v79pz87dbm112v80000gn/T/joblib_memmapping_folder_17955_40b3728a31c74beb9c4c4be204204601_1b63271cb75a4e4a8e96de60a4ab4a7d: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))
+/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/joblib/externals/loky/backend/resource_tracker.py:468: UserWarning: resource_tracker: /var/folders/fp/nftlk9kj3v79pz87dbm112v80000gn/T/joblib_memmapping_folder_17955_40b3728a31c74beb9c4c4be204204601_e0e092482f0b4d159ffbf8736f1fd8e9: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn('resource_tracker: %s: %r' % (name, e))

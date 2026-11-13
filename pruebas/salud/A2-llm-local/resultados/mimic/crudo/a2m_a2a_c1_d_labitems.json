@@ -1,0 +1,24 @@
+{
+  "columnas": [
+    {
+      "columna": "itemid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "label",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "fluid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "category",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

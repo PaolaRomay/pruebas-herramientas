@@ -1,0 +1,44 @@
+{
+  "columnas": [
+    {
+      "columna": "patient",
+      "sensible": true,
+      "entidad": "PERSON"
+    },
+    {
+      "columna": "memberid",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "start_date",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "end_date",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "payer",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "secondary_payer",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "plan_ownership",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "owner_name",
+      "sensible": true,
+      "entidad": "PERSON"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "emar_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "emar_seq",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "parent_field_ordinal",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "administration_type",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "pharmacy_id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "barcode_type",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "reason_for_no_barcode",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "complete_dose_not_given",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "dose_due",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "dose_due_unit",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "dose_given",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "dose_given_unit",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "will_remainder_of_dose_be_given",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "product_amount_given",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "product_unit",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "product_code",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "product_description",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "product_description_other",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "prior_infusion_rate",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "infusion_rate",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "infusion_rate_adjustment",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "infusion_rate_adjustment_amount",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "infusion_rate_unit",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "route",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "infusion_complete",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "completion_interval",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "new_iv_bag_hung",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "continued_infusion_in_other_location",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "restart_interval",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "side",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "site",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "non_formulary_visual_verification",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

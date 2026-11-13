@@ -1,0 +1,31 @@
+{
+  "pasos": [
+    {
+      "herramienta": "subconjunto",
+      "parametros": {
+        "ancla": "mimiciv_hosp.patients",
+        "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE 'A41.%' OR icd_code LIKE 'R65.%')",
+        "porcentaje": 100
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "edad": "decada",
+        "texto_libre": "enmascarar"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que la identificación de 'sepsis' se realiza mediante la búsqueda de códigos ICD-10 específicos en la tabla 'diagnoses_icd' (ej. A41.x para sepsis por bacterias sensibles y R65 para sepsis no especificada).",
+    "Asumo que el usuario desea mantener la integridad referencial de todas las tablas relacionadas (admissions, labevents, icustays, etc.) a través de la función 'subconjunto', la cual ya garantiza que se extraen todas las filas dependientes de los pacientes seleccionados.",
+    "Asumo que, al ser una base de datos de producción, es necesario aplicar una capa de anonimización estándar tras la extracción para proteger la privacidad de los datos (desplazamiento de fechas, enmascaramiento de textos y generalización de edad)."
+  ],
+  "preguntas": [
+    "¿Deseas utilizar algún código ICD-10 específico para definir la sepsis o prefieres que yo defina los más comunes?",
+    "¿Es necesario que los datos de 'texto_libre' (como comentarios en laboratorios o notas) se mantengan originales o prefieres que se enmascaren todos?",
+    "¿Quieres que se incluya alguna restricción de tiempo (ej. pacientes de un año específico) en el filtro de sepsis?"
+  ]
+}

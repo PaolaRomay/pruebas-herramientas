@@ -1,0 +1,68 @@
+{
+  "prueba": "B1m",
+  "variante": "consistentes",
+  "origen": "mimic_c1_50",
+  "destino": "b1m_consistentes",
+  "fecha": "2026-11-09T09:26:16",
+  "segundos_copia": 24.9,
+  "fk_declaradas": 51,
+  "columnas_enmascaradas": 120,
+  "enmascarado": "ok",
+  "segundos_enmascarar": 543.9,
+  "coherencia": {
+    "alta >= ingreso": {
+      "antes": 0,
+      "despues": 0
+    },
+    "muerte dentro de la internación": {
+      "antes": 0,
+      "despues": 0
+    },
+    "UCI dentro de la internación": {
+      "antes": 0,
+      "despues": 0
+    },
+    "dod = día de la muerte": {
+      "antes": 0,
+      "despues": 0
+    },
+    "traslado: salida >= entrada": {
+      "antes": 0,
+      "despues": 0
+    },
+    "emergencia: salida >= registro": {
+      "antes": 0,
+      "despues": 0
+    },
+    "chartevents dentro de su estadía UCI": {
+      "antes": 56,
+      "despues": 56
+    }
+  },
+  "fk_validas": 51,
+  "fechas_por_paciente": {
+    "pacientes": 47,
+    "con_un_solo_desplazamiento": 47,
+    "desplazamientos_distintos_promedio": 1.0
+  },
+  "duracion_internacion_igual": {
+    "internaciones": 115,
+    "igual": 115
+  },
+  "fuga_poe_id": {
+    "filas": 19144,
+    "prefijo_con_subject_id_original": 0
+  },
+  "subject_id_originales_que_quedan": 0,
+  "edad": "4 de 47 iguales",
+  "reversion": {
+    "metodo": "sal conocida -> recorrer los 10 millones de ids posibles",
+    "recuperados_sin_ambiguedad": 21,
+    "con_varios_candidatos": 26,
+    "con_el_original_entre_los_candidatos": 47,
+    "de": 47,
+    "segundos": 3.3,
+    "colisiones_en_el_dominio": 3677865,
+    "seudonimos_distintos_en_el_dominio": 6322135
+  }
+}

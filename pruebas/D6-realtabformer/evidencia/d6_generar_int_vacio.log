@@ -1,0 +1,45 @@
+miércoles, 14 de octubre de 2026, 22:10:12 -03
+Generated 0 invalid samples out of total 128 samples generated. Sampling efficiency is: 100.0000%
+[generar customer] 1 s
+We strongly recommend passing in an `attention_mask` since your input_ids may be padded. See https://huggingface.co/docs/transformers/troubleshooting#incorrect-output-when-padding-tokens-arent-masked.
+  lote 1: 5 clientes, 131 alquileres, 34 s
+  lote 2: 5 clientes, 162 alquileres, 21 s
+  lote 3: 5 clientes, 296 alquileres, 32 s
+  lote 4: 5 clientes, 210 alquileres, 30 s
+  lote 5: 5 clientes, 66 alquileres, 7 s
+Traceback (most recent call last):
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 549, in <module>
+    main()
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 545, in main
+    {"exportar": exportar, "entrenar": entrenar, "generar": generar, "cargar": cargar}[a.cmd](a)
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 322, in generar
+    rs = m_ren.sample(input_unique_ids=sub["customer_id"], input_df=sub.drop(columns=["customer_id"]),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/realtabformer.py", line 1312, in sample
+    synth_df = relational_sampler.sample_relational(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/rtf_sampler.py", line 960, in sample_relational
+    synth_df = self._processes_sample(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/rtf_sampler.py", line 457, in _processes_sample
+    synth_df = self._recover_data_values(synth_sample)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/rtf_sampler.py", line 333, in _recover_data_values
+    .map(lambda x: int(x) if x == x else None)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/pandas/core/series.py", line 4719, in map
+    new_values = self._map_values(arg, na_action=na_action)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/pandas/core/base.py", line 925, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/pandas/core/algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 2999, in pandas._libs.lib.map_infer
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/rtf_sampler.py", line 333, in <lambda>
+    .map(lambda x: int(x) if x == x else None)
+                   ^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+exit 1
+miércoles, 14 de octubre de 2026, 22:12:49 -03

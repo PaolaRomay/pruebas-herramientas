@@ -1,0 +1,39 @@
+{
+  "columnas": [
+    {
+      "columna": "start",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "stop",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "patient",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "encounter",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "system",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "code",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "description",
+      "sensible": true,
+      "entidad": "SALUD"
+    }
+  ]
+}

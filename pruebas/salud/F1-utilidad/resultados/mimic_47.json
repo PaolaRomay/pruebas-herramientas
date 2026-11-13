@@ -1,0 +1,350 @@
+{
+  "entrenamiento": "mimic_47",
+  "umbrales": {
+    "escalar": 0.2,
+    "ranking": 5,
+    "distribucion": 0.2
+  },
+  "consultas": [
+    "Pacientes por diagnóstico (top 10 códigos CIE)",
+    "Diagnóstico principal más frecuente (top 10, seq_num = 1)",
+    "Estadía media en UCI (días)",
+    "Estadía media en UCI calculada con las fechas (días)",
+    "Duración mediana de la internación (días)",
+    "Mortalidad hospitalaria (% de internaciones)",
+    "Mortalidad por grupo de edad",
+    "Internaciones por tipo de admisión",
+    "Internaciones por seguro",
+    "Pacientes por sexo",
+    "Pacientes por grupo de edad",
+    "Internaciones por paciente (media)",
+    "% de internaciones con estadía en UCI",
+    "Reinternación a 30 días (% de internaciones)",
+    "Estudios de laboratorio más pedidos (top 10 itemid)",
+    "% de laboratorios anormales (flag)",
+    "Primera unidad de UCI"
+  ],
+  "candidatas": {
+    "B1 anonimizada (PostgreSQL Anonymizer)": {
+      "por_consulta": {
+        "Pacientes por diagnóstico (top 10 códigos CIE)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 10,
+          "se_conserva": true
+        },
+        "Diagnóstico principal más frecuente (top 10, seq_num = 1)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 10,
+          "se_conserva": true
+        },
+        "Estadía media en UCI (días)": {
+          "tipo": "escalar",
+          "real": 3.345,
+          "candidata": 3.345,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Estadía media en UCI calculada con las fechas (días)": {
+          "tipo": "escalar",
+          "real": 3.345,
+          "candidata": 3.345,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Duración mediana de la internación (días)": {
+          "tipo": "escalar",
+          "real": 5.6,
+          "candidata": 5.6,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Mortalidad hospitalaria (% de internaciones)": {
+          "tipo": "escalar",
+          "real": 6.087,
+          "candidata": 6.087,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Mortalidad por grupo de edad": {
+          "tipo": "distribucion",
+          "variacion_total": 0.0,
+          "se_conserva": true
+        },
+        "Internaciones por tipo de admisión": {
+          "tipo": "distribucion",
+          "variacion_total": 0.0,
+          "se_conserva": true
+        },
+        "Internaciones por seguro": {
+          "tipo": "distribucion",
+          "variacion_total": 0.0,
+          "se_conserva": true
+        },
+        "Pacientes por sexo": {
+          "tipo": "distribucion",
+          "variacion_total": 0.0,
+          "se_conserva": true
+        },
+        "Pacientes por grupo de edad": {
+          "tipo": "distribucion",
+          "variacion_total": 0.0,
+          "se_conserva": true
+        },
+        "Internaciones por paciente (media)": {
+          "tipo": "escalar",
+          "real": 2.447,
+          "candidata": 2.447,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "% de internaciones con estadía en UCI": {
+          "tipo": "escalar",
+          "real": 50.435,
+          "candidata": 50.435,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Reinternación a 30 días (% de internaciones)": {
+          "tipo": "escalar",
+          "real": 17.391,
+          "candidata": 17.391,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Estudios de laboratorio más pedidos (top 10 itemid)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 9,
+          "se_conserva": true
+        },
+        "% de laboratorios anormales (flag)": {
+          "tipo": "escalar",
+          "real": 36.901,
+          "candidata": 36.901,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Primera unidad de UCI": {
+          "tipo": "distribucion",
+          "variacion_total": 0.0,
+          "se_conserva": true
+        }
+      },
+      "se_conservan": 17,
+      "de": 17
+    },
+    "D2 sintética (MOSTLY AI)": {
+      "por_consulta": {
+        "Pacientes por diagnóstico (top 10 códigos CIE)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 2,
+          "se_conserva": false
+        },
+        "Diagnóstico principal más frecuente (top 10, seq_num = 1)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 0,
+          "se_conserva": false
+        },
+        "Estadía media en UCI (días)": {
+          "tipo": "escalar",
+          "real": 3.345,
+          "candidata": 2.85,
+          "error_relativo": 0.148,
+          "se_conserva": true
+        },
+        "Estadía media en UCI calculada con las fechas (días)": {
+          "tipo": "escalar",
+          "real": 3.345,
+          "candidata": 1608.78,
+          "error_relativo": 479.983,
+          "se_conserva": false
+        },
+        "Duración mediana de la internación (días)": {
+          "tipo": "escalar",
+          "real": 5.6,
+          "candidata": 925.504,
+          "error_relativo": 164.269,
+          "se_conserva": false
+        },
+        "Mortalidad hospitalaria (% de internaciones)": {
+          "tipo": "escalar",
+          "real": 6.087,
+          "candidata": 0.0,
+          "error_relativo": 1.0,
+          "se_conserva": false
+        },
+        "Mortalidad por grupo de edad": {
+          "tipo": "distribucion",
+          "variacion_total": 0.5,
+          "se_conserva": false
+        },
+        "Internaciones por tipo de admisión": {
+          "tipo": "distribucion",
+          "variacion_total": 0.276,
+          "se_conserva": false
+        },
+        "Internaciones por seguro": {
+          "tipo": "distribucion",
+          "variacion_total": 0.127,
+          "se_conserva": true
+        },
+        "Pacientes por sexo": {
+          "tipo": "distribucion",
+          "variacion_total": 0.021,
+          "se_conserva": true
+        },
+        "Pacientes por grupo de edad": {
+          "tipo": "distribucion",
+          "variacion_total": 0.213,
+          "se_conserva": false
+        },
+        "Internaciones por paciente (media)": {
+          "tipo": "escalar",
+          "real": 2.447,
+          "candidata": 1.745,
+          "error_relativo": 0.287,
+          "se_conserva": false
+        },
+        "% de internaciones con estadía en UCI": {
+          "tipo": "escalar",
+          "real": 50.435,
+          "candidata": 47.561,
+          "error_relativo": 0.057,
+          "se_conserva": true
+        },
+        "Reinternación a 30 días (% de internaciones)": {
+          "tipo": "escalar",
+          "real": 17.391,
+          "candidata": 1.22,
+          "error_relativo": 0.93,
+          "se_conserva": false
+        },
+        "Estudios de laboratorio más pedidos (top 10 itemid)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 3,
+          "se_conserva": false
+        },
+        "% de laboratorios anormales (flag)": {
+          "tipo": "escalar",
+          "real": 36.901,
+          "candidata": 31.09,
+          "error_relativo": 0.157,
+          "se_conserva": true
+        },
+        "Primera unidad de UCI": {
+          "tipo": "distribucion",
+          "variacion_total": 0.3,
+          "se_conserva": false
+        }
+      },
+      "se_conservan": 5,
+      "de": 17
+    },
+    "D3 sintética (SDV HMA, 5 tablas)": {
+      "por_consulta": {
+        "Pacientes por diagnóstico (top 10 códigos CIE)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 4,
+          "se_conserva": false
+        },
+        "Diagnóstico principal más frecuente (top 10, seq_num = 1)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 1,
+          "se_conserva": false
+        },
+        "Estadía media en UCI (días)": {
+          "tipo": "escalar",
+          "real": 3.345,
+          "candidata": 6.166,
+          "error_relativo": 0.843,
+          "se_conserva": false
+        },
+        "Estadía media en UCI calculada con las fechas (días)": {
+          "tipo": "escalar",
+          "real": 3.345,
+          "candidata": 4858.833,
+          "error_relativo": 1451.662,
+          "se_conserva": false
+        },
+        "Duración mediana de la internación (días)": {
+          "tipo": "escalar",
+          "real": 5.6,
+          "candidata": 13.851,
+          "error_relativo": 1.473,
+          "se_conserva": false
+        },
+        "Mortalidad hospitalaria (% de internaciones)": {
+          "tipo": "escalar",
+          "real": 6.087,
+          "candidata": 3.478,
+          "error_relativo": 0.429,
+          "se_conserva": false
+        },
+        "Mortalidad por grupo de edad": {
+          "tipo": "distribucion",
+          "variacion_total": 0.631,
+          "se_conserva": false
+        },
+        "Internaciones por tipo de admisión": {
+          "tipo": "distribucion",
+          "variacion_total": 0.191,
+          "se_conserva": true
+        },
+        "Internaciones por seguro": {
+          "tipo": "distribucion",
+          "variacion_total": 0.052,
+          "se_conserva": true
+        },
+        "Pacientes por sexo": {
+          "tipo": "distribucion",
+          "variacion_total": 0.106,
+          "se_conserva": true
+        },
+        "Pacientes por grupo de edad": {
+          "tipo": "distribucion",
+          "variacion_total": 0.043,
+          "se_conserva": true
+        },
+        "Internaciones por paciente (media)": {
+          "tipo": "escalar",
+          "real": 2.447,
+          "candidata": 2.447,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "% de internaciones con estadía en UCI": {
+          "tipo": "escalar",
+          "real": 50.435,
+          "candidata": 40.0,
+          "error_relativo": 0.207,
+          "se_conserva": false
+        },
+        "Reinternación a 30 días (% de internaciones)": {
+          "tipo": "escalar",
+          "real": 17.391,
+          "candidata": 6.957,
+          "error_relativo": 0.6,
+          "se_conserva": false
+        },
+        "Estudios de laboratorio más pedidos (top 10 itemid)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 6,
+          "se_conserva": true
+        },
+        "% de laboratorios anormales (flag)": {
+          "tipo": "escalar",
+          "real": 36.901,
+          "candidata": 31.687,
+          "error_relativo": 0.141,
+          "se_conserva": true
+        },
+        "Primera unidad de UCI": {
+          "tipo": "distribucion",
+          "variacion_total": 0.258,
+          "se_conserva": false
+        }
+      },
+      "se_conservan": 7,
+      "de": 17
+    }
+  }
+}

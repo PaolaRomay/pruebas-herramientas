@@ -1,0 +1,129 @@
+{
+  "columnas": [
+    {
+      "columna": "microevent_id",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "micro_specimen_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "order_provider_id",
+      "sensible": true,
+      "entidad": "PROFESIONAL"
+    },
+    {
+      "columna": "chartdate",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "charttime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "spec_itemid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "spec_type_desc",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "test_seq",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "storedate",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "storetime",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "test_itemid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "test_name",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "org_itemid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "org_name",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "isolate_num",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "quantity",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "ab_itemid",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "ab_name",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "dilution_text",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "dilution_comparison",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "dilution_value",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "interpretation",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "comments",
+      "sensible": true,
+      "entidad": "SALUD"
+    }
+  ]
+}

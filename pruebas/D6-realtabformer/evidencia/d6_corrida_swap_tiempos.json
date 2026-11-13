@@ -1,0 +1,73 @@
+{
+  "exportar": {
+    "segundos": 0.2,
+    "memoria_max_mb": 308,
+    "mps_max_mb": 0,
+    "base": "e3_entrenamiento",
+    "clientes": 200,
+    "semilla": "d6",
+    "filas": {
+      "customer": 200,
+      "rental": 10461,
+      "payment": 10303
+    },
+    "alquileres_por_cliente_max": 87,
+    "alquileres_por_cliente_prom": 52.6,
+    "entorno": {
+      "equipo": "arm64, macOS 26.6.2",
+      "python": "3.11.16",
+      "ejecutable": "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/bin/python",
+      "paquetes": {
+        "realtabformer": "0.2.4",
+        "torch": "2.14.1",
+        "transformers": "4.57.6",
+        "datasets": "4.0.0",
+        "accelerate": "1.15.0",
+        "pandas": "2.3.3",
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "psycopg2-binary": "2.9.13"
+      }
+    },
+    "registrado": "2026-10-14 19:55:52"
+  },
+  "entrenar": {
+    "fases": {
+      "entrenar customer (tabular)": {
+        "segundos": 51.8,
+        "memoria_max_mb": 1078,
+        "mps_max_mb": 901
+      }
+    },
+    "parametros": {
+      "cmd": "entrenar",
+      "epocas_tabular": 100,
+      "epocas_rental": 5,
+      "epocas_payment": 20,
+      "batch_size": 8,
+      "batch_rental": 1,
+      "bootstrap": 500,
+      "gen_batch": 64,
+      "generar": 0,
+      "device": "cuda",
+      "semilla_modelo": 1029
+    },
+    "entorno": {
+      "equipo": "arm64, macOS 26.6.2",
+      "python": "3.11.16",
+      "ejecutable": "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/bin/python",
+      "paquetes": {
+        "realtabformer": "0.2.4",
+        "torch": "2.14.1",
+        "transformers": "4.57.6",
+        "datasets": "4.0.0",
+        "accelerate": "1.15.0",
+        "pandas": "2.3.3",
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "psycopg2-binary": "2.9.13"
+      }
+    },
+    "registrado": "2026-10-14 19:56:47"
+  }
+}

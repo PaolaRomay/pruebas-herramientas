@@ -1,0 +1,70 @@
+{
+  "relaciones": [
+    {
+      "tabla_hija": "mimiciv_hosp.emar",
+      "columna_hija": "pharmacy_id",
+      "tabla_padre": "mimiciv_hosp.pharmacy",
+      "columna_padre": "pharmacy_id"
+    },
+    {
+      "tabla_hija": "mimiciv_hosp.emar_detail",
+      "columna_hija": "pharmacy_id",
+      "tabla_padre": "mimiciv_hosp.pharmacy",
+      "columna_padre": "pharmacy_id"
+    },
+    {
+      "tabla_hija": "mimiciv_hosp.prescriptions",
+      "columna_hija": "pharmacy_id",
+      "tabla_padre": "mimiciv_hosp.pharmacy",
+      "columna_padre": "pharmacy_id"
+    },
+    {
+      "tabla_hija": "mimiciv_hosp.poe",
+      "columna_hija": "order_provider_id",
+      "tabla_padre": "mimiciv_hosp.provider",
+      "columna_padre": "provider_id"
+    },
+    {
+      "tabla_hija": "mimiciv_hosp.prescriptions",
+      "columna_hija": "poe_id",
+      "tabla_padre": "mimiciv_hosp.poe",
+      "columna_padre": "poe_id"
+    },
+    {
+      "tabla_hija": "mimiciv_icu.ingredientevents",
+      "columna_hija": "orderid",
+      "tabla_padre": "mimiciv_icu.procedureevents",
+      "columna_padre": "orderid"
+    },
+    {
+      "tabla_hija": "mimiciv_icu.inputevents",
+      "columna_hija": "orderid",
+      "tabla_padre": "mimiciv_icu.procedureevents",
+      "columna_padre": "orderid"
+    },
+    {
+      "tabla_hija": "mimiciv_icu.procedureevents",
+      "columna_hija": "orderid",
+      "tabla_padre": "mimiciv_icu.inputevents",
+      "columna_padre": "orderid"
+    },
+    {
+      "tabla_hija": "mimiciv_icu.procedureevents",
+      "columna_hija": "linkorderid",
+      "tabla_padre": "mimiciv_icu.procedureevents",
+      "columna_padre": "orderid"
+    },
+    {
+      "tabla_hija": "mimiciv_icu.ingredientevents",
+      "columna_hija": "linkorderid",
+      "tabla_padre": "mimiciv_icu.procedureevents",
+      "columna_padre": "orderid"
+    },
+    {
+      "tabla_hija": "mimiciv_icu.inputevents",
+      "columna_hija": "linkorderid",
+      "tabla_padre": "mimiciv_icu.procedureevents",
+      "columna_padre": "orderid"
+    }
+  ]
+}

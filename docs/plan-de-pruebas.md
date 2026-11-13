@@ -81,14 +81,14 @@ Estados: ✅ hecha · 🔄 en curso · 📝 hecha fuera del repo (hay que rehace
 |---|---|---|---|
 | B1 | PostgreSQL Anonymizer | Paola | 🔄 |
 | B2 | Presidio con cifrado reversible | Paola | ⏳ |
-| B3 | ARX (k-anonimato) | sin asignar | ⏳ |
+| B3 | ARX (k-anonimato) | Jero | ✅ [ficha](../pruebas/B3-arx/ficha.md) |
 | B4 | Tonic Structural (con trial) | sin asignar | ⏳ |
 
 ### C — Extraer subconjuntos
 
 | ID | Herramienta / variante | Responsable | Estado |
 |---|---|---|---|
-| C1 | Condenser o script propio. Ancla `customer`, filtro `hashtext('c1' \|\| customer_id::text) % 10 = 0` (98 clientes). Ojo: `payment` está particionada y hay un ciclo `store` ↔ `staff` | Jero | ⏳ |
+| C1 | Condenser o script propio. Ancla `customer`, filtro `hashtext('c1' \|\| customer_id::text) % 10 = 0` (98 clientes). Ojo: `payment` está particionada y hay un ciclo `store` ↔ `staff` | Jero | ✅ [Condenser](../pruebas/C1-condenser/ficha.md) · [script propio](../pruebas/C1-script-propio/ficha.md) |
 | C2 | Tonic Structural (con trial) | sin asignar | ⏳ |
 
 ### D — Sintetizar
@@ -100,6 +100,7 @@ Estados: ✅ hecha · 🔄 en curso · 📝 hecha fuera del repo (hay que rehace
 | D3 | SDV con 3, 5 y 10 tablas | sin asignar | ⏳ |
 | D4 | Faker (línea base) | sin asignar | ⏳ |
 | D5 | Tonic Fabricate (sin trial) | Jero | ✅ [ficha](../pruebas/D5-tonic-fabricate/ficha.md) |
+| D6 | REaLTabFormer, **prueba de descarte** (Tabla 2.6 del informe): 2 niveles, 3 niveles nativo y encadenado, varios padres | Jero | ✅ [ficha](../pruebas/D6-realtabformer/ficha.md): confirma el descarte |
 
 ### E — Validar privacidad
 
@@ -118,6 +119,32 @@ Estados: ✅ hecha · 🔄 en curso · 📝 hecha fuera del repo (hay que rehace
 | F1 | Mini-experimento de utilidad para testing | sin asignar | ⏳ |
 | G1 | Qwen 3 local con salida restringida a un JSON Schema | Jero | ⏳ |
 | G3 | Tonic Structural (con trial) | sin asignar | ⏳ |
+
+### Bases de salud (MIMIC y Synthea)
+
+Sobre la demo abierta de MIMIC-IV (100 pacientes, ya desidentificada) y Synthea (1 000 pacientes inventados),
+con listas de referencia propias ([taxonomía](../pruebas/_bases/referencia/taxonomia.md)). Sufijo **m** = MIMIC, **s** = Synthea. Las
+pruebas de «F2» corresponden a la funcionalidad F2 del sistema (relaciones no declaradas), no a la letra F del plan
+(utilidad). Fichas de herramienta nuevas: [SchemaSpy](../pruebas/_herramientas/schemaspy.md) y [Metanome](../pruebas/_herramientas/metanome.md).
+
+| ID | Herramienta | Función | Estado | Ficha |
+|---|---|---|---|---|
+| A1m / A1s | Presidio | Detectar | Hecha (2026-11-08) | [ficha](../pruebas/salud/A1-presidio/ficha.md) |
+| A2m / A2s | LLM local (Gemma 4 12B, Ollama): esquema, muestra y esquema ofuscado | Detectar | Hecha (2026-11-08) | [ficha](../pruebas/salud/A2-llm-local/ficha.md) |
+| A4m / A4s | GLiNER2-PII | Detectar | Hecha (2026-11-08) | [ficha](../pruebas/salud/A4-gliner2/ficha.md) |
+| A5m / A5s | `anon.detect` (PostgreSQL Anonymizer) | Detectar | Hecha (2026-11-09) | [ficha](../pruebas/salud/A5-anon-detect/ficha.md) |
+| A6m / A6s | LLM local + Presidio combinados | Detectar | Hecha (2026-11-08) | [ficha](../pruebas/salud/A6-llm-presidio/ficha.md) |
+| C1m / C1s | Script propio de subconjuntos (tablas sin PK, relaciones no declaradas, pacientes de control) | Extraer subconjuntos | Hecha (2026-11-09) | [ficha](../pruebas/salud/C1-subconjunto/ficha.md) |
+| B1m / B1s | PostgreSQL Anonymizer (funciones nativas y propias) | Anonimizar | Hecha (2026-11-09) | [ficha](../pruebas/salud/B1-anon/ficha.md) |
+| B3m / B3s | ARX como medidor de riesgo del registro «paciente» | Anonimizar | Hecha (2026-11-09) | [ficha](../pruebas/salud/B3-arx/ficha.md) |
+| D2m / D2s | MOSTLY AI (escalones de 47 a 10 000 pacientes) | Sintetizar | Hecha (2026-11-12) | [ficha](../pruebas/salud/D2-mostlyai/ficha.md) |
+| D3m / D3s | SDV (HMA) con 3, 4 y 5 tablas | Sintetizar | Hecha (2026-11-12) | [ficha](../pruebas/salud/D3-sdv/ficha.md) |
+| E3m / E3s | Evaluador propio adaptado a salud | Validar | Hecha (2026-11-12) | [ficha](../pruebas/salud/E3-evaluador/ficha.md) |
+| E4m / E4s | SyntheRela | Validar | Hecha (2026-11-12) | [ficha](../pruebas/salud/E4-syntherela/ficha.md) |
+| F1m / F1s | Consultas de referencia (utilidad) | Utilidad | Hecha (2026-11-12) | [ficha](../pruebas/salud/F1-utilidad/ficha.md) |
+| F2m / F2s | LLM local propone relaciones | Entender el esquema | Hecha (2026-11-12) | [ficha](../pruebas/salud/F2-relaciones-llm/ficha.md) |
+| F2m | **SchemaSpy** y **Metanome** (BINDER, SPIDER) descubren relaciones no declaradas | Entender el esquema | Hecha (2026-11-13) | [ficha](../pruebas/salud/F2-relaciones-herramientas/ficha.md) |
+| G1m | Orquestación con el LLM local | Orquestar | Hecha (2026-11-12) | [ficha](../pruebas/salud/G1-orquestacion/ficha.md) |
 
 ### Herramientas comerciales
 

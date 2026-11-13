@@ -1,0 +1,670 @@
+{
+  "prueba": "B1m",
+  "variante": "consistentes",
+  "origen": "mimic_c1_50",
+  "destino": "b1m_consistentes",
+  "fecha": "2026-11-09T09:26:16",
+  "segundos_copia": 24.9,
+  "fk_declaradas": 51,
+  "reglas": [
+    {
+      "columna": "admissions.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "admissions.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "admissions.admittime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(admittime, subject_id)"
+    },
+    {
+      "columna": "admissions.dischtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(dischtime, subject_id)"
+    },
+    {
+      "columna": "admissions.deathtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(deathtime, subject_id)"
+    },
+    {
+      "columna": "admissions.admit_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.texto_hash(admit_provider_id)"
+    },
+    {
+      "columna": "admissions.edregtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(edregtime, subject_id)"
+    },
+    {
+      "columna": "admissions.edouttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(edouttime, subject_id)"
+    },
+    {
+      "columna": "diagnoses_icd.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "diagnoses_icd.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "drgcodes.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "drgcodes.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "emar.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "emar.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "emar.emar_id",
+      "categoria": "ident_registro",
+      "regla": "FUNCTION masc.id_compuesto(emar_id)"
+    },
+    {
+      "columna": "emar.poe_id",
+      "categoria": "ident_registro",
+      "regla": "FUNCTION masc.id_compuesto(poe_id)"
+    },
+    {
+      "columna": "emar.enter_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.texto_hash(enter_provider_id)"
+    },
+    {
+      "columna": "emar.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(charttime, subject_id)"
+    },
+    {
+      "columna": "emar.scheduletime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(scheduletime, subject_id)"
+    },
+    {
+      "columna": "emar.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(storetime, subject_id)"
+    },
+    {
+      "columna": "emar_detail.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "emar_detail.emar_id",
+      "categoria": "ident_registro",
+      "regla": "FUNCTION masc.id_compuesto(emar_id)"
+    },
+    {
+      "columna": "hcpcsevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "hcpcsevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "hcpcsevents.chartdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(chartdate, subject_id)"
+    },
+    {
+      "columna": "labevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "labevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "labevents.order_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.texto_hash(order_provider_id)"
+    },
+    {
+      "columna": "labevents.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(charttime, subject_id)"
+    },
+    {
+      "columna": "labevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(storetime, subject_id)"
+    },
+    {
+      "columna": "microbiologyevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "microbiologyevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "microbiologyevents.order_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.texto_hash(order_provider_id)"
+    },
+    {
+      "columna": "microbiologyevents.chartdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(chartdate, subject_id)"
+    },
+    {
+      "columna": "microbiologyevents.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(charttime, subject_id)"
+    },
+    {
+      "columna": "microbiologyevents.storedate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(storedate, subject_id)"
+    },
+    {
+      "columna": "microbiologyevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(storetime, subject_id)"
+    },
+    {
+      "columna": "omr.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "omr.chartdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(chartdate, subject_id)"
+    },
+    {
+      "columna": "patients.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "patients.anchor_age",
+      "categoria": "cuasi",
+      "regla": "FUNCTION masc.decada(anchor_age)"
+    },
+    {
+      "columna": "patients.dod",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(dod, subject_id)"
+    },
+    {
+      "columna": "pharmacy.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "pharmacy.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "pharmacy.poe_id",
+      "categoria": "ident_registro",
+      "regla": "FUNCTION masc.id_compuesto(poe_id)"
+    },
+    {
+      "columna": "pharmacy.starttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(starttime, subject_id)"
+    },
+    {
+      "columna": "pharmacy.stoptime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(stoptime, subject_id)"
+    },
+    {
+      "columna": "pharmacy.entertime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(entertime, subject_id)"
+    },
+    {
+      "columna": "pharmacy.verifiedtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(verifiedtime, subject_id)"
+    },
+    {
+      "columna": "poe.poe_id",
+      "categoria": "ident_registro",
+      "regla": "FUNCTION masc.id_compuesto(poe_id)"
+    },
+    {
+      "columna": "poe.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "poe.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "poe.ordertime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(ordertime, subject_id)"
+    },
+    {
+      "columna": "poe.discontinue_of_poe_id",
+      "categoria": "ident_registro",
+      "regla": "FUNCTION masc.id_compuesto(discontinue_of_poe_id)"
+    },
+    {
+      "columna": "poe.discontinued_by_poe_id",
+      "categoria": "ident_registro",
+      "regla": "FUNCTION masc.id_compuesto(discontinued_by_poe_id)"
+    },
+    {
+      "columna": "poe.order_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.texto_hash(order_provider_id)"
+    },
+    {
+      "columna": "poe_detail.poe_id",
+      "categoria": "ident_registro",
+      "regla": "FUNCTION masc.id_compuesto(poe_id)"
+    },
+    {
+      "columna": "poe_detail.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "prescriptions.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "prescriptions.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "prescriptions.poe_id",
+      "categoria": "ident_registro",
+      "regla": "FUNCTION masc.id_compuesto(poe_id)"
+    },
+    {
+      "columna": "prescriptions.order_provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.texto_hash(order_provider_id)"
+    },
+    {
+      "columna": "prescriptions.starttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(starttime, subject_id)"
+    },
+    {
+      "columna": "prescriptions.stoptime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(stoptime, subject_id)"
+    },
+    {
+      "columna": "procedures_icd.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "procedures_icd.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "procedures_icd.chartdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(chartdate, subject_id)"
+    },
+    {
+      "columna": "provider.provider_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.texto_hash(provider_id)"
+    },
+    {
+      "columna": "services.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "services.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "services.transfertime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(transfertime, subject_id)"
+    },
+    {
+      "columna": "transfers.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "transfers.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "transfers.intime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(intime, subject_id)"
+    },
+    {
+      "columna": "transfers.outtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(outtime, subject_id)"
+    },
+    {
+      "columna": "caregiver.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.id_hash(caregiver_id)"
+    },
+    {
+      "columna": "chartevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "chartevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "chartevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(stay_id)"
+    },
+    {
+      "columna": "chartevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.id_hash(caregiver_id)"
+    },
+    {
+      "columna": "chartevents.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(charttime, subject_id)"
+    },
+    {
+      "columna": "chartevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(storetime, subject_id)"
+    },
+    {
+      "columna": "datetimeevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "datetimeevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "datetimeevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(stay_id)"
+    },
+    {
+      "columna": "datetimeevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.id_hash(caregiver_id)"
+    },
+    {
+      "columna": "datetimeevents.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(charttime, subject_id)"
+    },
+    {
+      "columna": "datetimeevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(storetime, subject_id)"
+    },
+    {
+      "columna": "icustays.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "icustays.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "icustays.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(stay_id)"
+    },
+    {
+      "columna": "icustays.intime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(intime, subject_id)"
+    },
+    {
+      "columna": "icustays.outtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(outtime, subject_id)"
+    },
+    {
+      "columna": "ingredientevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "ingredientevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "ingredientevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(stay_id)"
+    },
+    {
+      "columna": "ingredientevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.id_hash(caregiver_id)"
+    },
+    {
+      "columna": "ingredientevents.starttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(starttime, subject_id)"
+    },
+    {
+      "columna": "ingredientevents.endtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(endtime, subject_id)"
+    },
+    {
+      "columna": "ingredientevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(storetime, subject_id)"
+    },
+    {
+      "columna": "inputevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "inputevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "inputevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(stay_id)"
+    },
+    {
+      "columna": "inputevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.id_hash(caregiver_id)"
+    },
+    {
+      "columna": "inputevents.starttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(starttime, subject_id)"
+    },
+    {
+      "columna": "inputevents.endtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(endtime, subject_id)"
+    },
+    {
+      "columna": "inputevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(storetime, subject_id)"
+    },
+    {
+      "columna": "outputevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "outputevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "outputevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(stay_id)"
+    },
+    {
+      "columna": "outputevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.id_hash(caregiver_id)"
+    },
+    {
+      "columna": "outputevents.charttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(charttime, subject_id)"
+    },
+    {
+      "columna": "outputevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(storetime, subject_id)"
+    },
+    {
+      "columna": "procedureevents.subject_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(subject_id)"
+    },
+    {
+      "columna": "procedureevents.hadm_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(hadm_id)"
+    },
+    {
+      "columna": "procedureevents.stay_id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.id_hash(stay_id)"
+    },
+    {
+      "columna": "procedureevents.caregiver_id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.id_hash(caregiver_id)"
+    },
+    {
+      "columna": "procedureevents.starttime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(starttime, subject_id)"
+    },
+    {
+      "columna": "procedureevents.endtime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(endtime, subject_id)"
+    },
+    {
+      "columna": "procedureevents.storetime",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(storetime, subject_id)"
+    }
+  ],
+  "columnas_enmascaradas": 120,
+  "enmascarado": "ok",
+  "segundos_enmascarar": 543.9,
+  "coherencia": {
+    "alta >= ingreso": {
+      "antes": 0,
+      "despues": 0
+    },
+    "muerte dentro de la internación": {
+      "antes": 0,
+      "despues": 0
+    },
+    "UCI dentro de la internación": {
+      "antes": 0,
+      "despues": 0
+    },
+    "dod = día de la muerte": {
+      "antes": 0,
+      "despues": 0
+    },
+    "traslado: salida >= entrada": {
+      "antes": 0,
+      "despues": 0
+    },
+    "emergencia: salida >= registro": {
+      "antes": 0,
+      "despues": 0
+    },
+    "chartevents dentro de su estadía UCI": {
+      "antes": 56,
+      "despues": 56
+    }
+  },
+  "fk_validas": 51,
+  "fechas_por_paciente": {
+    "pacientes": 47,
+    "con_un_solo_desplazamiento": 47,
+    "desplazamientos_distintos_promedio": 1.0
+  },
+  "duracion_internacion_igual": {
+    "internaciones": 115,
+    "igual": 115
+  },
+  "fuga_poe_id": {
+    "filas": 19144,
+    "prefijo_con_subject_id_original": 0
+  },
+  "subject_id_originales_que_quedan": 0,
+  "edad": "4 de 47 iguales",
+  "reversion": {
+    "metodo": "sal conocida -> recorrer los 10 millones de ids posibles",
+    "recuperados_sin_ambiguedad": 21,
+    "con_varios_candidatos": 26,
+    "con_el_original_entre_los_candidatos": 47,
+    "de": 47,
+    "segundos": 3.3,
+    "colisiones_en_el_dominio": 3677865,
+    "seudonimos_distintos_en_el_dominio": 6322135
+  }
+}

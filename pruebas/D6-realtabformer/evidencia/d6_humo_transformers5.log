@@ -1,0 +1,43 @@
+
+===== entrenar customer (tabular) =====
+Computing the sensitivity threshold...
+Using parallel computation!!!
+Bootstrap round:   0%|          | 0/50 [00:00<?, ?it/s]Bootstrap round:   8%|▊         | 4/50 [00:02<00:25,  1.78it/s]Bootstrap round:  28%|██▊       | 14/50 [00:02<00:04,  7.59it/s]Bootstrap round:  88%|████████▊ | 44/50 [00:02<00:00, 30.33it/s]Bootstrap round: 100%|██████████| 50/50 [00:02<00:00, 20.27it/s]
+Sensitivity threshold summary:
+count    50.000000
+mean      0.072333
+std       0.123597
+min      -0.025000
+25%      -0.025000
+50%      -0.025000
+75%       0.175000
+max       0.375000
+dtype: float64
+Sensitivity threshold: 0.30833333333333335 qt_max: 0.05
+Map:   0%|          | 0/20 [00:00<?, ? examples/s]Map: 100%|██████████| 20/20 [00:00<00:00, 3114.27 examples/s]
+Traceback (most recent call last):
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 474, in <module>
+    main()
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 470, in main
+    {"exportar": exportar, "entrenar": entrenar, "cargar": cargar}[a.cmd](a)
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 225, in entrenar
+    m_cus = correr("entrenar customer (tabular)", fit_customer)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 208, in correr
+    out = fn()
+          ^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 222, in fit_customer
+    mod.fit(cus.drop(columns=["customer_id"]), device=a.device, num_bootstrap=a.bootstrap)
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/realtabformer.py", line 466, in fit
+    trainer = self._train_with_sensitivity(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/realtabformer.py", line 709, in _train_with_sensitivity
+    trainer = self._fit_tabular(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/realtabformer.py", line 1121, in _fit_tabular
+    return self._build_tabular_trainer(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/realtabformer.py", line 1171, in _build_tabular_trainer
+    args=TrainingArguments(**training_args_kwargs),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'overwrite_output_dir'

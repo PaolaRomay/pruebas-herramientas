@@ -1,0 +1,19 @@
+{
+  "columnas": [
+    {
+      "columna": "icd_code",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "icd_version",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "long_title",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    }
+  ]
+}

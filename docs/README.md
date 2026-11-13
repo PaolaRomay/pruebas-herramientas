@@ -29,6 +29,8 @@ Para una lectura rápida alcanza con los pasos 3 y 4. Si un término no se entie
 | A7 | Tonic Textual | Detectar | [ficha](../pruebas/A7-tonic-textual/ficha.md) | 🔄 en curso: todavía sin resultados |
 | D2 | MOSTLY AI | Sintetizar | [ficha](../pruebas/D2-mostlyai/ficha.md) | «En pocas palabras», los gráficos y «Hallazgos» |
 | D5 | Tonic Fabricate | Sintetizar | [ficha](../pruebas/D5-tonic-fabricate/ficha.md) | «En pocas palabras» y «¿Qué pasó con las fechas de los pagos?» |
+| D6 | REaLTabFormer (prueba de descarte) | Sintetizar | [ficha](../pruebas/D6-realtabformer/ficha.md) | «En pocas palabras» y los cuatro experimentos |
+| B3 | ARX (k-anonimato) | Anonimizar | [ficha](../pruebas/B3-arx/ficha.md) | «En pocas palabras» y «Cómo queda un cliente» |
 | E3 | Chequeos propios (evaluador común) | Validar | [ficha](../pruebas/E3-chequeos-propios/ficha.md) | «Validación del evaluador» |
 
 El estado de todas las pruebas, incluidas las pendientes y las que se hicieron fuera del repo, está en el

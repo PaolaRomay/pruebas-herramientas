@@ -1,0 +1,430 @@
+{
+  "prueba": "G1m",
+  "fecha": "2026-11-12T23:29:13",
+  "configuracion": {
+    "prueba": "G1m",
+    "origen": "mimic_demo",
+    "destino": "g1m_caso3_c1",
+    "salida": "../G1-orquestacion/resultados/c1_caso3_c1",
+    "ancla": {
+      "tabla": "mimiciv_hosp.patients",
+      "filtro": "(subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE '%Sepsis%' OR icd_code LIKE '%Septicemia%'))"
+    },
+    "control": "false",
+    "copiar_enteras": [
+      "mimiciv_hosp.d_icd_diagnoses",
+      "mimiciv_hosp.d_icd_procedures",
+      "mimiciv_hosp.d_hcpcs",
+      "mimiciv_hosp.d_labitems",
+      "mimiciv_icu.d_items"
+    ],
+    "relaciones_csv": "pruebas/_bases/evidencia/mimic-demo/relaciones.csv"
+  },
+  "configuracion_sha256": "6f9fc0f1c507959afaeab183538acce7943b01425625eb6fd2f2887e09a5827e",
+  "esquema_origen_sha256": "3d0b09ae99da9a932a9ed2e8190419d6a9d51a880cf053a422e99db26c1c1a9d",
+  "entorno": {
+    "postgresql": "16.4 (Debian 16.4-1.pgdg120+2)",
+    "python": "3.11.16",
+    "psycopg2": "2.9.13",
+    "equipo": "arm64",
+    "commit_repo": "989164d"
+  },
+  "tablas_sin_pk": [
+    "mimiciv_hosp.drgcodes",
+    "mimiciv_hosp.emar_detail",
+    "mimiciv_hosp.omr",
+    "mimiciv_hosp.provider",
+    "mimiciv_icu.caregiver",
+    "mimiciv_icu.chartevents",
+    "mimiciv_icu.ingredientevents"
+  ],
+  "relaciones": {
+    "catalogo": 51,
+    "extra": 25
+  },
+  "ancla": {
+    "filas": 100,
+    "control": 0,
+    "cumplen_filtro": 0,
+    "semilla": 0,
+    "fuera_del_filtro": 0,
+    "control_en_subconjunto": 0
+  },
+  "rondas_cierre": [
+    {
+      "ronda": 1,
+      "filas_nucleo_nuevas": 0,
+      "filas_referenciadas_nuevas": 0,
+      "segundos": 0.43
+    }
+  ],
+  "conteos": [
+    {
+      "tabla": "mimiciv_hosp.admissions",
+      "origen": 275,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.d_hcpcs",
+      "origen": 89200,
+      "subconjunto": 89200,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.d_icd_diagnoses",
+      "origen": 109775,
+      "subconjunto": 109775,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.d_icd_procedures",
+      "origen": 85257,
+      "subconjunto": 85257,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.d_labitems",
+      "origen": 1622,
+      "subconjunto": 1622,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.diagnoses_icd",
+      "origen": 4506,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.drgcodes",
+      "origen": 454,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "mimiciv_hosp.emar",
+      "origen": 35835,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.emar_detail",
+      "origen": 72018,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "mimiciv_hosp.hcpcsevents",
+      "origen": 61,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.labevents",
+      "origen": 107727,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.microbiologyevents",
+      "origen": 2899,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.omr",
+      "origen": 2964,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "mimiciv_hosp.patients",
+      "origen": 100,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.pharmacy",
+      "origen": 15306,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.poe",
+      "origen": 45154,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.poe_detail",
+      "origen": 3795,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.prescriptions",
+      "origen": 18087,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.procedures_icd",
+      "origen": 722,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.provider",
+      "origen": 40508,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "mimiciv_hosp.services",
+      "origen": 319,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_hosp.transfers",
+      "origen": 1190,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_icu.caregiver",
+      "origen": 15468,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "mimiciv_icu.chartevents",
+      "origen": 668862,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "mimiciv_icu.d_items",
+      "origen": 4014,
+      "subconjunto": 4014,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_icu.datetimeevents",
+      "origen": 15280,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_icu.icustays",
+      "origen": 140,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_icu.ingredientevents",
+      "origen": 25728,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "ctid"
+    },
+    {
+      "tabla": "mimiciv_icu.inputevents",
+      "origen": 20404,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_icu.outputevents",
+      "origen": 9362,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    },
+    {
+      "tabla": "mimiciv_icu.procedureevents",
+      "origen": 1468,
+      "subconjunto": 0,
+      "nucleo": 0,
+      "clave": "pk"
+    }
+  ],
+  "filas": {
+    "origen": 1398500,
+    "subconjunto": 289868,
+    "porcentaje": 20.73
+  },
+  "integridad": {
+    "fk_catalogo_recreadas_en_destino": 51,
+    "relaciones_no_declaradas": [
+      {
+        "relacion": "mimiciv_hosp.admissions.admit_provider_id -> mimiciv_hosp.provider.provider_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.emar_detail.pharmacy_id -> mimiciv_hosp.pharmacy.pharmacy_id",
+        "huerfanas_origen": 769,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.emar.poe_id -> mimiciv_hosp.poe.poe_id",
+        "huerfanas_origen": 1063,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.emar.pharmacy_id -> mimiciv_hosp.pharmacy.pharmacy_id",
+        "huerfanas_origen": 559,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.emar.enter_provider_id -> mimiciv_hosp.provider.provider_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.labevents.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.labevents.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.microbiologyevents.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.omr.subject_id -> mimiciv_hosp.patients.subject_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.pharmacy.poe_id -> mimiciv_hosp.poe.poe_id",
+        "huerfanas_origen": 19,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.poe.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.prescriptions.pharmacy_id -> mimiciv_hosp.pharmacy.pharmacy_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.prescriptions.poe_id -> mimiciv_hosp.poe.poe_id",
+        "huerfanas_origen": 19,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.prescriptions.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_hosp.transfers.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_icu.chartevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_icu.datetimeevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_icu.ingredientevents.subject_id -> mimiciv_hosp.patients.subject_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_icu.ingredientevents.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_icu.ingredientevents.stay_id -> mimiciv_icu.icustays.stay_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_icu.ingredientevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_icu.ingredientevents.itemid -> mimiciv_icu.d_items.itemid",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_icu.inputevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_icu.outputevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      },
+      {
+        "relacion": "mimiciv_icu.procedureevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "huerfanas_origen": 0,
+        "huerfanas_destino": 0
+      }
+    ]
+  },
+  "secuencias_ajustadas": [],
+  "escala": {
+    "memoria_max_proceso_mb": 44.8,
+    "tablas_trabajo_mb": "20.1",
+    "temp_bytes_postgres_mb": 0.0,
+    "mayor_tabla_copiada_mb": 8.4,
+    "base_destino_mb": 63.8
+  },
+  "segundos": {
+    "seleccion": 1.53,
+    "esquema_pre": 0.81,
+    "copia_datos": 0.99,
+    "esquema_post": 1.78,
+    "total": 8.01
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "columnas": [
+    {
+      "columna": "subject_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "hadm_id",
+      "sensible": true,
+      "entidad": "ID_PERSONA"
+    },
+    {
+      "columna": "chartdate",
+      "sensible": true,
+      "entidad": "DATE_TIME"
+    },
+    {
+      "columna": "hcpcs_cd",
+      "sensible": true,
+      "entidad": "SALUD"
+    },
+    {
+      "columna": "seq_num",
+      "sensible": false,
+      "entidad": "NINGUNA"
+    },
+    {
+      "columna": "short_description",
+      "sensible": true,
+      "entidad": "SALUD"
+    }
+  ]
+}

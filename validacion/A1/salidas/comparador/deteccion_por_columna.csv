@@ -1,0 +1,32 @@
+tabla,columna,verdad,categoria,A1 | manual umbral 0.0 | c1,A1 | manual umbral 0.4 | c1,A1 | manual umbral 0.6 | c1,A1 | manual_contexto umbral 0.0 | c1,A1 | manual_contexto umbral 0.4 | c1,A1 | manual_contexto umbral 0.6 | c1,A1 | structured:highest_confidence umbral 0.0 | c1,A1 | structured:highest_confidence umbral 0.4 | c1,A1 | structured:highest_confidence umbral 0.6 | c1,A1 | structured:mixed umbral 0.0 | c1,A1 | structured:mixed umbral 0.4 | c1,A1 | structured:mixed umbral 0.6 | c1,A1 | structured:most_common umbral 0.0 | c1,A1 | structured:most_common umbral 0.4 | c1,A1 | structured:most_common umbral 0.6 | c1
+address,address,si,direccion,LOCATION,LOCATION,LOCATION,no,no,no,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION
+address,address2,si,direccion,,,,,,,,,,,,,,,
+address,phone,si,telefono,DATE_TIME,no,no,US_BANK_NUMBER,no,no,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,US_BANK_NUMBER,DATE_TIME,DATE_TIME
+customer,email,si,correo electronico,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,URL,URL,EMAIL_ADDRESS
+customer,first_name,si,nombre,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON
+customer,last_name,si,apellido,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON
+customer,uuid,si,identificador unico,no,no,no,no,no,no,MEDICAL_LICENSE,MEDICAL_LICENSE,MEDICAL_LICENSE,MEDICAL_LICENSE,MEDICAL_LICENSE,MEDICAL_LICENSE,US_DRIVER_LICENSE,DATE_TIME,DATE_TIME
+staff,email,si,correo electronico,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS,EMAIL_ADDRESS
+staff,first_name,si,nombre,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON
+staff,last_name,si,apellido,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON
+staff,password,si,credencial,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no
+staff,picture,si,imagen,,,,,,,,,,,,,,,
+staff,username,si,identificador de cuenta,URL,URL,no,URL,URL,no,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,URL,URL,PERSON
+actor,first_name,dudoso,nombre,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON
+actor,last_name,dudoso,apellido,no,no,no,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON
+address,district,dudoso,ubicacion,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION
+address,postal_code,dudoso,ubicacion,no,no,no,no,no,no,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME
+city,city,dudoso,ubicacion,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON,PERSON
+customer,create_date,dudoso,fecha,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME
+payment,amount,dudoso,dato transaccional,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no
+payment,payment_date,dudoso,fecha,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME
+rental,rental_date,dudoso,fecha,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME
+rental,return_date,dudoso,fecha,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME,DATE_TIME
+address,city_id,no,clave foranea,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no
+category,name,no,dato de referencia,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no
+country,country,no,dato de referencia,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION
+customer,address_id,no,clave foranea,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no
+film,description,no,contenido del catalogo,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION
+film,title,no,contenido del catalogo,no,no,no,no,no,no,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION,LOCATION
+language,name,no,dato de referencia,NRP,NRP,NRP,NRP,NRP,NRP,NRP,NRP,NRP,NRP,NRP,NRP,NRP,NRP,NRP
+staff,address_id,no,clave foranea,no,no,no,no,no,no,no,no,no,no,no,no,no,no,no

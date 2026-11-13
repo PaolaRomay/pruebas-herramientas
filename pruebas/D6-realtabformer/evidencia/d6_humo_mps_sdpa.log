@@ -1,0 +1,110 @@
+
+===== entrenar customer (tabular) =====
+Computing the sensitivity threshold...
+Using parallel computation!!!
+Bootstrap round:   0%|          | 0/50 [00:00<?, ?it/s]Bootstrap round:   8%|▊         | 4/50 [00:02<00:24,  1.86it/s]Bootstrap round:  28%|██▊       | 14/50 [00:02<00:04,  7.93it/s]Bootstrap round:  88%|████████▊ | 44/50 [00:02<00:00, 31.59it/s]Bootstrap round: 100%|██████████| 50/50 [00:02<00:00, 21.15it/s]
+Sensitivity threshold summary:
+count    50.000000
+mean      0.057667
+std       0.103945
+min      -0.025000
+25%      -0.025000
+50%      -0.025000
+75%       0.108333
+max       0.375000
+dtype: float64
+Sensitivity threshold: 0.24166666666666667 qt_max: 0.05
+Map:   0%|          | 0/20 [00:00<?, ? examples/s]Map: 100%|██████████| 20/20 [00:00<00:00, 3236.35 examples/s]
+  0%|          | 0/2 [00:00<?, ?it/s]`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+ 50%|█████     | 1/2 [00:00<00:00,  2.06it/s]100%|██████████| 2/2 [00:01<00:00,  1.75it/s]                                             100%|██████████| 2/2 [00:02<00:00,  1.75it/s]100%|██████████| 2/2 [00:02<00:00,  1.03s/it]
+{'train_runtime': 2.0578, 'train_samples_per_second': 19.438, 'train_steps_per_second': 0.972, 'train_loss': 4.400888442993164, 'epoch': 2.0}
+  0%|          | 0/9 [00:00<?, ?it/s]128it [00:00, 193.00it/s]            128it [00:00, 192.98it/s]
+Generated 0 invalid samples out of total 128 samples generated. Sampling efficiency is: 100.0000%
+Critic round: 5,                     sensitivity_threshold: 0.24166666666666667,                         val_sensitivity: 0.04611111111111112,                             val_sensitivities: [np.float64(0.10833333333333334), np.float64(0.10833333333333334), np.float64(-0.025), np.float64(0.10833333333333334), np.float64(-0.025), np.float64(0.10833333333333334), np.float64(0.10833333333333334), np.float64(0.10833333333333334), np.float64(0.10833333333333334), np.float64(0.10833333333333334), np.float64(-0.025), np.float64(-0.025), np.float64(-0.025), np.float64(-0.025), np.float64(-0.025)]
+Copying artefacts from: best-disc-model
+Copying artefacts from: mean-best-disc-model
+Copying artefacts from: not-best-disc-model
+Copying artefacts from: last-epoch-model
+[entrenar customer (tabular)] 7 s, RSS 0.9 GB, MPS 0.9 GB
+
+===== entrenar rental (relacional, padre customer) =====
+Map:   0%|          | 0/1109 [00:00<?, ? examples/s]Map: 100%|██████████| 1109/1109 [00:00<00:00, 24645.45 examples/s]
+Map:   0%|          | 0/20 [00:00<?, ? examples/s]Map: 100%|██████████| 20/20 [00:00<00:00, 979.62 examples/s]
+Map:   0%|          | 0/20 [00:00<?, ? examples/s]Map: 100%|██████████| 20/20 [00:00<00:00, 6830.00 examples/s]
+  0%|          | 0/2 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 484, in <module>
+    main()
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 480, in main
+    {"exportar": exportar, "entrenar": entrenar, "cargar": cargar}[a.cmd](a)
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 244, in entrenar
+    m_ren = correr("entrenar rental (relacional, padre customer)", fit_rental)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 217, in correr
+    out = fn()
+          ^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/pruebas/D6-realtabformer/d6_realtabformer.py", line 241, in fit_rental
+    mod.fit(df=ren.drop(columns=["rental_id"]), in_df=cus, join_on="customer_id", device=a.device)
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/realtabformer/realtabformer.py", line 501, in fit
+    trainer.train(resume_from_checkpoint=resume_from_checkpoint)
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/trainer.py", line 4020, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/trainer.py", line 4110, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/models/encoder_decoder/modeling_encoder_decoder.py", line 529, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 925, in forward
+    outputs = block(
+              ^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 413, in forward
+    attn_output, self_attn_weights = self.attn(
+                                     ^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 345, in forward
+    attn_output, attn_weights = attention_interface(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jerojacques/Desktop/Tesis/pruebas-herramientas/.venv-rtf/lib/python3.11/site-packages/transformers/integrations/sdpa_attention.py", line 96, in sdpa_attention_forward
+    attn_output = torch.nn.functional.scaled_dot_product_attention(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NotImplementedError: scaled_dot_product_attention for MPS does not support dropout.
+  0%|          | 0/2 [00:00<?, ?it/s]

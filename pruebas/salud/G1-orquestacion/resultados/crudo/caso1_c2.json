@@ -1,0 +1,15 @@
+{"pasos": [
+  {
+    "herramienta": "detectar",
+    "parametros": {
+      "tablas": ["todas"]
+    }
+  }
+],
+"supuestos": [
+  "Asumo que, aunque el usuario pide una lista de tipos de datos, la herramienta 'detectar' es la adecuada para identificar qué columnas son sensibles según las reglas del sistema.",
+  "Dado que la herramienta 'detectar' devuelve la clasificación de sensibilidad, interpretaré el resultado para responder a la pregunta del usuario."
+],
+"preguntas": [
+  "La herramienta 'detectar' identificará las columnas sensibles. ¿Deseas que yo realice una inspección manual adicional de los tipos de datos de todas las columnas de la base de datos, o te basta con la lista de columnas marcadas como sensibles por la herramienta?"
+]}

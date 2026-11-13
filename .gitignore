@@ -8,3 +8,8 @@ __pycache__/
 pruebas/**/salidas_grandes/
 *.dump
 .DS_Store
+
+# MIMIC: nunca al repo (la demo es abierta, pero se regenera; la completa tiene DUA)
+data/mimic/
+validacion/base-comun/descarga/
+data/synthea/

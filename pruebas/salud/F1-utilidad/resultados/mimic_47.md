@@ -1,0 +1,22 @@
+# F1: utilidad — mimic_47
+
+| Consulta | B1 anonimizada (PostgreSQL Anonymizer) | D2 sintética (MOSTLY AI) | D3 sintética (SDV HMA, 5 tablas) |
+|---|---|---|---|
+| Pacientes por diagnóstico (top 10 códigos CIE) | ✓ 10/10 | ✗ 2/10 | ✗ 4/10 |
+| Diagnóstico principal más frecuente (top 10, seq_num = 1) | ✓ 10/10 | ✗ 0/10 | ✗ 1/10 |
+| Estadía media en UCI (días) | ✓ 0% | ✓ 15% | ✗ 84% |
+| Estadía media en UCI calculada con las fechas (días) | ✓ 0% | ✗ 47998% | ✗ 145166% |
+| Duración mediana de la internación (días) | ✓ 0% | ✗ 16427% | ✗ 147% |
+| Mortalidad hospitalaria (% de internaciones) | ✓ 0% | ✗ 100% | ✗ 43% |
+| Mortalidad por grupo de edad | ✓ VT 0.00 | ✗ VT 0.50 | ✗ VT 0.63 |
+| Internaciones por tipo de admisión | ✓ VT 0.00 | ✗ VT 0.28 | ✓ VT 0.19 |
+| Internaciones por seguro | ✓ VT 0.00 | ✓ VT 0.13 | ✓ VT 0.05 |
+| Pacientes por sexo | ✓ VT 0.00 | ✓ VT 0.02 | ✓ VT 0.11 |
+| Pacientes por grupo de edad | ✓ VT 0.00 | ✗ VT 0.21 | ✓ VT 0.04 |
+| Internaciones por paciente (media) | ✓ 0% | ✗ 29% | ✓ 0% |
+| % de internaciones con estadía en UCI | ✓ 0% | ✓ 6% | ✗ 21% |
+| Reinternación a 30 días (% de internaciones) | ✓ 0% | ✗ 93% | ✗ 60% |
+| Estudios de laboratorio más pedidos (top 10 itemid) | ✓ 9/10 | ✗ 3/10 | ✓ 6/10 |
+| % de laboratorios anormales (flag) | ✓ 0% | ✓ 16% | ✓ 14% |
+| Primera unidad de UCI | ✓ VT 0.00 | ✗ VT 0.30 | ✗ VT 0.26 |
+| **Se conservan** | **17 de 17** | **5 de 17** | **7 de 17** |

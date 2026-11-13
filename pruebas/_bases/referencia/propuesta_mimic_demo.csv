@@ -1,0 +1,343 @@
+tabla,columna,sensible,categoria,entidad_esperada,regla,fuente,tipo,nulos_pct,distintos,unica,esquema
+admissions,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_hosp
+admissions,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,275,sí,mimiciv_hosp
+admissions,admittime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,275,sí,mimiciv_hosp
+admissions,dischtime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,275,sí,mimiciv_hosp
+admissions,deathtime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,94.5,15,sí,mimiciv_hosp
+admissions,admission_type,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,9,no,mimiciv_hosp
+admissions,admit_provider_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,character varying,0.0,170,no,mimiciv_hosp
+admissions,admission_location,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,10,no,mimiciv_hosp
+admissions,discharge_location,sí,SENSIBLE,,m15,L18331-4E,character varying,15.3,10,no,mimiciv_hosp
+admissions,insurance,sí,CUASI,,m11,DEC-4,character varying,0.0,3,no,mimiciv_hosp
+admissions,language,sí,CUASI,,m11,DEC-4,character varying,0.0,2,no,mimiciv_hosp
+admissions,marital_status,sí,CUASI,,m11,DEC-4,character varying,4.4,4,no,mimiciv_hosp
+admissions,race,sí,SENSIBLE,,m10,L18331-4E,character varying,0.0,14,no,mimiciv_hosp
+admissions,edregtime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,33.8,181,no,mimiciv_hosp
+admissions,edouttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,33.8,181,no,mimiciv_hosp
+admissions,hospital_expire_flag,sí,SENSIBLE,,m15,L18331-4E,smallint,0.0,2,no,mimiciv_hosp
+d_hcpcs,code,no,CATALOGO,,m01,DOC-MIMIC,character,0.0,89200,sí,mimiciv_hosp
+d_hcpcs,category,no,CATALOGO,,m01,DOC-MIMIC,smallint,7.7,3,no,mimiciv_hosp
+d_hcpcs,long_description,no,CATALOGO,,m01,DOC-MIMIC,text,92.4,6674,no,mimiciv_hosp
+d_hcpcs,short_description,no,CATALOGO,,m01,DOC-MIMIC,character varying,0.0,6811,no,mimiciv_hosp
+d_icd_diagnoses,icd_code,no,CATALOGO,,m01,DOC-MIMIC,character,0.0,109282,no,mimiciv_hosp
+d_icd_diagnoses,icd_version,no,CATALOGO,,m01,DOC-MIMIC,smallint,0.0,2,no,mimiciv_hosp
+d_icd_diagnoses,long_title,no,CATALOGO,,m01,DOC-MIMIC,character varying,0.0,106327,no,mimiciv_hosp
+d_icd_procedures,icd_code,no,CATALOGO,,m01,DOC-MIMIC,character,0.0,85251,no,mimiciv_hosp
+d_icd_procedures,icd_version,no,CATALOGO,,m01,DOC-MIMIC,smallint,0.0,2,no,mimiciv_hosp
+d_icd_procedures,long_title,no,CATALOGO,,m01,DOC-MIMIC,character varying,0.0,85256,no,mimiciv_hosp
+d_labitems,itemid,no,CATALOGO,,m01,DOC-MIMIC,integer,0.0,1622,sí,mimiciv_hosp
+d_labitems,label,no,CATALOGO,,m01,DOC-MIMIC,character varying,0.2,1170,no,mimiciv_hosp
+d_labitems,fluid,no,CATALOGO,,m01,DOC-MIMIC,character varying,0.0,12,no,mimiciv_hosp
+d_labitems,category,no,CATALOGO,,m01,DOC-MIMIC,character varying,0.0,3,no,mimiciv_hosp
+diagnoses_icd,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_hosp
+diagnoses_icd,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,275,no,mimiciv_hosp
+diagnoses_icd,seq_num,no,TECNICO,,m13,DEC-1,integer,0.0,39,no,mimiciv_hosp
+diagnoses_icd,icd_code,sí,SENSIBLE,,m15,L18331-4E,character,0.0,1472,no,mimiciv_hosp
+diagnoses_icd,icd_version,no,TECNICO,,m13,DEC-1,smallint,0.0,2,no,mimiciv_hosp
+drgcodes,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_hosp
+drgcodes,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,233,no,mimiciv_hosp
+drgcodes,drg_type,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,2,no,mimiciv_hosp
+drgcodes,drg_code,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,240,no,mimiciv_hosp
+drgcodes,description,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,259,no,mimiciv_hosp
+drgcodes,drg_severity,sí,SENSIBLE,,m15,L18331-4E,smallint,51.3,4,no,mimiciv_hosp
+drgcodes,drg_mortality,sí,SENSIBLE,,m15,L18331-4E,smallint,51.3,4,no,mimiciv_hosp
+emar,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,65,no,mimiciv_hosp
+emar,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,2.8,181,no,mimiciv_hosp
+emar,emar_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,character varying,0.0,35835,sí,mimiciv_hosp
+emar,emar_seq,no,TECNICO,,m13,DEC-1,integer,0.0,3918,no,mimiciv_hosp
+emar,poe_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,character varying,0.0,7966,no,mimiciv_hosp
+emar,pharmacy_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,18.0,6376,no,mimiciv_hosp
+emar,enter_provider_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,character varying,91.8,176,no,mimiciv_hosp
+emar,charttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,18540,no,mimiciv_hosp
+emar,medication,sí,SENSIBLE,,m15,L18331-4E,text,4.4,470,no,mimiciv_hosp
+emar,event_txt,sí,SENSIBLE,,m15,L18331-4E,character varying,0.9,43,no,mimiciv_hosp
+emar,scheduletime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,18534,no,mimiciv_hosp
+emar,storetime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,17702,no,mimiciv_hosp
+emar_detail,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,65,no,mimiciv_hosp
+emar_detail,emar_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,character varying,0.0,35835,no,mimiciv_hosp
+emar_detail,emar_seq,no,TECNICO,,m13,DEC-1,integer,0.0,3918,no,mimiciv_hosp
+emar_detail,parent_field_ordinal,no,TECNICO,,m13,DEC-1,character varying,49.8,12,no,mimiciv_hosp
+emar_detail,administration_type,sí,SENSIBLE,,m15,L18331-4E,character varying,50.3,20,no,mimiciv_hosp
+emar_detail,pharmacy_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,51.7,6412,no,mimiciv_hosp
+emar_detail,barcode_type,no,TECNICO,,m13,DEC-1,character varying,51.8,5,no,mimiciv_hosp
+emar_detail,reason_for_no_barcode,sí,SENSIBLE,,m15,L18331-4E,text,98.1,43,no,mimiciv_hosp
+emar_detail,complete_dose_not_given,sí,SENSIBLE,,m15,L18331-4E,character varying,79.5,2,no,mimiciv_hosp
+emar_detail,dose_due,sí,SENSIBLE,,m15,L18331-4E,character varying,53.0,253,no,mimiciv_hosp
+emar_detail,dose_due_unit,no,TECNICO,,m13,DEC-1,character varying,50.9,50,no,mimiciv_hosp
+emar_detail,dose_given,sí,SENSIBLE,,m15,L18331-4E,character varying,54.7,143,no,mimiciv_hosp
+emar_detail,dose_given_unit,no,TECNICO,,m13,DEC-1,character varying,53.5,41,no,mimiciv_hosp
+emar_detail,will_remainder_of_dose_be_given,sí,SENSIBLE,,m15,L18331-4E,character varying,74.1,2,no,mimiciv_hosp
+emar_detail,product_amount_given,sí,SENSIBLE,,m15,L18331-4E,character varying,57.8,108,no,mimiciv_hosp
+emar_detail,product_unit,no,TECNICO,,m13,DEC-1,character varying,56.6,28,no,mimiciv_hosp
+emar_detail,product_code,sí,SENSIBLE,,m15,L18331-4E,character varying,52.4,643,no,mimiciv_hosp
+emar_detail,product_description,sí,SENSIBLE,,m15,L18331-4E,character varying,60.0,667,no,mimiciv_hosp
+emar_detail,product_description_other,sí,SENSIBLE,,m15,L18331-4E,character varying,95.7,44,no,mimiciv_hosp
+emar_detail,prior_infusion_rate,sí,SENSIBLE,,m15,L18331-4E,character varying,98.0,99,no,mimiciv_hosp
+emar_detail,infusion_rate,sí,SENSIBLE,,m15,L18331-4E,character varying,97.5,108,no,mimiciv_hosp
+emar_detail,infusion_rate_adjustment,sí,SENSIBLE,,m15,L18331-4E,character varying,96.1,7,no,mimiciv_hosp
+emar_detail,infusion_rate_adjustment_amount,sí,SENSIBLE,,m15,L18331-4E,character varying,99.9,9,no,mimiciv_hosp
+emar_detail,infusion_rate_unit,no,TECNICO,,m13,DEC-1,character varying,96.0,11,no,mimiciv_hosp
+emar_detail,route,sí,SENSIBLE,,m15,L18331-4E,character varying,85.3,5,no,mimiciv_hosp
+emar_detail,infusion_complete,sí,SENSIBLE,,m15,L18331-4E,character varying,99.5,2,no,mimiciv_hosp
+emar_detail,completion_interval,sí,SENSIBLE,,m15,L18331-4E,character varying,99.5,15,no,mimiciv_hosp
+emar_detail,new_iv_bag_hung,sí,SENSIBLE,,m15,L18331-4E,character varying,99.4,1,no,mimiciv_hosp
+emar_detail,continued_infusion_in_other_location,dudoso,NO_EVALUABLE,,v00,DEC-6,character varying,100.0,1,no,mimiciv_hosp
+emar_detail,restart_interval,sí,SENSIBLE,,m15,L18331-4E,character varying,99.8,6,no,mimiciv_hosp
+emar_detail,side,sí,SENSIBLE,,m15,L18331-4E,character varying,99.8,3,no,mimiciv_hosp
+emar_detail,site,sí,SENSIBLE,,m15,L18331-4E,character varying,99.8,41,no,mimiciv_hosp
+emar_detail,non_formulary_visual_verification,sí,SENSIBLE,,m15,L18331-4E,character varying,99.9,1,no,mimiciv_hosp
+hcpcsevents,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,18,no,mimiciv_hosp
+hcpcsevents,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,41,no,mimiciv_hosp
+hcpcsevents,chartdate,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,date,0.0,42,no,mimiciv_hosp
+hcpcsevents,hcpcs_cd,sí,SENSIBLE,,m15,L18331-4E,character,0.0,19,no,mimiciv_hosp
+hcpcsevents,seq_num,no,TECNICO,,m13,DEC-1,integer,0.0,4,no,mimiciv_hosp
+hcpcsevents,short_description,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,11,no,mimiciv_hosp
+labevents,labevent_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,107727,sí,mimiciv_hosp
+labevents,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_hosp
+labevents,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,26.4,252,no,mimiciv_hosp
+labevents,specimen_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,11122,no,mimiciv_hosp
+labevents,itemid,sí,SENSIBLE,,m15,L18331-4E,integer,0.0,498,no,mimiciv_hosp
+labevents,order_provider_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,character varying,84.4,151,no,mimiciv_hosp
+labevents,charttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,5864,no,mimiciv_hosp
+labevents,storetime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.9,14573,no,mimiciv_hosp
+labevents,value,sí,SENSIBLE,,m15,L18331-4E,character varying,8.9,3107,no,mimiciv_hosp
+labevents,valuenum,sí,SENSIBLE,,m15,L18331-4E,double precision,11.6,3032,no,mimiciv_hosp
+labevents,valueuom,no,TECNICO,,m13,DEC-1,character varying,13.0,50,no,mimiciv_hosp
+labevents,ref_range_lower,sí,SENSIBLE,,m15,L18331-4E,double precision,17.4,95,no,mimiciv_hosp
+labevents,ref_range_upper,sí,SENSIBLE,,m15,L18331-4E,double precision,17.4,134,no,mimiciv_hosp
+labevents,flag,sí,SENSIBLE,,m15,L18331-4E,character varying,62.6,1,no,mimiciv_hosp
+labevents,priority,sí,SENSIBLE,,m15,L18331-4E,character varying,8.7,2,no,mimiciv_hosp
+labevents,comments,sí,TEXTO_LIBRE,,m12,DOC-MIMIC,text,82.9,736,no,mimiciv_hosp
+microbiologyevents,microevent_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,2899,sí,mimiciv_hosp
+microbiologyevents,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,97,no,mimiciv_hosp
+microbiologyevents,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,33.5,171,no,mimiciv_hosp
+microbiologyevents,micro_specimen_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,1336,no,mimiciv_hosp
+microbiologyevents,order_provider_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,character varying,89.5,44,no,mimiciv_hosp
+microbiologyevents,chartdate,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,701,no,mimiciv_hosp
+microbiologyevents,charttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,6.3,1136,no,mimiciv_hosp
+microbiologyevents,spec_itemid,sí,SENSIBLE,,m15,L18331-4E,integer,0.0,40,no,mimiciv_hosp
+microbiologyevents,spec_type_desc,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,35,no,mimiciv_hosp
+microbiologyevents,test_seq,no,TECNICO,,m13,DEC-1,integer,0.0,10,no,mimiciv_hosp
+microbiologyevents,storedate,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.6,1150,no,mimiciv_hosp
+microbiologyevents,storetime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.6,1676,no,mimiciv_hosp
+microbiologyevents,test_itemid,sí,SENSIBLE,,m15,L18331-4E,integer,0.0,71,no,mimiciv_hosp
+microbiologyevents,test_name,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,71,no,mimiciv_hosp
+microbiologyevents,org_itemid,sí,SENSIBLE,,m15,L18331-4E,integer,56.6,59,no,mimiciv_hosp
+microbiologyevents,org_name,sí,SENSIBLE,,m15,L18331-4E,character varying,56.6,59,no,mimiciv_hosp
+microbiologyevents,isolate_num,no,TECNICO,,m13,DEC-1,smallint,56.6,2,no,mimiciv_hosp
+microbiologyevents,quantity,dudoso,NO_EVALUABLE,,v00,DEC-6,character varying,100.0,0,no,mimiciv_hosp
+microbiologyevents,ab_itemid,sí,SENSIBLE,,m15,L18331-4E,integer,64.3,25,no,mimiciv_hosp
+microbiologyevents,ab_name,sí,SENSIBLE,,m15,L18331-4E,character varying,64.3,25,no,mimiciv_hosp
+microbiologyevents,dilution_text,sí,SENSIBLE,,m15,L18331-4E,character varying,65.5,29,no,mimiciv_hosp
+microbiologyevents,dilution_comparison,sí,SENSIBLE,,m15,L18331-4E,character varying,65.6,3,no,mimiciv_hosp
+microbiologyevents,dilution_value,sí,SENSIBLE,,m15,L18331-4E,double precision,65.6,13,no,mimiciv_hosp
+microbiologyevents,interpretation,sí,SENSIBLE,,m15,L18331-4E,character varying,64.3,3,no,mimiciv_hosp
+microbiologyevents,comments,sí,TEXTO_LIBRE,,m12,DOC-MIMIC,text,28.0,121,no,mimiciv_hosp
+omr,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,79,no,mimiciv_hosp
+omr,chartdate,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,date,0.0,945,no,mimiciv_hosp
+omr,seq_num,no,TECNICO,,m13,DEC-1,integer,0.0,27,no,mimiciv_hosp
+omr,result_name,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,8,no,mimiciv_hosp
+omr,result_value,sí,SENSIBLE,,m15,L18331-4E,text,0.0,1427,no,mimiciv_hosp
+patients,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,sí,mimiciv_hosp
+patients,gender,sí,CUASI,,m11,DEC-4,character,0.0,2,no,mimiciv_hosp
+patients,anchor_age,dudoso,CUASI,,m08,HIPAA-C,smallint,0.0,50,no,mimiciv_hosp
+patients,anchor_year,dudoso,CUASI,,m09,HIPAA-C,smallint,0.0,62,no,mimiciv_hosp
+patients,anchor_year_group,dudoso,CUASI,,m09,HIPAA-C,character varying,0.0,2,no,mimiciv_hosp
+patients,dod,sí,CUASI_HIPAA,DATE_TIME,m07,HIPAA-C,date,69.0,31,sí,mimiciv_hosp
+pharmacy,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_hosp
+pharmacy,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,250,no,mimiciv_hosp
+pharmacy,pharmacy_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,15306,sí,mimiciv_hosp
+pharmacy,poe_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,character varying,0.6,13470,no,mimiciv_hosp
+pharmacy,starttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,6856,no,mimiciv_hosp
+pharmacy,stoptime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.5,4976,no,mimiciv_hosp
+pharmacy,medication,sí,SENSIBLE,,m15,L18331-4E,text,6.6,583,no,mimiciv_hosp
+pharmacy,proc_type,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,6,no,mimiciv_hosp
+pharmacy,status,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,5,no,mimiciv_hosp
+pharmacy,entertime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,8440,no,mimiciv_hosp
+pharmacy,verifiedtime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,8436,no,mimiciv_hosp
+pharmacy,route,sí,SENSIBLE,,m15,L18331-4E,character varying,0.6,34,no,mimiciv_hosp
+pharmacy,frequency,sí,SENSIBLE,,m15,L18331-4E,character varying,0.6,85,no,mimiciv_hosp
+pharmacy,disp_sched,sí,SENSIBLE,,m15,L18331-4E,character varying,41.8,164,no,mimiciv_hosp
+pharmacy,infusion_type,sí,SENSIBLE,,m15,L18331-4E,character varying,93.2,4,no,mimiciv_hosp
+pharmacy,sliding_scale,sí,SENSIBLE,,m15,L18331-4E,character varying,86.7,2,no,mimiciv_hosp
+pharmacy,lockout_interval,sí,SENSIBLE,,m15,L18331-4E,character varying,98.4,6,no,mimiciv_hosp
+pharmacy,basal_rate,sí,SENSIBLE,,m15,L18331-4E,real,98.3,9,no,mimiciv_hosp
+pharmacy,one_hr_max,sí,SENSIBLE,,m15,L18331-4E,character varying,99.6,13,no,mimiciv_hosp
+pharmacy,doses_per_24_hrs,sí,SENSIBLE,,m15,L18331-4E,real,39.5,9,no,mimiciv_hosp
+pharmacy,duration,sí,SENSIBLE,,m15,L18331-4E,real,73.8,61,no,mimiciv_hosp
+pharmacy,duration_interval,sí,SENSIBLE,,m15,L18331-4E,character varying,0.6,5,no,mimiciv_hosp
+pharmacy,expiration_value,sí,SENSIBLE,,m15,L18331-4E,integer,15.0,6,no,mimiciv_hosp
+pharmacy,expiration_unit,no,TECNICO,,m13,DEC-1,character varying,0.7,3,no,mimiciv_hosp
+pharmacy,expirationdate,dudoso,NO_EVALUABLE,,v00,DEC-6,timestamp without time zone,100.0,0,no,mimiciv_hosp
+pharmacy,dispensation,sí,SENSIBLE,,m15,L18331-4E,character varying,0.6,11,no,mimiciv_hosp
+pharmacy,fill_quantity,dudoso,NO_EVALUABLE,,v00,DEC-6,character varying,100.0,0,no,mimiciv_hosp
+poe,poe_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,character varying,0.0,45154,sí,mimiciv_hosp
+poe,poe_seq,no,TECNICO,,m13,DEC-1,integer,0.0,3194,no,mimiciv_hosp
+poe,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_hosp
+poe,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,272,no,mimiciv_hosp
+poe,ordertime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,21046,no,mimiciv_hosp
+poe,order_type,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,15,no,mimiciv_hosp
+poe,order_subtype,sí,SENSIBLE,,m15,L18331-4E,character varying,63.8,78,no,mimiciv_hosp
+poe,transaction_type,no,TECNICO,,m13,DEC-1,character varying,0.0,4,no,mimiciv_hosp
+poe,discontinue_of_poe_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,character varying,76.7,10483,no,mimiciv_hosp
+poe,discontinued_by_poe_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,character varying,76.8,10459,sí,mimiciv_hosp
+poe,order_provider_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,character varying,1.8,1357,no,mimiciv_hosp
+poe,order_status,no,TECNICO,,m13,DEC-1,character varying,0.0,1,no,mimiciv_hosp
+poe_detail,poe_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,character varying,0.0,2691,no,mimiciv_hosp
+poe_detail,poe_seq,no,TECNICO,,m13,DEC-1,integer,0.0,1247,no,mimiciv_hosp
+poe_detail,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_hosp
+poe_detail,field_name,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,11,no,mimiciv_hosp
+poe_detail,field_value,sí,SENSIBLE,,m15,L18331-4E,text,0.0,59,no,mimiciv_hosp
+prescriptions,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_hosp
+prescriptions,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,250,no,mimiciv_hosp
+prescriptions,pharmacy_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,15225,no,mimiciv_hosp
+prescriptions,poe_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,character varying,0.7,13389,no,mimiciv_hosp
+prescriptions,poe_seq,no,TECNICO,,m13,DEC-1,integer,0.7,2336,no,mimiciv_hosp
+prescriptions,order_provider_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,character varying,0.5,1016,no,mimiciv_hosp
+prescriptions,starttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,6799,no,mimiciv_hosp
+prescriptions,stoptime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.1,4973,no,mimiciv_hosp
+prescriptions,drug_type,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,3,no,mimiciv_hosp
+prescriptions,drug,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,631,no,mimiciv_hosp
+prescriptions,formulary_drug_cd,sí,SENSIBLE,,m15,L18331-4E,character varying,0.1,937,no,mimiciv_hosp
+prescriptions,gsn,sí,SENSIBLE,,m15,L18331-4E,character varying,13.7,830,no,mimiciv_hosp
+prescriptions,ndc,sí,SENSIBLE,,m15,L18331-4E,character varying,0.1,1250,no,mimiciv_hosp
+prescriptions,prod_strength,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,662,no,mimiciv_hosp
+prescriptions,form_rx,sí,SENSIBLE,,m15,L18331-4E,character varying,84.1,4,no,mimiciv_hosp
+prescriptions,dose_val_rx,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,242,no,mimiciv_hosp
+prescriptions,dose_unit_rx,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,36,no,mimiciv_hosp
+prescriptions,form_val_disp,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,227,no,mimiciv_hosp
+prescriptions,form_unit_disp,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,37,no,mimiciv_hosp
+prescriptions,doses_per_24_hrs,sí,SENSIBLE,,m15,L18331-4E,real,40.8,9,no,mimiciv_hosp
+prescriptions,route,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,34,no,mimiciv_hosp
+procedures_icd,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,92,no,mimiciv_hosp
+procedures_icd,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,187,no,mimiciv_hosp
+procedures_icd,seq_num,no,TECNICO,,m13,DEC-1,integer,0.0,23,no,mimiciv_hosp
+procedures_icd,chartdate,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,date,0.0,385,no,mimiciv_hosp
+procedures_icd,icd_code,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,352,no,mimiciv_hosp
+procedures_icd,icd_version,no,TECNICO,,m13,DEC-1,smallint,0.0,2,no,mimiciv_hosp
+provider,provider_id,sí,IDENT_PROFESIONAL,,m02,DEC-3,character varying,0.0,40508,sí,mimiciv_hosp
+services,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_hosp
+services,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,275,no,mimiciv_hosp
+services,transfertime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,319,sí,mimiciv_hosp
+services,prev_service,sí,SENSIBLE,,m15,L18331-4E,character varying,86.2,10,no,mimiciv_hosp
+services,curr_service,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,13,no,mimiciv_hosp
+transfers,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_hosp
+transfers,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,4.5,275,no,mimiciv_hosp
+transfers,transfer_id,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,1190,sí,mimiciv_hosp
+transfers,eventtype,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,4,no,mimiciv_hosp
+transfers,careunit,sí,SENSIBLE,,m15,L18331-4E,character varying,23.1,31,no,mimiciv_hosp
+transfers,intime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,1190,sí,mimiciv_hosp
+transfers,outtime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,23.1,915,sí,mimiciv_hosp
+caregiver,caregiver_id,sí,IDENT_PROFESIONAL,,m02,DEC-3,integer,0.0,15468,sí,mimiciv_icu
+chartevents,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_icu
+chartevents,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,128,no,mimiciv_icu
+chartevents,stay_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,140,no,mimiciv_icu
+chartevents,caregiver_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,integer,3.6,692,no,mimiciv_icu
+chartevents,charttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,36303,no,mimiciv_icu
+chartevents,storetime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.2,53751,no,mimiciv_icu
+chartevents,itemid,sí,SENSIBLE,,m15,L18331-4E,integer,0.0,1318,no,mimiciv_icu
+chartevents,value,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,4243,no,mimiciv_icu
+chartevents,valuenum,sí,SENSIBLE,,m15,L18331-4E,double precision,61.5,2458,no,mimiciv_icu
+chartevents,valueuom,no,TECNICO,,m13,DEC-1,character varying,75.7,43,no,mimiciv_icu
+chartevents,warning,no,TECNICO,,m13,DEC-1,smallint,0.2,2,no,mimiciv_icu
+d_items,itemid,no,CATALOGO,,m01,DOC-MIMIC,integer,0.0,4014,sí,mimiciv_icu
+d_items,label,no,CATALOGO,,m01,DOC-MIMIC,character varying,0.0,3888,no,mimiciv_icu
+d_items,abbreviation,no,CATALOGO,,m01,DOC-MIMIC,character varying,0.0,3895,no,mimiciv_icu
+d_items,linksto,no,CATALOGO,,m01,DOC-MIMIC,character varying,0.0,6,no,mimiciv_icu
+d_items,category,no,CATALOGO,,m01,DOC-MIMIC,character varying,0.0,81,no,mimiciv_icu
+d_items,unitname,no,CATALOGO,,m01,DOC-MIMIC,character varying,60.3,59,no,mimiciv_icu
+d_items,param_type,no,CATALOGO,,m01,DOC-MIMIC,character varying,0.0,8,no,mimiciv_icu
+d_items,lownormalvalue,no,CATALOGO,,m01,DOC-MIMIC,double precision,99.5,11,no,mimiciv_icu
+d_items,highnormalvalue,no,CATALOGO,,m01,DOC-MIMIC,double precision,99.5,14,no,mimiciv_icu
+datetimeevents,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_icu
+datetimeevents,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,127,no,mimiciv_icu
+datetimeevents,stay_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,138,no,mimiciv_icu
+datetimeevents,caregiver_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,integer,0.0,381,no,mimiciv_icu
+datetimeevents,charttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,4152,no,mimiciv_icu
+datetimeevents,storetime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,4463,no,mimiciv_icu
+datetimeevents,itemid,sí,SENSIBLE,,m15,L18331-4E,integer,0.0,87,no,mimiciv_icu
+datetimeevents,value,sí,SENSIBLE,,m15,L18331-4E,timestamp without time zone,0.0,1364,no,mimiciv_icu
+datetimeevents,valueuom,no,TECNICO,,m13,DEC-1,character varying,0.0,2,no,mimiciv_icu
+datetimeevents,warning,no,TECNICO,,m13,DEC-1,smallint,0.0,2,no,mimiciv_icu
+icustays,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_icu
+icustays,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,128,no,mimiciv_icu
+icustays,stay_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,140,sí,mimiciv_icu
+icustays,first_careunit,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,9,no,mimiciv_icu
+icustays,last_careunit,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,9,no,mimiciv_icu
+icustays,intime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,140,sí,mimiciv_icu
+icustays,outtime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,140,sí,mimiciv_icu
+icustays,los,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,140,sí,mimiciv_icu
+ingredientevents,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,99,no,mimiciv_icu
+ingredientevents,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,127,no,mimiciv_icu
+ingredientevents,stay_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,138,no,mimiciv_icu
+ingredientevents,caregiver_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,integer,0.0,391,no,mimiciv_icu
+ingredientevents,starttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,9565,no,mimiciv_icu
+ingredientevents,endtime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,9859,no,mimiciv_icu
+ingredientevents,storetime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,7645,no,mimiciv_icu
+ingredientevents,itemid,sí,SENSIBLE,,m15,L18331-4E,integer,0.0,15,no,mimiciv_icu
+ingredientevents,amount,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,8292,no,mimiciv_icu
+ingredientevents,amountuom,no,TECNICO,,m13,DEC-1,character varying,0.0,5,no,mimiciv_icu
+ingredientevents,rate,sí,SENSIBLE,,m15,L18331-4E,double precision,35.3,6689,no,mimiciv_icu
+ingredientevents,rateuom,no,TECNICO,,m13,DEC-1,character varying,35.3,3,no,mimiciv_icu
+ingredientevents,orderid,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,10842,no,mimiciv_icu
+ingredientevents,linkorderid,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,7693,no,mimiciv_icu
+ingredientevents,statusdescription,no,TECNICO,,m13,DEC-1,character varying,0.0,5,no,mimiciv_icu
+ingredientevents,originalamount,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,1,no,mimiciv_icu
+ingredientevents,originalrate,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,5463,no,mimiciv_icu
+inputevents,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,99,no,mimiciv_icu
+inputevents,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,127,no,mimiciv_icu
+inputevents,stay_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,138,no,mimiciv_icu
+inputevents,caregiver_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,integer,0.0,397,no,mimiciv_icu
+inputevents,starttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,11793,no,mimiciv_icu
+inputevents,endtime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,12230,no,mimiciv_icu
+inputevents,storetime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,9514,no,mimiciv_icu
+inputevents,itemid,sí,SENSIBLE,,m15,L18331-4E,integer,0.0,159,no,mimiciv_icu
+inputevents,amount,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,9469,no,mimiciv_icu
+inputevents,amountuom,no,TECNICO,,m13,DEC-1,character varying,0.0,9,no,mimiciv_icu
+inputevents,rate,sí,SENSIBLE,,m15,L18331-4E,double precision,45.9,7645,no,mimiciv_icu
+inputevents,rateuom,no,TECNICO,,m13,DEC-1,character varying,45.9,10,no,mimiciv_icu
+inputevents,orderid,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,13948,no,mimiciv_icu
+inputevents,linkorderid,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,10799,no,mimiciv_icu
+inputevents,ordercategoryname,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,15,no,mimiciv_icu
+inputevents,secondaryordercategoryname,sí,SENSIBLE,,m15,L18331-4E,character varying,30.7,4,no,mimiciv_icu
+inputevents,ordercomponenttypedescription,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,3,no,mimiciv_icu
+inputevents,ordercategorydescription,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,5,no,mimiciv_icu
+inputevents,patientweight,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,116,no,mimiciv_icu
+inputevents,totalamount,sí,SENSIBLE,,m15,L18331-4E,double precision,16.2,173,no,mimiciv_icu
+inputevents,totalamountuom,no,TECNICO,,m13,DEC-1,character varying,16.2,1,no,mimiciv_icu
+inputevents,isopenbag,no,TECNICO,,m13,DEC-1,smallint,0.0,2,no,mimiciv_icu
+inputevents,continueinnextdept,no,TECNICO,,m13,DEC-1,smallint,0.0,1,no,mimiciv_icu
+inputevents,statusdescription,no,TECNICO,,m13,DEC-1,character varying,0.0,5,no,mimiciv_icu
+inputevents,originalamount,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,6247,no,mimiciv_icu
+inputevents,originalrate,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,4199,no,mimiciv_icu
+outputevents,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_icu
+outputevents,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,126,no,mimiciv_icu
+outputevents,stay_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,137,no,mimiciv_icu
+outputevents,caregiver_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,integer,0.0,435,no,mimiciv_icu
+outputevents,charttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,7898,no,mimiciv_icu
+outputevents,storetime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,7078,no,mimiciv_icu
+outputevents,itemid,sí,SENSIBLE,,m15,L18331-4E,integer,0.0,39,no,mimiciv_icu
+outputevents,value,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,208,no,mimiciv_icu
+outputevents,valueuom,no,TECNICO,,m13,DEC-1,character varying,0.0,1,no,mimiciv_icu
+procedureevents,subject_id,sí,IDENT_OPACO,,m04,HIPAA-H,integer,0.0,100,no,mimiciv_icu
+procedureevents,hadm_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,128,no,mimiciv_icu
+procedureevents,stay_id,sí,IDENT_OPACO,,m05,HIPAA-R,integer,0.0,138,no,mimiciv_icu
+procedureevents,caregiver_id,sí,IDENT_PROFESIONAL,,m03,DEC-3,integer,16.5,297,no,mimiciv_icu
+procedureevents,starttime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,1241,no,mimiciv_icu
+procedureevents,endtime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,1297,no,mimiciv_icu
+procedureevents,storetime,sí,CUASI_HIPAA,DATE_TIME,m14,HIPAA-C,timestamp without time zone,0.0,1179,no,mimiciv_icu
+procedureevents,itemid,sí,SENSIBLE,,m15,L18331-4E,integer,0.0,82,no,mimiciv_icu
+procedureevents,value,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,623,no,mimiciv_icu
+procedureevents,valueuom,no,TECNICO,,m13,DEC-1,character varying,0.0,4,no,mimiciv_icu
+procedureevents,location,sí,SENSIBLE,,m15,L18331-4E,character varying,76.0,43,no,mimiciv_icu
+procedureevents,locationcategory,sí,SENSIBLE,,m15,L18331-4E,character varying,76.0,7,no,mimiciv_icu
+procedureevents,orderid,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,1468,sí,mimiciv_icu
+procedureevents,linkorderid,dudoso,IDENT_REGISTRO,,m06,DEC-2,integer,0.0,1467,no,mimiciv_icu
+procedureevents,ordercategoryname,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,12,no,mimiciv_icu
+procedureevents,ordercategorydescription,sí,SENSIBLE,,m15,L18331-4E,character varying,0.0,2,no,mimiciv_icu
+procedureevents,patientweight,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,116,no,mimiciv_icu
+procedureevents,isopenbag,no,TECNICO,,m13,DEC-1,smallint,0.0,2,no,mimiciv_icu
+procedureevents,continueinnextdept,no,TECNICO,,m13,DEC-1,smallint,0.0,1,no,mimiciv_icu
+procedureevents,statusdescription,no,TECNICO,,m13,DEC-1,character varying,0.0,3,no,mimiciv_icu
+procedureevents,originalamount,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,601,no,mimiciv_icu
+procedureevents,originalrate,sí,SENSIBLE,,m15,L18331-4E,double precision,0.0,2,no,mimiciv_icu

@@ -1,0 +1,28 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "texto_libre": "sin_cambios"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que al pedir 'anonimizar los identificadores', te referís a que los IDs actuales deben mantenerse como claves primarias/foráneas para no romper la integridad referencial (por eso uso 'seudonimizar' en lugar de 'eliminar'), pero que sus valores deben ser transformados para que no sean identificables.",
+    "Asumo que 'profesionales' se refiere a la tabla 'mimiciv_hosp.provider' y a las columnas que contienen IDs de proveedores (como 'admit_provider_id', 'order_provider_id', etc.). El proceso de seudonimización global sobre las tablas identificará estas relaciones.",
+    "Asumo que 'fechas coherentes' se traduce en la función 'desplazar_por_paciente', ya que esta técnica desplaza todas las fechas de un paciente por el mismo intervalo de tiempo, manteniendo la cronología lógica de sus eventos (ej. ingreso < alta)."
+  ],
+  "preguntas": [
+    "¿Deseas que la seudonimización de los profesionales sea aleatoria o que mantenga alguna relación específica entre ellos?",
+    "¿Hay alguna columna de 'texto_libre' específica (como notas médicas) que prefieras enmascarar en lugar de dejarla sin cambios?",
+    "¿Confirmás que el objetivo es mantener la integridad de las relaciones entre tablas (por ejemplo, que un `subject_id` siga vinculado a sus registros en `labevents` y `admissions`)?"
+  ]
+}
