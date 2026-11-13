@@ -92,6 +92,11 @@ Comparado con Pagila (49 de 55 particiones sin FK y una relación lógica sin de
 relaciones implícitas, y algunas no se cumplen del todo: un caso más realista para F2 (proponer relaciones y
 confirmarlas).
 
+Pruebas de F2 sobre esta base (2026-11-12 y 2026-11-13): el [LLM local](../salud/F2-relaciones-llm/ficha.md)
+encuentra 5 de las 25; [SchemaSpy y Metanome](../salud/F2-relaciones-herramientas/ficha.md) encuentran 10 de 25 y 20
+de 25 (las 20 que se cumplen). Metanome además encontró 2 relaciones reales que esta lista no tenía
+(`poe.discontinued_by_poe_id → poe.poe_id` y `procedureevents.linkorderid → procedureevents.orderid`).
+
 ## Evidencia
 
 - `evidencia/mimic-demo/`: `versiones.txt`, `tiempos.csv`, un log por paso de la carga

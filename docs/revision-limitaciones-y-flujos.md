@@ -167,6 +167,7 @@ generativo falla, esa columna pasa a la vía determinista y queda registrado.
 ### F2 · Relaciones no declaradas
 - **Qué es:** proponer relaciones que el catálogo no tiene y verificarlas contra los datos.
 - **Sugerencia:** DEJAR. Evidencia: las FK de `payment` están declaradas solo en 6 de sus 55 particiones, y `store.manager_staff_id → staff` no está declarada.
+- **Evidencia nueva (MIMIC, 2026-11-13):** la demo de MIMIC-IV tiene 25 relaciones sin declarar. Herramientas de código abierto que lo resuelven: **Metanome** (Apache 2.0) con dos filtros encuentra las 20 que se cumplen, con precisión 0,96; **SchemaSpy** (LGPL-3.0) encuentra 10, incluidas las 5 con huérfanas; el LLM local, 5. Ver [F2m con herramientas](../pruebas/salud/F2-relaciones-herramientas/ficha.md).
 - **Decisión:**
 
 ### F3 · Clasificación de columnas en cascada

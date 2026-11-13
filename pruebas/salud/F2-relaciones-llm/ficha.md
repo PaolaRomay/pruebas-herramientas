@@ -20,9 +20,12 @@ sin ellas el subconjunto deja 20 relaciones rotas en MIMIC.
     `encounter → encounters`, ni las de aseguradoras (`payer`).
   - Las 2 propuestas falsas (`departmentid → organizations`) no se cumplen en ninguna fila.
 - **Determinista:** las tres corridas dan exactamente lo mismo. Ninguna columna inventada.
-- **Conclusión:** el LLM solo no alcanza para el grafo de relaciones. La búsqueda por **nombre de columna + valores
-  en común** (lo que hizo `relaciones_mimic.py` en la etapa 1) encontró las 25 de MIMIC. El LLM puede sumar como
-  segunda opinión, siempre verificado contra los datos.
+- **Conclusión:** el LLM solo no alcanza para el grafo de relaciones. Las 25 de MIMIC salieron de reglas de nombre
+  escritas a mano para MIMIC (`relaciones_mimic.py`, etapa 1) más la verificación contra los datos: no es una
+  comparación justa, porque esas reglas son la verdad contra la que se mide. Sin reglas escritas a mano, **Metanome
+  con dos filtros simples encontró las 20 de 20 que se cumplen** (ver
+  [F2m con herramientas](../F2-relaciones-herramientas/ficha.md)). El LLM puede sumar como segunda opinión, siempre
+  verificado contra los datos.
 
 ## Entorno
 

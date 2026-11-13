@@ -99,6 +99,13 @@ etapa 2.
 | F11 | Manifiesto de trazabilidad firmado | 5 | — | EDPB 02/2026; anexo A |
 | F12 | Refresco ante cambio de esquema: reclasifica solo lo nuevo | 0/1 | Propone | Riesgo de deriva (Tabla 4.1) |
 
+**Herramientas para F2 (relevadas y probadas sobre MIMIC el 2026-11-13, todas de código abierto):** Metanome
+(Apache 2.0, perfilado de datos: descubre dependencias de inclusión, es decir, columnas cuyos valores están todos en
+otra) y SchemaSpy (LGPL-3.0, documentación de esquemas: propone relaciones implícitas por nombre de columna).
+Metanome con dos filtros simples encontró las 20 relaciones no declaradas que se cumplen en la demo de MIMIC;
+SchemaSpy encuentra las que tienen filas huérfanas, que Metanome no ve. Detalle en
+[F2m con herramientas](../pruebas/salud/F2-relaciones-herramientas/ficha.md).
+
 **Flujo principal:** F1 → F2 → F3 → F4 → F5 → F6 → F7 → F8 (+F9) → F10 → F11 → entrega.
 Si el gate rechaza, se ajusta la configuración o el catálogo y se vuelve a F8 o a F4; si un componente generativo
 falla, la columna pasa a vía determinista y queda registrado (degradación elegante, informe 3.3).

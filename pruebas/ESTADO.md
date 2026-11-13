@@ -37,6 +37,32 @@ Estados: **Hecha** · **Hecha fuera del repo** (hay que rehacerla o documentarla
 | G2 | Tonic Fabricate, Data Agent (cualitativo) | Orquestar | Pendiente (casos definidos) | sin asignar | [G2-tonic-fabricate](G2-tonic-fabricate/ficha.md) |
 | G3 | Tonic Structural, Agent y MCP (cualitativo) | Orquestar | Requiere trial (casos definidos) | sin asignar | [G3-tonic-structural](G3-tonic-structural/ficha.md) |
 
+## Pruebas sobre bases de salud (MIMIC y Synthea)
+
+Sobre la demo abierta de MIMIC-IV (100 pacientes, ya desidentificada) y Synthea (1 000 pacientes inventados),
+con listas de referencia propias ([taxonomía](_bases/referencia/taxonomia.md)). Sufijo **m** = MIMIC, **s** = Synthea. Las
+pruebas de «F2» corresponden a la funcionalidad F2 del sistema (relaciones no declaradas), no a la letra F del plan
+(utilidad). Fichas de herramienta nuevas: [SchemaSpy](_herramientas/schemaspy.md) y [Metanome](_herramientas/metanome.md).
+
+| ID | Herramienta | Función | Estado | Ficha |
+|---|---|---|---|---|
+| A1m / A1s | Presidio | Detectar | Hecha (2026-11-08) | [ficha](salud/A1-presidio/ficha.md) |
+| A2m / A2s | LLM local (Gemma 4 12B, Ollama): esquema, muestra y esquema ofuscado | Detectar | Hecha (2026-11-08) | [ficha](salud/A2-llm-local/ficha.md) |
+| A4m / A4s | GLiNER2-PII | Detectar | Hecha (2026-11-08) | [ficha](salud/A4-gliner2/ficha.md) |
+| A5m / A5s | `anon.detect` (PostgreSQL Anonymizer) | Detectar | Hecha (2026-11-09) | [ficha](salud/A5-anon-detect/ficha.md) |
+| A6m / A6s | LLM local + Presidio combinados | Detectar | Hecha (2026-11-08) | [ficha](salud/A6-llm-presidio/ficha.md) |
+| C1m / C1s | Script propio de subconjuntos (tablas sin PK, relaciones no declaradas, pacientes de control) | Extraer subconjuntos | Hecha (2026-11-09) | [ficha](salud/C1-subconjunto/ficha.md) |
+| B1m / B1s | PostgreSQL Anonymizer (funciones nativas y propias) | Anonimizar | Hecha (2026-11-09) | [ficha](salud/B1-anon/ficha.md) |
+| B3m / B3s | ARX como medidor de riesgo del registro «paciente» | Anonimizar | Hecha (2026-11-09) | [ficha](salud/B3-arx/ficha.md) |
+| D2m / D2s | MOSTLY AI (escalones de 47 a 10 000 pacientes) | Sintetizar | Hecha (2026-11-12) | [ficha](salud/D2-mostlyai/ficha.md) |
+| D3m / D3s | SDV (HMA) con 3, 4 y 5 tablas | Sintetizar | Hecha (2026-11-12) | [ficha](salud/D3-sdv/ficha.md) |
+| E3m / E3s | Evaluador propio adaptado a salud | Validar | Hecha (2026-11-12) | [ficha](salud/E3-evaluador/ficha.md) |
+| E4m / E4s | SyntheRela | Validar | Hecha (2026-11-12) | [ficha](salud/E4-syntherela/ficha.md) |
+| F1m / F1s | Consultas de referencia (utilidad) | Utilidad | Hecha (2026-11-12) | [ficha](salud/F1-utilidad/ficha.md) |
+| F2m / F2s | LLM local propone relaciones | Entender el esquema | Hecha (2026-11-12) | [ficha](salud/F2-relaciones-llm/ficha.md) |
+| F2m | **SchemaSpy** y **Metanome** (BINDER, SPIDER) descubren relaciones no declaradas | Entender el esquema | Hecha (2026-11-13) | [ficha](salud/F2-relaciones-herramientas/ficha.md) |
+| G1m | Orquestación con el LLM local | Orquestar | Hecha (2026-11-12) | [ficha](salud/G1-orquestacion/ficha.md) |
+
 ## Pendientes de decisión que traban pruebas
 
 | Pendiente | Lo define | Traba |
