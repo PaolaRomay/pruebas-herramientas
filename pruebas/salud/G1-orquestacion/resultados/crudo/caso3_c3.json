@@ -1,0 +1,38 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    },
+    {
+      "herramienta": "subconjunto",
+      "parametros": {
+        "ancla": "mimiciv_hosp.patients",
+        "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE '%Sepsis%')",
+        "porcentaje": 100
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "edad": "sin_cambios",
+        "texto_libre": "enmascarar"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que la condición de 'sepsis' se identifica mediante un código ICD en la tabla 'mimiciv_hosp.diagnoses_icd'. Como no especificaste un código exacto, utilizaré un operador 'LIKE' con la palabra 'Sepsis'.",
+    "Asumo que el 'subconjunto' debe incluir el 100% de los pacientes que cumplan el criterio.",
+    "Asumo que, al pedir 'todo lo que dependa de ellos', la herramienta 'subconjunto' debe manejar automáticamente las relaciones de las tablas mencionadas (admissions, diagnoses, labevents, etc.) manteniendo la integridad referencial.",
+    "He incluido un paso de 'anonimizar' al final por seguridad, ya que al extraer datos de producción para un entorno de prueba, es una buena práctica estándar, aunque no lo pediste explícitamente."
+  ],
+  "preguntas": [
+    "¿Tienes un código ICD específico para 'sepsis' que prefieras usar en lugar de la búsqueda por texto?",
+    "¿Deseas que los datos sean completamente anonimizados (seudonimización) o prefieres mantener los identificadores originales de la base de producción?",
+    "¿Deseas que se incluya algún porcentaje específico de pacientes o quieres a todos los que cumplan con el diagnóstico?"
+  ]
+}

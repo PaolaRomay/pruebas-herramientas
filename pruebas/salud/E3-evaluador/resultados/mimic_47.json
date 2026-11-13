@@ -1,0 +1,362 @@
+{
+  "entrenamiento": "mimic_47",
+  "fecha": "2026-11-12T23:02",
+  "pacientes_entrenamiento": 47,
+  "pacientes_control": 16,
+  "real": {
+    "reglas": {
+      "alta >= ingreso": 0,
+      "muerte dentro de la internación": 0,
+      "muerte en el hospital <=> hospital_expire_flag": 0,
+      "emergencia: salida >= registro": 0,
+      "UCI dentro de la internación": 0,
+      "UCI: salida >= entrada": 0,
+      "dod = día de la muerte": 0,
+      "edad en la internación >= 18": 0,
+      "estadía UCI: los = salida - entrada (±0,01 días)": 0
+    },
+    "codigos": {
+      "filas": 1774,
+      "codigos_validos": 1774,
+      "pct": 100.0
+    },
+    "riesgo_arx": {
+      "fraccion_unicos": 1.0,
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 1.0,
+      "k2_suprimidos": 3,
+      "k2_niveles": {
+        "sexo": 0,
+        "edad": 4,
+        "raza": 2,
+        "seguro": 1,
+        "idioma": 0,
+        "estado_civil": 0
+      }
+    }
+  },
+  "candidatas": {
+    "B1 anonimizada (PostgreSQL Anonymizer)": {
+      "filas": {
+        "patients": 47,
+        "admissions": 115,
+        "diagnoses_icd": 1774,
+        "icustays": 66,
+        "labevents": 48042
+      },
+      "integridad": {
+        "patients: PK repetidas": 0,
+        "admissions: PK repetidas": 0,
+        "admissions.subject_id sin padre": 0,
+        "diagnoses_icd.hadm_id sin padre": 0,
+        "icustays: PK repetidas": 0,
+        "icustays.hadm_id sin padre": 0,
+        "labevents.subject_id sin padre": 0
+      },
+      "reglas": {
+        "alta >= ingreso": 0,
+        "muerte dentro de la internación": 0,
+        "muerte en el hospital <=> hospital_expire_flag": 0,
+        "emergencia: salida >= registro": 0,
+        "UCI dentro de la internación": 0,
+        "UCI: salida >= entrada": 0,
+        "dod = día de la muerte": 0,
+        "edad en la internación >= 18": 0,
+        "estadía UCI: los = salida - entrada (±0,01 días)": 0
+      },
+      "codigos": {
+        "filas": 1774,
+        "codigos_validos": 1774,
+        "pct": 100.0
+      },
+      "segundos_bloque1": 0.0,
+      "calidad": {
+        "puntaje": 0.913,
+        "propiedades": {
+          "Column Shapes": 0.701,
+          "Column Pair Trends": 0.984,
+          "Cardinality": 1.0,
+          "Intertable Trends": 0.968
+        }
+      },
+      "segundos_bloque2": 2.4,
+      "privacidad": {
+        "n_ataques": 16,
+        "filas_original": 47,
+        "filas_candidata": 47,
+        "filas_control": 16,
+        "singling_out": {
+          "riesgo": 0.72,
+          "ic95": [
+            0.511,
+            0.929
+          ],
+          "tasa_ataque": 0.752,
+          "tasa_azar": 0.298,
+          "tasa_control": 0.115,
+          "concluyente": true
+        },
+        "linkability": {
+          "riesgo": 0.056,
+          "ic95": [
+            0.0,
+            0.237
+          ],
+          "tasa_ataque": 0.147,
+          "tasa_azar": 0.097,
+          "tasa_control": 0.097,
+          "concluyente": true
+        },
+        "inference": {
+          "riesgo": 0.754,
+          "ic95": [
+            0.545,
+            0.962
+          ],
+          "tasa_ataque": 0.802,
+          "tasa_azar": 0.349,
+          "tasa_control": 0.198,
+          "concluyente": true
+        },
+        "dcr": {
+          "copias_exactas_pct": 8.5,
+          "mediana_candidata": 0.01,
+          "mediana_control": 0.149,
+          "pct_candidata_mas_cerca_que_p5_control": 80.9
+        }
+      },
+      "segundos_bloque3": 2.0,
+      "riesgo_arx": {
+        "fraccion_unicos": 0.809,
+        "riesgo_maximo": 1.0,
+        "riesgo_promedio": 0.894,
+        "k2_suprimidos": 3,
+        "k2_niveles": {
+          "sexo": 0,
+          "edad": 4,
+          "raza": 2,
+          "seguro": 1,
+          "idioma": 0,
+          "estado_civil": 0
+        }
+      },
+      "segundos_bloque4": 0.9,
+      "segundos_total": 5.8
+    },
+    "D2 sintética (MOSTLY AI)": {
+      "filas": {
+        "patients": 47,
+        "admissions": 82,
+        "diagnoses_icd": 1163,
+        "icustays": 39,
+        "labevents": 27732
+      },
+      "integridad": {
+        "patients: PK repetidas": 0,
+        "admissions: PK repetidas": 0,
+        "admissions.subject_id sin padre": 0,
+        "diagnoses_icd.hadm_id sin padre": 0,
+        "icustays: PK repetidas": 0,
+        "icustays.hadm_id sin padre": 0,
+        "labevents.subject_id sin padre": 0
+      },
+      "reglas": {
+        "alta >= ingreso": 39,
+        "muerte dentro de la internación": 0,
+        "muerte en el hospital <=> hospital_expire_flag": 6,
+        "emergencia: salida >= registro": 8,
+        "UCI dentro de la internación": 31,
+        "UCI: salida >= entrada": 17,
+        "dod = día de la muerte": 0,
+        "edad en la internación >= 18": 1,
+        "estadía UCI: los = salida - entrada (±0,01 días)": 39
+      },
+      "codigos": {
+        "filas": 1163,
+        "codigos_validos": 327,
+        "pct": 28.1
+      },
+      "segundos_bloque1": 0.0,
+      "calidad": {
+        "puntaje": 0.702,
+        "propiedades": {
+          "Column Shapes": 0.795,
+          "Column Pair Trends": 0.603,
+          "Cardinality": 0.878,
+          "Intertable Trends": 0.535
+        }
+      },
+      "segundos_bloque2": 0.5,
+      "privacidad": {
+        "n_ataques": 16,
+        "filas_original": 47,
+        "filas_candidata": 47,
+        "filas_control": 16,
+        "singling_out": {
+          "riesgo": 0.076,
+          "ic95": [
+            0.0,
+            0.362
+          ],
+          "tasa_ataque": 0.248,
+          "tasa_azar": 0.097,
+          "tasa_control": 0.186,
+          "concluyente": true
+        },
+        "linkability": {
+          "riesgo": 0.056,
+          "ic95": [
+            0.0,
+            0.237
+          ],
+          "tasa_ataque": 0.147,
+          "tasa_azar": 0.097,
+          "tasa_control": 0.097,
+          "concluyente": true
+        },
+        "inference": {
+          "riesgo": 0.0,
+          "ic95": [
+            0.0,
+            0.152
+          ],
+          "tasa_ataque": 0.097,
+          "tasa_azar": 0.198,
+          "tasa_control": 0.097,
+          "concluyente": false
+        },
+        "dcr": {
+          "copias_exactas_pct": 0.0,
+          "mediana_candidata": 0.288,
+          "mediana_control": 0.149,
+          "pct_candidata_mas_cerca_que_p5_control": 2.1
+        }
+      },
+      "segundos_bloque3": 0.0,
+      "riesgo_arx": {
+        "fraccion_unicos": 1.0,
+        "riesgo_maximo": 1.0,
+        "riesgo_promedio": 1.0,
+        "k2_suprimidos": 2,
+        "k2_niveles": {
+          "sexo": 0,
+          "edad": 4,
+          "raza": 2,
+          "seguro": 0,
+          "idioma": 0,
+          "estado_civil": 1
+        }
+      },
+      "segundos_bloque4": 0.8,
+      "segundos_total": 1.4
+    },
+    "D3 sintética (SDV HMA, 5 tablas)": {
+      "filas": {
+        "patients": 47,
+        "admissions": 115,
+        "diagnoses_icd": 1774,
+        "icustays": 66,
+        "labevents": 48042
+      },
+      "integridad": {
+        "patients: PK repetidas": 0,
+        "admissions: PK repetidas": 0,
+        "admissions.subject_id sin padre": 0,
+        "diagnoses_icd.hadm_id sin padre": 0,
+        "icustays: PK repetidas": 0,
+        "icustays.hadm_id sin padre": 0,
+        "labevents.subject_id sin padre": 0
+      },
+      "reglas": {
+        "alta >= ingreso": 48,
+        "muerte dentro de la internación": 4,
+        "muerte en el hospital <=> hospital_expire_flag": 10,
+        "emergencia: salida >= registro": 13,
+        "UCI dentro de la internación": 63,
+        "UCI: salida >= entrada": 19,
+        "dod = día de la muerte": 4,
+        "edad en la internación >= 18": 14,
+        "estadía UCI: los = salida - entrada (±0,01 días)": 66
+      },
+      "codigos": {
+        "filas": 1774,
+        "codigos_validos": 976,
+        "pct": 55.0
+      },
+      "segundos_bloque1": 0.0,
+      "calidad": {
+        "puntaje": 0.688,
+        "propiedades": {
+          "Column Shapes": 0.792,
+          "Column Pair Trends": 0.642,
+          "Cardinality": 0.741,
+          "Intertable Trends": 0.578
+        }
+      },
+      "segundos_bloque2": 0.6,
+      "privacidad": {
+        "n_ataques": 16,
+        "filas_original": 47,
+        "filas_candidata": 47,
+        "filas_control": 16,
+        "singling_out": {
+          "riesgo": 0.075,
+          "ic95": [
+            0.0,
+            0.306
+          ],
+          "tasa_ataque": 0.198,
+          "tasa_azar": 0.198,
+          "tasa_control": 0.133,
+          "concluyente": false
+        },
+        "linkability": {
+          "riesgo": 0.0,
+          "ic95": [
+            0.0,
+            0.226
+          ],
+          "tasa_ataque": 0.147,
+          "tasa_azar": 0.097,
+          "tasa_control": 0.147,
+          "concluyente": true
+        },
+        "inference": {
+          "riesgo": 0.0,
+          "ic95": [
+            0.0,
+            0.152
+          ],
+          "tasa_ataque": 0.097,
+          "tasa_azar": 0.097,
+          "tasa_control": 0.097,
+          "concluyente": false
+        },
+        "dcr": {
+          "copias_exactas_pct": 0.0,
+          "mediana_candidata": 0.184,
+          "mediana_control": 0.149,
+          "pct_candidata_mas_cerca_que_p5_control": 0.0
+        }
+      },
+      "segundos_bloque3": 0.0,
+      "riesgo_arx": {
+        "fraccion_unicos": 1.0,
+        "riesgo_maximo": 1.0,
+        "riesgo_promedio": 1.0,
+        "k2_suprimidos": 1,
+        "k2_niveles": {
+          "sexo": 0,
+          "edad": 4,
+          "raza": 2,
+          "seguro": 0,
+          "idioma": 0,
+          "estado_civil": 1
+        }
+      },
+      "segundos_bloque4": 0.7,
+      "segundos_total": 1.4
+    }
+  },
+  "avisos": []
+}

@@ -1,0 +1,161 @@
+{
+  "exportar": {
+    "base": "synthea_p1000",
+    "filas": {
+      "patients": 925,
+      "encounters": 54795,
+      "conditions": 32555,
+      "observations": 681113
+    },
+    "segundos": 2.4,
+    "registrado": "2026-11-12 22:09:19"
+  },
+  "entrenar": {
+    "segundos": 1236.5,
+    "memoria_max_mb": 3693,
+    "max_minutos_por_tabla": 10,
+    "accuracy_global": 0.8597017,
+    "metricas_por_tabla": {
+      "patients": {
+        "accuracy": 0.8694085,
+        "coherencia": null,
+        "dcr_share": 0.574,
+        "discriminador_auc": 0.589
+      },
+      "encounters": {
+        "accuracy": 0.8351785,
+        "coherencia": 0.8809433,
+        "dcr_share": 0.566,
+        "discriminador_auc": 0.873
+      },
+      "conditions": {
+        "accuracy": 0.8603884,
+        "coherencia": 0.92519,
+        "dcr_share": 0.557,
+        "discriminador_auc": 0.621
+      },
+      "observations": {
+        "accuracy": 0.8738314,
+        "coherencia": 0.8504114,
+        "dcr_share": 0.732,
+        "discriminador_auc": 0.684
+      }
+    },
+    "filas_entrada": {
+      "patients": 925,
+      "encounters": 54795,
+      "conditions": 32555,
+      "observations": 681113
+    },
+    "entorno": {
+      "equipo": "arm64, macOS 26.6.2",
+      "python": "3.12.0",
+      "paquetes": {
+        "mostlyai": "6.1.4",
+        "mostlyai-engine": "2.7.0",
+        "torch": "2.13.0",
+        "pandas": "3.0.6",
+        "numpy": "2.5.3"
+      }
+    },
+    "registrado": "2026-11-12 22:44:10"
+  },
+  "generar_925": {
+    "segundos": 131.8,
+    "memoria_max_mb": 4491,
+    "filas": {
+      "conditions": 28295,
+      "encounters": 41541,
+      "patients": 925,
+      "observations": 342187
+    },
+    "registrado": "2026-11-12 22:46:22"
+  },
+  "evaluar": {
+    "real": {
+      "reglas": {
+        "encuentro: fin >= inicio": 0,
+        "encuentro después del nacimiento": 0,
+        "encuentro antes de la muerte (+1 día)": 95,
+        "muerte >= nacimiento": 0,
+        "condición: fin >= inicio": 0,
+        "observación dentro de su encuentro (±1 día)": 439
+      },
+      "integridad": {
+        "patients: PK repetidas": 0,
+        "encounters: PK repetidas": 0,
+        "encounters.patient sin padre": 0,
+        "conditions.encounter sin padre": 0,
+        "observations.encounter sin padre": 0
+      },
+      "estadisticas": {
+        "pacientes": 925,
+        "encuentros por paciente": 59.2,
+        "condiciones por paciente": 35.2,
+        "observaciones por encuentro": 12.43,
+        "% mujeres": 48.5,
+        "edad mediana": 45.4,
+        "% fallecidos": 12.6,
+        "duración del encuentro, mediana (horas)": 0.66,
+        "códigos de condición distintos": 416
+      }
+    },
+    "sintetico_925": {
+      "reglas": {
+        "encuentro: fin >= inicio": 12468,
+        "encuentro después del nacimiento": 2525,
+        "encuentro antes de la muerte (+1 día)": 4494,
+        "muerte >= nacimiento": 24,
+        "condición: fin >= inicio": 5404,
+        "observación dentro de su encuentro (±1 día)": 122746
+      },
+      "integridad": {
+        "patients: PK repetidas": 0,
+        "encounters: PK repetidas": 0,
+        "encounters.patient sin padre": 0,
+        "conditions.encounter sin padre": 0,
+        "observations.encounter sin padre": 0
+      },
+      "estadisticas": {
+        "pacientes": 925,
+        "encuentros por paciente": 44.9,
+        "condiciones por paciente": 30.6,
+        "observaciones por encuentro": 8.24,
+        "% mujeres": 48.8,
+        "edad mediana": 44.5,
+        "% fallecidos": 12.0,
+        "duración del encuentro, mediana (horas)": 0.58,
+        "códigos de condición distintos": 75
+      },
+      "filas": {
+        "patients": 925,
+        "encounters": 41541,
+        "conditions": 28295,
+        "observations": 342187
+      },
+      "copias_exactas": {
+        "patients": {
+          "filas_sinteticas": 925,
+          "identicas_a_una_real": 0,
+          "columnas_comparadas": 8
+        },
+        "encounters": {
+          "filas_sinteticas": 41541,
+          "identicas_a_una_real": 95,
+          "columnas_comparadas": 7
+        },
+        "conditions": {
+          "filas_sinteticas": 28295,
+          "identicas_a_una_real": 416,
+          "columnas_comparadas": 4
+        },
+        "observations": {
+          "filas_sinteticas": 342187,
+          "identicas_a_una_real": 135,
+          "columnas_comparadas": 7
+        }
+      }
+    },
+    "registrado": "2026-11-12 23:01:30"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "pasos": [
+    {
+      "herramienta": "subconjunto",
+      "parametros": {
+        "ancla": "mimiciv_hosp.patients",
+        "filtro_sql": "SELECT subject_id FROM mimiciv_hosp.patients LIMIT 200",
+        "porcentaje": 100
+      }
+    },
+    {
+      "herramienta": "sintetizar",
+      "parametros": {
+        "tablas": [
+          "mimiciv_hosp.patients",
+          "mimiciv_hosp.admissions",
+          "mimiciv_hosp.diagnoses_icd",
+          "mimiciv_hosp.procedures_icd",
+          "mimiciv_hosp.labevents",
+          "mimiciv_hosp.emar"
+        ],
+        "pacientes": 200
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que 'internaciones' se refiere a la tabla 'mimiciv_hosp.admissions'.",
+    "Asumo que 'diagnósticos' se refiere a la tabla 'mimiciv_hosp.diagnoses_icd'.",
+    "He incluido 'labevents' y 'emar' en la síntesis para asegurar que haya coherencia clínica básica (tratamientos y resultados), ya que son dependientes de las internaciones.",
+    "Para garantizar la coherencia entre tablas, el modelo de síntesis utilizará los IDs de los pacientes extraídos inicialmente como anclaje."
+  ],
+  "preguntas": [
+    "¿Deseas incluir datos de la unidad de cuidados intensivos (mimiciv_icu) además de la hospitalización general?",
+    "¿Hay alguna patología o tipo de internación específica en la que deba centrarse la generación de datos?"
+  ]
+}

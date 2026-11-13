@@ -1,0 +1,110 @@
+{
+  "prueba": "D3s",
+  "conjunto": "synthea_85",
+  "tablas": [
+    "patients",
+    "encounters",
+    "conditions",
+    "observations"
+  ],
+  "entorno": {
+    "equipo": "arm64, macOS 26.6.2",
+    "python": "3.11.16",
+    "sdv": "1.32.1",
+    "pandas": "3.0.6"
+  },
+  "fecha": "2026-11-12T22:48:44",
+  "entrenar": {
+    "segundos": 32.8,
+    "memoria_max_proceso_mb": 502
+  },
+  "generar": {
+    "segundos": 76.8,
+    "memoria_max_proceso_mb": 502
+  },
+  "filas": {
+    "real": {
+      "patients": 85,
+      "encounters": 3214,
+      "conditions": 2445,
+      "observations": 33371
+    },
+    "sintetico": {
+      "patients": 85,
+      "encounters": 3214,
+      "conditions": 2445,
+      "observations": 33371
+    }
+  },
+  "integridad": {
+    "patients: PK repetidas": 0,
+    "encounters: PK repetidas": 0,
+    "encounters.patient sin padre": 0,
+    "conditions.encounter sin padre": 0,
+    "observations.encounter sin padre": 0
+  },
+  "reglas": {
+    "real": {
+      "encuentro: fin >= inicio": 0,
+      "encuentro después del nacimiento": 0,
+      "encuentro antes de la muerte (+1 día)": 8,
+      "muerte >= nacimiento": 0,
+      "condición: fin >= inicio": 0,
+      "observación dentro de su encuentro (±1 día)": 28
+    },
+    "sintetico": {
+      "encuentro: fin >= inicio": 1530,
+      "encuentro después del nacimiento": 184,
+      "encuentro antes de la muerte (+1 día)": 472,
+      "muerte >= nacimiento": 7,
+      "condición: fin >= inicio": 517,
+      "observación dentro de su encuentro (±1 día)": 31283
+    }
+  },
+  "estadisticas": {
+    "real": {
+      "pacientes": 85,
+      "encuentros por paciente": 37.8,
+      "condiciones por paciente": 28.8,
+      "observaciones por encuentro": 10.38,
+      "% mujeres": 58.8,
+      "edad mediana": 45.4,
+      "% fallecidos": 10.6,
+      "duración del encuentro, mediana (horas)": 0.52,
+      "códigos de condición distintos": 167
+    },
+    "sintetico": {
+      "pacientes": 85,
+      "encuentros por paciente": 37.8,
+      "condiciones por paciente": 28.8,
+      "observaciones por encuentro": 10.38,
+      "% mujeres": 64.7,
+      "edad mediana": 44.6,
+      "% fallecidos": 15.3,
+      "duración del encuentro, mediana (horas)": 0.31,
+      "códigos de condición distintos": 135
+    }
+  },
+  "copias_exactas": {
+    "patients": {
+      "filas_sinteticas": 85,
+      "identicas_a_una_real": 0,
+      "columnas_comparadas": 8
+    },
+    "encounters": {
+      "filas_sinteticas": 3214,
+      "identicas_a_una_real": 0,
+      "columnas_comparadas": 7
+    },
+    "conditions": {
+      "filas_sinteticas": 2445,
+      "identicas_a_una_real": 0,
+      "columnas_comparadas": 4
+    },
+    "observations": {
+      "filas_sinteticas": 33371,
+      "identicas_a_una_real": 0,
+      "columnas_comparadas": 7
+    }
+  }
+}

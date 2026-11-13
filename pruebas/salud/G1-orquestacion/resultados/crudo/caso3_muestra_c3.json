@@ -1,0 +1,39 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    },
+    {
+      "herramienta": "subconjunto",
+      "parametros": {
+        "ancla": "mimiciv_hosp.patients",
+        "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE '%Sepsis%') OR subject_id IN (SELECT subject_id FROM mimiciv_hosp.admissions WHERE admission_location = 'SEPSIS')",
+        "porcentaje": 100
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "edad": "decada",
+        "texto_libre": "enmascarar"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que la condición de 'sepsis' puede identificarse mediante una búsqueda de texto en los códigos o títulos de la tabla 'mimiciv_hosp.diagnoses_icd'.",
+    "Asumo que 'todo lo que dependa de ellos' incluye todas las tablas relacionadas con el 'subject_id' (pacientes), como 'admissions', 'diagnoses_icd', 'labevents', 'icustays' y 'procedures_icd'.",
+    "Asumo que el usuario desea mantener la integridad referencial de los datos (relaciones entre tablas) dentro del subconjunto extraído.",
+    "Asumo que, al ser datos de salud, se debe aplicar una anonimización estándar tras la extracción."
+  ],
+  "preguntas": [
+    "¿Existe algún código ICD específico para sepsis que prefieras usar en el filtro en lugar de una búsqueda por texto?",
+    "¿Deseas que la anonimización sea más agresiva (por ejemplo, eliminar identificadores en lugar de seudonimizarlos)?",
+    "¿Necesitas que el subconjunto incluya tablas específicas que no estén directamente ligadas al subject_id (ej. catálogos de medicación o procedimientos)?",
+    "¿Para qué propósito se usará la base de datos? (Esto me ayudaría a ajustar el nivel de ruido en las fechas y edades)."
+  ]
+}

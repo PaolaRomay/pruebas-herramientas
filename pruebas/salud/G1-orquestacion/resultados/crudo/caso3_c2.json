@@ -1,0 +1,37 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    },
+    {
+      "herramienta": "subconjunto",
+      "parametros": {
+        "ancla": "mimiciv_hosp.patients",
+        "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE '%Sepsis%')",
+        "porcentaje": 100
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "edad": "ruido",
+        "texto_libre": "enmascarar"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que la identificación de 'pacientes con sepsis' se puede realizar mediante una búsqueda de términos relacionados en la tabla de diagnósticos (mimiciv_hosp.diagnoses_icd).",
+    "Asumo que el usuario desea mantener la integridad referencial de todas las tablas relacionadas (internaciones, laboratorios, etc.), por lo cual el uso de la herramienta 'subconjunto' es el adecuado ya que extrae automáticamente las filas dependientes.",
+    "Asumo que, al ser una base de producción, se requiere anonimizar los datos tras la extracción para cumplir con normativas de privacidad (GDPR/HIPAA), aplicando desplazamientos de fechas y ruido en edades."
+  ],
+  "preguntas": [
+    "¿Deseas que utilice un código ICD específico para identificar la sepsis o prefieres que busque cualquier diagnóstico que contenga la palabra 'Sepsis'?",
+    "¿Prefieres que los identificadores de los pacientes se eliminen por completo o que se seudonimicen para mantener la consistencia entre tablas?",
+    "¿Quieres que el desplazamiento de las fechas sea el mismo para todos los registros de un mismo paciente (para mantener la cronología) o que sea aleatorio por fila?"
+  ]
+}

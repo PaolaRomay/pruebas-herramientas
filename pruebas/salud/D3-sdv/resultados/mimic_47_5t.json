@@ -1,0 +1,126 @@
+{
+  "prueba": "D3m",
+  "conjunto": "mimic_47",
+  "tablas": [
+    "patients",
+    "admissions",
+    "diagnoses_icd",
+    "icustays",
+    "labevents"
+  ],
+  "entorno": {
+    "equipo": "arm64, macOS 26.6.2",
+    "python": "3.11.16",
+    "sdv": "1.32.1",
+    "pandas": "3.0.6"
+  },
+  "fecha": "2026-11-12T22:47:57",
+  "entrenar": {
+    "segundos": 5.9,
+    "memoria_max_proceso_mb": 605
+  },
+  "generar": {
+    "segundos": 8.7,
+    "memoria_max_proceso_mb": 605
+  },
+  "filas": {
+    "real": {
+      "patients": 47,
+      "admissions": 115,
+      "diagnoses_icd": 1774,
+      "icustays": 66,
+      "labevents": 48042
+    },
+    "sintetico": {
+      "patients": 47,
+      "admissions": 115,
+      "diagnoses_icd": 1774,
+      "icustays": 66,
+      "labevents": 48042
+    }
+  },
+  "integridad": {
+    "patients: PK repetidas": 0,
+    "admissions: PK repetidas": 0,
+    "admissions.subject_id sin padre": 0,
+    "diagnoses_icd.hadm_id sin padre": 0,
+    "icustays: PK repetidas": 0,
+    "icustays.hadm_id sin padre": 0,
+    "labevents.subject_id sin padre": 0
+  },
+  "reglas": {
+    "real": {
+      "alta >= ingreso": 0,
+      "muerte dentro de la internación": 0,
+      "muerte en el hospital <=> hospital_expire_flag": 0,
+      "emergencia: salida >= registro": 0,
+      "UCI dentro de la internación": 0,
+      "UCI: salida >= entrada": 0,
+      "dod = día de la muerte": 0,
+      "edad en la internación >= 18": 0,
+      "estadía UCI: los = salida - entrada (±0,01 días)": 0
+    },
+    "sintetico": {
+      "alta >= ingreso": 48,
+      "muerte dentro de la internación": 4,
+      "muerte en el hospital <=> hospital_expire_flag": 10,
+      "emergencia: salida >= registro": 13,
+      "UCI dentro de la internación": 63,
+      "UCI: salida >= entrada": 19,
+      "dod = día de la muerte": 4,
+      "edad en la internación >= 18": 14,
+      "estadía UCI: los = salida - entrada (±0,01 días)": 66
+    }
+  },
+  "estadisticas": {
+    "real": {
+      "pacientes": 47,
+      "internaciones por paciente": 2.45,
+      "diagnósticos por internación": 15.43,
+      "laboratorios por paciente": 1022.2,
+      "% mujeres": 44.7,
+      "edad (anchor_age) mediana": 61.0,
+      "duración de la internación, mediana (días)": 5.6,
+      "% internaciones con muerte": 6.1,
+      "códigos CIE distintos": 797
+    },
+    "sintetico": {
+      "pacientes": 47,
+      "internaciones por paciente": 2.45,
+      "diagnósticos por internación": 15.43,
+      "laboratorios por paciente": 1022.2,
+      "% mujeres": 55.3,
+      "edad (anchor_age) mediana": 60.0,
+      "duración de la internación, mediana (días)": 13.85,
+      "% internaciones con muerte": 3.5,
+      "códigos CIE distintos": 483
+    }
+  },
+  "copias_exactas": {
+    "patients": {
+      "filas_sinteticas": 47,
+      "identicas_a_una_real": 2,
+      "columnas_comparadas": 5
+    },
+    "admissions": {
+      "filas_sinteticas": 115,
+      "identicas_a_una_real": 0,
+      "columnas_comparadas": 13
+    },
+    "diagnoses_icd": {
+      "filas_sinteticas": 1774,
+      "identicas_a_una_real": 217,
+      "columnas_comparadas": 3
+    },
+    "icustays": {
+      "filas_sinteticas": 66,
+      "identicas_a_una_real": 0,
+      "columnas_comparadas": 5
+    },
+    "labevents": {
+      "filas_sinteticas": 48042,
+      "identicas_a_una_real": 0,
+      "columnas_comparadas": 5
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "edad": "sin_cambios",
+        "texto_libre": "sin_cambios"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que 'identificadores de pacientes' se refiere a las columnas `subject_id` y `hadm_id` en las tablas correspondientes, y 'profesionales' a `provider_id` y `caregiver_id`.",
+    "Asumo que la coherencia temporal (que el alta sea posterior al ingreso) se garantiza mediante el parámetro 'desplazar_por_paciente', ya que este método mantiene la diferencia de tiempo relativa entre eventos para un mismo sujeto.",
+    "Asumo que 'la base tiene que seguir cargando sin errores' implica mantener la integridad referencial, por lo cual utilizo 'seudonimizar' en lugar de 'eliminar' para no romper las claves foráneas."
+  ],
+  "preguntas": [
+    "¿Deseas que el desplazamiento de fechas sea aleatorio para cada paciente o prefieres que se mantenga un desplazamiento fijo para toda la base de datos?",
+    "¿Hay alguna tabla específica que deba excluirse del proceso de anonimización por ser de naturaleza pública o técnica (ej. tablas de catálogos como d_hcpcs)?"
+  ]
+}

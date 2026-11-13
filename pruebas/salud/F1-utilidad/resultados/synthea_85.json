@@ -1,0 +1,296 @@
+{
+  "entrenamiento": "synthea_85",
+  "umbrales": {
+    "escalar": 0.2,
+    "ranking": 5,
+    "distribucion": 0.2
+  },
+  "consultas": [
+    "Pacientes por condición (top 10)",
+    "Condiciones más frecuentes (top 10 códigos)",
+    "Duración mediana del encuentro (horas)",
+    "Encuentros por paciente (media)",
+    "% de pacientes fallecidos",
+    "Edad mediana",
+    "Encuentros por clase",
+    "Pacientes por sexo",
+    "Pacientes por raza",
+    "Costo medio del encuentro",
+    "Observaciones más frecuentes (top 10)",
+    "Observaciones por encuentro (media)",
+    "Encuentros por año",
+    "% de condiciones resueltas (con fin)"
+  ],
+  "candidatas": {
+    "B1 anonimizada (PostgreSQL Anonymizer)": {
+      "por_consulta": {
+        "Pacientes por condición (top 10)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 10,
+          "se_conserva": true
+        },
+        "Condiciones más frecuentes (top 10 códigos)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 10,
+          "se_conserva": true
+        },
+        "Duración mediana del encuentro (horas)": {
+          "tipo": "escalar",
+          "real": 0.524,
+          "candidata": 0.524,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Encuentros por paciente (media)": {
+          "tipo": "escalar",
+          "real": 37.812,
+          "candidata": 37.812,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "% de pacientes fallecidos": {
+          "tipo": "escalar",
+          "real": 10.588,
+          "candidata": 10.588,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Edad mediana": {
+          "tipo": "escalar",
+          "real": 45.424,
+          "candidata": 45.057,
+          "error_relativo": 0.008,
+          "se_conserva": true
+        },
+        "Encuentros por clase": {
+          "tipo": "distribucion",
+          "variacion_total": 0.0,
+          "se_conserva": true
+        },
+        "Pacientes por sexo": {
+          "tipo": "distribucion",
+          "variacion_total": 0.0,
+          "se_conserva": true
+        },
+        "Pacientes por raza": {
+          "tipo": "distribucion",
+          "variacion_total": 0.0,
+          "se_conserva": true
+        },
+        "Costo medio del encuentro": {
+          "tipo": "escalar",
+          "real": 118.275,
+          "candidata": 118.275,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Observaciones más frecuentes (top 10)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 10,
+          "se_conserva": true
+        },
+        "Observaciones por encuentro (media)": {
+          "tipo": "escalar",
+          "real": 10.383,
+          "candidata": 10.383,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Encuentros por año": {
+          "tipo": "distribucion",
+          "variacion_total": 0.048,
+          "se_conserva": true
+        },
+        "% de condiciones resueltas (con fin)": {
+          "tipo": "escalar",
+          "real": 70.061,
+          "candidata": 70.061,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        }
+      },
+      "se_conservan": 14,
+      "de": 14
+    },
+    "D2 sintética (MOSTLY AI)": {
+      "por_consulta": {
+        "Pacientes por condición (top 10)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 6,
+          "se_conserva": true
+        },
+        "Condiciones más frecuentes (top 10 códigos)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 6,
+          "se_conserva": true
+        },
+        "Duración mediana del encuentro (horas)": {
+          "tipo": "escalar",
+          "real": 0.524,
+          "candidata": 0.481,
+          "error_relativo": 0.082,
+          "se_conserva": true
+        },
+        "Encuentros por paciente (media)": {
+          "tipo": "escalar",
+          "real": 37.812,
+          "candidata": 38.882,
+          "error_relativo": 0.028,
+          "se_conserva": true
+        },
+        "% de pacientes fallecidos": {
+          "tipo": "escalar",
+          "real": 10.588,
+          "candidata": 0.0,
+          "error_relativo": 1.0,
+          "se_conserva": false
+        },
+        "Edad mediana": {
+          "tipo": "escalar",
+          "real": 45.424,
+          "candidata": 41.509,
+          "error_relativo": 0.086,
+          "se_conserva": true
+        },
+        "Encuentros por clase": {
+          "tipo": "distribucion",
+          "variacion_total": 0.044,
+          "se_conserva": true
+        },
+        "Pacientes por sexo": {
+          "tipo": "distribucion",
+          "variacion_total": 0.082,
+          "se_conserva": true
+        },
+        "Pacientes por raza": {
+          "tipo": "distribucion",
+          "variacion_total": 0.035,
+          "se_conserva": true
+        },
+        "Costo medio del encuentro": {
+          "tipo": "escalar",
+          "real": 118.275,
+          "candidata": 110.334,
+          "error_relativo": 0.067,
+          "se_conserva": true
+        },
+        "Observaciones más frecuentes (top 10)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 9,
+          "se_conserva": true
+        },
+        "Observaciones por encuentro (media)": {
+          "tipo": "escalar",
+          "real": 10.383,
+          "candidata": 6.528,
+          "error_relativo": 0.371,
+          "se_conserva": false
+        },
+        "Encuentros por año": {
+          "tipo": "distribucion",
+          "variacion_total": 0.262,
+          "se_conserva": false
+        },
+        "% de condiciones resueltas (con fin)": {
+          "tipo": "escalar",
+          "real": 70.061,
+          "candidata": 68.79,
+          "error_relativo": 0.018,
+          "se_conserva": true
+        }
+      },
+      "se_conservan": 11,
+      "de": 14
+    },
+    "D3 sintética (SDV HMA, 4 tablas)": {
+      "por_consulta": {
+        "Pacientes por condición (top 10)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 7,
+          "se_conserva": true
+        },
+        "Condiciones más frecuentes (top 10 códigos)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 9,
+          "se_conserva": true
+        },
+        "Duración mediana del encuentro (horas)": {
+          "tipo": "escalar",
+          "real": 0.524,
+          "candidata": 0.312,
+          "error_relativo": 0.404,
+          "se_conserva": false
+        },
+        "Encuentros por paciente (media)": {
+          "tipo": "escalar",
+          "real": 37.812,
+          "candidata": 37.812,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "% de pacientes fallecidos": {
+          "tipo": "escalar",
+          "real": 10.588,
+          "candidata": 15.294,
+          "error_relativo": 0.444,
+          "se_conserva": false
+        },
+        "Edad mediana": {
+          "tipo": "escalar",
+          "real": 45.424,
+          "candidata": 44.624,
+          "error_relativo": 0.018,
+          "se_conserva": true
+        },
+        "Encuentros por clase": {
+          "tipo": "distribucion",
+          "variacion_total": 0.112,
+          "se_conserva": true
+        },
+        "Pacientes por sexo": {
+          "tipo": "distribucion",
+          "variacion_total": 0.059,
+          "se_conserva": true
+        },
+        "Pacientes por raza": {
+          "tipo": "distribucion",
+          "variacion_total": 0.047,
+          "se_conserva": true
+        },
+        "Costo medio del encuentro": {
+          "tipo": "escalar",
+          "real": 118.275,
+          "candidata": 117.097,
+          "error_relativo": 0.01,
+          "se_conserva": true
+        },
+        "Observaciones más frecuentes (top 10)": {
+          "tipo": "ranking",
+          "coinciden_del_top10": 2,
+          "se_conserva": false
+        },
+        "Observaciones por encuentro (media)": {
+          "tipo": "escalar",
+          "real": 10.383,
+          "candidata": 10.383,
+          "error_relativo": 0.0,
+          "se_conserva": true
+        },
+        "Encuentros por año": {
+          "tipo": "distribucion",
+          "variacion_total": 0.486,
+          "se_conserva": false
+        },
+        "% de condiciones resueltas (con fin)": {
+          "tipo": "escalar",
+          "real": 70.061,
+          "candidata": 69.816,
+          "error_relativo": 0.004,
+          "se_conserva": true
+        }
+      },
+      "se_conservan": 10,
+      "de": 14
+    }
+  }
+}

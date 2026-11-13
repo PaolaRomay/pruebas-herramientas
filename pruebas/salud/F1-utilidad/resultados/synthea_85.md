@@ -1,0 +1,19 @@
+# F1: utilidad — synthea_85
+
+| Consulta | B1 anonimizada (PostgreSQL Anonymizer) | D2 sintética (MOSTLY AI) | D3 sintética (SDV HMA, 4 tablas) |
+|---|---|---|---|
+| Pacientes por condición (top 10) | ✓ 10/10 | ✓ 6/10 | ✓ 7/10 |
+| Condiciones más frecuentes (top 10 códigos) | ✓ 10/10 | ✓ 6/10 | ✓ 9/10 |
+| Duración mediana del encuentro (horas) | ✓ 0% | ✓ 8% | ✗ 40% |
+| Encuentros por paciente (media) | ✓ 0% | ✓ 3% | ✓ 0% |
+| % de pacientes fallecidos | ✓ 0% | ✗ 100% | ✗ 44% |
+| Edad mediana | ✓ 1% | ✓ 9% | ✓ 2% |
+| Encuentros por clase | ✓ VT 0.00 | ✓ VT 0.04 | ✓ VT 0.11 |
+| Pacientes por sexo | ✓ VT 0.00 | ✓ VT 0.08 | ✓ VT 0.06 |
+| Pacientes por raza | ✓ VT 0.00 | ✓ VT 0.04 | ✓ VT 0.05 |
+| Costo medio del encuentro | ✓ 0% | ✓ 7% | ✓ 1% |
+| Observaciones más frecuentes (top 10) | ✓ 10/10 | ✓ 9/10 | ✗ 2/10 |
+| Observaciones por encuentro (media) | ✓ 0% | ✗ 37% | ✓ 0% |
+| Encuentros por año | ✓ VT 0.05 | ✗ VT 0.26 | ✗ VT 0.49 |
+| % de condiciones resueltas (con fin) | ✓ 0% | ✓ 2% | ✓ 0% |
+| **Se conservan** | **14 de 14** | **11 de 14** | **10 de 14** |

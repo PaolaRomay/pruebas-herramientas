@@ -1,0 +1,37 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    },
+    {
+      "herramienta": "subconjunto",
+      "parametros": {
+        "ancla": "mimiciv_hosp.patients",
+        "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE '%Sepsis%' OR icd_code LIKE '%Septicemia%')",
+        "porcentaje": 100
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "edad": "decada",
+        "texto_libre": "enmascarar"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que la condición de 'sepsis' debe identificarse mediante una búsqueda de palabras clave en la tabla de diagnósticos (diagnoses_icd), ya que no hay una columna booleana de sepsis en el esquema proporcionado.",
+    "Asumo que el 'subconjunto' de la herramienta ya se encarga de la recursividad de las claves foráneas (internaciones, laboratorios, etc.) basándose en la descripción de la herramienta ('todas las filas que dependen de ellos').",
+    "Asumo que deseas anonimizar los datos una vez extraídos para que la base de prueba sea segura."
+  ],
+  "preguntas": [
+    "¿Deseas que utilice algún código ICD específico para identificar la sepsis o prefieres que busque por descripción de texto?",
+    "¿Quieres que incluya también la información de la tabla de proveedores (provider) si están relacionados con las internaciones de esos pacientes?",
+    "¿El desplazamiento de fechas debe ser el mismo para todos los pacientes o prefieres un desplazamiento aleatorio por cada uno?"
+  ]
+}

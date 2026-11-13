@@ -1,0 +1,141 @@
+Attack `univariate` could generate only 24 singling out queries out of the requested 200. This can probably lead to an underestimate of the singling out risk.
+[synthea_925] D2 sintética (MOSTLY AI): 11.9 s
+{
+ "entrenamiento": "synthea_925",
+ "fecha": "2026-11-12T23:01",
+ "pacientes_entrenamiento": 925,
+ "pacientes_control": 226,
+ "real": {
+  "reglas": {
+   "encuentro: fin >= inicio": 0,
+   "encuentro después del nacimiento": 0,
+   "encuentro antes de la muerte (+1 día)": 95,
+   "muerte >= nacimiento": 0,
+   "condición: fin >= inicio": 0,
+   "observación dentro de su encuentro (±1 día)": 439
+  },
+  "codigos": {
+   "filas": 32555,
+   "codigos_validos": 32555,
+   "pct": 100.0
+  },
+  "riesgo_arx": {
+   "fraccion_unicos": 0.735,
+   "riesgo_maximo": 1.0,
+   "riesgo_promedio": 0.855,
+   "k2_suprimidos": 61,
+   "k2_niveles": {
+    "sexo": 0,
+    "edad": 3,
+    "raza": 0,
+    "etnia": 0,
+    "estado_civil": 0,
+    "condado": 1
+   }
+  }
+ },
+ "candidatas": {
+  "D2 sintética (MOSTLY AI)": {
+   "filas": {
+    "patients": 925,
+    "encounters": 41541,
+    "conditions": 28295,
+    "observations": 342187
+   },
+   "integridad": {
+    "patients: PK repetidas": 0,
+    "encounters: PK repetidas": 0,
+    "encounters.patient sin padre": 0,
+    "conditions.encounter sin padre": 0,
+    "observations.encounter sin padre": 0
+   },
+   "reglas": {
+    "encuentro: fin >= inicio": 12468,
+    "encuentro después del nacimiento": 2525,
+    "encuentro antes de la muerte (+1 día)": 4494,
+    "muerte >= nacimiento": 24,
+    "condición: fin >= inicio": 5404,
+    "observación dentro de su encuentro (±1 día)": 122746
+   },
+   "codigos": {
+    "filas": 28295,
+    "codigos_validos": 25743,
+    "pct": 91.0
+   },
+   "segundos_bloque1": 0.1,
+   "calidad": {
+    "puntaje": 0.845,
+    "propiedades": {
+     "Column Shapes": 0.863,
+     "Column Pair Trends": 0.826,
+     "Cardinality": 0.903,
+     "Intertable Trends": 0.788
+    }
+   },
+   "segundos_bloque2": 8.4,
+   "privacidad": {
+    "n_ataques": 200,
+    "filas_original": 925,
+    "filas_candidata": 925,
+    "filas_control": 226,
+    "singling_out": {
+     "riesgo": 0.0,
+     "ic95": [
+      0.0,
+      0.013
+     ],
+     "tasa_ataque": 0.009,
+     "tasa_azar": 0.014,
+     "tasa_control": 0.012,
+     "concluyente": false
+    },
+    "linkability": {
+     "riesgo": 0.0,
+     "ic95": [
+      0.0,
+      0.013
+     ],
+     "tasa_ataque": 0.009,
+     "tasa_azar": 0.009,
+     "tasa_control": 0.009,
+     "concluyente": false
+    },
+    "inference": {
+     "riesgo": 0.0,
+     "ic95": [
+      0.0,
+      0.045
+     ],
+     "tasa_ataque": 0.073,
+     "tasa_azar": 0.019,
+     "tasa_control": 0.083,
+     "concluyente": true
+    },
+    "dcr": {
+     "copias_exactas_pct": 0.9,
+     "mediana_candidata": 0.153,
+     "mediana_control": 0.143,
+     "pct_candidata_mas_cerca_que_p5_control": 0.0
+    }
+   },
+   "segundos_bloque3": 2.2,
+   "riesgo_arx": {
+    "fraccion_unicos": 0.905,
+    "riesgo_maximo": 1.0,
+    "riesgo_promedio": 0.95,
+    "k2_suprimidos": 80,
+    "k2_niveles": {
+     "sexo": 0,
+     "edad": 3,
+     "raza": 0,
+     "etnia": 0,
+     "estado_civil": 0,
+     "condado": 1
+    }
+   },
+   "segundos_bloque4": 1.0,
+   "segundos_total": 11.9
+  }
+ },
+ "avisos": []
+}

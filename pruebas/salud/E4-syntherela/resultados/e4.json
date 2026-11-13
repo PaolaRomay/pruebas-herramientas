@@ -1,0 +1,207 @@
+[
+  {
+    "conjunto": "mimic_47",
+    "generador": "D2 MOSTLY AI",
+    "cardinalidad": {
+      "patients_admissions": {
+        "statistic": 0.14893617021276595,
+        "pval": 0.6800174807197423
+      },
+      "admissions_diagnoses_icd": {
+        "statistic": 0.14750795334040298,
+        "pval": 0.21834314616156617
+      },
+      "admissions_icustays": {
+        "statistic": 0.043478260869565216,
+        "pval": 0.9999177558611249
+      },
+      "patients_labevents": {
+        "statistic": 0.14893617021276595,
+        "pval": 0.6800174807197423
+      }
+    },
+    "deteccion_agregada": {
+      "patients": {
+        "accuracy": 0.979,
+        "SE": 0.015,
+        "bin_test_p_val": 0.0,
+        "copying_p_val": 1.0
+      },
+      "admissions": {
+        "accuracy": 0.841,
+        "SE": 0.029,
+        "bin_test_p_val": 0.0,
+        "copying_p_val": 1.0
+      }
+    },
+    "mmd_por_tabla": {
+      "patients": 0.5878,
+      "admissions": 0.207,
+      "diagnoses_icd": "no aplica: ValueError",
+      "icustays": 0.2438,
+      "labevents": 0.0234
+    },
+    "segundos": 17.4
+  },
+  {
+    "conjunto": "mimic_47",
+    "generador": "D3 SDV HMA",
+    "cardinalidad": {
+      "patients_admissions": {
+        "statistic": 0.3404255319148936,
+        "pval": 0.008205525490630283
+      },
+      "admissions_diagnoses_icd": {
+        "statistic": 0.3130434782608696,
+        "pval": 2.217182616638952e-05
+      },
+      "admissions_icustays": {
+        "statistic": 0.10434782608695652,
+        "pval": 0.5604432802018713
+      },
+      "patients_labevents": {
+        "statistic": 0.2765957446808511,
+        "pval": 0.054452894761163696
+      }
+    },
+    "deteccion_agregada": {
+      "patients": {
+        "accuracy": 0.798,
+        "SE": 0.041,
+        "bin_test_p_val": 0.0,
+        "copying_p_val": 1.0
+      },
+      "admissions": {
+        "accuracy": 0.978,
+        "SE": 0.01,
+        "bin_test_p_val": 0.0,
+        "copying_p_val": 1.0
+      }
+    },
+    "mmd_por_tabla": {
+      "patients": 0.0162,
+      "admissions": 0.0375,
+      "diagnoses_icd": "no aplica: ValueError",
+      "icustays": 1.8289,
+      "labevents": 0.1802
+    },
+    "segundos": 17.4
+  },
+  {
+    "conjunto": "synthea_85",
+    "generador": "D2 MOSTLY AI",
+    "cardinalidad": {
+      "patients_encounters": {
+        "statistic": 0.10588235294117647,
+        "pval": 0.7305621681256868
+      },
+      "encounters_conditions": {
+        "statistic": 0.059865546629863486,
+        "pval": 1.592660926694134e-05
+      },
+      "encounters_observations": {
+        "statistic": 0.12593984148397658,
+        "pval": 5.563049063887751e-23
+      }
+    },
+    "deteccion_agregada": {
+      "patients": {
+        "accuracy": 0.741,
+        "SE": 0.034,
+        "bin_test_p_val": 0.0,
+        "copying_p_val": 1.0
+      },
+      "encounters": {
+        "accuracy": 0.995,
+        "SE": 0.001,
+        "bin_test_p_val": 0.0,
+        "copying_p_val": 1.0
+      }
+    },
+    "mmd_por_tabla": {
+      "patients": 0.2346,
+      "encounters": 0.2957,
+      "conditions": 0.0426,
+      "observations": 0.0102
+    },
+    "segundos": 20.7
+  },
+  {
+    "conjunto": "synthea_85",
+    "generador": "D3 SDV HMA",
+    "cardinalidad": {
+      "patients_encounters": {
+        "statistic": 0.12941176470588237,
+        "pval": 0.4773314263820302
+      },
+      "encounters_conditions": {
+        "statistic": 0.16739265712507778,
+        "pval": 1.0258968851803437e-39
+      },
+      "encounters_observations": {
+        "statistic": 0.25326695706285,
+        "pval": 6.294472908604673e-91
+      }
+    },
+    "deteccion_agregada": {
+      "patients": {
+        "accuracy": 0.988,
+        "SE": 0.008,
+        "bin_test_p_val": 0.0,
+        "copying_p_val": 1.0
+      },
+      "encounters": {
+        "accuracy": 0.999,
+        "SE": 0.0,
+        "bin_test_p_val": 0.0,
+        "copying_p_val": 1.0
+      }
+    },
+    "mmd_por_tabla": {
+      "patients": 0.0388,
+      "encounters": 0.7951,
+      "conditions": 0.1734,
+      "observations": 0.0223
+    },
+    "segundos": 19.9
+  },
+  {
+    "conjunto": "synthea_925",
+    "generador": "D2 MOSTLY AI",
+    "cardinalidad": {
+      "patients_encounters": {
+        "statistic": 0.057297297297297295,
+        "pval": 0.09596822820531804
+      },
+      "encounters_conditions": {
+        "statistic": 0.06470158707119478,
+        "pval": 1.9388896205109007e-86
+      },
+      "encounters_observations": {
+        "statistic": 0.16944190698033856,
+        "pval": 0.0
+      }
+    },
+    "deteccion_agregada": {
+      "patients": {
+        "accuracy": 0.8,
+        "SE": 0.009,
+        "bin_test_p_val": 0.0,
+        "copying_p_val": 1.0
+      },
+      "encounters": {
+        "accuracy": 0.945,
+        "SE": 0.001,
+        "bin_test_p_val": 0.0,
+        "copying_p_val": 1.0
+      }
+    },
+    "mmd_por_tabla": {
+      "patients": 0.0078,
+      "encounters": 0.2137,
+      "conditions": 0.073,
+      "observations": 0.1453
+    },
+    "segundos": 35.7
+  }
+]

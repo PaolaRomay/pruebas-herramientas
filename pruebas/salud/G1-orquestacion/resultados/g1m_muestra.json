@@ -1,0 +1,87 @@
+{
+  "modelo": "gemma4:12b-it-qat",
+  "temperatura": 0.7,
+  "muestra": true,
+  "casos": {
+    "3": {
+      "nombre": "subconjunto",
+      "pedido": "Sacame un subconjunto con los pacientes que tuvieron sepsis y todo lo que dependa de ellos (internaciones, diagnósticos, laboratorios, UCI), sin romper las claves.",
+      "corridas": [
+        {
+          "corrida": 1,
+          "segundos": 75.3,
+          "herramientas": [
+            "detectar",
+            "subconjunto",
+            "anonimizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 3,
+          "subconjunto": {
+            "ancla": "mimiciv_hosp.patients",
+            "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE '%Sepsis%' OR icd_code LIKE '%Septicemia%')",
+            "porcentaje": 100,
+            "filtro_corre": true,
+            "pacientes": 0,
+            "verdad": 17,
+            "aciertos": 0,
+            "de_mas": 0,
+            "extraccion_c1": "ok, carga con todas las FK",
+            "salida_c1": "g1m_caso3_c1: 289868 de 1398500 filas (20.73 %), 1 rondas, semilla 0 de 100 (control 0, en subconjunto 0), fuera del filtro 0, 8.01 s, escala {'memoria_max_proceso_mb': 44.8, 'tablas_trabajo_mb': Deci"
+          },
+          "bien": false
+        },
+        {
+          "corrida": 2,
+          "segundos": 36.2,
+          "herramientas": [
+            "detectar",
+            "subconjunto",
+            "anonimizar"
+          ],
+          "supuestos": 3,
+          "preguntas": 3,
+          "subconjunto": {
+            "ancla": "mimiciv_hosp.patients",
+            "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE '%Sepsis%' OR icd_code LIKE '%Septicemia%')",
+            "porcentaje": 100,
+            "filtro_corre": true,
+            "pacientes": 0,
+            "verdad": 17,
+            "aciertos": 0,
+            "de_mas": 0,
+            "extraccion_c1": "ok, carga con todas las FK",
+            "salida_c1": "g1m_caso3_c2: 289868 de 1398500 filas (20.73 %), 1 rondas, semilla 0 de 100 (control 0, en subconjunto 0), fuera del filtro 0, 6.34 s, escala {'memoria_max_proceso_mb': 43.9, 'tablas_trabajo_mb': Deci"
+          },
+          "bien": false
+        },
+        {
+          "corrida": 3,
+          "segundos": 44.7,
+          "herramientas": [
+            "detectar",
+            "subconjunto",
+            "anonimizar"
+          ],
+          "supuestos": 4,
+          "preguntas": 4,
+          "subconjunto": {
+            "ancla": "mimiciv_hosp.patients",
+            "filtro_sql": "subject_id IN (SELECT subject_id FROM mimiciv_hosp.diagnoses_icd WHERE icd_code LIKE '%Sepsis%') OR subject_id IN (SELECT subject_id FROM mimiciv_hosp.admissions WHERE admission_location = 'SEPSIS')",
+            "porcentaje": 100,
+            "filtro_corre": true,
+            "pacientes": 0,
+            "verdad": 17,
+            "aciertos": 0,
+            "de_mas": 0,
+            "extraccion_c1": "ok, carga con todas las FK",
+            "salida_c1": "g1m_caso3_c3: 289868 de 1398500 filas (20.73 %), 1 rondas, semilla 0 de 100 (control 0, en subconjunto 0), fuera del filtro 0, 5.59 s, escala {'memoria_max_proceso_mb': 46.3, 'tablas_trabajo_mb': Deci"
+          },
+          "bien": false
+        }
+      ],
+      "bien": 0,
+      "mismo_plan_en_las_3": true
+    }
+  }
+}

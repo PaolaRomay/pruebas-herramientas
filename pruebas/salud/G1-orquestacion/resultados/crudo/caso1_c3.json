@@ -1,0 +1,17 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que el usuario desea identificar qué columnas contienen información sensible (PII - Personally Identifiable Information o PHI - Protected Health Information) para cumplir con normativas de privacidad.",
+    "Dado que la herramienta 'detectar' devuelve la clasificación de sensibilidad, el paso de 'listado con tipo de dato' se sobreentiende como la salida informativa que proporciona dicha herramienta sobre las columnas identificadas."
+  ],
+  "preguntas": [
+    "¿Deseas que el sistema solo te muestre las columnas que la herramienta clasifique como sensibles, o quieres un listado completo de todas las columnas de todas las tablas con sus respectivos tipos de datos?"
+  ]
+}

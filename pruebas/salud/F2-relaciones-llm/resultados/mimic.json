@@ -1,0 +1,266 @@
+{
+  "prueba": "F2m",
+  "modelo": "gemma4:12b-it-qat",
+  "fecha": "2026-11-12T22:48",
+  "verdad": 25,
+  "corridas": [
+    {
+      "corrida": 1,
+      "segundos": 75.2,
+      "tokens": 794,
+      "propuestas": 11,
+      "columnas_inexistentes": 0,
+      "ya_declaradas": 0,
+      "aciertos": 5,
+      "recall": 0.2,
+      "precision_contra_verdad": 0.455,
+      "fuera_de_la_verdad_que_se_cumplen": 1,
+      "precision_verificada": 0.545,
+      "no_encontradas": [
+        "mimiciv_hosp.admissions.admit_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.emar.enter_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.emar.poe_id -> mimiciv_hosp.poe.poe_id",
+        "mimiciv_hosp.labevents.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "mimiciv_hosp.labevents.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.microbiologyevents.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.omr.subject_id -> mimiciv_hosp.patients.subject_id",
+        "mimiciv_hosp.pharmacy.poe_id -> mimiciv_hosp.poe.poe_id",
+        "mimiciv_hosp.prescriptions.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.transfers.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "mimiciv_icu.chartevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.datetimeevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.ingredientevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.ingredientevents.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "mimiciv_icu.ingredientevents.itemid -> mimiciv_icu.d_items.itemid",
+        "mimiciv_icu.ingredientevents.stay_id -> mimiciv_icu.icustays.stay_id",
+        "mimiciv_icu.ingredientevents.subject_id -> mimiciv_hosp.patients.subject_id",
+        "mimiciv_icu.inputevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.outputevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.procedureevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id"
+      ],
+      "fuera_de_la_verdad": [
+        {
+          "relacion": "mimiciv_icu.ingredientevents.linkorderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 25728,
+          "huerfanas": 25728,
+          "distintos": 7693,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.ingredientevents.orderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 25728,
+          "huerfanas": 25728,
+          "distintos": 10842,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.inputevents.linkorderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 20404,
+          "huerfanas": 20404,
+          "distintos": 10799,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.inputevents.orderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 20404,
+          "huerfanas": 20404,
+          "distintos": 13948,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.procedureevents.linkorderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 1468,
+          "huerfanas": 0,
+          "distintos": 1467,
+          "se_cumple": true,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.procedureevents.orderid -> mimiciv_icu.inputevents.orderid",
+          "filas_no_nulas": 1468,
+          "huerfanas": 1468,
+          "distintos": 1468,
+          "se_cumple": false,
+          "parcial": false
+        }
+      ],
+      "inexistentes": []
+    },
+    {
+      "corrida": 2,
+      "segundos": 59.9,
+      "tokens": 794,
+      "propuestas": 11,
+      "columnas_inexistentes": 0,
+      "ya_declaradas": 0,
+      "aciertos": 5,
+      "recall": 0.2,
+      "precision_contra_verdad": 0.455,
+      "fuera_de_la_verdad_que_se_cumplen": 1,
+      "precision_verificada": 0.545,
+      "no_encontradas": [
+        "mimiciv_hosp.admissions.admit_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.emar.enter_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.emar.poe_id -> mimiciv_hosp.poe.poe_id",
+        "mimiciv_hosp.labevents.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "mimiciv_hosp.labevents.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.microbiologyevents.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.omr.subject_id -> mimiciv_hosp.patients.subject_id",
+        "mimiciv_hosp.pharmacy.poe_id -> mimiciv_hosp.poe.poe_id",
+        "mimiciv_hosp.prescriptions.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.transfers.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "mimiciv_icu.chartevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.datetimeevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.ingredientevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.ingredientevents.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "mimiciv_icu.ingredientevents.itemid -> mimiciv_icu.d_items.itemid",
+        "mimiciv_icu.ingredientevents.stay_id -> mimiciv_icu.icustays.stay_id",
+        "mimiciv_icu.ingredientevents.subject_id -> mimiciv_hosp.patients.subject_id",
+        "mimiciv_icu.inputevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.outputevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.procedureevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id"
+      ],
+      "fuera_de_la_verdad": [
+        {
+          "relacion": "mimiciv_icu.ingredientevents.linkorderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 25728,
+          "huerfanas": 25728,
+          "distintos": 7693,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.ingredientevents.orderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 25728,
+          "huerfanas": 25728,
+          "distintos": 10842,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.inputevents.linkorderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 20404,
+          "huerfanas": 20404,
+          "distintos": 10799,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.inputevents.orderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 20404,
+          "huerfanas": 20404,
+          "distintos": 13948,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.procedureevents.linkorderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 1468,
+          "huerfanas": 0,
+          "distintos": 1467,
+          "se_cumple": true,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.procedureevents.orderid -> mimiciv_icu.inputevents.orderid",
+          "filas_no_nulas": 1468,
+          "huerfanas": 1468,
+          "distintos": 1468,
+          "se_cumple": false,
+          "parcial": false
+        }
+      ],
+      "inexistentes": []
+    },
+    {
+      "corrida": 3,
+      "segundos": 60.7,
+      "tokens": 794,
+      "propuestas": 11,
+      "columnas_inexistentes": 0,
+      "ya_declaradas": 0,
+      "aciertos": 5,
+      "recall": 0.2,
+      "precision_contra_verdad": 0.455,
+      "fuera_de_la_verdad_que_se_cumplen": 1,
+      "precision_verificada": 0.545,
+      "no_encontradas": [
+        "mimiciv_hosp.admissions.admit_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.emar.enter_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.emar.poe_id -> mimiciv_hosp.poe.poe_id",
+        "mimiciv_hosp.labevents.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "mimiciv_hosp.labevents.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.microbiologyevents.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.omr.subject_id -> mimiciv_hosp.patients.subject_id",
+        "mimiciv_hosp.pharmacy.poe_id -> mimiciv_hosp.poe.poe_id",
+        "mimiciv_hosp.prescriptions.order_provider_id -> mimiciv_hosp.provider.provider_id",
+        "mimiciv_hosp.transfers.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "mimiciv_icu.chartevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.datetimeevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.ingredientevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.ingredientevents.hadm_id -> mimiciv_hosp.admissions.hadm_id",
+        "mimiciv_icu.ingredientevents.itemid -> mimiciv_icu.d_items.itemid",
+        "mimiciv_icu.ingredientevents.stay_id -> mimiciv_icu.icustays.stay_id",
+        "mimiciv_icu.ingredientevents.subject_id -> mimiciv_hosp.patients.subject_id",
+        "mimiciv_icu.inputevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.outputevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id",
+        "mimiciv_icu.procedureevents.caregiver_id -> mimiciv_icu.caregiver.caregiver_id"
+      ],
+      "fuera_de_la_verdad": [
+        {
+          "relacion": "mimiciv_icu.ingredientevents.linkorderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 25728,
+          "huerfanas": 25728,
+          "distintos": 7693,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.ingredientevents.orderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 25728,
+          "huerfanas": 25728,
+          "distintos": 10842,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.inputevents.linkorderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 20404,
+          "huerfanas": 20404,
+          "distintos": 10799,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.inputevents.orderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 20404,
+          "huerfanas": 20404,
+          "distintos": 13948,
+          "se_cumple": false,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.procedureevents.linkorderid -> mimiciv_icu.procedureevents.orderid",
+          "filas_no_nulas": 1468,
+          "huerfanas": 0,
+          "distintos": 1467,
+          "se_cumple": true,
+          "parcial": false
+        },
+        {
+          "relacion": "mimiciv_icu.procedureevents.orderid -> mimiciv_icu.inputevents.orderid",
+          "filas_no_nulas": 1468,
+          "huerfanas": 1468,
+          "distintos": 1468,
+          "se_cumple": false,
+          "parcial": false
+        }
+      ],
+      "inexistentes": []
+    }
+  ]
+}

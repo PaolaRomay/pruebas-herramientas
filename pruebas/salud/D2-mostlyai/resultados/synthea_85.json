@@ -1,0 +1,149 @@
+{
+  "exportar": {
+    "base": "synthea_c1_10",
+    "filas": {
+      "patients": 85,
+      "encounters": 3214,
+      "conditions": 2445,
+      "observations": 33371
+    },
+    "segundos": 0.4,
+    "registrado": "2026-11-12 22:09:17"
+  },
+  "entrenar": {
+    "segundos": 276.3,
+    "memoria_max_mb": 3221,
+    "max_minutos_por_tabla": 10,
+    "accuracy_global": 0.6797017999999999,
+    "metricas_por_tabla": {
+      "conditions": {
+        "accuracy": 0.6037326,
+        "coherencia": 0.7295692,
+        "dcr_share": 0.396,
+        "discriminador_auc": 0.725
+      },
+      "observations": {
+        "accuracy": 0.755671,
+        "coherencia": 0.7886143,
+        "dcr_share": 0.588,
+        "discriminador_auc": 0.785
+      }
+    },
+    "filas_entrada": {
+      "patients": 85,
+      "encounters": 3214,
+      "conditions": 2445,
+      "observations": 33371
+    },
+    "entorno": {
+      "equipo": "arm64, macOS 26.6.2",
+      "python": "3.12.0",
+      "paquetes": {
+        "mostlyai": "6.1.4",
+        "mostlyai-engine": "2.7.0",
+        "torch": "2.13.0",
+        "pandas": "3.0.6",
+        "numpy": "2.5.3"
+      }
+    },
+    "registrado": "2026-11-12 22:23:08"
+  },
+  "generar_85": {
+    "segundos": 21.2,
+    "memoria_max_mb": 4209,
+    "filas": {
+      "observations": 21576,
+      "patients": 85,
+      "conditions": 2166,
+      "encounters": 3305
+    },
+    "registrado": "2026-11-12 22:23:29"
+  },
+  "evaluar": {
+    "real": {
+      "reglas": {
+        "encuentro: fin >= inicio": 0,
+        "encuentro después del nacimiento": 0,
+        "encuentro antes de la muerte (+1 día)": 8,
+        "muerte >= nacimiento": 0,
+        "condición: fin >= inicio": 0,
+        "observación dentro de su encuentro (±1 día)": 28
+      },
+      "integridad": {
+        "patients: PK repetidas": 0,
+        "encounters: PK repetidas": 0,
+        "encounters.patient sin padre": 0,
+        "conditions.encounter sin padre": 0,
+        "observations.encounter sin padre": 0
+      },
+      "estadisticas": {
+        "pacientes": 85,
+        "encuentros por paciente": 37.8,
+        "condiciones por paciente": 28.8,
+        "observaciones por encuentro": 10.38,
+        "% mujeres": 58.8,
+        "edad mediana": 45.4,
+        "% fallecidos": 10.6,
+        "duración del encuentro, mediana (horas)": 0.52,
+        "códigos de condición distintos": 167
+      }
+    },
+    "sintetico_85": {
+      "reglas": {
+        "encuentro: fin >= inicio": 1642,
+        "encuentro después del nacimiento": 110,
+        "encuentro antes de la muerte (+1 día)": 0,
+        "muerte >= nacimiento": 0,
+        "condición: fin >= inicio": 530,
+        "observación dentro de su encuentro (±1 día)": 19614
+      },
+      "integridad": {
+        "patients: PK repetidas": 0,
+        "encounters: PK repetidas": 0,
+        "encounters.patient sin padre": 0,
+        "conditions.encounter sin padre": 0,
+        "observations.encounter sin padre": 0
+      },
+      "estadisticas": {
+        "pacientes": 85,
+        "encuentros por paciente": 38.9,
+        "condiciones por paciente": 25.5,
+        "observaciones por encuentro": 6.53,
+        "% mujeres": 67.1,
+        "edad mediana": 41.5,
+        "% fallecidos": 0.0,
+        "duración del encuentro, mediana (horas)": 0.48,
+        "códigos de condición distintos": 16
+      },
+      "filas": {
+        "patients": 85,
+        "encounters": 3305,
+        "conditions": 2166,
+        "observations": 21576
+      },
+      "copias_exactas": {
+        "patients": {
+          "filas_sinteticas": 85,
+          "identicas_a_una_real": 0,
+          "columnas_comparadas": 8
+        },
+        "encounters": {
+          "filas_sinteticas": 3305,
+          "identicas_a_una_real": 0,
+          "columnas_comparadas": 7
+        },
+        "conditions": {
+          "filas_sinteticas": 2166,
+          "identicas_a_una_real": 10,
+          "columnas_comparadas": 4
+        },
+        "observations": {
+          "filas_sinteticas": 21576,
+          "identicas_a_una_real": 64,
+          "columnas_comparadas": 7
+        }
+      }
+    },
+    "registrado": "2026-11-12 23:01:15"
+  }
+}

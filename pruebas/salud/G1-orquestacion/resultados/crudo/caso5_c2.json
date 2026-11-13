@@ -1,0 +1,29 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "edad": "decada",
+        "texto_libre": "enmascarar"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que el objetivo es mantener la integridad referencial y la utilidad estadística de los datos (por eso uso 'seudonimizar' y 'desplazar_por_paciente' en lugar de eliminar o poner ruido aleatorio), permitiendo que el equipo de testing vea patrones reales sin identificar personas.",
+    "Asumo que el equipo de testing necesita una muestra representativa de toda la base de datos actual, no una síntesis desde cero.",
+    "Asumo que las columnas identificadas como sensibles por la herramienta 'detectar' deben ser tratadas con los métodos de enmascaramiento estándar definidos en el plan."
+  ],
+  "preguntas": [
+    "¿Necesitás que la base de datos resultante tenga una cantidad específica de pacientes o que sea una copia completa de la producción (filtrada solo por anonimización)?",
+    "¿Hay algún criterio específico de filtrado para los pacientes (ej. solo pacientes de un año determinado, o solo de una unidad específica de la UCI) antes de anonimizar?",
+    "¿Existe alguna columna de 'texto libre' que deba permanecer sin cambios por razones de negocio o de pruebas específicas?"
+  ]
+}

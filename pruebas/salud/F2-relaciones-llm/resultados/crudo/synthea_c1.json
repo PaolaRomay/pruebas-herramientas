@@ -1,0 +1,160 @@
+{
+  "relaciones": [
+    {
+      "tabla_hija": "synthea.allergies",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.careplans",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.claims",
+      "columna_hija": "patientid",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.claims_transactions",
+      "columna_hija": "claimid",
+      "tabla_padre": "synthea.claims",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.claims_transactions",
+      "columna_hija": "patientid",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.claims_transactions",
+      "columna_hija": "providerid",
+      "tabla_padre": "synthea.providers",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.claims_transactions",
+      "columna_hija": "supervisingproviderid",
+      "tabla_padre": "synthea.providers",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.claims",
+      "columna_hija": "providerid",
+      "tabla_padre": "synthea.providers",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.claims",
+      "columna_hija": "supervisingproviderid",
+      "tabla_padre": "synthea.providers",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.claims",
+      "columna_hija": "appointmentid",
+      "tabla_padre": "synthea.encounters",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.claims_transactions",
+      "columna_hija": "appointmentid",
+      "tabla_padre": "synthea.encounters",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.conditions",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.devices",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.encounters",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.imaging_studies",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.immunizations",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.medications",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.observations",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.procedures",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.supplies",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.payer_transitions",
+      "columna_hija": "patient",
+      "tabla_padre": "synthea.patients",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.encounters",
+      "columna_hija": "organization",
+      "tabla_padre": "synthea.organizations",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.providers",
+      "columna_hija": "organization",
+      "tabla_padre": "synthea.organizations",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.encounters",
+      "columna_hija": "provider",
+      "tabla_padre": "synthea.providers",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.claims",
+      "columna_hija": "departmentid",
+      "tabla_padre": "synthea.organizations",
+      "columna_padre": "id"
+    },
+    {
+      "tabla_hija": "synthea.claims_transactions",
+      "columna_hija": "departmentid",
+      "tabla_padre": "synthea.organizations",
+      "columna_padre": "id"
+    }
+  ]
+}

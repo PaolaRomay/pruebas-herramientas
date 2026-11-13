@@ -1,0 +1,38 @@
+{
+  "pasos": [
+    {
+      "herramienta": "subconjunto",
+      "parametros": {
+        "ancla": "mimiciv_hosp.patients",
+        "filtro_sql": "SELECT subject_id FROM mimiciv_hosp.patients LIMIT 200",
+        "porcentaje": 100
+      }
+    },
+    {
+      "herramienta": "sintetizar",
+      "parametros": {
+        "tablas": [
+          "mimiciv_hosp.patients",
+          "mimiciv_hosp.admissions",
+          "mimiciv_hosp.diagnoses_icd",
+          "mimiciv_hosp.procedures_icd",
+          "mimiciv_hosp.labevents",
+          "mimiciv_hosp.emar",
+          "mimiciv_icu.icustays",
+          "mimiciv_icu.inputevents",
+          "mimiciv_icu.outputevents"
+        ],
+        "pacientes": 200
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que para lograr coherencia entre internaciones y diagnósticos, la herramienta 'sintetizar' debe procesar simultáneamente las tablas principales de pacientes, admisiones, diagnósticos y eventos clínicos (laboratorios, medicación y eventos de cuidados críticos).",
+    "Asumo que el esquema de 'producción' incluye tanto las tablas del hospital general (mimiciv_hosp) como las de la unidad de cuidados intensivos (mimiciv_icu), por lo que incluiré ambas en el entrenamiento del generador para mantener la integridad relacional.",
+    "Asumo que 'coherentes entre sí' implica mantener las relaciones de claves foráneas (subject_id, hadm_id) y la secuencia lógica temporal de los eventos."
+  ],
+  "preguntas": [
+    "¿Deseas que la base sintética incluya todas las tablas del esquema o solo las que mencioné en el plan (las más relevantes para pacientes, diagnósticos e internaciones)?",
+    "¿Necesitás que los datos sintéticos sigan alguna distribución estadística específica (por ejemplo, una prevalencia mayor de ciertos diagnósticos) o que solo imiten la estructura y correlación de la producción?"
+  ]
+}

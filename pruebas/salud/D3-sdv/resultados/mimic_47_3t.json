@@ -1,0 +1,71 @@
+{
+  "prueba": "D3m",
+  "conjunto": "mimic_47",
+  "tablas": [
+    "patients",
+    "admissions",
+    "diagnoses_icd"
+  ],
+  "entorno": {
+    "equipo": "arm64, macOS 26.6.2",
+    "python": "3.11.16",
+    "sdv": "1.32.1",
+    "pandas": "3.0.6"
+  },
+  "fecha": "2026-11-12T22:47:52",
+  "entrenar": {
+    "segundos": 1.3,
+    "memoria_max_proceso_mb": 407
+  },
+  "generar": {
+    "segundos": 1.6,
+    "memoria_max_proceso_mb": 409
+  },
+  "filas": {
+    "real": {
+      "patients": 47,
+      "admissions": 115,
+      "diagnoses_icd": 1774
+    },
+    "sintetico": {
+      "patients": 47,
+      "admissions": 115,
+      "diagnoses_icd": 1774
+    }
+  },
+  "integridad": {
+    "patients: PK repetidas": 0,
+    "admissions: PK repetidas": 0,
+    "admissions.subject_id sin padre": 0,
+    "diagnoses_icd.hadm_id sin padre": 0
+  },
+  "reglas": {
+    "real": {
+      "alta >= ingreso": 0,
+      "muerte dentro de la internación": 0,
+      "muerte en el hospital <=> hospital_expire_flag": 0
+    },
+    "sintetico": {
+      "alta >= ingreso": 60,
+      "muerte dentro de la internación": 4,
+      "muerte en el hospital <=> hospital_expire_flag": 20
+    }
+  },
+  "copias_exactas": {
+    "patients": {
+      "filas_sinteticas": 47,
+      "identicas_a_una_real": 0,
+      "columnas_comparadas": 5
+    },
+    "admissions": {
+      "filas_sinteticas": 115,
+      "identicas_a_una_real": 0,
+      "columnas_comparadas": 13
+    },
+    "diagnoses_icd": {
+      "filas_sinteticas": 1774,
+      "identicas_a_una_real": 250,
+      "columnas_comparadas": 3
+    }
+  }
+}

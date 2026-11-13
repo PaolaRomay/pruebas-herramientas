@@ -1,0 +1,71 @@
+{
+  "prueba": "D3s",
+  "conjunto": "synthea_85",
+  "tablas": [
+    "patients",
+    "encounters",
+    "conditions"
+  ],
+  "entorno": {
+    "equipo": "arm64, macOS 26.6.2",
+    "python": "3.11.16",
+    "sdv": "1.32.1",
+    "pandas": "3.0.6"
+  },
+  "fecha": "2026-11-12T23:01:58",
+  "entrenar": {
+    "segundos": 4.2,
+    "memoria_max_proceso_mb": 395
+  },
+  "generar": {
+    "segundos": 15.2,
+    "memoria_max_proceso_mb": 395
+  },
+  "filas": {
+    "real": {
+      "patients": 85,
+      "encounters": 3214,
+      "conditions": 2445
+    },
+    "sintetico": {
+      "patients": 85,
+      "encounters": 3214,
+      "conditions": 2445
+    }
+  },
+  "integridad": {
+    "patients: PK repetidas": 0,
+    "encounters: PK repetidas": 0,
+    "encounters.patient sin padre": 0,
+    "conditions.encounter sin padre": 0
+  },
+  "reglas": {
+    "real": {
+      "encuentro: fin >= inicio": 0,
+      "encuentro después del nacimiento": 0,
+      "condición: fin >= inicio": 0
+    },
+    "sintetico": {
+      "encuentro: fin >= inicio": 1496,
+      "encuentro después del nacimiento": 198,
+      "condición: fin >= inicio": 548
+    }
+  },
+  "copias_exactas": {
+    "patients": {
+      "filas_sinteticas": 85,
+      "identicas_a_una_real": 0,
+      "columnas_comparadas": 8
+    },
+    "encounters": {
+      "filas_sinteticas": 3214,
+      "identicas_a_una_real": 0,
+      "columnas_comparadas": 7
+    },
+    "conditions": {
+      "filas_sinteticas": 2445,
+      "identicas_a_una_real": 1,
+      "columnas_comparadas": 4
+    }
+  }
+}

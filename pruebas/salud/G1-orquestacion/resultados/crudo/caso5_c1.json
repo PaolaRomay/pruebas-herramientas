@@ -1,0 +1,29 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "edad": "ruido",
+        "texto_libre": "enmascarar"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que el objetivo es mantener la integridad referencial y la estructura de la base de datos completa para pruebas de integración, por lo que no aplicaré un filtro de subconjunto a menos que se especifique.",
+    "Asumo que 'sin ver datos reales' implica una anonimización agresiva de identificadores personales, fechas y textos libres, pero manteniendo la coherencia temporal (por eso uso 'desplazar_por_paciente').",
+    "Asumo que el equipo de testing necesita datos que conserven la distribución estadística básica, por lo que no utilizaré la herramienta 'sintetizar' a menos que se requiera una base 100% artificial."
+  ],
+  "preguntas": [
+    "¿Deseas incluir todos los registros de la base de producción o prefieres extraer un subconjunto específico (por ejemplo, solo pacientes de una unidad médica o de un periodo de tiempo determinado)?",
+    "¿Hay alguna columna específica que deba mantenerse intacta por razones de negocio (ej. nombres de medicamentos o códigos de diagnósticos que no se deben enmascarar)?",
+    "¿Es necesario generar datos sintéticos para aumentar el volumen de la base de prueba, o es suficiente con anonimizar los datos reales existentes?"
+  ]
+}

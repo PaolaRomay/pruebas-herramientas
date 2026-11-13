@@ -1,0 +1,29 @@
+{
+  "pasos": [
+    {
+      "herramienta": "detectar",
+      "parametros": {
+        "tablas": ["todas"]
+      }
+    },
+    {
+      "herramienta": "anonimizar",
+      "parametros": {
+        "identificadores": "seudonimizar",
+        "fechas": "desplazar_por_paciente",
+        "edad": "decada",
+        "texto_libre": "enmascarar"
+      }
+    }
+  ],
+  "supuestos": [
+    "Asumo que el equipo de testing necesita una base de datos con la misma estructura y volumen (o una muestra representativa) que la producción, por lo que no aplicaré la herramienta 'subconjunto' ni 'sintetizar' a menos que se especifique lo contrario.",
+    "Asumo que 'sin ver datos reales' implica una anonimización completa de PII (Información de Identificación Personal), por lo que aplicaré seudonimización a identificadores, desplazamiento de fechas y enmascaramiento de textos libres.",
+    "Asumo que el objetivo es mantener la integridad referencial de la base de datos para que las pruebas funcionen correctamente."
+  ],
+  "preguntas": [
+    "¿Necesitás que la base de datos tenga la misma cantidad de registros que la producción, o preferís extraer un subconjunto específico (ej. solo pacientes de una unidad médica o de un rango de fechas)?",
+    "¿Hay alguna regla de negocio específica para la anonimización de fechas? (Por ejemplo, ¿el desplazamiento debe mantener la duración exacta entre eventos o es suficiente con ruido aleatorio?).",
+    "¿Deseás que algunas tablas se generen completamente con datos sintéticos en lugar de anonimizar los reales?"
+  ]
+}
