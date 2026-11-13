@@ -1,0 +1,511 @@
+{
+  "prueba": "B1s",
+  "variante": "consistentes",
+  "origen": "synthea_c1_10",
+  "destino": "b1s_consistentes",
+  "fecha": "2026-11-09T09:37:13",
+  "segundos_copia": 4.2,
+  "fk_declaradas": 40,
+  "reglas": [
+    {
+      "columna": "allergies.start",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(start, patient)"
+    },
+    {
+      "columna": "allergies.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "allergies.encounter",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(encounter)"
+    },
+    {
+      "columna": "careplans.start",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(start, patient)"
+    },
+    {
+      "columna": "careplans.stop",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(stop, patient)"
+    },
+    {
+      "columna": "careplans.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "careplans.encounter",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(encounter)"
+    },
+    {
+      "columna": "claims.patientid",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patientid)"
+    },
+    {
+      "columna": "claims.providerid",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.uuid_hash(providerid)"
+    },
+    {
+      "columna": "claims.appointmentid",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(appointmentid)"
+    },
+    {
+      "columna": "claims.currentillnessdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(currentillnessdate, patientid)"
+    },
+    {
+      "columna": "claims.servicedate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(servicedate, patientid)"
+    },
+    {
+      "columna": "claims.supervisingproviderid",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.uuid_hash(supervisingproviderid)"
+    },
+    {
+      "columna": "claims.lastbilleddate1",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(lastbilleddate1, patientid)"
+    },
+    {
+      "columna": "claims.lastbilleddate2",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(lastbilleddate2, patientid)"
+    },
+    {
+      "columna": "claims.lastbilleddatep",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(lastbilleddatep, patientid)"
+    },
+    {
+      "columna": "claims_transactions.patientid",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patientid)"
+    },
+    {
+      "columna": "claims_transactions.fromdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(fromdate, patientid)"
+    },
+    {
+      "columna": "claims_transactions.todate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(todate, patientid)"
+    },
+    {
+      "columna": "claims_transactions.appointmentid",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(appointmentid)"
+    },
+    {
+      "columna": "claims_transactions.providerid",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.uuid_hash(providerid)"
+    },
+    {
+      "columna": "claims_transactions.supervisingproviderid",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.uuid_hash(supervisingproviderid)"
+    },
+    {
+      "columna": "conditions.start",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(start, patient)"
+    },
+    {
+      "columna": "conditions.stop",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(stop, patient)"
+    },
+    {
+      "columna": "conditions.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "conditions.encounter",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(encounter)"
+    },
+    {
+      "columna": "devices.start",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(start, patient)"
+    },
+    {
+      "columna": "devices.stop",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(stop, patient)"
+    },
+    {
+      "columna": "devices.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "devices.encounter",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(encounter)"
+    },
+    {
+      "columna": "devices.udi",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION masc.mismo_formato(udi, patient)"
+    },
+    {
+      "columna": "encounters.id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(id)"
+    },
+    {
+      "columna": "encounters.start",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(start, patient)"
+    },
+    {
+      "columna": "encounters.stop",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(stop, patient)"
+    },
+    {
+      "columna": "encounters.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "encounters.provider",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.uuid_hash(provider)"
+    },
+    {
+      "columna": "imaging_studies.date",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(date, patient)"
+    },
+    {
+      "columna": "imaging_studies.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "imaging_studies.encounter",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(encounter)"
+    },
+    {
+      "columna": "imaging_studies.series_uid",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(series_uid)"
+    },
+    {
+      "columna": "imaging_studies.instance_uid",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(instance_uid)"
+    },
+    {
+      "columna": "immunizations.date",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(date, patient)"
+    },
+    {
+      "columna": "immunizations.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "immunizations.encounter",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(encounter)"
+    },
+    {
+      "columna": "medications.start",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(start, patient)"
+    },
+    {
+      "columna": "medications.stop",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(stop, patient)"
+    },
+    {
+      "columna": "medications.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "medications.encounter",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(encounter)"
+    },
+    {
+      "columna": "observations.date",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(date, patient)"
+    },
+    {
+      "columna": "observations.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "observations.encounter",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(encounter)"
+    },
+    {
+      "columna": "patients.id",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(id)"
+    },
+    {
+      "columna": "patients.birthdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(birthdate, id)"
+    },
+    {
+      "columna": "patients.deathdate",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(deathdate, id)"
+    },
+    {
+      "columna": "patients.ssn",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION masc.mismo_formato(ssn, id)"
+    },
+    {
+      "columna": "patients.drivers",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION masc.mismo_formato(drivers, id)"
+    },
+    {
+      "columna": "patients.passport",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION masc.mismo_formato(passport, id)"
+    },
+    {
+      "columna": "patients.first",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION anon.pseudo_first_name(id)"
+    },
+    {
+      "columna": "patients.middle",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION anon.pseudo_first_name(id, 'm')"
+    },
+    {
+      "columna": "patients.last",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION anon.pseudo_last_name(id)"
+    },
+    {
+      "columna": "patients.maiden",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION anon.pseudo_last_name(id, 'm')"
+    },
+    {
+      "columna": "patients.birthplace",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.pseudo_city(id, 'n')"
+    },
+    {
+      "columna": "patients.address",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION anon.fake_address()"
+    },
+    {
+      "columna": "patients.city",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION anon.pseudo_city(id)"
+    },
+    {
+      "columna": "patients.county",
+      "categoria": "cuasi_hipaa",
+      "regla": "VALUE NULL"
+    },
+    {
+      "columna": "patients.fips",
+      "categoria": "cuasi_hipaa",
+      "regla": "VALUE NULL"
+    },
+    {
+      "columna": "patients.zip",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.zip3(zip)"
+    },
+    {
+      "columna": "patients.lat",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.redondear(lat, 1)"
+    },
+    {
+      "columna": "patients.lon",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.redondear(lon, 1)"
+    },
+    {
+      "columna": "patients.healthcare_expenses",
+      "categoria": "economico",
+      "regla": "FUNCTION anon.noise(healthcare_expenses, 0.1)"
+    },
+    {
+      "columna": "patients.healthcare_coverage",
+      "categoria": "economico",
+      "regla": "FUNCTION anon.noise(healthcare_coverage, 0.1)"
+    },
+    {
+      "columna": "patients.income",
+      "categoria": "economico",
+      "regla": "FUNCTION anon.noise(income, 0.1)"
+    },
+    {
+      "columna": "payer_transitions.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "payer_transitions.memberid",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION masc.mismo_formato(memberid, patient)"
+    },
+    {
+      "columna": "payer_transitions.start_date",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(start_date, patient)"
+    },
+    {
+      "columna": "payer_transitions.end_date",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(end_date, patient)"
+    },
+    {
+      "columna": "payer_transitions.owner_name",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION anon.pseudo_last_name(patient)"
+    },
+    {
+      "columna": "procedures.start",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(start, patient)"
+    },
+    {
+      "columna": "procedures.stop",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(stop, patient)"
+    },
+    {
+      "columna": "procedures.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "procedures.encounter",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(encounter)"
+    },
+    {
+      "columna": "providers.id",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.uuid_hash(id)"
+    },
+    {
+      "columna": "providers.name",
+      "categoria": "ident_directo",
+      "regla": "FUNCTION anon.pseudo_last_name(id)"
+    },
+    {
+      "columna": "providers.address",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.fake_address()"
+    },
+    {
+      "columna": "providers.city",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION anon.pseudo_city(id)"
+    },
+    {
+      "columna": "providers.zip",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.zip3(zip)"
+    },
+    {
+      "columna": "providers.lat",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.redondear(lat, 1)"
+    },
+    {
+      "columna": "providers.lon",
+      "categoria": "ident_profesional",
+      "regla": "FUNCTION masc.redondear(lon, 1)"
+    },
+    {
+      "columna": "supplies.date",
+      "categoria": "cuasi_hipaa",
+      "regla": "FUNCTION masc.desplazar(date, patient)"
+    },
+    {
+      "columna": "supplies.patient",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(patient)"
+    },
+    {
+      "columna": "supplies.encounter",
+      "categoria": "ident_opaco",
+      "regla": "FUNCTION masc.uuid_hash(encounter)"
+    }
+  ],
+  "columnas_enmascaradas": 91,
+  "enmascarado": "ok",
+  "segundos_enmascarar": 584.6,
+  "coherencia": {
+    "encuentro: fin >= inicio": {
+      "antes": 0,
+      "despues": 0
+    },
+    "encuentro después del nacimiento": {
+      "antes": 0,
+      "despues": 0
+    },
+    "muerte >= nacimiento": {
+      "antes": 0,
+      "despues": 0
+    },
+    "encuentro antes de la muerte": {
+      "antes": 8,
+      "despues": 8
+    },
+    "condición: fin >= inicio": {
+      "antes": 0,
+      "despues": 0
+    },
+    "medicación: fin >= inicio": {
+      "antes": 0,
+      "despues": 0
+    }
+  },
+  "fk_validas": 40,
+  "fechas_por_paciente": {
+    "pacientes": 85,
+    "con_un_solo_desplazamiento": 85
+  },
+  "directos": {
+    "pacientes": 85,
+    "nombre_igual": 0,
+    "apellido_igual": 0,
+    "ssn_igual": 0,
+    "ssn_formato_valido": 0,
+    "pasaporte_igual": 0,
+    "zip_igual": 20
+  },
+  "nombres_distintos": "82 de 85",
+  "ids_originales_que_quedan": 0
+}

@@ -1,0 +1,668 @@
+[
+  {
+    "datos": "mimic_subconjunto",
+    "arx": "3.9.2",
+    "k": 2,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,seguro,idioma,estado_civil",
+    "sensible": "diagnostico",
+    "filas": 47,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 1.0,
+      "fraccion_unicos": 1.0
+    },
+    "segundos": 0.021494125,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 4,
+      "raza": 2,
+      "seguro": 1,
+      "idioma": 0,
+      "estado_civil": 0
+    },
+    "perdida_informacion": "0.45864991495560736",
+    "filas_suprimidas": 3,
+    "clases_equivalencia": 8,
+    "clase_min": 2,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.5,
+      "riesgo_promedio": 0.18181818181818182,
+      "fraccion_unicos": 0.0
+    },
+    "base": "mimic",
+    "conjunto": "subconjunto",
+    "valores_distintos_sensible": 14
+  },
+  {
+    "datos": "mimic_subconjunto",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,seguro,idioma,estado_civil",
+    "sensible": "diagnostico",
+    "filas": 47,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 1.0,
+      "fraccion_unicos": 1.0
+    },
+    "segundos": 0.019579709,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 1,
+      "edad": 4,
+      "raza": 2,
+      "seguro": 0,
+      "idioma": 0,
+      "estado_civil": 1
+    },
+    "perdida_informacion": "0.6312133602500283",
+    "filas_suprimidas": 4,
+    "clases_equivalencia": 3,
+    "clase_min": 5,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.2,
+      "riesgo_promedio": 0.06976744186046512,
+      "fraccion_unicos": 0.0
+    },
+    "base": "mimic",
+    "conjunto": "subconjunto",
+    "valores_distintos_sensible": 14
+  },
+  {
+    "datos": "mimic_subconjunto",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 2,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,seguro,idioma,estado_civil",
+    "sensible": "diagnostico",
+    "filas": 47,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 1.0,
+      "fraccion_unicos": 1.0
+    },
+    "segundos": 0.018875541,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 1,
+      "edad": 4,
+      "raza": 2,
+      "seguro": 0,
+      "idioma": 0,
+      "estado_civil": 1
+    },
+    "perdida_informacion": "0.6312133602500283",
+    "filas_suprimidas": 4,
+    "clases_equivalencia": 3,
+    "clase_min": 5,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.2,
+      "riesgo_promedio": 0.06976744186046512,
+      "fraccion_unicos": 0.0
+    },
+    "base": "mimic",
+    "conjunto": "subconjunto",
+    "valores_distintos_sensible": 14
+  },
+  {
+    "datos": "mimic_b1",
+    "arx": "3.9.2",
+    "k": 2,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,seguro,idioma,estado_civil",
+    "sensible": "diagnostico",
+    "filas": 47,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.8936170212765957,
+      "fraccion_unicos": 0.8085106382978723
+    },
+    "segundos": 0.020703542,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 4,
+      "raza": 2,
+      "seguro": 1,
+      "idioma": 0,
+      "estado_civil": 0
+    },
+    "perdida_informacion": "0.45864991495560736",
+    "filas_suprimidas": 3,
+    "clases_equivalencia": 8,
+    "clase_min": 2,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.5,
+      "riesgo_promedio": 0.18181818181818182,
+      "fraccion_unicos": 0.0
+    },
+    "base": "mimic",
+    "conjunto": "b1",
+    "valores_distintos_sensible": 14
+  },
+  {
+    "datos": "mimic_b1",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,seguro,idioma,estado_civil",
+    "sensible": "diagnostico",
+    "filas": 47,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.8936170212765957,
+      "fraccion_unicos": 0.8085106382978723
+    },
+    "segundos": 0.022591041,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 1,
+      "edad": 4,
+      "raza": 2,
+      "seguro": 0,
+      "idioma": 0,
+      "estado_civil": 1
+    },
+    "perdida_informacion": "0.6312133602500283",
+    "filas_suprimidas": 4,
+    "clases_equivalencia": 3,
+    "clase_min": 5,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.2,
+      "riesgo_promedio": 0.06976744186046512,
+      "fraccion_unicos": 0.0
+    },
+    "base": "mimic",
+    "conjunto": "b1",
+    "valores_distintos_sensible": 14
+  },
+  {
+    "datos": "mimic_b1",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 2,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,seguro,idioma,estado_civil",
+    "sensible": "diagnostico",
+    "filas": 47,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.8936170212765957,
+      "fraccion_unicos": 0.8085106382978723
+    },
+    "segundos": 0.019131125,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 1,
+      "edad": 4,
+      "raza": 2,
+      "seguro": 0,
+      "idioma": 0,
+      "estado_civil": 1
+    },
+    "perdida_informacion": "0.6312133602500283",
+    "filas_suprimidas": 4,
+    "clases_equivalencia": 3,
+    "clase_min": 5,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.2,
+      "riesgo_promedio": 0.06976744186046512,
+      "fraccion_unicos": 0.0
+    },
+    "base": "mimic",
+    "conjunto": "b1",
+    "valores_distintos_sensible": 14
+  },
+  {
+    "datos": "mimic_completa",
+    "arx": "3.9.2",
+    "k": 2,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,seguro,idioma,estado_civil",
+    "sensible": "diagnostico",
+    "filas": 100,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.9500000000000001,
+      "fraccion_unicos": 0.9
+    },
+    "segundos": 0.02457625,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 3,
+      "raza": 2,
+      "seguro": 0,
+      "idioma": 0,
+      "estado_civil": 1
+    },
+    "perdida_informacion": "0.3742055389149088",
+    "filas_suprimidas": 8,
+    "clases_equivalencia": 16,
+    "clase_min": 2,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.5,
+      "riesgo_promedio": 0.17391304347826086,
+      "fraccion_unicos": 0.0
+    },
+    "base": "mimic",
+    "conjunto": "completa",
+    "valores_distintos_sensible": 18
+  },
+  {
+    "datos": "mimic_completa",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,seguro,idioma,estado_civil",
+    "sensible": "diagnostico",
+    "filas": 100,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.9500000000000001,
+      "fraccion_unicos": 0.9
+    },
+    "segundos": 0.020212667,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 1,
+      "edad": 3,
+      "raza": 2,
+      "seguro": 0,
+      "idioma": 0,
+      "estado_civil": 1
+    },
+    "perdida_informacion": "0.5287617179995272",
+    "filas_suprimidas": 9,
+    "clases_equivalencia": 8,
+    "clase_min": 5,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.2,
+      "riesgo_promedio": 0.08791208791208792,
+      "fraccion_unicos": 0.0
+    },
+    "base": "mimic",
+    "conjunto": "completa",
+    "valores_distintos_sensible": 18
+  },
+  {
+    "datos": "mimic_completa",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 2,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,seguro,idioma,estado_civil",
+    "sensible": "diagnostico",
+    "filas": 100,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.9500000000000001,
+      "fraccion_unicos": 0.9
+    },
+    "segundos": 0.021150667,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 1,
+      "edad": 3,
+      "raza": 2,
+      "seguro": 0,
+      "idioma": 0,
+      "estado_civil": 1
+    },
+    "perdida_informacion": "0.5287617179995272",
+    "filas_suprimidas": 9,
+    "clases_equivalencia": 8,
+    "clase_min": 5,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.2,
+      "riesgo_promedio": 0.08791208791208792,
+      "fraccion_unicos": 0.0
+    },
+    "base": "mimic",
+    "conjunto": "completa",
+    "valores_distintos_sensible": 18
+  },
+  {
+    "datos": "synthea_subconjunto",
+    "arx": "3.9.2",
+    "k": 2,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,etnia,estado_civil,zip3",
+    "sensible": "condicion",
+    "filas": 85,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.9882352941176471,
+      "fraccion_unicos": 0.9764705882352941
+    },
+    "segundos": 0.022074208,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 4,
+      "raza": 2,
+      "etnia": 0,
+      "estado_civil": 0,
+      "zip3": 1
+    },
+    "perdida_informacion": "0.36770375178181225",
+    "filas_suprimidas": 5,
+    "clases_equivalencia": 20,
+    "clase_min": 2,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.5,
+      "riesgo_promedio": 0.25,
+      "fraccion_unicos": 0.0
+    },
+    "base": "synthea",
+    "conjunto": "subconjunto",
+    "valores_distintos_sensible": 29
+  },
+  {
+    "datos": "synthea_subconjunto",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,etnia,estado_civil,zip3",
+    "sensible": "condicion",
+    "filas": 85,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.9882352941176471,
+      "fraccion_unicos": 0.9764705882352941
+    },
+    "segundos": 0.020849375,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 4,
+      "raza": 2,
+      "etnia": 0,
+      "estado_civil": 1,
+      "zip3": 1
+    },
+    "perdida_informacion": "0.5206401048485476",
+    "filas_suprimidas": 5,
+    "clases_equivalencia": 6,
+    "clase_min": 8,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.125,
+      "riesgo_promedio": 0.075,
+      "fraccion_unicos": 0.0
+    },
+    "base": "synthea",
+    "conjunto": "subconjunto",
+    "valores_distintos_sensible": 29
+  },
+  {
+    "datos": "synthea_subconjunto",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 2,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,etnia,estado_civil,zip3",
+    "sensible": "condicion",
+    "filas": 85,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.9882352941176471,
+      "fraccion_unicos": 0.9764705882352941
+    },
+    "segundos": 0.021847583,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 4,
+      "raza": 2,
+      "etnia": 0,
+      "estado_civil": 1,
+      "zip3": 1
+    },
+    "perdida_informacion": "0.5206401048485476",
+    "filas_suprimidas": 5,
+    "clases_equivalencia": 6,
+    "clase_min": 8,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.125,
+      "riesgo_promedio": 0.075,
+      "fraccion_unicos": 0.0
+    },
+    "base": "synthea",
+    "conjunto": "subconjunto",
+    "valores_distintos_sensible": 29
+  },
+  {
+    "datos": "synthea_b1",
+    "arx": "3.9.2",
+    "k": 2,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,etnia,estado_civil,zip3",
+    "sensible": "condicion",
+    "filas": 85,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.9882352941176471,
+      "fraccion_unicos": 0.9764705882352941
+    },
+    "segundos": 0.022000792,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 4,
+      "raza": 2,
+      "etnia": 0,
+      "estado_civil": 0,
+      "zip3": 1
+    },
+    "perdida_informacion": "0.36770375178181225",
+    "filas_suprimidas": 5,
+    "clases_equivalencia": 20,
+    "clase_min": 2,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.5,
+      "riesgo_promedio": 0.25,
+      "fraccion_unicos": 0.0
+    },
+    "base": "synthea",
+    "conjunto": "b1",
+    "valores_distintos_sensible": 29
+  },
+  {
+    "datos": "synthea_b1",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,etnia,estado_civil,zip3",
+    "sensible": "condicion",
+    "filas": 85,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.9882352941176471,
+      "fraccion_unicos": 0.9764705882352941
+    },
+    "segundos": 0.020664,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 4,
+      "raza": 2,
+      "etnia": 0,
+      "estado_civil": 1,
+      "zip3": 1
+    },
+    "perdida_informacion": "0.5206401048485476",
+    "filas_suprimidas": 5,
+    "clases_equivalencia": 6,
+    "clase_min": 8,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.125,
+      "riesgo_promedio": 0.075,
+      "fraccion_unicos": 0.0
+    },
+    "base": "synthea",
+    "conjunto": "b1",
+    "valores_distintos_sensible": 29
+  },
+  {
+    "datos": "synthea_b1",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 2,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,etnia,estado_civil,zip3",
+    "sensible": "condicion",
+    "filas": 85,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.9882352941176471,
+      "fraccion_unicos": 0.9764705882352941
+    },
+    "segundos": 0.021228042,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 4,
+      "raza": 2,
+      "etnia": 0,
+      "estado_civil": 1,
+      "zip3": 1
+    },
+    "perdida_informacion": "0.5206401048485476",
+    "filas_suprimidas": 5,
+    "clases_equivalencia": 6,
+    "clase_min": 8,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.125,
+      "riesgo_promedio": 0.075,
+      "fraccion_unicos": 0.0
+    },
+    "base": "synthea",
+    "conjunto": "b1",
+    "valores_distintos_sensible": 29
+  },
+  {
+    "datos": "synthea_completa",
+    "arx": "3.9.2",
+    "k": 2,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,etnia,estado_civil,zip3",
+    "sensible": "condicion",
+    "filas": 1151,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.8323197219808862,
+      "fraccion_unicos": 0.7019982623805386
+    },
+    "segundos": 0.042897459,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 3,
+      "raza": 0,
+      "etnia": 0,
+      "estado_civil": 0,
+      "zip3": 2
+    },
+    "perdida_informacion": "0.2049365037930464",
+    "filas_suprimidas": 63,
+    "clases_equivalencia": 104,
+    "clase_min": 2,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.5,
+      "riesgo_promedio": 0.09558823529411764,
+      "fraccion_unicos": 0.0
+    },
+    "base": "synthea",
+    "conjunto": "completa",
+    "valores_distintos_sensible": 63
+  },
+  {
+    "datos": "synthea_completa",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 1,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,etnia,estado_civil,zip3",
+    "sensible": "condicion",
+    "filas": 1151,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.8323197219808862,
+      "fraccion_unicos": 0.7019982623805386
+    },
+    "segundos": 0.035289541,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 4,
+      "raza": 0,
+      "etnia": 0,
+      "estado_civil": 0,
+      "zip3": 2
+    },
+    "perdida_informacion": "0.31193027469855417",
+    "filas_suprimidas": 72,
+    "clases_equivalencia": 31,
+    "clase_min": 5,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.2,
+      "riesgo_promedio": 0.028730305838739575,
+      "fraccion_unicos": 0.0
+    },
+    "base": "synthea",
+    "conjunto": "completa",
+    "valores_distintos_sensible": 63
+  },
+  {
+    "datos": "synthea_completa",
+    "arx": "3.9.2",
+    "k": 5,
+    "l": 2,
+    "limite_supresion": 0.1,
+    "cuasi_identificadores": "sexo,edad,raza,etnia,estado_civil,zip3",
+    "sensible": "condicion",
+    "filas": 1151,
+    "riesgo_antes": {
+      "riesgo_maximo": 1.0,
+      "riesgo_promedio": 0.8323197219808862,
+      "fraccion_unicos": 0.7019982623805386
+    },
+    "segundos": 0.036621167,
+    "solucion_encontrada": true,
+    "nivel_por_cuasi_identificador": {
+      "sexo": 0,
+      "edad": 4,
+      "raza": 0,
+      "etnia": 0,
+      "estado_civil": 0,
+      "zip3": 2
+    },
+    "perdida_informacion": "0.31193027469855417",
+    "filas_suprimidas": 72,
+    "clases_equivalencia": 31,
+    "clase_min": 5,
+    "riesgo_despues": {
+      "riesgo_maximo": 0.2,
+      "riesgo_promedio": 0.028730305838739575,
+      "fraccion_unicos": 0.0
+    },
+    "base": "synthea",
+    "conjunto": "completa",
+    "valores_distintos_sensible": 63
+  }
+]

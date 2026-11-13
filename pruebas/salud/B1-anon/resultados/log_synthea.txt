@@ -1,0 +1,54 @@
+{
+  "prueba": "B1s",
+  "variante": "consistentes",
+  "origen": "synthea_c1_10",
+  "destino": "b1s_consistentes",
+  "fecha": "2026-11-09T09:37:13",
+  "segundos_copia": 4.2,
+  "fk_declaradas": 40,
+  "columnas_enmascaradas": 91,
+  "enmascarado": "ok",
+  "segundos_enmascarar": 584.6,
+  "coherencia": {
+    "encuentro: fin >= inicio": {
+      "antes": 0,
+      "despues": 0
+    },
+    "encuentro después del nacimiento": {
+      "antes": 0,
+      "despues": 0
+    },
+    "muerte >= nacimiento": {
+      "antes": 0,
+      "despues": 0
+    },
+    "encuentro antes de la muerte": {
+      "antes": 8,
+      "despues": 8
+    },
+    "condición: fin >= inicio": {
+      "antes": 0,
+      "despues": 0
+    },
+    "medicación: fin >= inicio": {
+      "antes": 0,
+      "despues": 0
+    }
+  },
+  "fk_validas": 40,
+  "fechas_por_paciente": {
+    "pacientes": 85,
+    "con_un_solo_desplazamiento": 85
+  },
+  "directos": {
+    "pacientes": 85,
+    "nombre_igual": 0,
+    "apellido_igual": 0,
+    "ssn_igual": 0,
+    "ssn_formato_valido": 0,
+    "pasaporte_igual": 0,
+    "zip_igual": 20
+  },
+  "nombres_distintos": "82 de 85",
+  "ids_originales_que_quedan": 0
+}
